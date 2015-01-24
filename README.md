@@ -1,2 +1,2 @@
 # maths_projects
-Rédactions diverses en mathématiques
+Rédactions diverses en mathématiques.
