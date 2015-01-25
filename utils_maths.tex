@@ -1,0 +1,76 @@
+%-------------------------------------------------------------------------------
+%          -Packages nécessaires pour écrire en Français et en UTF8-
+%-------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%                          -Outils de mise en forme-
+%-------------------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{pdfstartview=XYZ}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\usepackage{anysize} %%pour pouvoir mettre les marges qu'on veut
+%\marginsize{2.5cm}{2.5cm}{2.5cm}{2.5cm}
+
+\usepackage{indentfirst} %%pour que les premier paragraphes soient aussi indentés
+%-------------------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------------------
+%                  -Nécessaires pour écrire des mathématiques-
+%-------------------------------------------------------------------------------
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz}
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%                     -Mise en forme d'exercices-
+%-------------------------------------------------------------------------------
+\newtheoremstyle{exostyle}
+{\topsep}% espace avant
+{\topsep}% espace apres
+{}% Police utilisee par le style de thm
+{}% Indentation (vide = aucune, \parindent = indentation paragraphe)
+{\bfseries}% Police du titre de thm
+{.}% Signe de ponctuation apres le titre du thm
+{ }% Espace apres le titre du thm (\newline = linebreak)
+{\thmname{#1}\thmnumber{ #2}\thmnote{. \normalfont{\textit{#3}}}}% composants du titre du thm : \thmname = nom du thm, \thmnumber = numéro du thm, \thmnote = sous-titre du thm
+
+\theoremstyle{exostyle}
+\newtheorem{exercice}{Exercice}
+
+\newenvironment{questions}{
+\begin{enumerate}[\hspace{12pt}\bfseries\itshape a.]}{\end{enumerate}
+} %mettre un 1 à la place du a si on veut des numéros au lieu de lettres pour les questions 
+%-------------------------------------------------------------------------------
+
+
+
+%-------------------------------------------------------------------------------
+%                    - Racourcis d'écriture -
+%-------------------------------------------------------------------------------
+
+% Angles orientés (couples de vecteurs)
+\newcommand{\aopp}[2]{(\vec{#1}, \vec{#2})} %Les deuc vecteurs sont positifs
+\newcommand{\aopn}[2]{(\vec{#1}, -\vec{#2})} %Le second vecteur est négatif
+\newcommand{\aonp}[2]{(-\vec{#1}, \vec{#2})} %Le premier vecteur est négatif
+\newcommand{\aonn}[2]{(-\vec{#1}, -\vec{#2})} %Les deux vecteurs sont négatifs
+
+%Ensembles mathématiques
+\newcommand{\naturels}{\mathbb{N}} %Nombres naturels
+\newcommand{\relatifs}{\mathbb{Z}} %Nombres relatifs
+\newcommand{\rationnels}{\mathbb{Q}} %Nombres rationnels
+\newcommand{\reels}{\mathbb{R}} %Nombres réels
+\newcommand{\complexes}{\mathbb{C}} %Nombres complexes
+%-------------------------------------------------------------------------------
+

@@ -1,0 +1,51 @@
+\documentclass[9pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage{multicol}
+%\usepackage{tikz}
+\usepackage{pst-eucl}
+    
+
+\newcommand{\CercleTrigo}[1]{%
+}
+
+
+\author{}
+\date{}
+\title{Formulaire de trigonométrie}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+
+
+\section{test}
+
+%\CercleTrigo{45}
+
+
+	\psset{unit=3cm,dotstyle=+}
+	\def\psxmin{-2} \def\psxmax{2} \def\psymin{-2}  \def\psymax{2}
+	\def\xmin{-1.3} \def\xmax{1.3} \def\ymin{-1.3} \def\ymax{1.3}
+	\begin{pspicture}(\psxmin,\psymin)(\psxmax,\psymax)
+	\psaxes[linewidth=1pt,Dx=2,Dy=2]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)
+	\pstGeonode[PosAngle=-135](0,0){O}
+	\pstGeonode[PosAngle=30](1,0){I}
+	\pstGeonode[PosAngle=120](0,1){J}
+	\pstCircleOA[linecolor=red]{O}{I}
+	\pstRotation[RotAngle=45]{O}{I}[M]
+	\pstArcOAB{O}{I}{M}
+	\pstLineAB{O}{M}
+	\pstMarkAngle[LabelSep=0.25]{I}{O}{M}{$\alpha$}
+	\pstProjection[PointName=none]{O}{I}{M}[c]
+	\uput{0.1}[-90](c){$\cos(\alpha)$}
+	\pstProjection[PointName=none]{O}{J}{M}[s]
+	\uput{0.1}[180](s){$\sin(\alpha)$}
+	\psline[linestyle=dashed](c)(M)(s)
+	\end{pspicture}
+
+\end{document}
