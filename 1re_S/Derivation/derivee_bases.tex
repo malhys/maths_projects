@@ -1,0 +1,68 @@
+\newcommand{\drv}[1]{
+
+\begin{center}
+\begin{tabular}{|c|c|}
+	\hline
+	\textbf{Fonction} & \textbf{D\'eriv\'ee}\\
+	\hline
+	\hline
+	$f(x) = k$ & \ifTrue{#1}{$f'(x) = 0$}\\
+	\hline
+	$f(x) = x $ & \ifTrue{#1}{$f'(x) = 1 $}\\
+	\hline
+	$f(x) = ax + b$ & \ifTrue{#1}{$f'(x) = a$}\\
+	\hline
+	$f(x)= x^2$ & \ifTrue{#1}{$f'(x) = 2x$}\\
+	\hline
+	$f(x)=x^\alpha $ & \ifTrue{#1}{$f'(x) = \alpha x^{\alpha-1}$}\\
+	\hline
+	$f(x)=\frac{1}{x} (x \neq 0)$ & \ifTrue{#1}{$f'(x)=-\frac{1}{x^2}$}\\
+	\hline
+	$f(x)=\sqrt{x} (x > 0) $ & \ifTrue{#1}{$f'(x)=\frac{1}{2\sqrt{x}} $}\\
+	\hline
+	$ f(x) = e^x $ & \ifTrue{#1}{$f'(x) = e^x $}\\
+	\hline
+	$ f(x) = ln(x) $ & \ifTrue{#1}{$f'(x) = \frac{1}{x} $}\\
+	\hline
+
+	
+
+\end{tabular}
+
+\end{center}
+
+}
+
+
+\newcommand{\drvOp}[1]{
+
+\begin{center}
+\begin{tabular}{|c|c|}
+	\hline
+	\textbf{Fonction} & \textbf{D\'eriv\'ee}\\
+	\hline
+	\hline
+	$ f(x) = u + v $ & \ifTrue{#1}{$f'(x) = u' + v'$}\\
+	\hline
+	$ f(x) = ku \text{ (k constante)}$ & \ifTrue{#1}{$f'(x) = ku' $}\\
+	\hline
+	$ f(x) = uv $ & \ifTrue{#1}{$f'(x) = u'v + uv'$}\\
+	\hline
+	$ f(x) = \frac{1}{u} $ & \ifTrue{#1}{$f'(x) = - \frac{u'}{u^2} $}\\
+	\hline
+	$ f(x) = \frac{u}{v} $ & \ifTrue{#1}{$f'(x) = \frac{u'v - uv'}{v^2}$}\\
+	\hline
+	$ f(x) = u^\alpha $ & \ifTrue{#1}{$f'(x) =  \alpha u ^{\alpha - 1} u'$}\\
+	\hline
+	$ f(x) =  e^u$ & \ifTrue{#1}{$f'(x) = u'e^u $}\\
+	\hline
+	$ f(x) =  ln(u) $ & \ifTrue{#1}{$f'(x) = \frac{u'}{u} $}\\
+	\hline
+	$ f(x) = v\circ u $ & \ifTrue{#1}{$f'(x) =  (v' \circ u)u'$}\\
+	\hline
+	
+\end{tabular}
+
+\end{center}
+
+}

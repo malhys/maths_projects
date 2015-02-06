@@ -17,6 +17,7 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{multicol}
+\usepackage{tabularx}
 
 \usepackage{anysize} %%pour pouvoir mettre les marges qu'on veut
 %\marginsize{2.5cm}{2.5cm}{2.5cm}{2.5cm}
@@ -33,6 +34,18 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{tikz}
+%-------------------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------------------
+%                    - Mise en forme avancée
+%-------------------------------------------------------------------------------
+
+\usepackage{ifthen}
+
+
+\newcommand{\ifTrue}[2]{\ifthenelse{\equal{#1}{true}}{#2}{$\qquad \qquad$}}
+
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
@@ -54,6 +67,16 @@
 \newenvironment{questions}{
 \begin{enumerate}[\hspace{12pt}\bfseries\itshape a.]}{\end{enumerate}
 } %mettre un 1 à la place du a si on veut des numéros au lieu de lettres pour les questions 
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%                    - Mise en forme de tableaux -
+%-------------------------------------------------------------------------------
+
+\renewcommand{\arraystretch}{1.7}
+
+\setlength{\tabcolsep}{1.2cm}
+
 %-------------------------------------------------------------------------------
 
 
