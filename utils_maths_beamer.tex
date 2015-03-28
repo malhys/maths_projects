@@ -16,10 +16,10 @@
 \hypersetup{pdfstartview=XYZ}
 \usepackage{enumerate}
 \usepackage{graphicx}
-\usepackage{multicol}
-\usepackage{tabularx}
+%\usepackage{multicol}
+%\usepackage{tabularx}
 
-\usepackage{anysize} %%pour pouvoir mettre les marges qu'on veut
+%\usepackage{anysize} %%pour pouvoir mettre les marges qu'on veut
 %\marginsize{2.5cm}{2.5cm}{2.5cm}{2.5cm}
 
 \usepackage{indentfirst} %%pour que les premier paragraphes soient aussi indentés
@@ -47,36 +47,7 @@
 
 \newcommand{\ifTrue}[2]{\ifthenelse{\equal{#1}{true}}{#2}{$\qquad \qquad$}}
 
-%-------------------------------------------------------------------------------
 
-%-------------------------------------------------------------------------------
-%                     -Mise en forme d'exercices-
-%-------------------------------------------------------------------------------
-\newtheoremstyle{exostyle}
-{\topsep}% espace avant
-{\topsep}% espace apres
-{}% Police utilisee par le style de thm
-{}% Indentation (vide = aucune, \parindent = indentation paragraphe)
-{\bfseries}% Police du titre de thm
-{.}% Signe de ponctuation apres le titre du thm
-{ }% Espace apres le titre du thm (\newline = linebreak)
-{\thmname{#1}\thmnumber{ #2}\thmnote{. \normalfont{\textit{#3}}}}% composants du titre du thm : \thmname = nom du thm, \thmnumber = numéro du thm, \thmnote = sous-titre du thm
-
-\theoremstyle{exostyle}
-\newtheorem{exercice}{Exercice}
-
-\newenvironment{questions}{
-\begin{enumerate}[\hspace{12pt}\bfseries\itshape a.]}{\end{enumerate}
-} %mettre un 1 à la place du a si on veut des numéros au lieu de lettres pour les questions 
-%-------------------------------------------------------------------------------
-
-%-------------------------------------------------------------------------------
-%                    - Mise en forme de tableaux -
-%-------------------------------------------------------------------------------
-
-\renewcommand{\arraystretch}{1.7}
-
-\setlength{\tabcolsep}{1.2cm}
 
 %-------------------------------------------------------------------------------
 
@@ -103,5 +74,4 @@
 %Intégration des parenthèses aux cosinus
 \newcommand{\cosP}[1]{\cos\left(#1\right)}
 \newcommand{\sinP}[1]{\sin\left(#1\right)}
-%-------------------------------------------------------------------------------
-
+%----------------------------------------------------
