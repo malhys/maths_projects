@@ -7,6 +7,15 @@
 \title{Axes de symétrie d'une figure}
 \author{Olivier FINOT}\institute{Collège Jules Ferry, Beaune}
 
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, hideothersubsections]
+	\end{frame} 
+}
+
 \begin{document}
 
 
@@ -19,17 +28,17 @@
 \section{Rappels}
 
 \begin{frame}
-\frametitle{Symétrique d'un point M par rapport à une droite (d)}  
+\frametitle{Symétrique d'un point M par rapport à une droite $(d)$}  
 \framesubtitle{Définition}
 
-\begin{alertblock}<2->{Si M n'appartient pas à la droite (d)}
-Dire que le point M' est le symétrique du point M par rapport à la droite (d) signifie que la droite (d) est la médiatrice du segment [MM'].
-\end{alertblock}
+\begin{block}<2->{Si M n'appartient pas à la droite $(d)$}
+Dire que le point M' est le symétrique du point M par rapport à la droite $(d)$ signifie que la droite $(d)$ est la médiatrice du segment [MM'].
+\end{block}
 
-\begin{alertblock}<3->{Si M appartient à la droite (d)}
+\begin{block}<3->{Si M appartient à la droite (d)}
 Le symétrique M4 du point M par rapport à la droite (d) est lui-même.
 C'est à dire, les points M et M' sont confondus.
-\end{alertblock}
+\end{block}
 
 \end{frame}
 
@@ -38,25 +47,168 @@ C'est à dire, les points M et M' sont confondus.
 \subsection{Définition}
 
 \begin{frame}
-\frametitle{T}  
-\framesubtitle{ST}
-blabla
+\frametitle{Définition}  
+\framesubtitle{}
+
+Un \asym d'une figure $F$ est une \dte{d}  telle que le \sym\ de la \fig{F} par rapport à la \dte{d} est la \fig{F} elle-même.
+
+\begin{columns}[c]
+
+\begin{column}{2.2cm}
+\begin{exampleblock}<2->{0 \asyms}
+	\center{\includegraphics[scale=0.25]{./img/stop}}
+\end{exampleblock}	
+\end{column}
+
+\begin{column}{2.2cm}
+	\begin{exampleblock}<3->{1 \asym }
+		\center{\includegraphics[scale=0.25]{./img/warn}}
+	\end{exampleblock}	
+\end{column}
+
+\begin{column}{2.2cm}
+	\begin{exampleblock}<4->{2 \asyms}
+		\center{\includegraphics[scale=0.25]{./img/fin_limite}}
+	\end{exampleblock}	
+\end{column}
+
+\begin{column}{2.2cm}
+	\begin{exampleblock}<5->{4 \asyms}
+		\center{\includegraphics[scale=0.25]{./img/stationnement}}
+	\end{exampleblock}	
+\end{column}
+
+\end{columns}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Exemple}  
+\framesubtitle{}
+	\begin{exampleblock}{Une infinité d'\asyms}
+		Un cercle admet une infité d'\asyms : \only<2>{toute droite passant par son centre.}
+		
+		\only<2>{\center{\includegraphics[scale=0.35]{./img/cercle}}}
+	\end{exampleblock}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Application}  
+\framesubtitle{}
+
+\begin{block}{Exercices}
+	\begin{itemize}
+		\item .. p ..
+	\end{itemize}
+\end{block}
+	
 \end{frame}
 
 \subsection{Axes de symétrie d'un segment}
 
 \begin{frame}
-\frametitle{T}  
-\framesubtitle{ST}
-blabla
+\frametitle{Axe de symétrie d'un segment}  
+
+
+\begin{alertblock}{Propriété}
+	Un segment possède deux \asyms :
+	\begin{itemize}
+		\visible<2->{\item sa médiatrice}
+		\visible<3->{\item la droite qui porte ce segment}
+	\end{itemize}
+\end{alertblock}
+
+\center{\visible<2->{\includegraphics[scale=0.7]{./img/mediat}}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Démonstration I}  
+	\framesubtitle{}
+
+\begin{block}{On sait que}
+\seg{AB} est un segment et $(d)$ est sa médiatrice.\pause
+\end{block}
+
+\begin{block}{Propriété}
+	Si M n'appartient pas à la \dte{d}.
+	Dire que le point M' est le symétrique du point M par rapport à la \dte{d} signifie que la \dte{d} est la médiatrice du segment \seg{MM'}.\pause
+\end{block}
+
+\begin{block}{Conclusion}
+	B est le \sym  de A par rapport à $(d)$ et A est le symétrique de B par rapport à $(d)$.
+	Donc le symétrique du \seg{AB} par rapport à $(d)$ est lui-même.
+	Donc la médiatrice (d) est un axe de symétrie du \seg{AB}.
+\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Démonstration II}  
+	\framesubtitle{}
+	
+	\begin{block}{On sait que}
+		\seg{AB} est un segment.\pause
+	\end{block}
+	
+	\begin{block}{Propriété}
+		Si M appartient à la \dte{d}.
+		Le symétrique M' du point M par rapport à la \dte{d} est lui-même.
+		C'est-à-dire, les points M et M' sont confondus.\pause
+	\end{block}
+	
+	\begin{block}{Conclusion}
+		A est le symétrique de A par rapport à la \dte{(AB)} et B est le symétrique de B par rapport à (AB).
+		Donc le symétrique du segment [AB] par rapport à (AB) est lui-même.
+		Donc la droite (AB) est un axe de symétrie du \seg[AB].
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Application}  
+	\framesubtitle{}
+	
+	\begin{block}{Exercices}
+		\begin{itemize}
+			\item .. p ..
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 \subsection{Axe de symétrie d'un angle}
 
 \begin{frame}
-\frametitle{T}  
-\framesubtitle{ST}
-blabla
+\frametitle{Axe de symétrie d'un angle}  
+\framesubtitle{}
+
+\begin{alertblock}{Propriété (admise)}
+	Un angle possède un \asym\ ;  la droite qui porte sa bissectrice.\pause
+\end{alertblock}
+
+\begin{columns}[c]
+	
+\begin{column}{7cm}
+\begin{exampleblock}{Exemple}
+	L'angle \monAngle{AOB} a pour \bissec\ la demi-droite \ddte{OC} et donc pour \asym\ la \dte{OC}.
+\end{exampleblock}
+\end{column}
+
+\begin{column}{3cm}
+	\includegraphics[scale=0.4]{./img/angle}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Application}  
+	\framesubtitle{}
+	
+	\begin{block}{Exercices}
+		\begin{itemize}
+			\item .. p ..
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 \section{Axes de symétrie de triangles}
@@ -65,17 +217,150 @@ blabla
 \subsection{Le Triangle Isocèle}
 
 \begin{frame}
-\frametitle{T}  
-\framesubtitle{ST}
-blabla
+\frametitle{Triangle Isocèle}  
+\framesubtitle{}
+
+\begin{columns}[c]
+	
+
+\begin{column}{7cm}
+
+\begin{alertblock}{Propriété}
+	Un triangle isocèle possède un axe de symétrie: \only<2->{la médiatrice de sa base.}
+\end{alertblock}
+
+\begin{block}<3>{Remarque}
+	Cet axe de symétrie est aussi la bissectrice de l'angle au sommet principal.
+\end{block}
+
+\end{column}
+
+\begin{column}{3cm}
+	\includegraphics[scale=0.6]{./img/isocele}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Démonstration}  
+\framesubtitle{}
+	
+\begin{columns}[c]
+	
+	
+	\begin{column}{12cm}
+		
+		\begin{block}{On sait que}
+			\small{Le triangle DEF est isocèle en D et que la \dte{DI} est la médiatrice du \seg{EF}.}\pause
+		\end{block}
+		
+		\begin{block}{Propriété}
+			\small{Si M appartient à la droite (d).
+			Le symétrique M' du point M par rapport à la droite (d) est lui-même.
+			C'est-à-dire, les points M et M' sont confondus.
+			Si M n'appartient pas à la droite (d).
+			Dire que le point M' est le symétrique du point M par rapport à la droite (d) signifie que la droite (d) est la médiatrice du segment [MM'].}\pause
+		\end{block}
+		
+		\begin{block}{Conclusion}
+			\small{Le symétrique du point D par rapport à la droite $(DI)$ est lui-même.
+			Le symétrique de E est F et le symétrique de F est E.
+			Donc le symétrique du triangle DEF est lui-même.
+			Donc $(DI)$ est un axe de symétrie du triangle DEF.}
+		\end{block}
+		
+	\end{column}
+	
+%	\begin{column}{2cm}
+%		\includegraphics[scale=0.5]{./img/isocele}
+%	\end{column}
+	
+\end{columns}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Application}  
+	\framesubtitle{}
+	
+	\begin{block}{Exercices}
+		\begin{itemize}
+			\item .. p ..
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 \subsection{Le Triangle Équilatéral}
 
 \begin{frame}
-\frametitle{T}  
-\framesubtitle{ST}
-blabla
+\frametitle{Le Triangle Équilatéral}  
+\framesubtitle{}
+
+\begin{columns}[c]
+	
+	
+	\begin{column}{6cm}
+		
+		\begin{alertblock}{Propriété (admise)}
+			Un triangle équilatéral possède trois axes de symétrie : \only<2->{les médiatrices de ses côtés.}
+		\end{alertblock}
+		
+		\begin{block}<3>{Remarque}
+			Ces axes de symétrie sont aussi les bissectrices des angles.
+		\end{block}
+		
+	\end{column}
+	
+	\begin{column}{4cm}
+		\includegraphics[scale=0.6]{./img/equilat}
+	\end{column}
+	
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Exemple}  
+	\framesubtitle{}
+	
+	\begin{columns}[c]
+		
+		
+		\begin{column}{7.5cm}
+			
+			\begin{block}{On sait que}
+				Le triangle UVW est équilatéral. Les droites $(d1)$, $(d2)$ et $(d3)$ sont les médiatrices des côtés $[UV]$, $[VW]$ et $[UW]$.
+			\end{block}
+			
+			\begin{block}<2->{Propriété}
+				Un triangle équilatéral possède trois axes de symétrie: les médiatrices de ses côtés.
+			\end{block}
+			
+			\begin{block}<3->{Conclusion}
+				Donc ce sont les axes de symétries du triangle UVW.
+			\end{block}
+			
+		\end{column}
+		
+		\begin{column}{3cm}
+			\includegraphics[scale=0.5]{./img/equilat}
+		\end{column}
+		
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Application}  
+	\framesubtitle{}
+	
+	\begin{block}{Exercices}
+		\begin{itemize}
+			\item .. p ..
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 \section{Axes de symétrie de quadrilatères usuels}
@@ -83,23 +368,23 @@ blabla
 \subsection{Le Losange}
 
 \begin{frame}
-\frametitle{T}  
-\framesubtitle{ST}
+\frametitle{Le Losange}  
+\framesubtitle{}
 blabla
 \end{frame}
 
 \subsection{Le Rectangle}
 
 \begin{frame}
-\frametitle{T}  
-\framesubtitle{ST}
+\frametitle{Le Rectangle}  
+\framesubtitle{}
 blabla
 \end{frame}
 
 \subsection{Le Carré}
 
 \begin{frame}
-\frametitle{T}  
+\frametitle{Le Carré}  
 \framesubtitle{ST}
 blabla
 \end{frame}
@@ -110,6 +395,7 @@ blabla
 \begin{frame}[label=lbl:]
 \frametitle{}  
 \framesubtitle{}
+\end{frame}
 
 \begin{block}{title}
 contenu...
@@ -123,4 +409,16 @@ contenu...
 \begin{exampleblock}{block title}
 contenu...
 \end{exampleblock}
+
+
+\begin{frame}
+	\frametitle{Application}  
+	\framesubtitle{}
+	
+	\begin{block}{Exercices}
+		\begin{itemize}
+			\item .. p ..
+		\end{itemize}
+	\end{block}
+	
 \end{frame}
