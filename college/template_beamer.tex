@@ -1,17 +1,28 @@
 \documentclass{beamer}
 %\usepackage[utf8]{inputenc}
-\usetheme{Warsaw}
+\usetheme{CambridgeUS}
 
-\input{../utils_maths_beamer}
+\input{../../../utils_maths_beamer}
 
-\title{}
-\author{Olivier FINOT}\institute{Collège Jules Ferry, Beaune}
+\title{Titre}
+\author{}\institute{}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, hideothersubsections]
+	\end{frame} 
+}
 
 \begin{document}
-
-\begin{frame}
-  \titlepage
-\end{frame}
+	
+	
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
 
 \begin{frame}
 	\textsc{Beamer}, c'est vachement tout beau!
