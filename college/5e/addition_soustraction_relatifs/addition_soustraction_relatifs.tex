@@ -1,7 +1,8 @@
 \documentclass{beamer}
 %\usepackage[utf8]{inputenc}
-\usetheme{Warsaw}
-\usecolortheme{seahorse}
+%\usetheme{Warsaw}
+\usetheme{CambridgeUS}
+%\usecolortheme{seahorse}
 
 \input{../../../utils_maths_beamer}
 
@@ -229,7 +230,7 @@
 			\center{\includegraphics[scale=0.7]{./img/axe1}}
 		\end{column}
 		\begin{column}{0.465\textwidth}
-			\center{\textbf{$AB = b -a $ si $ b > a$} }
+			\center{\textbf{$AB = a -b $ si $ a > b$} }
 			\center{\includegraphics[scale=0.7]{./img/axe2}}
 		\end{column}
 	\end{columns}
@@ -278,13 +279,110 @@
 	\end{exampleblock}
 \end{frame}
 
-\subsection{Expression algébrique}
+\section{Expressions algébriques}
+
+\subsection{Calcul d'une expression algébrique}
 
 \begin{frame}
-	\frametitle{bla}  
-	\framesubtitle{}	
+	\frametitle{Expression algébrique}  
+	\framesubtitle{Définition}	
 	
-	bla
+	\begin{block}{Définition}
+		Une expression algébrique est une suite d'additions et de soustractions de nombres.
+	\end{block}
+	
+	\begin{exampleblock}{Exemple}
+		$E = (-3,7) + (-11,9) + (+0,6) - (-11,4) - (+35,8)$\\
+		
+		$E$ est une expression algébrique.
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Expression algébrique}  
+	\framesubtitle{Calcul }
+	
+	\begin{block}{Propriété}
+		Pour calculer la \textbf{\underline{somme}} de plusieurs nombres relatifs, on peut \underline{modifier l'ordre des termes} puis les \underline{regrouper} différemment sans que cela ne change le résultat.\pause
+	\end{block}	
+	
+	\begin{block}{Méthode}
+		Pour calculer une expression algébrique :
+		\begin{itemize}
+			\item On commence par \underline{transformer les soustractions en additions}.
+			\item On \underline{ajoute les nombres positifs entre eux}. 
+			\item On \underline{ajoute les nombres négatifs entre eux}.
+			\item On ajoute les deux nombres restants.
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{Expression algébrique}  
+	\framesubtitle{Exemple }	
+	
+	
+	\begin{exampleblock}{Exemple 1}
+		\begin{itemize}
+			\item[$E=$] $(-3,7) + (-11,9) + (+0,6) - (-11,4) - (+35,8)$
+			\item[$E=$] $(-3,7) + (-11,9) + (+0,6) \textbf{+ (+11,4) + (-35,8)}$
+			\item[$E=$] $\textbf{(+0,6) + (+11,4)} + (-3,7) + (-11,9) + (-35,8)$
+			\item[$E=$] $\textbf{(+12)} + (-51,4)$
+			\item[$E=$] $ -39,4 $
+		\end{itemize}		
+	\end{exampleblock}
+	
+	\begin{exampleblock}{Exemple 2}
+		\begin{itemize}
+			\item[$F=$] $(-8,5) + (+5,6) - (+2,5) - (-3) + (-4)$
+			\item[$F=$] $(-8,5) + (+5,6) \textbf{+ (-2,5) + (+3)} + (-4)$
+			\item[$F=$] $ (+5,6) + (+3) + (-8,5) + (-2,5) + (-4)$
+			\item[$F=$] $\textbf{(+8,6)} + (-15)$
+			\item[$F=$] $ -6,4 $
+		\end{itemize}		
+	\end{exampleblock}
+\end{frame}
+	
+\subsection{Simplification d'une expression algébrique}
+
+\begin{frame}
+	\frametitle{Expression algébrique}  
+	\framesubtitle{Simplification }	
+	
+	\begin{block}{Règle}
+		Pour \textbf{\underline{simplifier une expression algébrique}}, on peut :
+		\begin{itemize}
+			\item Supprimer le signe $\ll$+$\gg$ et les parenthèses des nombres positifs.
+			\item \'Ecrire le premier terme sans parenthèse.
+		\end{itemize}
+	\end{block}
+	
+	\begin{exampleblock}{Exemples}
+		
+		\begin{itemize}
+			\item $(-8) + (+3) = -8 + 3$
+			\item $(-8) + (-3) = (-8) - (+3) = -8 -3 $
+			\item $ (+4) - (-7) = (+4) + (+7) = 4 + 7$
+			\item $ (+11,5) - (+4,5) = 11,5 - 4,5$ 
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Expression algébrique}  
+	\framesubtitle{Exemple de calcul d'une expression simplifiée}	
+	
+	
+	\begin{exampleblock}{Exemple}
+		\begin{itemize}
+			\item[$G=$] $7 + 2,5 - 3,7 + 4,1 - 2,3$
+			\item[$G=$] $7 + 2,5 + 4,1 - 3,7 - 2,3$
+			\item[$G=$] $(7 + 2,5 + 4,1) - (3,7 + 2,3)$
+			\item[$G=$] $13,1 - 6$
+			\item[$G=$] $ 7,1 $
+		\end{itemize}		
+	\end{exampleblock}
+	
 \end{frame}
 
 \end{document}
