@@ -7,6 +7,8 @@
 \usepackage{lmodern}
 \usepackage{textcomp}
 
+
+
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
@@ -14,7 +16,7 @@
 %-------------------------------------------------------------------------------
 \usepackage{hyperref}
 \hypersetup{pdfstartview=XYZ}
-\usepackage{enumerate}
+%\usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{tabularx}
@@ -25,8 +27,7 @@
 \usepackage{indentfirst} %%pour que les premier paragraphes soient aussi indentés
 \usepackage{verbatim}
 \usepackage{enumitem}
-\setenumerate[1]{font=\bfseries,label=\textit{\alph*})}
-\setenumerate[2]{font=\bfseries,label=\arabic*)}
+
 %-------------------------------------------------------------------------------
 
 
@@ -45,6 +46,15 @@
 %                    - Mise en forme avancée
 %-------------------------------------------------------------------------------
 
+\usepackage{pas-cours}
+
+%-------------------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------------------
+%                    - Mise en forme avancée
+%-------------------------------------------------------------------------------
+
 \usepackage{ifthen}
 
 
@@ -55,22 +65,22 @@
 %-------------------------------------------------------------------------------
 %                     -Mise en forme d'exercices-
 %-------------------------------------------------------------------------------
-\newtheoremstyle{exostyle}
-{\topsep}% espace avant
-{\topsep}% espace apres
-{}% Police utilisee par le style de thm
-{}% Indentation (vide = aucune, \parindent = indentation paragraphe)
-{\bfseries}% Police du titre de thm
-{.}% Signe de ponctuation apres le titre du thm
-{ }% Espace apres le titre du thm (\newline = linebreak)
-{\thmname{#1}\thmnumber{ #2}\thmnote{. \normalfont{\textit{#3}}}}% composants du titre du thm : \thmname = nom du thm, \thmnumber = numéro du thm, \thmnote = sous-titre du thm
+%\newtheoremstyle{exostyle}
+%{\topsep}% espace avant
+%{\topsep}% espace apres
+%{}% Police utilisee par le style de thm
+%{}% Indentation (vide = aucune, \parindent = indentation paragraphe)
+%{\bfseries}% Police du titre de thm
+%{.}% Signe de ponctuation apres le titre du thm
+%{ }% Espace apres le titre du thm (\newline = linebreak)
+%{\thmname{#1}\thmnumber{ #2}\thmnote{. \normalfont{\textit{#3}}}}% composants du titre du thm : \thmname = nom du thm, \thmnumber = numéro du thm, \thmnote = sous-titre du thm
 
-\theoremstyle{exostyle}
-\newtheorem{exercice}{Exercice}
-
-\newenvironment{questions}{
-\begin{enumerate}[\hspace{12pt}\bfseries\itshape a.]}{\end{enumerate}
-} %mettre un 1 à la place du a si on veut des numéros au lieu de lettres pour les questions 
+%\theoremstyle{exostyle}
+%\newtheorem{exercice}{Exercice}
+%
+%\newenvironment{questions}{
+%\begin{enumerate}[\hspace{12pt}\bfseries\itshape a.]}{\end{enumerate}
+%} %mettre un 1 à la place du a si on veut des numéros au lieu de lettres pour les questions 
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
@@ -106,6 +116,11 @@
 %Intégration des parenthèses aux cosinus
 \newcommand{\cosP}[1]{\cos\left(#1\right)}
 \newcommand{\sinP}[1]{\sin\left(#1\right)}
+
+
+%Probas stats
+\newcommand{\stat}{statistique}
+\newcommand{\stats}{statistiques}
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
@@ -113,3 +128,17 @@
 %-------------------------------------------------------------------------------
 
 \newcommand{\twoCol}[1]{\begin{multicols}{2}#1\end{multicols}}
+
+
+\setenumerate[1]{font=\bfseries,label=\textit{\alph*})}
+\setenumerate[2]{font=\bfseries,label=\arabic*)}
+
+
+%-------------------------------------------------------------------------------
+%                    - Elements cours -
+%-------------------------------------------------------------------------------
+
+%Théorèmes
+\newcommand{\thm}[1]{\env[style=thm ,name=Théorème de Pythagore ,degrade]{#1}}
+\newcommand{\thmNum}[1]{\env[style=thm ,name=Théorème de Pythagore ,degrade, num]{#1}}
+
