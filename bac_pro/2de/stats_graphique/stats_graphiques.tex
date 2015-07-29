@@ -2,6 +2,7 @@
 
 %\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
 \usepackage{fullpage}
+\usepackage{array}
 \usepackage{../../../pas-math}
 
 %\usepackage{pas-cours}
@@ -20,28 +21,46 @@
 
 \section{Population et Caractère}
 
-\begin{pasbox}[style=defi ,degrade , pluriel, name=Population]
+\begin{mydefs}
 La \definmot{population} est l'ensemble des individus (personnes, objets ou faits ...) étudiés.
 La \definmot{série statistique} est l'ensemble des valeurs collectées.
-\end{pasbox}
+\end{mydefs}
 
-\begin{pasbox}[style=defi ,degrade , pluriel, name=Caractère]
+
+\begin{myex}
+	
+	Le tableau suivant présente le nombre de repas pris chaque semaine par les élèves d'un lycée professionnel :
+	
+	\begin{center}
+		\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+			\hline
+			Nombre de repas & 0 & 1 & 2 & 3 & 4 & 5 \\ \hline
+			Nombre d'élèves & 56 & 24 & 72 & 99 & 259 & 115 \\ \hline
+		\end{tabular}
+	\end{center}
+	
+	Ici la \definmot{population} étudiée est les élèves du lycée.
+\end{myex}
+
+
+\begin{mydefs}
 
 Le \definmot{caractère} est la propriété étudiée sur la population, il est :
 \begin{itemize}
 	\item \definmot{quantitatif} quand il est mesurable :
 		\begin{itemize}
 			\item \definmot{discret} si les valeurs sont des nombres isolés ;
-			\item \definmot{continu} si les valeurs ne sont pas isolée. %Les valeurs sont regroupées en \definmot{classes} ou \definmot{intervalles}  $\intervFO{a}{b}$ ; l'\definmot{amplitude} de l'intervalle est $b -a$;
+			\item \definmot{continu} si les valeurs ne sont pas isolées. %Les valeurs sont regroupées en \definmot{classes} ou \definmot{intervalles}  $\intervFO{a}{b}$ ; l'\definmot{amplitude} de l'intervalle est $b -a$;
 		\end{itemize}
 	\item \definmot{qualitatif} quand il n'est pas mesurable. %, les valeurs s'appellent alors $\ll$ modalités $\gg$ .
 \end{itemize}
-\end{pasbox}
+\end{mydefs}
 
-\begin{pasbox}[style=defi ,degrade , pluriel, name=Effectif]
+
+\begin{mydefs}
 	L'\definmot{effectif} $n_i$ est le nombre d'individus correspondant à une valeur du caractère. L'\definmot{effectif total} $N$ est le nombre total d'individus.
 	La fréquence $f_i$ est, pour chaque valeur du caractère, le quotient de l'effectif $n_i$ par l'effectif total $N$ multiplié par 100 pour obtenir le résultat en pourcentage.
-\end{pasbox}		
+\end{mydefs}		
 
 
 

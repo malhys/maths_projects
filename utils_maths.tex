@@ -56,6 +56,7 @@
 %-------------------------------------------------------------------------------
 
 \usepackage{ifthen}
+\usepackage{ifmtarg}
 
 
 \newcommand{\ifTrue}[2]{\ifthenelse{\equal{#1}{true}}{#2}{$\qquad \qquad$}}
@@ -142,3 +143,31 @@
 \newcommand{\thm}[1]{\env[style=thm ,name=Théorème de Pythagore ,degrade]{#1}}
 \newcommand{\thmNum}[1]{\env[style=thm ,name=Théorème de Pythagore ,degrade, num]{#1}}
 
+%-------------------------------------------------------------------------------
+%                    - Elements cours -
+%-------------------------------------------------------------------------------
+
+\newenvironment{mydef}{	
+	\begin{pasbox}[style=defi ,degrade, pluriel]	
+}{
+	\end{pasbox}
+}
+
+\newenvironment{mydefs}{
+
+	\begin{pasbox}[style=defi ,degrade, pluriel]	
+}{
+	\end{pasbox}
+}
+
+\newenvironment{myex}{
+	\begin{pasbox}[style=ex ,degrade]
+}{
+	\end{pasbox}
+}
+%
+%\newenvironment{\myexs}{
+%	\begin{pasbox}[style=ex ,degrade, pluriel]
+%	}{
+%	\end{pasbox}
+%}
