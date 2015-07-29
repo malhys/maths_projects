@@ -22,8 +22,8 @@
 \section{Population et Caractère}
 
 \begin{mydefs}
-La \definmot{population} est l'ensemble des individus (personnes, objets ou faits ...) étudiés.
-La \definmot{série statistique} est l'ensemble des valeurs collectées.
+La \kw{population} est l'ensemble des individus (personnes, objets ou faits ...) étudiés.
+La \kw{série statistique} est l'ensemble des valeurs collectées.
 \end{mydefs}
 
 
@@ -39,29 +39,53 @@ La \definmot{série statistique} est l'ensemble des valeurs collectées.
 		\end{tabular}
 	\end{center}
 	
-	Ici la \definmot{population} étudiée est les élèves du lycée.
+	Ici la \kw{population} étudiée est les élèves du lycée.
 \end{myex}
 
 
-\begin{mydefs}
+\begin{mydef}
 
-Le \definmot{caractère} est la propriété étudiée sur la population, il est :
+Le \kw{caractère} est la propriété étudiée sur la population, il est :
 \begin{itemize}
-	\item \definmot{quantitatif} quand il est mesurable :
+	\item \kw{quantitatif} quand il est mesurable :
 		\begin{itemize}
-			\item \definmot{discret} si les valeurs sont des nombres isolés ;
-			\item \definmot{continu} si les valeurs ne sont pas isolées. %Les valeurs sont regroupées en \definmot{classes} ou \definmot{intervalles}  $\intervFO{a}{b}$ ; l'\definmot{amplitude} de l'intervalle est $b -a$;
+			\item \kw{discret} si les valeurs sont des nombres isolés ;
+			\item \kw{continu} si les valeurs ne sont pas isolées. %Les valeurs sont regroupées en \kw{classes} ou \kw{intervalles}  $\intervFO{a}{b}$ ; l'\kw{amplitude} de l'intervalle est $b -a$;
 		\end{itemize}
-	\item \definmot{qualitatif} quand il n'est pas mesurable. %, les valeurs s'appellent alors $\ll$ modalités $\gg$ .
+	\item \kw{qualitatif} quand il n'est pas mesurable. %, les valeurs s'appellent alors $\ll$ modalités $\gg$ .
 \end{itemize}
-\end{mydefs}
+\end{mydef}
 
+\begin{myex}
+	
+	Dans l'exemple ci-dessus, le \kw{caractère} étudié est le nombre de repas pris chaque semaine. Il ne peut prendre que des valeurs entières comprises entre $0$ et $1$, il est donc \kw{quantitatif discret}.
+	
+	
+\end{myex}
 
 \begin{mydefs}
-	L'\definmot{effectif} $n_i$ est le nombre d'individus correspondant à une valeur du caractère. L'\definmot{effectif total} $N$ est le nombre total d'individus.
-	La fréquence $f_i$ est, pour chaque valeur du caractère, le quotient de l'effectif $n_i$ par l'effectif total $N$ multiplié par 100 pour obtenir le résultat en pourcentage.
+	L'\kw{effectif} $n_i$ est le nombre d'individus correspondant à une valeur du caractère. L'\kw{effectif total} $N$ est le nombre total d'individus.
+	
+	Pour chaque valeur du caractère la \kw{fréquence} $f_i$ est le quotient $\dfrac{n_i}{N}$
 \end{mydefs}		
 
+
+\begin{myex}
+	L'\kw{effectif total} est : $56 + 24 + 72 + 99 + 259 + 115 = 625$\\
+	
+	La \kw{fréquence} $f_1$de la valeur $1$ du caractère est : $\dfrac{24}{625} * 100 = 3,84\%$ 
+
+	\begin{center}
+		
+	
+	\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+		\hline
+		Nombre de repas & 0 & 1 & 2 & 3 & 4 & 5 \\ \hline
+	%	Nombre d'élèves & 56 & 24 & 72 & 99 & 259 & 115 \\ \hline
+		Fréquence & 8,96\% & 3,84\% & 11,52\% & 15,84\% & 41,44\% & 18,40\% \\ \hline
+	\end{tabular}
+	\end{center}
+\end{myex}
 
 
 \end{document}
