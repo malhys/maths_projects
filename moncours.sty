@@ -1,0 +1,110 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{moncours}
+\usepackage{ulem}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{pas-cours}
+
+
+%-------------------------------------------------------------------------------
+%                    - Mise en forme globale -
+%-------------------------------------------------------------------------------
+
+
+\makeatletter
+\renewcommand\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {% set colour and font for the title 
+    \color{Red}\bfseries\LARGE
+    \@title \par}%
+    \vskip 1.5em%
+    {% set colour and font for the author
+      \color{CornflowerBlue}\sffamily\large
+      \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip 1em%
+    {% set colour and font for the date
+    \color{CornflowerBlue}\sffamily\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1.5em}
+
+\renewcommand\section{%
+\@startsection{section}{1}{\z@}%
+              {-3.5ex \@plus -1ex \@minus -.2ex}%
+              {2.3ex \@plus.2ex}%
+              {\color{Red}\Large\bfseries\underline}}
+            
+\renewcommand{\thesection}{\Roman{section}. }            
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname \hspace{0.2cm}}
+
+            
+\renewcommand\subsection{%
+\@startsection{subsection}{2}{\z@}%
+              {-3.25ex\@plus -1ex \@minus -.2ex}%
+              {1.5ex \@plus .2ex}%
+              {\color{Green}\large\bfseries\underline}}
+
+\renewcommand{\thesubsection}{\arabic{subsection}) }            
+\makeatother
+
+
+
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%                    - Elements de cours -
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%Reprise des environnements définis dans le package pas-maths et personalisation
+
+%% Mot clé à mettre en évidence
+\newcommand{\kw}[1]{\definmot{#1}}
+
+%------------------------------------------------------
+% Définitions
+
+% Singulier
+\newenvironment{mydef}{	
+	\begin{pasbox}[style=defi ,degrade, color=BrickRed]	
+	}{
+\end{pasbox}
+}
+
+% Pluriel
+\newenvironment{mydefs}{
+	
+	\begin{pasbox}[style=defi ,degrade, pluriel, color=BrickRed]	
+	}{
+\end{pasbox}
+}
+
+
+%------------------------------------------------------
+% Exemples
+\newenvironment{myex}{
+	\begin{pasbox}[style=ex ,degrade, color=ForestGreen]
+	}{
+\end{pasbox}
+}
+%
+
+%------------------------------------------------------
+% Remarques
+\newenvironment{myrem}{
+	\begin{pasbox}[style=rem ,degrade, color=Blue]
+	}{
+\end{pasbox}
+}
+
+\newenvironment{myrems}{
+	\begin{pasbox}[style=rem ,degrade, color=Blue, pluriel]
+	}{
+\end{pasbox}
+}
+\endinput

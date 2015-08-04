@@ -43,11 +43,6 @@
 %-------------------------------------------------------------------------------
 
 
-%-------------------------------------------------------------------------------
-%                    - Mise en forme avancée
-%-------------------------------------------------------------------------------
-
-\usepackage{pas-cours}
 
 %-------------------------------------------------------------------------------
 
@@ -140,43 +135,4 @@
 %                    - Elements cours -
 %-------------------------------------------------------------------------------
 
-%Théorèmes
-\newcommand{\thm}[1]{\env[style=thm ,name=Théorème de Pythagore ,degrade]{#1}}
-\newcommand{\thmNum}[1]{\env[style=thm ,name=Théorème de Pythagore ,degrade, num]{#1}}
 
-%-------------------------------------------------------------------------------
-%                    - Elements cours -
-%-------------------------------------------------------------------------------
-
-\newcommand{\kw}[1]{\definmot{#1}}
-
-\newenvironment{mydef}{	
-	\begin{pasbox}[style=defi ,degrade, color=BrickRed]	
-}{
-	\end{pasbox}
-}
-
-\newenvironment{mydefs}{
-
-	\begin{pasbox}[style=defi ,degrade, pluriel, color=BrickRed]	
-}{
-	\end{pasbox}
-}
-
-\newenvironment{myex}{
-	\begin{pasbox}[style=ex ,degrade, color=ForestGreen]
-}{
-	\end{pasbox}
-}
-%
-%\newenvironment{\myexs}{
-%	\begin{pasbox}[style=ex ,degrade, pluriel]
-%	}{
-%	\end{pasbox}
-%}
-
-\newenvironment{myrem}{
-	\begin{pasbox}[style=rem ,degrade, color=Blue]
-}{
-	\end{pasbox}
-}

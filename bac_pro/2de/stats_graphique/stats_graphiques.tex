@@ -4,10 +4,16 @@
 \usepackage{fullpage}
 \usepackage{array}
 \usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
 
 %\usepackage{pas-cours}
 \input{../../../utils_maths}
 
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
 
 
 \author{Olivier FINOT}
@@ -19,8 +25,9 @@
 \begin{document}
 \maketitle
 
-\section{Population et Caractère}
+\section{Population, Caractère et Effectif}
 
+\subsection{Population}
 \begin{mydefs}
 La \kw{population} est l'ensemble des individus (personnes, objets ou faits ...) étudiés.
 La \kw{série statistique} est l'ensemble des valeurs collectées.
@@ -43,6 +50,8 @@ La \kw{série statistique} est l'ensemble des valeurs collectées.
 \end{myex}
 
 
+\subsection{Caractère}
+
 \begin{mydef}
 
 Le \kw{caractère} est la propriété étudiée sur la population, il est :
@@ -63,17 +72,28 @@ Le \kw{caractère} est la propriété étudiée sur la population, il est :
 	
 \end{myex}
 
+\subsection{Effectif}
+
 \begin{mydefs}
-	L'\kw{effectif} $n_i$ est le nombre d'individus correspondant à une valeur du caractère. L'\kw{effectif total} $N$ est le nombre total d'individus.
+	L'\kw{effectif} $n_i$ est le nombre d'individus correspondant à une valeur du caractère. 
 	
-	Pour chaque valeur du caractère la \kw{fréquence} $f_i$ est le quotient $\dfrac{n_i}{N}$
+\end{mydefs}
+
+
+\section{Représentations graphiques}
+
+\section{Effectif Total et Fréquence}
+\begin{mydefs}
+	L'\kw{effectif total} $N$ est le nombre total d'individus de la population étudiée.
+	
+	Pour chaque valeur du caractère la \kw{fréquence} $f_i$ est calculée en divisant l'effectif correspondant à la valeur par l'effectif total  ($\frac{n_i}{N}$).
 \end{mydefs}		
 
 
 \begin{myex}
 	L'\kw{effectif total} est : $56 + 24 + 72 + 99 + 259 + 115 = 625$\\
 	
-	La \kw{fréquence} $f_1$de la valeur $1$ du caractère est : $\dfrac{24}{625} * 100 = 3,84\%$ 
+	La \kw{fréquence} $f_1$de la valeur $1$ du caractère est : $\dfrac{24}{625} = 0,384$ 
 
 	\begin{center}
 		
@@ -88,7 +108,7 @@ Le \kw{caractère} est la propriété étudiée sur la population, il est :
 \end{myex}
 
 \begin{myrem}
-	La somme des fréquences d'une série statistique est égale à $1$.
+	La somme des fréquences d'une série statistique est égale à $100\%$.
 \end{myrem}
 
 \end{document}
