@@ -27,6 +27,7 @@
 \usepackage{indentfirst} %%pour que les premier paragraphes soient aussi indentés
 \usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 
 %-------------------------------------------------------------------------------
 
@@ -150,20 +151,20 @@
 \newcommand{\kw}[1]{\definmot{#1}}
 
 \newenvironment{mydef}{	
-	\begin{pasbox}[style=defi ,degrade]	
+	\begin{pasbox}[style=defi ,degrade, color=BrickRed]	
 }{
 	\end{pasbox}
 }
 
 \newenvironment{mydefs}{
 
-	\begin{pasbox}[style=defi ,degrade, pluriel]	
+	\begin{pasbox}[style=defi ,degrade, pluriel, color=BrickRed]	
 }{
 	\end{pasbox}
 }
 
 \newenvironment{myex}{
-	\begin{pasbox}[style=ex ,degrade]
+	\begin{pasbox}[style=ex ,degrade, color=ForestGreen]
 }{
 	\end{pasbox}
 }
@@ -173,3 +174,9 @@
 %	}{
 %	\end{pasbox}
 %}
+
+\newenvironment{myrem}{
+	\begin{pasbox}[style=rem ,degrade, color=Blue]
+}{
+	\end{pasbox}
+}
