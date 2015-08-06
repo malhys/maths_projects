@@ -4,6 +4,12 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{pas-cours}
 
+\usepackage{fancyhdr}
+
+%\pagestyle{fancy}
+%\fancyhf{}
+%\
+
 
 %-------------------------------------------------------------------------------
 %                    - Mise en forme globale -
@@ -20,16 +26,16 @@
     {% set colour and font for the title 
     \color{Red}\bfseries\LARGE
     \@title \par}%
-    \vskip 1.5em%
-    {% set colour and font for the author
-      \color{CornflowerBlue}\sffamily\large
-      \lineskip .5em%
-      \begin{tabular}[t]{c}%
-        \@author
-      \end{tabular}\par}%
     \vskip 1em%
-    {% set colour and font for the date
-    \color{CornflowerBlue}\sffamily\large \@date}%
+%    {% set colour and font for the author
+%      \color{CornflowerBlue}\sffamily\large
+%      \lineskip .5em%
+%      \begin{tabular}[t]{c}%
+%        \@author
+%      \end{tabular}\par}%
+%    \vskip 1em%
+%    {% set colour and font for the date
+%    \color{CornflowerBlue}\sffamily\large \@date}%
   \end{center}%
   \par
   \vskip 1.5em}
@@ -63,6 +69,9 @@
 %-------------------------------------------------------------------------------
 %Reprise des environnements définis dans le package pas-maths et personalisation
 
+
+\newcommand{\KW}[1]{\textbf{\uline{#1}}}
+
 %% Mot clé à mettre en évidence
 \newcommand{\kw}[1]{\definmot{#1}}
 
@@ -83,6 +92,7 @@
 	}{
 \end{pasbox}
 }
+
 
 
 %------------------------------------------------------
@@ -106,5 +116,12 @@
 	\begin{pasbox}[style=rem ,degrade, color=Blue, pluriel]
 	}{
 \end{pasbox}
+}
+
+
+\newenvironment{mybox}{
+	\begin{pasbox}[style=prop ,degrade, notitle, color=NavyBlue]
+}{
+	\end{pasbox}
 }
 \endinput
