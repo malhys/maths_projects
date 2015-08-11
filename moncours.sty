@@ -75,6 +75,9 @@
 %% Mot clé à mettre en évidence
 \newcommand{\kw}[1]{\definmot{#1}}
 
+%% "Casser" la boite
+\newcommand{\mysp}{\breakbox} 
+
 %------------------------------------------------------
 % Définitions
 
@@ -107,13 +110,28 @@
 %------------------------------------------------------
 % Remarques
 \newenvironment{myrem}{
-	\begin{pasbox}[style=rem ,degrade, color=Blue]
+	\begin{pasbox}[style=rem ,degrade, color=Gray]
 	}{
 \end{pasbox}
 }
 
 \newenvironment{myrems}{
-	\begin{pasbox}[style=rem ,degrade, color=Blue, pluriel]
+	\begin{pasbox}[style=rem ,degrade, color=Gray, pluriel]
+	}{
+\end{pasbox}
+}
+
+
+%------------------------------------------------------
+% Rappels
+\newenvironment{myrap}{
+	\begin{pasbox}[title=Rappel, style=rem ,degrade, color=Blue]
+	}{
+\end{pasbox}
+}
+
+\newenvironment{myraps}{
+	\begin{pasbox}[title=Rappels, style=rem ,degrade, color=Blue]
 	}{
 \end{pasbox}
 }
