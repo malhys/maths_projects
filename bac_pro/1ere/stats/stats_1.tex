@@ -39,20 +39,7 @@
 \end{mydef}
 
 
-\begin{myex}
-	
-	Le tableau suivant présente le nombre de repas pris chaque semaine par les élèves d'un lycée professionnel :
-	
-	\begin{center}
-		\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
-			\hline
-			Nombre de repas & 0 & 1 & 2 & 3 & 4 & 5 \\ \hline
-			Nombre d'élèves & 56 & 24 & 72 & 99 & 259 & 115 \\ \hline
-		\end{tabular}
-	\end{center}
-	
-	Ici le \kw{mode} est 4, car $259 > 56$ et $259 > 24$ et $259 > 72$ et $259 > 99$ et $259 > 115$.
-\end{myex}
+\input{./ex1}
 
 
 \subsection{Médiane}
@@ -75,28 +62,7 @@
 	\end{itemize}
 \end{mymeth}
 
-\begin{myex}
-
-
-Le 1$^{er}$ novembre 2012, on a relevé le prix du gazole sur 10 points de vente du département du Territoire de Belfort. Les 10 prix rangés dans l'ordre croissant sont :
-
-\begin{center}
-	\begin{tabular}{|@{\ }l@{\ } | @{\ }c@{\ } | @{\ }c@{\ } | @{\ }c@{\ } |@{\ }c@{\ } |@{\ }c@{\ } |@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
-		\hline
-		Rang & 1 & 2 & 3 & 4 & \kw{5} & \kw{6} & 7 & 8 & 9& 10 \\ \hline  
-		Prix & 1,368 & 1,369 & 1,374 & 1,375 & \kw{1,377} & \kw{1,379} & 1,385 & 1,408 & 1,450 & 1,460 \\ \hline			
-	\end{tabular}
-\end{center}
-
-Ici $N = 10$ est pair.
-
-La \kw{médiane $Me$} de la série est donc la moyenne entre les $5^e$ et $6^e$ valeurs :
-
-\begin{center}
-	$Me = \dfrac{n_5 + n_6}{2} = \dfrac{1,377 + 1,379}{2} = 1,378$
-\end{center}
-La moitié des prix pratiqués est donc inférieure ou égale à 1,378 €.
-\end{myex}
+\input{./ex2}
 
 \subsection{Moyenne}
 
@@ -107,28 +73,14 @@ La moitié des prix pratiqués est donc inférieure ou égale à 1,378 €.
 	
 \end{mydef}
 
-\begin{myex}
-	Ici on considère la répartition des prix du gazole dans l'ensemble des 25 stations du département :
-	
-	\begin{center}
-		\begin{tabular}{|@{\ }l@{\ } | @{\ }c@{\ } | @{\ }c@{\ } | @{\ }c@{\ } |@{\ }c@{\ } |@{\ }c@{\ } |@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
-			\hline
-			Prix & 1,368 & 1,369 & 1,374 & 1,375 & \kw{1,377} & \kw{1,379} & 1,385 & 1,408 & 1,450 & 1,460 \\ \hline			
-			Nb. de stations & 2 & 5 & 2 & 4 & 1 & 4 & 2 & 1 & 3 & 1 \\ \hline
-		\end{tabular}
-	\end{center}
-	
-	\kw{Moyenne} des prix des 25 stations : 
-	\begin{center}
-		$\bar{x} = \dfrac{1,368 \times 2 + 1,369 \times 5 + ... + 1,450 \times 3 + 1,460}{25} = 1,3884$
-	\end{center}
-	
-	Le prix moyen observé pour ces 25 stations est 1,3884 €.	 
-	
-\end{myex}
+\input{./ex3}
 
-
-
+\begin{mywarning}
+	Ne pas confondre moyenne et médiane qui sont deux indicateurs statistiques très différents.\\
+	
+	
+	En 2013 le salaire moyen français était de 7.800 € bruts par mois, alors que le salaire médian était de 1.675 € bruts par mois\footnote{Source : http://www.lefigaro.fr/social/2014/03/13/09010-20140313ARTFIG00167-derriere-le-salaire-moyen-de-fortes-disparites.php}.
+\end{mywarning}
 
 \section{Indicateurs de dispersion}
 
@@ -138,18 +90,7 @@ La moitié des prix pratiqués est donc inférieure ou égale à 1,378 €.
 		L'\kw{étendue $e$} d'une série statistique est la différence entre la plus grande et la plus petite valeur de la série.
 	\end{mydef}	
 
-	\begin{myex}
-		Les 10 prix rangés par ordre croissant sont :
-		\begin{center}
-			\begin{tabular}{|@{\ }l@{\ } | @{\ }c@{\ } | @{\ }c@{\ } | @{\ }c@{\ } |@{\ }c@{\ } |@{\ }c@{\ } |@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
-				\hline
-				Rang & 1 & 2 & 3 & 4 & \kw{5} & \kw{6} & 7 & 8 & 9& 10 \\ \hline  
-				Prix & 1,368 & 1,369 & 1,374 & 1,375 & \kw{1,377} & \kw{1,379} & 1,385 & 1,408 & 1,450 & 1,460 \\ \hline			
-			\end{tabular}
-		\end{center}
-		
-		L'étendue de la série est $e = 1,460 - 1,368 = 0,092$ €.
-	\end{myex}
+	\input{./ex4}
 
 \subsection{Quartiles}
 
@@ -178,34 +119,7 @@ La moitié des prix pratiqués est donc inférieure ou égale à 1,378 €.
 	\end{itemize}
 \end{mymeth}
 
-\begin{myex}
-	
-	
-	\begin{itemize}		
-
-		\item Dans l'exemple ci-dessus, on a $N = 10$, donc $N$ n'est pas un multiple de 4.
-		
-		$r_1 = 0,25 \times N = 0,25 \times 10 = 2,5$ et $ r_3 = 0,75 \times N = 0,75 \times 10 = 7,5 $
-		
-
-		\item Calcul du \kw{premier quartile $Q_1$} :
-		\begin{itemize}
-			\item le plus petit entier supérieur à $r_1 = 2,5$ est 3 ;
-			\item $Q_1$ correspond à la 3$^e$ valeur de la série : $Q_1 = 1,374$
-		\end{itemize}
-		
-		\item Calcul du \kw{troisième quartile $Q_3$} :
-		\begin{itemize}
-			\item le plus petit entier supérieur à $r_3 = 7,5$ est 8 ;
-			\item $Q_3$ correspond à la 8$^e$ valeur de la série : $Q_3 = 1,408$
-		\end{itemize}
-		
-		25 \% des prix pratiqués sont inférieurs ou égaux à 1,374 € et 75 \% des prix pratiqués sont inférieurs à 1,408 €.
-		
-		
-		\item L'\kw{écart interquartile $Q_3 - Q_1$} vaut $1,408 - 1,374 = 0,034$ €.
-	\end{itemize}
-\end{myex}
+\input{./ex5}
 
 
 \subsection{\'Ecart type}
@@ -218,13 +132,7 @@ La moitié des prix pratiqués est donc inférieure ou égale à 1,378 €.
 	Inversement, plus l'écart type $\sigma$ est grand, plus les valeurs sont <<\kw{resserrées}>> autour de la moyenne.
 \end{mydef}	
 
-\begin{myex}
-	Ces deux graphiques représentent deux séries de même effectif et de de même moyenne $\bar{x} = 11$.
-	
-	\includegraphics[scale=0.9, angle=-1.1, origin=c]{img/ex_ecart_type}
-	
-	$\sigma _A < \sigma _B$ : les valeurs de la série $\mathbf{B}$ sont plus dispersées que celles de la série $\mathbf{A}$ autour de $\bar{x}$. 
-\end{myex}
+\input{./ex6}
 			
 
 \section{Diagrammes en boîte à moustaches}
@@ -237,10 +145,5 @@ La moitié des prix pratiqués est donc inférieure ou égale à 1,378 €.
 	Le minimum $x_{min}$ et le maximum $x_{max}$ correspondent aux extrémités des <<\kw{moustaches}>>.
 \end{mydef}
 
-\begin{myex}
-	Boite à moustache correspondant à l'exemple :
-		\begin{center}
-		 \includegraphics[scale=0.67]{img/moustache}
-	\end{center}
-\end{myex}
+\input{./ex7}
 \end{document}

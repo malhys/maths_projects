@@ -1,0 +1,123 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+%\newcommand{\disp}{false}
+
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+\chap[num=2, color=red]{Fonctions de référence}{Olivier FINOT, \today }
+
+\section{Rappels}
+
+
+
+\begin{mydefs}
+	
+	\begin{itemize}
+		\item Toute fonction est définie sur \kw{intervalle} I.
+		
+		\item Elle a un nom, souvent \kw{$f$}.
+		
+		\item Le nombre de départ, \kw{la variable} est en général appelé $x$. Le nombre qui lui est associé est alors noté \kw{$f(x)$}.
+		
+		\item Le nombre $f(x)$ est appelé \kw{image de $x$} par la fonction $f$.
+		
+		\item \kw{x} est appelé \kw{antécédentde $f(x)$} par la fonction $f$
+		
+		\item $f$ est \kw{croissante} si $f(x)$ augmente quand $x$ augmente.
+		
+		\item $f$ est \kw{décroissante} si $f(x)$ diminue quand $x$ augmente.
+	\end{itemize}
+	
+	%
+
+\end{mydefs}
+
+\begin{myillus}
+	{\centering \includegraphics[scale=0.5]{./img/voc}}
+\end{myillus}
+
+\section{Fonctions de référence}
+
+\subsection{Fonction carré}
+
+\begin{mydef}
+	La \kw{fonction carré} est définie par $x \mapsto x^2$.
+\end{mydef}
+\begin{myprops}
+	\begin{itemize}
+		\item Elle est définie pour tous les nombres qui existent (sur l'intervalle $\intervOO{- \infty }{+ \infty}$).
+		\item Elle est décroissante sur $\intervOF{- \infty}{0}$.
+		\item Elle est croissante sur $\intervFO{0}{+ \infty}$.
+	\end{itemize}
+	
+\end{myprops}
+
+\input{carre}
+
+\subsection{Fonction inverse}
+
+\begin{mydef}
+	La fonction inverse est définie par $x \mapsto \dfrac{1}{x}$.			
+\end{mydef}
+
+\begin{myprops}
+	\begin{itemize}
+		\item Elle est définie pour tous les nombres qui existent sauf 0, car il n'est pas possible de diviser un nombre par 0 (sur l'intervalle $\intervOO{-\infty}{0} \cup \intervOO{0}{+\infty}$).
+		\item Elle est décroissante sur $\intervOO{- \infty}{0}$.
+		\item Elle est croissante sur $\intervOO{0}{+ \infty}$. 
+	\end{itemize}
+\end{myprops}
+
+\input{inverse}
+\subsection{Fonction racine}
+
+\begin{mydef}
+	La fonction racine carrée est définie par $x \mapsto \sqrt{x}$.			
+\end{mydef}
+
+\begin{myprops}
+	\begin{itemize}
+		\item Elle est définie pour tous les nombres positifs, car on ne peut pas prendre la racine carrée d'un nombre négatif (sur l'intervalle $\intervFO{0}{+\infty}$).
+		\item Elle est croissante sur $\intervFO{0}{+ \infty}$. 
+	\end{itemize}
+\end{myprops}
+
+\input{racine}
+\subsection{Fonction cube}
+
+
+\begin{mydef}
+	La fonction cube est définie par $x \mapsto x^3$.			
+\end{mydef}
+
+\begin{myprops}
+	\begin{itemize}
+		\item Elle est définie pour tous les nombres qui existent (sur l'intervalle $\intervOO{- \infty }{+ \infty}$).
+		\item Elle est croissante sur $\intervFO{0}{+ \infty}$. 
+	\end{itemize}
+\end{myprops}
+
+\input{cube}
+\end{document}

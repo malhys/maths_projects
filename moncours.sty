@@ -4,6 +4,8 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{pas-cours}
 
+\usepackage{tikz,tkz-tab}
+
 \usepackage{fancyhdr}
 
 %\pagestyle{fancy}
@@ -83,7 +85,7 @@
 
 % Singulier
 \newenvironment{mydef}{	
-	\begin{pasbox}[style=defi ,degrade, color=BrickRed]	
+	\begin{pasbox}[style=defi ,degrade, color=Red]	
 	}{
 \end{pasbox}
 }
@@ -91,11 +93,29 @@
 % Pluriel
 \newenvironment{mydefs}{
 	
-	\begin{pasbox}[style=defi ,degrade, pluriel, color=BrickRed]	
+	\begin{pasbox}[style=defi ,degrade, pluriel, color=Red]	
 	}{
 \end{pasbox}
 }
 
+
+%------------------------------------------------------
+% Propriétés
+
+% Singulier
+\newenvironment{myprop}{	
+	\begin{pasbox}[style=prop ,degrade, color=Maroon]	
+	}{
+\end{pasbox}
+}
+
+% Pluriel
+\newenvironment{myprops}{
+	
+	\begin{pasbox}[style=prop ,degrade, pluriel, color=Maroon]	
+	}{
+\end{pasbox}
+}
 
 
 %------------------------------------------------------
@@ -156,6 +176,23 @@
 \newenvironment{mybox}{
 	\begin{pasbox}[style=prop ,degrade, notitle, color=NavyBlue]
 }{
+	\end{pasbox}
+}
+
+%------------------------------------------------------
+% 
+
+\newenvironment{mywarning}{
+	\begin{attention}[0.7]
+}{
+	\end{attention}
+}
+
+%------------------------------------------------------
+% Illustartion
+\newenvironment{myillus}{
+	\begin{pasbox}[title=Illustartion, style=rem ,degrade, color=NavyBlue]
+	}{
 	\end{pasbox}
 }
 \endinput
