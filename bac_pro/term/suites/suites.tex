@@ -1,0 +1,76 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+%\newcommand{\disp}{false}
+
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+\chap[num=1, color=red]{Suites numériques}{Olivier FINOT, \today }
+
+\section{Suite arithmétique}
+
+\begin{mydef}
+	Une \kw{suite arithmétique} est une suite de nombres où chaque terme, à partir du deuxième, est obtenu en ajoutant toujours un même nombre au précédent, appelé \kw{raison} :
+	
+	\begin{center}
+		$u_{n+1}=u_n + \kw{r}$
+	\end{center} 
+\end{mydef}
+
+\begin{myprop}
+	Dans une suite arithmétique de raison $r$, le terme $u_n$ est obtenu à partir du premier terme par la relation :
+	\begin{itemize}
+		\item \kw{$u_n = u_0 + nr$} (lorsque le terme initial est $u_0$) 
+		\item \kw{$u_n = u_1 + (n-1)r$} (lorsque le terme initial est $u_1$)
+	\end{itemize}
+\end{myprop}
+
+
+\input{./ex1}
+
+
+
+\section{Suite géométrique}
+
+
+\begin{mydef}
+	Une \kw{suite géométrique} est une suite de nombres où chaque terme, à partir du deuxième, est obtenu en multipliant le précédent par un même nombre, appelé \kw{raison} :
+	
+	\begin{center}
+		$u_{n+1}=u_n \times \kw{q}$
+	\end{center} 
+\end{mydef}
+
+\begin{myprop}
+	Dans une suite géométrique de raison $q$, le terme $u_n$ est obtenu à partir du premier terme par la relation :
+	\begin{itemize}
+		\item \kw{$u_n = u_0 \times q^n$} (lorsque le terme initial est $u_0$) 
+		\item \kw{$u_n = u_1 \times q^{n-1}$} (lorsque le terme initial est $u_1$)
+	\end{itemize}
+\end{myprop}
+
+
+\input{./ex2}
+
+\end{document}
