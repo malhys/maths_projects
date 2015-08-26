@@ -54,9 +54,7 @@
 
 \end{mydefs}
 
-\begin{myillus}
-	{\centering \includegraphics[scale=0.5]{./img/voc}}
-\end{myillus}
+\input{ex1}
 
 \section{Fonctions de référence}
 
@@ -65,21 +63,24 @@
 \begin{mydef}
 	La \kw{fonction carré} est définie par $x \mapsto x^2$.
 \end{mydef}
+
 \begin{myprops}
 	\begin{itemize}
 		\item Elle est définie pour tous les nombres qui existent (sur l'intervalle $\intervOO{- \infty }{+ \infty}$).
 		\item Elle est décroissante sur $\intervOF{- \infty}{0}$.
 		\item Elle est croissante sur $\intervFO{0}{+ \infty}$.
+		\item Sa représentation graphique est une \kw{parabole}.
 	\end{itemize}
 	
 \end{myprops}
 
-\input{carre}
+
+\input{./carre}
 
 \subsection{Fonction inverse}
 
 \begin{mydef}
-	La fonction inverse est définie par $x \mapsto \dfrac{1}{x}$.			
+	La \kw{fonction inverse} est définie par $x \mapsto \dfrac{1}{x}$.			
 \end{mydef}
 
 \begin{myprops}
@@ -87,14 +88,15 @@
 		\item Elle est définie pour tous les nombres qui existent sauf 0, car il n'est pas possible de diviser un nombre par 0 (sur l'intervalle $\intervOO{-\infty}{0} \cup \intervOO{0}{+\infty}$).
 		\item Elle est décroissante sur $\intervOO{- \infty}{0}$.
 		\item Elle est croissante sur $\intervOO{0}{+ \infty}$. 
+		\item Sa représentation graphique est une \kw{hyperbole}.
 	\end{itemize}
 \end{myprops}
 
-\input{inverse}
+\input{./inverse}
 \subsection{Fonction racine}
 
 \begin{mydef}
-	La fonction racine carrée est définie par $x \mapsto \sqrt{x}$.			
+	La \kw{fonction racine carrée} est définie par $x \mapsto \sqrt{x}$.			
 \end{mydef}
 
 \begin{myprops}
@@ -109,7 +111,7 @@
 
 
 \begin{mydef}
-	La fonction cube est définie par $x \mapsto x^3$.			
+	La \kw{fonction cube} est définie par $x \mapsto x^3$.			
 \end{mydef}
 
 \begin{myprops}
@@ -120,4 +122,86 @@
 \end{myprops}
 
 \input{cube}
+
+\section{Opérations avec les fonctions}
+
+\subsection{Somme d'une fonction et d'un nombre}
+
+\begin{myprop}
+	Lorsque l'on \kw{ajoute une constante $k$ à  une fonction $f$}, on obtient une nouvelle fonction notée $f$+$k$ qui a \kw{le même sens de variation que $f$}.
+\end{myprop}
+
+\begin{myex}
+	\begin{multicols}{2}
+		\vspace*{1cm}
+		
+		Soit la fonction $f$, telle que $f(x) = x^2$.
+		
+		$f$ est décroissante sur l'intervalle $\intervOF{-\infty}{0} $ et croissante sur $\intervFO{0}{+\infty}$.
+		
+		Donc la fonction $f+k(x) = x^2 + 2 $ est décroissante sur l'intervalle $\intervOF{-\infty}{0} $ et croissante sur $\intervFO{0}{+\infty}$).
+			
+		\includegraphics[scale=0.6]{./img/k+f}
+	\end{multicols}
+\end{myex}
+
+\subsection{Somme de deux fonctions}
+
+\begin{myprop}
+	Si on \kw{ajoute deux fonctions $f$ et $g$} qui possèdent le \kw{même sens de variation}, on obtient alors une fonction $f$+$g$ qui a \kw{le même sens de variation que $f$ ou $g$}. 
+\end{myprop}
+
+\begin{myex}
+	\begin{multicols}{2}
+		\vspace*{20mm}
+		
+		Soient les fonctions $f$ et $g$, telles que $f(x) = x^2$ et $g(x)=2x+1$.
+		
+		$f$ et $g$ sont croissantes sur l'intervalle $\intervFO{0}{+\infty}$.
+		
+		Donc la fonction $f+g(x) = x^2 + 2x + 1$ est croissante sur $\intervFO{0}{+\infty}$.
+		
+		\includegraphics[scale=0.6]{./img/f+g}
+	\end{multicols}
+\end{myex}
+
+\subsection{Produit d'une fonction et d'un nombre}
+
+\begin{myprops}
+	\begin{itemize}
+		\item Lorsque l'on \kw{multiplie une fonction $f$ par une constante  positive $k$}, on obtient alors une fonction $kf$ qui a \kw{le même sens de variation que $f$}.
+		\item Lorsque l'on \kw{multiplie une fonction $f$ par une constante négative $k$}, on obtient alors une fonction $kf$ qui \kw{varie en sens contraire de $f$}.
+	\end{itemize}
+\end{myprops}
+
+\begin{myex}
+	%\begin{multicols}{2}
+	%	\vspace*{15mm}
+		
+		Soit la fonction $f$, telle que $f(x) = x^2$.
+		
+		$f$ est décroissante sur l'intervalle $\intervOF{-\infty}{0} $ et croissante sur $\intervFO{0}{+\infty}$.
+		
+		Donc la fonction $kf(x) = 0,5 \times x^2$ est décroissante sur l'intervalle $\intervOF{-\infty}{0} $ et croissante sur $\intervFO{0}{+\infty}$.
+		
+		\begin{center}
+			\includegraphics[scale=0.6]{./img/kf1}			
+		\end{center}
+
+	%\end{multicols}
+\end{myex}
+
+\begin{myex}	
+	
+	\begin{multicols}{2}
+		\vspace*{15mm}
+		
+		Soit la fonction $f$, telle que $f(x) = x^2$.
+		$f$ est décroissante sur l'intervalle $\intervOF{-\infty}{0} $ et croissante sur $\intervFO{0}{+\infty}$ .
+		Donc la fonction $kf(x) = -2 \times x^2$ est croissante sur l'intervalle $\intervOF{-\infty}{0} $ et décroissante sur $\intervFO{0}{+\infty}$.
+		
+		\includegraphics[scale=0.65]{./img/kf2}
+	\end{multicols}
+\end{myex}
+
 \end{document}
