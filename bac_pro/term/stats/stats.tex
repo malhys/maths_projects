@@ -1,0 +1,63 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+\date{}
+\title{}
+
+
+\begin{document}
+%\maketitle
+\chap[num=2, color=red]{Statistiques à deux variables}{Olivier FINOT, \today }
+
+\section{Série statistique double}
+
+\begin{mydefs}
+	\begin{itemize}
+		\item Lorsqu'on étudie \kw{deux caractères statistiques} sur une même population, on obtient une \kw{série statistique double}.
+		
+		\item La représentation d'une série statistique double dans un repère orthogonal forme un \kw{nuage de points}.
+		
+		\item Le \kw{point moyen} $G$ d'un  nuage de points a pour coordonnées \kw{$(\bar{x}; \bar{y})$}.
+	\end{itemize}
+	
+\end{mydefs}
+
+\input{./ex1}
+
+\newpage
+
+\section{Ajustement affine d'une série statistique et prévisions}
+
+
+\subsection{Ajustement affine}
+\begin{mydefs}
+	\begin{itemize}
+		\item Si le nuage de points a une forme <<allongée>>, on peut calculer un \kw{ajustement affine} du nuage. 
+		\item On obtient ainsi une \kw{droite d'ajustement} (ou droite de régression) qui passe par le point moyen $G$ et au plus près des autres points du nuage.		
+	\end{itemize}
+\end{mydefs}
+
+\begin{mymeth}
+	La droite d'ajustement est obtenue à l'aide du tableur ou de la calculatrice.
+\end{mymeth}
+
+\input{./ex2}
+
+\subsection{Prévisions}
+
+\begin{myprop}
+	L'équation de type $y = ax +b $ de la droite d'ajustement donne la <<tendance>> de l'évolution de la grandeur $y$ en fonction de celle de $x$. Cette équation permet de réaliser des estimations en supposant que la tendance observée se poursuive.
+\end{myprop}
+
+\input{./ex3}
+
+\end{document}
