@@ -30,14 +30,13 @@
 	
 	\section{Rappels}
 	
-	
+	%\subsection{Définitions}
 	
 	\begin{mydefs}
 		
 		Définir une fonction $f$ sur un intervalle $\intervFO{a}{b}$, c'est fournir une \kw{relation} qui à chaque valeur $x$ de l'intervalle $\intervFO{a}{b}$ associe un nombre appelé \kw{image} et noté $f(x)$.
 		On dit que $x$ a pour \kw{antécédent}  le nombre $x$.
-		Si $f(x)$ augmente quand $x$ augmente, alors $f$ est \kw{croissante}.
-		Si $f(x)$ diminue quand $x$ augmente, alors $f$ est \kw{décroissante}.
+		
 		%	\begin{itemize}
 		%%		\item Toute fonction est définie sur \kw{intervalle} I.
 		%%		
@@ -60,6 +59,52 @@
 	
 	\input{ex1}
 	
+	%\newpage
+	
+	\section{Variations et parité d'une fonction}
+	
+	\subsection{Fonction croissante}
+	
+	\begin{mydef}
+		Si une fonction $f$ est \kw{croissante} sur un intervalle $I$ alors les images sont rangées dans le même ordre que leur antécédent ; c'est à dire que \kw{$f(x)$ augmente quand $x$ augmente}.
+		
+		%Si $f(x)$ augmente quand $x$ augmente, alors $f$ est \kw{croissante}.
+		%Si $f(x)$ diminue quand $x$ augmente, alors $f$ est \kw{décroissante}.
+	\end{mydef}
+	
+	\input{./croiss}
+	
+	
+	\subsection{Fonction décroissante}
+	
+	\begin{mydef}
+		Si une fonction $f$ est \kw{décroissante} sur un intervalle $I$ alors les images sont rangées dans l'ordre inverse de leur antécédent ; c'est à dire que \kw{$f(x)$ diminue quand $x$ augmente}.
+		
+		%Si $f(x)$ augmente quand $x$ augmente, alors $f$ est \kw{croissante}.
+		%Si $f(x)$ diminue quand $x$ augmente, alors $f$ est \kw{décroissante}.
+	\end{mydef}
+	
+	\input{./decroiss}
+	
+	
+	\subsection{Fonction paire}
+	
+	\begin{mydef}
+		Si une fonction $f$ est \kw{paire} sur un intervalle I, alors pour tout $x$ de I \kw{$f(-x) = f(x)$} . 
+	\end{mydef}
+	
+	\input{./paire}
+	
+	\subsection{Fonction impaire}
+	
+	\begin{mydef}
+		Si une fonction $f$ est \kw{impaire} sur un intervalle I, alors pour tout $x$ de I on a \kw{$f(-x) = -f(x)$} . 
+	\end{mydef}
+	
+	\input{./impaire}
+	
+	%\newpage
+	
 	\section{Fonctions de référence}
 	
 	\subsection{Fonction carré}
@@ -69,10 +114,12 @@
 	\end{mydef}
 	
 	\begin{myprops}
+		La fonction carré est :
 		\begin{itemize}
-			\item Elle est définie sur l'intervalle $\intervOO{- \infty }{+ \infty}$.
-			\item Elle est décroissante sur $\intervOF{- \infty}{0}$ et croissante sur $\intervFO{0}{+ \infty}$.
-%			\item Sa représentation graphique est une \kw{parabole}.
+			\item définie sur $\intervOO{- \infty }{+ \infty}$.
+			\item décroissante sur $\intervOF{- \infty}{0}$ et croissante sur $\intervFO{0}{+ \infty}$.
+			\item paire.
+			%			\item Sa représentation graphique est une \kw{parabole}.
 		\end{itemize}
 		
 	\end{myprops}
@@ -87,10 +134,11 @@
 	\end{mydef}
 	
 	\begin{myprops}
+		La fonction inverse est :
 		\begin{itemize}
-			\item Elle est définie sur $\intervOO{-\infty}{0} \cup \intervOO{0}{+\infty}$.
-			\item Elle est décroissante sur $\intervOO{- \infty}{0}$ et croissante sur $\intervOO{0}{+ \infty}$. 
-%			\item Sa représentation graphique est une \kw{hyperbole}.
+			\item définie sur $\intervOO{-\infty}{0} \cup \intervOO{0}{+\infty}$.
+			\item décroissante sur $\intervOO{- \infty}{0}$ et sur $\intervOO{0}{+ \infty}$. 
+			%			\item Sa représentation graphique est une \kw{hyperbole}.
 		\end{itemize}
 	\end{myprops}
 	
@@ -104,7 +152,7 @@
 	\begin{myprops}
 		
 		Elle est définie et croissante sur $\intervFO{0}{+\infty}$.
-			
+		
 		
 	\end{myprops}
 	
@@ -118,7 +166,7 @@
 	
 	\begin{myprops}
 		Elle est définie et croissante sur l'intervalle $\intervOO{- \infty }{+ \infty}$.
-			 
+		
 		
 	\end{myprops}
 	
