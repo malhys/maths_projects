@@ -1,0 +1,193 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{Représentations graphiques d'une série statistique }
+
+%\newcommand{\disp}{false}
+
+\lhead{CH1 : Stats et représentations graphiques}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+\chap[num=2, color=red]{Statistques graphiques}{Olivier FINOT, \today }
+
+\section{Population, Caractère et Effectif}
+
+\subsection{Population}
+\begin{mydefs}
+	\begin{itemize}
+		\item La \kw{population} est l'ensemble des individus (personnes, objets, faits ...) étudiés.
+		\item La \kw{série statistique} est l'ensemble des valeurs collectées.
+	\end{itemize}
+\end{mydefs}
+
+
+\begin{myex}
+	
+	Le tableau suivant présente le nombre de repas pris chaque semaine par les élèves d'un lycée professionnel :
+	
+	\begin{center}
+		\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+			\hline
+			Nombre de repas & 0 & 1 & 2 & 3 & 4 & 5 \\ \hline
+			Nombre d'élèves & 56 & 24 & 72 & 99 & 259 & 115 \\ \hline
+		\end{tabular}
+	\end{center}
+	
+	Ici la \kw{population} étudiée est les élèves du lycée.
+\end{myex}
+
+
+\subsection{Caractère}
+
+\begin{mydef}
+
+Le \kw{caractère} est la propriété étudiée sur la population, il est :
+\begin{itemize}
+	\item \kw{quantitatif} quand il est mesurable :
+		\begin{itemize}
+			\item \kw{discret} si les valeurs sont des nombres isolés ;
+			\item \kw{continu} si les valeurs ne sont pas isolées. Les valeurs sont regroupées en \kw{classes} ou \kw{intervalles}  $\intervFO{a}{b}$ ; l'\kw{amplitude} de l'intervalle est $b -a$.
+		\end{itemize}
+	\item \kw{qualitatif} quand il n'est pas mesurable. %, les valeurs s'appellent alors $\ll$ modalités $\gg$ .
+\end{itemize}
+\end{mydef}
+
+\begin{myex}
+	
+	Dans l'exemple ci-dessus, le \kw{caractère} étudié est le nombre de repas pris chaque semaine. Il ne peut prendre que des valeurs entières comprises entre $0$ et $1$, il est donc \kw{quantitatif discret}.
+	
+	
+\end{myex}
+
+\subsection{Effectif}
+
+\begin{mydef}
+	L'\kw{effectif} $n_i$ est le nombre d'individus correspondant à une valeur du caractère. 
+	
+\end{mydef}
+
+\begin{myex}
+	Dans l'exemple, l'\kw{effectif} $n_2$ des élèves qui prennent deux repas est 72.
+\end{myex}
+\section{Effectif Total et Fréquence}
+
+\subsection{Effectif Total}
+	
+	\begin{mydef}
+		L'\kw{effectif total} $N$ est le nombre total d'individus de la population étudiée.				
+	\end{mydef}	
+
+	\begin{myex}
+		Dans l'exemple, l'\kw{effectif total} est : $56 + 24 + 72 + 99 + 259 + 115 = 625$.	
+	\end{myex}
+			
+
+\subsection{Fréquence}
+
+	\begin{mydef}
+		Pour chaque valeur du caractère la \kw{fréquence} $f_i$ est calculée en divisant l'effectif correspondant à la valeur par l'effectif total  ($\frac{n_i}{N}$).
+	\end{mydef}
+	
+	\begin{myex}
+		La \kw{fréquence} $f_1$de la valeur $1$ du caractère est : $\dfrac{24}{625} = 0,384$ 
+		
+		\begin{center}
+			
+			
+			\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+				\hline
+				Nombre de repas & 0 & 1 & 2 & 3 & 4 & 5 \\ \hline
+				%	Nombre d'élèves & 56 & 24 & 72 & 99 & 259 & 115 \\ \hline
+				Fréquence & 0,0896 & 0,0384 & 0,1152 & 0,1584 & 0,4144 & 0,1840 \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{myex}
+	
+	\begin{myrems}
+		\begin{itemize}
+			\item Pour obtenir un pourcentage, on multiplie la fréquence par $100$. 
+			\item La somme des fréquences d'une série statistique est égale à $1$ (ou $100\%$).
+		\end{itemize}
+		
+	\end{myrems}
+
+\section{Représentations graphiques}
+
+
+
+\subsection{Diagramme en Secteur}
+
+\begin{mybox}
+
+		
+
+	 Le \kw{diagramme en secteurs (ou circulaire)} est une représentation adaptée une série à \kw{caractère qualitatif}.
+	
+	 Chaque valeur est représentée par un secteur circulaire dont l'aire et l'angle sont proportionnels à l'effectif $n_i$ (ou à la fréquence $f_i$).
+	
+\end{mybox}	
+
+
+\input{./ex_circ}
+
+\subsection{Diagramme en bâtons}
+
+\begin{mybox}
+	Le \kw{diagramme en bâtons (ou en barres)} est une représentation adaptée pour une série à \kw{caractère quantitatif discret}.
+	
+	Chaque valeur du caractère est reportée sur l'axe des abscisses. Les effectifs sont sont reportés sur l'axe des ordonnées.
+	La longueur de chaque segment vertical est proportionnelle à l'effectif $n_i$ (ou à la fréquence $f_i$).
+\end{mybox}
+\input{./ex_barres}
+
+%\newpage
+\subsection{Histogramme}
+
+\begin{mybox}
+	L'\kw{histogramme} est utilisé pour représenter les séries à \kw{caractère quantitatif continu}.
+	
+	Un histogramme est constitué d'une successions de rectangles accolés avec pour bases les amplitudes des classes $\intervFO{a}{b}$.
+	Si les classes ont la même amplitude $b - a$, tous les rectangles ont la même base et les hauteurs sont proportionnelles aux effectifs $n_i$ (ou aux fréquences $f_i$).
+\end{mybox}	
+
+\input{./ex_histo}
+
+\subsection{Diagramme cartésien}
+
+\begin{mybox}
+	Le \kw{diagramme cartesien} est utilisé pour représenter l'évolution d'une grandeur par rapport à une autre (souvent le temps). 
+\end{mybox}
+	
+\input{./ex_cartesien}
+
+\section{Schéma récapitulatif}
+
+\vspace*{1cm}
+
+Le schéma ci dessous indique quel diagramme choisir pour représenter une information en fonction du type de donnée. 
+
+\begin{center}
+	\includegraphics[scale=0.78]{img/bilan}
+\end{center}
+\end{document}

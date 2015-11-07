@@ -1,0 +1,92 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{Représentations graphiques d'une série statistique }
+
+%\newcommand{\disp}{false}
+
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+
+\begin{myex}
+	
+	Le tableau suivant présente le nombre de repas pris chaque semaine par les élèves d'un lycée professionnel :
+	
+	\begin{center}
+		\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+			\hline
+			Nombre de repas & 0 & 1 & 2 & 3 & 4 & 5 \\ \hline
+			Nombre d'élèves & 56 & 24 & 72 & 99 & 259 & 115 \\ \hline
+		\end{tabular}
+	\end{center}
+	
+	Ici la \kw{population} étudiée est les élèves du lycée.
+\end{myex}
+
+\begin{myex}
+	
+	Dans l'exemple ci-dessus, le \kw{caractère} étudié est le nombre de repas pris chaque semaine. Il ne peut prendre que des valeurs entières comprises entre $0$ et $1$, il est donc \kw{quantitatif discret}.
+	
+	
+\end{myex}
+
+
+	\begin{myex}
+		Dans l'exemple, l'\kw{effectif total} est : $56 + 24 + 72 + 99 + 259 + 115 = 625$.	
+	\end{myex}
+			
+
+	\begin{myex}
+		La \kw{fréquence} $f_1$de la valeur $1$ du caractère est : $\dfrac{24}{625} = 0,384$ 
+		
+		\begin{center}
+			
+			
+			\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+				\hline
+				Nombre de repas & 0 & 1 & 2 & 3 & 4 & 5 \\ \hline
+				%	Nombre d'élèves & 56 & 24 & 72 & 99 & 259 & 115 \\ \hline
+				Fréquence & 0,0896 & 0,0384 & 0,1152 & 0,1584 & 0,4144 & 0,1840 \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{myex}
+	
+
+
+
+\input{./ex_circ}
+
+
+\input{./ex_barres}
+
+
+\input{./ex_histo}
+
+
+\input{./ex_cartesien}
+
+
+\begin{center}
+	\includegraphics[scale=0.78]{img/bilan}
+\end{center}
+\end{document}

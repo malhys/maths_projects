@@ -1,0 +1,192 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{\'Equations et Inéquations}
+
+%\newcommand{\disp}{false}
+
+%\lhead{CH1 : Stats et représentations graphiques}
+%\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+\chap[num=3, color=red]{Problèmes du premier degré}{Olivier FINOT, \today }
+
+
+\begin{myobj}
+	Être capable de :
+	\begin{itemize}
+		\item traduire un problème en équation ou en inéquation.
+		\item résoudre une équation.
+		\item résoudre une inéquation.
+		\item évaluer ou critiquer un résultat obtenu
+		\item replacer un résultat dans le contexte du problème.
+	\end{itemize}
+\end{myobj}
+
+\section*{Activités préparatoires}
+
+\begin{myact}{1}
+	Dans un magasin Jean achète 5 CD et paye 45 euros en caisse. 
+	
+	Combien coûte un CD ?
+\end{myact}
+
+\begin{myrep}
+	
+	%\begin{multicols}{2}
+		\begin{itemize}
+			\item On pose $x$ le prix d'un CD.
+			\item $NbCDs \times PrixCD = Total$
+			\item[$\Rightarrow$] $5 \times x = 45$ 
+		\end{itemize}
+		
+		\begin{align*}
+			5x &= 45 \\
+			x &= 45 \div 5\\
+			x &= 9
+		\end{align*}
+	%\end{multicols}
+	
+	Un CD coûte 9 euros.
+	
+\end{myrep}
+
+\begin{myact}{2}
+	Sophie paie 42 € pour 3 mangas et des romans. Un manga vaut 6 € et un roman 12 €. 
+	
+	Combien a-t-elle acheté de romans ?
+\end{myact}
+
+\begin{myrep}
+	%\begin{multicols}{2}
+		\begin{itemize}
+			\item On pose $x$ le nombre de romans achetés.
+			\item $NbMangas \times PrixManga + NbRomans \times PrixRoman = Total $
+			\item[$\Rightarrow$]$3 \times 6 + x \times 12 = 42$
+		\end{itemize}
+		
+		\begin{align*}
+			18 + 12x &= 42\\
+			12x &= 42 - 18 \\
+			12x &= 24 \\
+			x &= 24 \div 12\\
+			x &= 2
+		\end{align*}
+	%\end{multicols}
+	
+	Elle a acheté 2 romans.
+\end{myrep}
+
+\begin{myact}{3}
+	Jeanne a 25 ans de moins que sa mère, et elles ont 43 ans à eux deux. 
+	
+	Quel âge ont-elles ?
+\end{myact}
+
+\begin{myrep}
+	\begin{itemize}
+		\item On cherche l'âge de Jeanne et celui de sa mère.
+		\item On pose $x$ l'âge de Jeanne.
+		\item On a :
+		\begin{itemize}
+			
+		\item $AgeMère = AgeJeanne + 25$.
+		\item[$\Rightarrow$] $AgeMère = x + 25 $
+		\item $AgeMère + AgeJeanne = 43$
+		\item[$\Rightarrow$] $(x + 25) + x = 43$ 
+		\end{itemize} 
+	\end{itemize}
+	
+	\begin{align*}
+		2x + 25 &= 43\\
+		2x &= 43 - 25\\
+		2x &= 18 \\
+		x &= 18 \div 2 \\
+		x &= 9
+	\end{align*}
+	
+	Jeanne a 9 ans et sa mère 34 (9 + 25).
+\end{myrep}
+
+\begin{myact}{4}
+	Thomas possède une collection de 248 vidéos. Il les classe en trois catégories : séries télé, films et documentaire.
+	
+	Il a 3 fois plus de films que de séries télé et 40 documentaires.
+	
+	Combien de vidéos de chaque catégorie possède-t-il ?
+	
+\end{myact}
+
+\begin{myrep}
+\begin{itemize}
+	\item On cherche le nombre de séries et le nombre de films.
+	\item On pose $x$ le nombre de séries.
+	\item On a :
+		\begin{itemize}
+			\item $NbFilms = 3 \times NbSéries$
+			\item[$\Rightarrow$] $NbFilms = 3 \times x$
+			\item $NbFilms + NbSéries + NbDocs = Total$
+			\item[$\Rightarrow$] $(3 \times x) + x + 40 = 248$
+		\end{itemize} 
+\end{itemize}
+
+\begin{align*}
+	4x + 40 &= 248\\
+	4x &= 248 - 40 \\
+	4x &= 208 \\
+	x &= 208 \div 4 \\
+	x &= 52 \\
+\end{align*}
+
+Il a 52 séries, 156 films ($52 \times 3$) et 40 documentaires. 
+\end{myrep}
+	
+%
+%\begin{mydefs}
+%\begin{itemize}
+%	\item Une \kw{équation du premier degré} est une \kw{égalité qui contient une inconnue}, une lettre dont on ne connaît pas la valeur.
+%	\item \kw{Résoudre une équation} c'est trouver la valeur de l'inconnue (si elle existe) qui rend l'égalité vraie. Cette valeur est la \kw{solution} de l'équation.
+%\end{itemize}
+%
+%
+%\begin{myex}
+%		$12x - 7 = 8x + 5$ est un exemple d'équation.
+%		$x$ est l'inconnue de cette équation.
+%		
+%		En remplaçant $x$ par $3$, on a:
+%		$12 \times 3 -7 = 36 - 7 = 29$
+%		$8 \times 3 + 5 = 24 + 5 = 29$
+%		
+%		Donc $3$ est une \kw{solution} de l'équation.
+%\end{myex}
+%	
+%\end{mydefs}
+
+\section{Mettre un problème en équation}
+
+
+
+\section{Inéquations}
+
+
+\end{document}
