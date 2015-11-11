@@ -9,9 +9,14 @@
 \usepackage[T1]{fontenc}
 \usepackage[upright]{fourier} 
 %\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{color}
+%\usepackage[dvipsnames]{xcolor}
+
 \usepackage{tkz-kiviat,numprint} 
 \usetikzlibrary{arrows}
 \usepackage{pgfplots}
+\usepackage{pgfplotstable}
 %\usepackage{tikz}
 %\usepackage[francais]{babel}
 %\usepgfplotslibrary{external}
@@ -20,10 +25,9 @@
 
 \pgfplotsset{width=7cm,	compat=1.12}
 
-%\input{../../../utils_maths_beamer}
 
-\title{Conseil de Classe 3e}
-\author{}\institute[GS. S$^t$ Vincent, S$^t$ Bernard]{Groupe Scolaire S$^t$ Vincent, S$^t$ Bernard}
+
+\input{titre}
 
 
 %\AtBeginSubsection[]
@@ -33,6 +37,12 @@
 %		\tableofcontents[currentsection, currentsubsection]
 %	\end{frame} 
 %}
+
+
+\definecolor{mygreen2}{rgb}{0.0, 0.26, 0.15}
+\definecolor{mygreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{pastelgray}{rgb}{0.81, 0.81, 0.77}
+
 
 \begin{document}
 	
@@ -81,7 +91,7 @@
 	(techno, 12)
 };
 
-\addplot[ybar,fill=green] coordinates {
+\addplot[ybar,fill=mygreen] coordinates {
 	(maths,15)
 	(histoire,17)
 	(EPS,11)
@@ -247,7 +257,106 @@
 	\end{frame}
 
 
-
+\begin{frame}
+	\frametitle{CHOPPARD Justine (18/12/2000)}  
+	\framesubtitle{ }	
+	
+	
+	\begin{columns}[onlytextwidth]
+		
+		
+		
+		\begin{column}{0.3\textwidth}
+			\vspace*{-.5cm}
+			\begin{center}
+				\includegraphics[scale=0.8]{tof2}
+			\end{center}
+			
+			
+			{\small \begin{block}{Métier envisagé}
+					Anesthésiste
+				\end{block}
+				
+				\begin{alertblock}{Orientation}
+					\begin{enumerate}
+						\item 2$^{de}$ GT
+						
+					\end{enumerate}
+				\end{alertblock}}
+				
+				
+			\end{column}	
+			
+			\begin{column}{0.70\textwidth}
+				
+				\begin{center}
+					
+					\vspace*{-.7cm}	
+					
+					{\small 
+						\colorbox{pastelgray}{
+						\begin{tabular}{c|c|c|c}
+							& {\color{red} Classe}                       & {\color{blue}\'Elève}                      & {\color{mygreen} Classement}                   \\ \hline
+							Trimestre 1 & {\color{red} 12,40} & {\color{blue} 10.52} & {\color{mygreen} 22/27} \\ \hline
+							Trimestre 2 & {\color{red} 11,69} & {\color{blue} 10.11} & {\color{mygreen} 25/28} \\ \hline
+							Trimestre 3 & {\color{red} 12,46} & {\color{blue} 11.69} & {\color{mygreen} 16/29}
+						\end{tabular}}
+						}
+						
+						
+						
+						\vspace*{-1cm}
+						
+							\begin{tikzpicture}[label distance=.15cm]
+							\tkzKiviatDiagramFromFile[radial=7, scale=.5, label distance=.5cm,
+													gap     = 1,label space=1.2,  
+													lattice = 5]{data.dat}  %[radial=7,lattice=4,gap=1,step=0.2,label space=1.2]{data.dat}
+							\tkzKiviatLineFromFile[thick,color=red,fill=red,opacity=.15]{data.dat}{1}
+							\tkzKiviatLineFromFile[thick,color=blue]{data.dat}{2}
+							\tkzKiviatGrad[prefix=,unity=5](0)   
+							\end{tikzpicture}
+						
+%						\begin{tikzpicture}[label distance=.15cm,rotate=30,scale=.5]
+%						\tkzKiviatDiagram[lattice=4,gap=1,step=0.2,label space=1.2]%
+%						{Maths,
+%							Histoire Géo,
+%							Français,
+%							EPS,
+%							SVT,
+%							Techno,
+%							Physique}
+%						\tkzKiviatLine[thick,color=red,fill=red,opacity=.15](12,15,14,11,13,10, 15)
+%						\tkzKiviatLine[thick,color=blue](18,17,19,18.5,19,17, 18)
+%						\tkzKiviatGrad[prefix=,unity=5](0)   
+%						\end{tikzpicture}
+						
+						
+%						\begin{tikzpicture}
+%						\tkzKiviatDiagramFromFile[
+%						scale=.5,
+%						label distance=.5cm,
+%						gap     = 1,label space=3,  
+%						lattice = 10]{tableae.dat}
+%						\tkzKiviatLineFromFile[thick,
+%						color      = blue,
+%						mark       = ball,
+%						ball color = blue,
+%						mark size  = 4pt,
+%						fill       = blue!20]{tableae.dat}{2}
+%						\tkzKiviatLineFromFile[thick,
+%						color      = red,
+%						mark       = ball,
+%						ball color = red,
+%						mark size  = 4pt,
+%						fill       = red!20]{tableae.dat}{1} 
+%						\end{tikzpicture}
+					\end{center}
+					
+				\end{column}
+				
+			\end{columns}
+			
+		\end{frame}
 
 \end{document}
 
