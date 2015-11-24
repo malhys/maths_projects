@@ -1,0 +1,103 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+\usepackage{multicol}
+\usepackage{caption}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+\date{}
+\title{}
+
+
+\begin{document}
+%\maketitle
+\chap[num=3, color=red]{Proportionnalites}{}
+
+\section{Vocabulaire}
+
+\subsection{Expérience, issue et probabilité}
+\begin{mydefs}
+	\begin{itemize}
+		\item En probabilités, on étudie les \kw{issues} d'une \kw{expérience aléatoire}.
+		\item L'ensemble des issues de l'expérience forme \kw{l'univers}.
+		\item On associe une \kw{probabilité $p_i$} à chaque issue.
+		\item La \kw{somme des probabilités} de toutes les issues d'une expérience vaut \kw{1}.
+		\item L'\kw{équiprobabilité} correspond au cas où toutes les issues de l'expérience ont la même probabilité de se produire.
+	\end{itemize}
+
+	
+\end{mydefs}
+
+\input{ex1}
+
+\subsection{\'Evénements}
+
+\begin{mydefs}
+	\begin{itemize}
+		\item Un \kw{événement} A regroupe une partie des issues d'une expérience.
+		\item La probabilité d'un événement A est $p(A)$.
+		\item $\bar{A}$ est l'événement \kw{contraire} de A (voir figure \ref{fig:contraire}), on a $\bar{A}$ est $P(\bar{A}) = 1 - P(A)$.
+		\item L'intersection de deux événements $A \cap B$ est l'ensemble des issues qui réalisent A \kw{ou} B (au moins un des deux). (Dans la figure \ref{fig:union}, la partie hachurée dans les deux sens)
+		\item L'union de deux événements $A \cup B$ est l'ensemble des issues qui réalisent à la fois A \kw{et} B. (Dans la figure \ref{fig:union}, toutes les parties hachurées)
+		
+	\end{itemize}
+\end{mydefs}
+
+
+\vspace*{1cm}
+\begin{multicols}{2}
+	\begin{center}
+		
+		\includegraphics[scale=0.40]{./img/contraire}
+		\captionof{figure}{Un événement et son contraire}
+		\label{fig:contraire}
+		
+		
+		\includegraphics[scale=0.43]{./img/union_inter}
+		\captionof{figure}{Union et intersection d'événements}
+		\label{fig:union}
+	\end{center}
+ 
+
+\end{multicols}	
+
+
+\input{ex2}		
+\section{Calculs de probabilités}
+
+\subsection{Probabilité d'un événement}		
+
+\begin{myprops}
+	\begin{itemize}
+		 \item La probabilité $p(A)$ d'un événement $A$ est la somme des propriétés des issues qui réalisent l'événement.
+		 \item En cas d'équiprobabilité on a : $p(A) = \dfrac{Nombre\;de\; cas\; favorables\; à\; A}{Nombre\; de\; cas\; possibles}$ .
+	\end{itemize}
+	
+\end{myprops}
+
+\input{ex3}
+
+\input{ex4}
+
+
+
+\subsection{Opérations sur les événements}
+
+
+
+	
+	
+	
+
+
+
+
+\end{document}
