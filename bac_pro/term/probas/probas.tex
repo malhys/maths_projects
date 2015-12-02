@@ -77,7 +77,7 @@
 
 \begin{myprops}
 	\begin{itemize}
-		 \item La probabilité $p(A)$ d'un événement $A$ est la somme des propriétés des issues qui réalisent l'événement.
+		 \item La probabilité $p(A)$ d'un événement $A$ est la somme des probabilités des issues qui réalisent l'événement.
 		 \item En cas d'équiprobabilité on a : $p(A) = \dfrac{Nombre\;de\; cas\; favorables\; à\; A}{Nombre\; de\; cas\; possibles}$ .
 	\end{itemize}
 	
@@ -89,9 +89,53 @@
 
 
 
-\subsection{Opérations sur les événements}
+\subsection{Utilisation d'un tableau de probabilités}
 
 
+\begin{mymeth}
+	On peut regrouper les différentes issues d'une expérience aléatoire dans un tableau.
+	En transformant ce tableau en tableau de probabilités, on peut calculer plus facilement des combinaisons de deux événements.
+\end{mymeth}
+
+
+
+\begin{myex}
+	Pour 500 personnes respirant des poussières pendant leur activité professionnelle on dispose des données suivantes :
+	
+	\begin{small}
+		\begin{tabular}{@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+			\cline{2-4}
+			& Atteints de toux chronique & non atteins de toux chronique & Total \\ \hline
+			\multicolumn{1}{|c|}{Fumeurs}     & 60                         & 140                           & 200   \\ \hline
+			\multicolumn{1}{|c|}{Non fumeurs} & 40                         & 260                           & 300   \\ \hline
+			\multicolumn{1}{|c|}{Total}       & 100                        & 400                           & 500   \\ \hline
+		\end{tabular}
+	\end{small}
+	
+	\vspace*{0.5cm}
+	
+	
+	On prélève au hasard le dossier d'une personne parmi les 500.\\
+	
+	
+	On note A l'événement << Le dossier est celui d'une personne atteinte de toux chronique>> et F <<Le dossier est celui d'un fumeur>>.\\
+	
+	Le tirage de  chaque dossier est équiprobable donc on peut utiliser les formule (nombre de cas favorables) divisé par (nombre de cas possibles).
+	
+	\begin{small}
+		
+		\renewcommand{\arraystretch}{2}
+		\begin{tabular}{c|c|c|c|}
+			\cline{2-4}
+			& $A$                      & $\bar{A} $              & Total \\ \hline
+			\multicolumn{1}{|c|}{$F$}         & $\dfrac{60}{500}=0,12$ & $\dfrac{140}{500}=0,28$ & 0.4   \\ \hline
+			\multicolumn{1}{|c|}{$\bar{F}$} & $\dfrac{40}{500}=0,08$ & $\dfrac{260}{500}=0,52$ & 0.6   \\ \hline
+			\multicolumn{1}{|c|}{Total}     & 0,2                    & 0,8                     & 1     \\ \hline
+		\end{tabular}
+	\end{small}
+	
+	$p(A \cup F) = 0,12 + 0,08 + 0,28 = 0,48.$
+\end{myex}
 
 	
 	
