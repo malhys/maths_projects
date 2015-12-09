@@ -8,6 +8,8 @@
 
 \usepackage{multicol}
 \usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{trees}
 
 
 %\usepackage{pas-cours}
@@ -137,10 +139,21 @@
 	$p(A \cup F) = 0,12 + 0,08 + 0,28 = 0,48.$
 \end{myex}
 
+\subsection{Utilisation d'un arbre de probabilités}	
 	
-	
-	
+\begin{mymeth}
+	On utilise un arbre de probabilité pour calculer la probabilité d'une intersection d'événements.\\
+	\begin{itemize}
+		\item La somme des probabilités pour les branches d'un même n\oe ud est égale à $1$.
+		\item Un chemin est une intersection d'événements.
+		\item La probabilité d'un chemin est le produit des probabilités portées par ses branches.
+		\item La probabilité d'un événement est la somme des probabilité des chemins qui y aboutissent.
+	\end{itemize}
 
+	
+\end{mymeth}
+	
+\input{tree}
 
 
 
