@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+%\newcommand{\disp}{false}
+
+\lhead{CH5 : \'Equations du second degré}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+\chap[num=5, color=red]{\'Equations du second degré}{Olivier FINOT, \today }
+
+\section{Résolution d'une équation du second degré}
+
+\begin{mydef}
+	Une équation du second degré est une équation du type $ax^2+bx+c=0$, où $a$, $b$ et $c$ sont des nombres quelconques avec $a \neq 0$.
+	
+	Ce type d'équation possède \kw{zéro, une ou deux solutions}.
+\end{mydef}
+
+\begin{mymeth}
+	\begin{enumerate}
+		\item Pour résoudre une équation du second degré, il faut d'abord calculer \kw{le discriminant $\Delta$} (delta) de l'équation.
+		
+		On a : 
+		\begin{align*}
+			\Delta = b^2 - 4ac
+		\end{align*}
+		
+		\item Le \kw{nombre de solutions} de l'équation dépend du \kw{signe de $\Delta$} :
+		
+		\begin{itemize}
+		
+			\item Si \kw{$\Delta > 0$}, alors il existe \kw{deux solutions} distinctes ($x_1$ et $x_2$). On a :
+			
+			\begin{multicols}{2}
+				\begin{align*}
+					x_1=\dfrac{-b -\sqrt{\Delta}}{2a}
+				\end{align*}
+				
+				\begin{align*}
+					x_2=\dfrac{-b +\sqrt{\Delta}}{2a}
+				\end{align*}
+			\end{multicols}
+			
+			\item Si \kw{$\Delta = 0$}, alors il existe \kw{une unique solution} ($x_1$). On a :
+			
+			\begin{align*}
+				x_1=\dfrac{-b}{2a}
+			\end{align*}
+			
+			\item Si \kw{$\Delta < 0$}, alors il n'existe \kw{aucune solution}. 
+			
+		\end{itemize} 
+	\end{enumerate}
+	
+	
+	
+\end{mymeth}
+
+\input{./chart}
+
+\section{Signe d'un polynôme du second degré}
+\end{document}

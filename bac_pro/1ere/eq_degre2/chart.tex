@@ -1,0 +1,26 @@
+\begin{mymeth}
+
+\begin{tikzpicture}[node distance=2cm]
+
+\node (start) [startstop] {D\'ebut};
+\node (pr1) [process, below of=start] {Caluler le discriminant  $\Delta = b^2-4ac$};
+\node (dec1) [decision, below of=pr1, yshift=-0.5cm] {$\Delta = 0 ?$};
+\node (dec2) [decision, below of=dec1, yshift=-1cm] {$\Delta > 0 ?$};
+\node (pr3) [process, below of=dec2, yshift=-0.5cm] {2 solutions $\dfrac{-b +/- \sqrt{\Delta}}{2a}$};
+\node (pr2) [process, left of=pr3, xshift=-2cm] {1 solution $\dfrac{-b}{2a}$ };
+\node (pr4) [process, right of=pr3, xshift= 2cm] {Aucune solution };
+\node (stop) [startstop, below of=pr3] {Fin};
+
+
+\draw [arrow] (start) --  (pr1);
+\draw [arrow] (pr1) --  (dec1);
+\draw [arrow] (dec1) -| node[anchor=east] {oui} (pr2);
+\draw [arrow] (dec1) -- node[anchor=east] {non} (dec2);
+\draw [arrow] (dec2) -- node[anchor=west] {oui} (pr3);
+\draw [arrow] (dec2) -| node[anchor=west] {non} (pr4);
+\draw [arrow] (pr2) |-  (stop);
+\draw [arrow] (pr3) --  (stop);
+\draw [arrow] (pr4) |-  (stop);
+\end{tikzpicture}
+
+\end{mymeth}
