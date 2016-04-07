@@ -1,0 +1,124 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+%\newcommand{\disp}{false}
+
+%
+%\rfoot{Page \thepage}
+\begin{document}
+	%\maketitle
+	\chap[num=4, color=red]{Notion de fonction}{Olivier FINOT, \today }
+
+
+\section{Définition et vocabulaire}
+
+
+\begin{mydefs}
+	
+	
+	
+	\begin{itemize}
+		\item Une fonction est un \kw{procédé} qui permet de faire correspondre à un nombre de départ $x$, un autre nombre qui en dépend. Le procédé peut être \kw{une formule}, c'est à dire une suite de calculs qui dépend de $x$.
+		
+		\item Toute fonction est définie sur \kw{intervalle} (entre une valeur minimale et une valeur maximale).
+		
+		\item Elle a un nom, souvent \kw{$f$}.
+		
+		\item Le nombre de départ, est en général appelé $x$. Le nombre qui lui est associé est alors noté \kw{$f(x)$}.
+		
+		\item Le nombre $f(x)$ est appelé \kw{image de $x$} par la fonction $f$.
+		
+		\item \kw{x} est appelé \kw{antécédent de $f(x)$} par la fonction $f$
+		
+		\item $f$ est croissante si $ \forall a, b \in I.$ $ a \leq b \Leftrightarrow f(a) \leq f(b) $ 
+	\end{itemize}
+	
+	
+	
+
+\end{mydefs}
+
+	\begin{myex}
+		La fonction $f$, qui a toute valeur d'un nombre $x$, fait correspondre $x^2-1$ est notée :
+		\kw{\begin{align*}
+			f(x) = x^2-1
+		\end{align*}}	
+	\begin{itemize}
+		\item L'image de $2$ par $f$ est : $f(2) = 2^2-1=3$
+		\item L'image de $-2$ par $f$ est : $f(-2) = (-2)^2-1=3$
+		\item[$\rightarrow$] $-2$ et $2$ sont des antécédents de $3$ par $f$.
+		
+	\end{itemize}
+	\end{myex}
+
+\section{Représentation graphique d'une fonction}
+
+\subsection{Courbe représentative}
+
+\begin{mydef}
+	La courbe représentative de la fonction $f$ défine sur l'intervalle $[a;b]$ est l'ensemble des points de coordonnées $(x;f(x))$, où $x$ varie entre $a$ et $b$.
+\end{mydef}
+
+\begin{myex}
+	\begin{multicols}{2}
+		La courbe ci-contre est la représentation graphique de la fonction $f(x)=x^2-1$ entre $-2$ et $2$ (sur l'intervalle $[-2;2]$).
+		
+		\includegraphics[scale=0.4]{img/ex1}
+	\end{multicols}
+	
+\end{myex}
+	
+\subsection{Lecture graphique}
+
+\begin{myprops}
+	\begin{itemize}
+		\item L'\kw{image} d'un nombre se lit sur l'axe des \kw{ordonnées}.
+		\item L'\kw{antécédent} d'un nombre se lit sur l'axe des \kw{abscisses}.
+	\end{itemize}
+\end{myprops}
+
+
+\begin{mymeth}
+	
+	\begin{multicols}{2}
+		
+	
+		Pour lire l'image d'un nombre $a$ :
+		\begin{enumerate}
+			\item Repérer $b$ sur l'axe des abscisses;
+			\item Rejoindre la courbe verticalement;
+			\item Repérer la valeur correspondante sur l'axe des ordonnées, $f(a)$.
+		\end{enumerate}
+		
+		
+		Pour lire l'antécédent d'un nombre $b$ :
+		\begin{enumerate}
+			\item Repérer $b$ sur l'axe des ordonnées;
+			\item Rejoindre la courbe horizontalement;
+			\item Repérer la valeur correspondante sur l'axe des abscisses.
+		\end{enumerate}
+		
+		\includegraphics[scale=0.5]{img/graph2}
+	\end{multicols}
+\end{mymeth}
+
+\end{document}	
