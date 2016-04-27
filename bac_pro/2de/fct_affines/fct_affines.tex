@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+%\newcommand{\disp}{false}
+
+%
+%\rfoot{Page \thepage}
+\begin{document}
+	%\maketitle
+	\chap[num=6, color=red]{Fonctions affines}{Olivier FINOT, \today }
+
+
+\section{Fonctions affines, fonctions linéaires}
+
+
+\begin{mydefs}
+	
+$a$ et $b$ sont des nombres quelconques ; la fonction qui à tout nombre $x$, associe le nombre \kw{$ax+b$}, est une \kw{fonction affine}.\\
+	
+	
+Cas particuliers :
+\begin{itemize}
+	\item Si \kw{$b = 0$}, la fonction est \kw{linéaire}.
+	\item Si \kw{$a=0$}, la fonction est \kw{constante}.
+\end{itemize}
+\end{mydefs}
+
+\begin{myexs}
+	On considère les fonctions $f,g,h$ et $i$ :
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item $f(x)=2x$
+			\item $g(x)=-x+2$
+			\item $h(x)=3x-4$
+			\item $i(x)=5$
+		\end{itemize}
+	\end{multicols}
+	
+	\begin{itemize}
+		\item $f$ est une fonction \kw{linéaire (On a $a=2$ et $b=0$)}.
+		\item $g$ est une fonction \kw{affine (On a $a=-1$ et $b=2$)}.
+		\item $h$ est une fonction \kw{affine (On a $a=3$ et $b=-4$)}.
+		\item $i$ est une fonction \kw{constante (On a $a=0$ et $b=5$)}.
+	\end{itemize}
+\end{myexs}
+	
+\section{Représentation graphique et variations}
+
+\subsection{Représentation graphique d'une fonction affine}	
+
+\begin{myprops}
+	\begin{itemize}
+		\item La \kw{représentation graphique} d'une fonction affine $f(x)=ax+b$ et \kw{une droite}. On dit que $y=ax+b$ est l'équation de la droite.
+		\kw{a} est le \kw{coefficient directeur} (ou la pente) de la droite.
+		\kw{b} est l'\kw{ordonnée à l'origine}.
+		\item La droite passe par le point de coordonnées $(0;b)$, si la fonction est linéaire elle passe par l'origine du repère.
+	\end{itemize}
+	
+\end{myprops}
+
+\begin{myex}
+	\begin{multicols}{2}
+		\vspace*{1.5cm}
+		On considère la fonction affine $f(x)=2x+4$. Elle ne passe pas par l'origine du repère, elle n'est pas linéaire. Elle passe par le point de coordonnées $(0;4)$.
+		
+		\includegraphics[scale=0.5]{img/ex1}
+	\end{multicols}
+\end{myex}
+
+\subsection{Calcul de l'expression algébrique}
+\subsection{Sens de variation}
+
+\section{Résolution graphique}
+\end{document}	
