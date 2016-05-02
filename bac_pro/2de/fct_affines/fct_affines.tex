@@ -86,8 +86,68 @@ Cas particuliers :
 	\end{multicols}
 \end{myex}
 
-\subsection{Calcul de l'expression algébrique}
+
 \subsection{Sens de variation}
 
+\begin{myprop}
+	Le sens de variation d'une fonction affine dépend du signe de $a$ :
+	\begin{itemize}
+		\item Si \kw{$a > 0$}, le droite \kw{"monte"}, la fonction est \kw{croissante};
+		\item Si \kw{$a < 0$}, la droite \kw{"descend"} la fonction est \kw{décroissante};
+		\item Si \kw{$a = 0$}, la droite est \kw{horizontale}, la fonction est \kw{constante}.
+	\end{itemize}
+\end{myprop}
+
+\begin{myexs}
+	$f, g$ et $h$ sont des fonctions affines telles que :
+	
+	\begin{multicols}{3}
+		\begin{center}
+			$f(x)=2x+1$
+			
+			\includegraphics[scale=0.6]{img/ex2_1}
+			
+			$a=2$; $a>0$, la droite "monte", la fonction est croissante. 
+		\end{center}
+		
+		\begin{center}
+			$g(x)=-x+1$
+			
+			\includegraphics[scale=0.6]{img/ex2_2}
+			
+			$a=-1$; $a<0$, la droite "descend", la fonction est décroissante. 
+		\end{center}
+			
+		\begin{center}
+			$h(x)=3$
+				
+				
+			\includegraphics[scale=0.57]{img/ex2_3}
+				
+			$a=0$, la droite est horizontale, la fonction est constante. 
+		\end{center}
+	\end{multicols}
+\end{myexs}
+
+\subsection{Calcul du coefficient directeur}
+
+\begin{mymeth}
+	Pour calculer le coefficient directeur d'une fonction affine $f$, on a besoin de deux nombres distincts $x_1$ et $x_2$ et de leurs images par $f$, $f(x_1)$ et $f(x_2)$. On a alors :
+	
+	\kw{\begin{align*}
+		a = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1}
+	\end{align*}}
+\end{mymeth}
+
+
+\begin{myex}
+	La fonction passe par les points de coordonnées $(2;4)$ et $(4;8)$, on a :
+	
+	\begin{align*}
+		a &= \frac{8-4}{4-2} \\
+		a &= \frac{4}{2} \\
+		a &= 2
+	\end{align*}
+\end{myex}
 \section{Résolution graphique}
 \end{document}	
