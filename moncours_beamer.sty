@@ -1,0 +1,181 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{moncours_beamer}
+\usepackage{ulem}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+
+
+
+\usepackage{tikz,tkz-tab}
+\usetikzlibrary{shapes.geometric, arrows}
+
+
+
+\definecolor{red}{rgb}{1.0, 0.0, 0.0}
+
+
+
+\defbeamertemplate{section in toc}{sections numbered roman}{%
+	\leavevmode%
+	{\Large {\color{red} \MakeUppercase{\romannumeral\inserttocsectionnumber}.\ %
+	\inserttocsection\par}}}
+
+\setbeamertemplate{section in toc}[sections numbered roman]
+
+
+
+
+\newcommand{\kw}[1]{\textbf{#1}}
+
+
+%------------------------------------------------------
+% Définitions
+
+% Singulier
+\newenvironment{mydef}{	
+	\begin{alertblock}{Définition}	
+	}{
+\end{alertblock}
+}
+
+% Pluriel
+\newenvironment{mydefs}{
+
+		
+		
+	\begin{alertblock}{Définitions}	
+	}{
+\end{alertblock}
+
+
+
+}
+
+
+%------------------------------------------------------
+% Propriétés
+
+% Singulier
+\newenvironment{myprop}{	
+	\begin{block}{Propriété}	
+	}{
+\end{block}
+}
+
+% Pluriel
+\newenvironment{myprops}{
+	
+	\begin{block}{Propriétés}	
+	}{
+\end{block}
+}
+
+
+%------------------------------------------------------
+% Exemples
+\newenvironment{myex}{
+	\begin{exampleblock}{Exemple}
+	}{
+\end{examleblock}
+}
+%
+
+\newenvironment{myexs}{
+	\begin{exampleblock}{Exemples}
+	}{
+\end{exampleblock}
+}
+
+%------------------------------------------------------
+% Remarques
+\newenvironment{myrem}{
+	\begin{block}{Remarque}
+	}{
+\end{block}
+}
+
+\newenvironment{myrems}{
+	\begin{bock}{Remarques}
+	}{
+\end{bock}
+}
+
+
+%------------------------------------------------------
+% Rappels
+\newenvironment{myrap}{
+	\begin{block}{Rappel}
+	}{
+\end{block}
+}
+
+\newenvironment{myraps}{
+	\begin{block}{Rappels}
+	}{
+\end{block}
+}
+
+%------------------------------------------------------
+% Méthode
+\newenvironment{mymeth}{
+	\begin{block}{Méthode}
+	}{
+\end{block}
+}
+
+
+%\newenvironment{mymethname}[1]{
+%	\begin{pasbox}[style=meth ,degrade, name=#1]
+%	}{
+%\end{pasbox}
+%}
+
+%------------------------------------------------------
+% 
+%\newenvironment{mybox}{
+%	\begin{pasbox}[style=prop ,degrade, notitle, color=NavyBlue]
+%}{
+%	\end{pasbox}
+%}
+
+%------------------------------------------------------
+% 
+
+%\newenvironment{mywarning}{
+%	\begin{attention}[0.7]
+%}{
+%	\end{attention}
+%}
+
+%------------------------------------------------------
+% Illustartion
+\newenvironment{myillus}{
+	\begin{block}{Illustration}
+	}{
+	\end{block}
+}
+
+
+%------------------------------------------------------
+% Rappels
+
+
+\newenvironment{myobj}{
+	\begin{block}{Objectifs}
+}{
+\end{block}
+}
+
+%------------------------------------------------------
+\newenvironment{myact}[1]{
+	\begin{pasbox}{Activité #1}
+	}{
+\end{pasbox}
+}
+
+%------------------------------------------------------
+\newenvironment{myrep}{
+	\begin{block}{Réponse}
+	}{
+\end{block}
+}
