@@ -20,7 +20,15 @@
 	{\Large {\color{red} \MakeUppercase{\romannumeral\inserttocsectionnumber}.\ %
 	\inserttocsection\par}}}
 
+
+\defbeamertemplate{subsection in toc}{subsections numbered arabic}{%
+	\leavevmode%
+	$\quad${\color{blue} \MakeUppercase\inserttocsubsectionnumber.\ %
+			 \inserttocsubsection\par}}
+
+
 \setbeamertemplate{section in toc}[sections numbered roman]
+\setbeamertemplate{subsection in toc}[subsections numbered arabic]
 
 
 
@@ -76,7 +84,7 @@
 \newenvironment{myex}{
 	\begin{exampleblock}{Exemple}
 	}{
-\end{examleblock}
+\end{exampleblock}
 }
 %
 

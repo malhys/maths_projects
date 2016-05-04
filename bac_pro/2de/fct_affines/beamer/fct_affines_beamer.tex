@@ -8,6 +8,9 @@
 \usepackage{../../../../pas-math}
 \usepackage{../../../../moncours_beamer}
 
+
+\graphicspath{{../img/}}
+
 \title{Fonctions affines}
 \author{}\institute{}
 
@@ -16,7 +19,16 @@
 {
 	\begin{frame}
 		\frametitle{Sommaire}
-		\tableofcontents[currentsection, hideothersubsections]
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+}
+
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
 	\end{frame} 
 }
 
@@ -44,12 +56,158 @@
 \end{mydefs}
 \end{frame}
 
+\begin{frame}
+	\begin{myexs}
+		On considère les fonctions $f,g,h$ et $i$ :
+		\begin{columns}[c]
+			\begin{column}{6cm}
+				\begin{itemize}
+					\item $f(x)=2x$
+					\item $g(x)=-x+2$
+				\end{itemize}
+			\end{column}
+			\begin{column}{6cm}
+				\begin{itemize}
+					\item $h(x)=3x-4$
+					\item $i(x)=5$
+				\end{itemize}
+			\end{column}				
+		\end{columns}
+		
+		\vspace*{1cm}
+		
+		\begin{itemize}
+			\item[$\rightarrow$] $f$ est une fonction \kw{linéaire (On a $a=2$ et $b=0$)}.
+			\item[$\rightarrow$] $g$ est une fonction \kw{affine (On a $a=-1$ et $b=2$)}.
+			\item[$\rightarrow$] $h$ est une fonction \kw{affine (On a $a=3$ et $b=-4$)}.
+			\item[$\rightarrow$] $i$ est une fonction \kw{constante (On a $a=0$ et $b=5$)}.
+		\end{itemize}
+	\end{myexs}
+\end{frame}
+
+\section{Représentation graphique et variations}
+
+\subsection{Représentation graphique d'une fonction affine}	
+
+\begin{frame}
+	\begin{myprops}
+		\begin{itemize}
+			\item La \kw{représentation graphique} d'une fonction affine $f(x)=ax+b$ et \kw{une droite}. 
+			%On dit que $y=ax+b$ est l'équation de la droite.
+			\kw{a} est le \kw{coefficient directeur} (ou la pente) de la droite.
+			\kw{b} est l'\kw{ordonnée à l'origine}.
+			\item La droite passe par le point de coordonnées $(0;b)$, si la fonction est linéaire elle passe par l'origine du repère.
+		\end{itemize}
+	
+	\end{myprops}
+\end{frame}
+
+\begin{frame}
+\begin{myex}
+		\begin{columns}[c]
+			\begin{column}{6cm}
+				On considère la fonction affine $f(x)=2x+4$. Elle ne passe pas par l'origine du repère, elle n'est pas linéaire. Elle passe par le point de coordonnées $(0;4)$.
+			\end{column}
+			
+			\begin{column}{6cm}
+				\includegraphics[scale=0.5]{ex1}
+			\end{column}			
+			
+		\end{columns}
+	\end{myex}
+\end{frame}
+
+\subsection{Sens de variation}
 
 \begin{frame}
 
+\begin{myprop}
+	Le sens de variation d'une fonction affine dépend du signe de $a$ :
+	\begin{itemize}
+		\item Si \kw{$a > 0$}, le droite \kw{"monte"}, la fonction est \kw{croissante};
+		\item Si \kw{$a < 0$}, la droite \kw{"descend"} la fonction est \kw{décroissante};
+		\item Si \kw{$a = 0$}, la droite est \kw{horizontale}, la fonction est \kw{constante}.
+	\end{itemize}
+\end{myprop}
 
-\begin{myobj}
-	Toto
-\end{myobj}
 \end{frame}
+
+
+\begin{frame}
+	%\frametitle{Exemples}
+
+	\begin{myex}
+		$f, g$ et $h$ sont des fonctions affines telles que :
+	\end{myex}
+	
+	\begin{columns}[c]
+		
+		
+		\begin{column}{3.7cm}
+			
+			\begin{exampleblock}{$f(x)=2x+1$}
+				
+				
+				\begin{center}
+					\includegraphics[scale=0.5]{ex2_1}
+				\end{center}		
+				
+				$a=2$; $a>0$, la droite "monte", la fonction est croissante. 	
+			\end{exampleblock}
+			
+		\end{column}
+		
+		\begin{column}{3.7cm}
+			\begin{exampleblock}{$g(x)=-x+1$}
+			
+				\begin{center}
+					\includegraphics[scale=0.5]{ex2_2}
+				\end{center}		
+			
+				$a=-1$; $a<0$, la droite "descend", la fonction est décroissante. 
+			\end{exampleblock}
+		\end{column}
+		
+		\begin{column}{3.7cm}
+			\begin{exampleblock}{$h(x)=3$}
+			
+				\begin{center}
+					\includegraphics[scale=0.45]{ex2_3}
+				\end{center}		
+				$a=0$, la droite est horizontale, la fonction est constante. 
+			\end{exampleblock}
+		\end{column}
+	
+	\end{columns}
+
+
+
+\end{frame}
+
+\subsection{Calcul du coefficient directeur}
+
+
+\begin{frame}
+	\begin{mymeth}
+		Pour calculer le coefficient directeur d'une fonction affine $f$, on a besoin de deux nombres distincts $x_1$ et $x_2$ et de leurs images par $f$, $f(x_1)$ et $f(x_2)$. On a alors :
+
+		\kw{\begin{align*}
+			a = \dfrac{f(x_2) - f(x_1)}{x_2 - x_1}
+		\end{align*}}
+	\end{mymeth}
+\end{frame}	
+
+\begin{frame}
+	\begin{myex}
+		La fonction passe par les points de coordonnées $(2;4)$ et $(4;8)$, on a :
+		
+		\begin{align*}
+		a &= \frac{8-4}{4-2} \\
+		a &= \frac{4}{2} \\
+		a &= 2
+		\end{align*}
+	\end{myex}
+	
+\end{frame}
+
 \end{document}
