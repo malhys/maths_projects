@@ -1,0 +1,318 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{CambridgeUS}
+
+\input{../../utils_maths_beamer}
+
+
+\usepackage{../../pas-math}
+\usepackage{../../moncours_beamer}
+
+
+\graphicspath{{./img/}}
+
+\title{Introduction à la cryptologie}
+\author{O. FINOT}\institute{Lycée S$^t$ Vincent de Paul}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+}
+
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
+	\end{frame} 
+}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{Introduction}	
+	
+	\begin{block}{Historique}
+		\begin{itemize}
+			\item Utilisé depuis toujours
+			\item Cacher, dissimuler des informations essentielles / confidentielles\pause
+			\item[$\Rightarrow$] Cryptologie
+		\end{itemize}	\pause
+	\end{block}
+	
+	\begin{block}{Aujourd'hui : Sur internet}
+		\begin{itemize}
+			\item Informations confidentielles
+			\item Impôts
+			\item Paiements en ligne\pause
+			\item[$\Rightarrow$] Données ne doivent pas circuler "en clair"
+		\end{itemize}
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sommaire}
+	\tableofcontents[hideallsubsections]
+\end{frame} 
+
+\section{Vocabulaire}
+
+\begin{frame}
+\frametitle{Définitions I}
+
+
+	\begin{alertblock}{Cryptologie}
+		\begin{itemize}
+			\item Science des messages secrets
+			\item Cryptographie vs. Cryptanalyse
+		\end{itemize}
+	\end{alertblock}\pause
+	
+	\begin{block}{Cryptographie}
+		"Art" de transformer un message pour le rendre illisible
+	\end{block}\pause
+	
+	\begin{block}{Cryptananlyse}
+		"Art" de rendre un message transformé lisible
+	\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Définitions II}	
+
+	\begin{block}{Chiffrer / Crypter}
+		Transformer un message
+	\end{block}\pause
+	
+	\begin{block}{Décrypter}
+		Rendre un message lisible
+	\end{block}
+	
+
+\end{frame}
+\section{Chiffrements par substitution monoalphabétique}
+
+\subsection{Principe}
+
+\begin{frame}
+\frametitle{Principe des chiffrements par substitution}
+
+\begin{itemize}
+	\item Chaque lettre remplacée par une autre
+	\item Toujours la même lettre d'arrivée pour une lettre donnée
+\end{itemize}
+
+\end{frame}
+
+
+\subsection{Exemples}
+
+\begin{frame}
+\frametitle{Chiffre de César}
+\framesubtitle{Présentation}
+
+\begin{block}{Historique}
+	\begin{itemize}
+		\item Utilisé par César 
+		\item Transmission des ordres à ses généraux 
+	\end{itemize}
+	\end{block}
+	
+	\begin{block}{Principe}
+		\begin{itemize}
+			\item Choix d'une distance (26 possibilités)
+			\item Remplacement d'une lettre par celle qui se trouve à la distance choisie   
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.2]{cesar}			
+		\end{center}
+
+	\end{block}
+	
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Chiffre de césar}
+\framesubtitle{Exemple avec une distance de 3}
+
+
+	\begin{center}
+		\includegraphics[scale=0.2]{cesar}			
+	\end{center}
+
+\begin{itemize}
+	\item ALEA JACTA EST\pause
+	\item[$\Rightarrow$] DOHD MDFWD HVW
+\end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Substitution "aléatoire"}
+	
+	\begin{block}{Principe}
+		\begin{itemize}
+			\item Pas de distance fixe
+			\item Choix d'une lettre de remplacement pour chaque lettre d'origine
+		\end{itemize}
+	\end{block}
+	
+	\begin{exampleblock}{Exemple de substitution}
+		\begin{itemize}
+			\item ABCDEFGHIJKLMNOPQRSTUVWXYZ
+			\item AZERTYUIOPQSDFGHJKLMWXCVBN\pause
+			\item []
+			\item[$\Rightarrow$] SUBSTITUTION devient LWZLMOMWMOGF
+		\end{itemize}
+		
+		
+	\end{exampleblock}
+	
+	
+\end{frame}
+
+
+\subsection{Bilan}
+
+\begin{frame}
+\frametitle{Décryptage}
+
+\begin{block}{Analyse fréquentielle}
+	\begin{itemize}
+		\item Repérer les lettres qui apparaissent le plus
+		\item En français : E
+	\end{itemize}
+\end{block}
+
+\begin{center}
+	\includegraphics[scale=0.6]{freq}\footnote{Source wikipédia}
+\end{center}	
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Avantages / Inconvénients}
+
+\begin{exampleblock}{Avantages}
+	\begin{itemize}
+		\item Faciles à comprendre
+		\item Faciles à utiliser
+	\end{itemize}
+\end{exampleblock}
+
+\begin{alertblock}{Incovénients}
+	\begin{itemize}
+		\item Faciles à casser
+	\end{itemize}
+\end{alertblock}
+\end{frame}
+\section{Chiffrements par clé}
+
+\subsection{Chiffrements symétriques}
+
+\begin{frame}
+\frametitle{Principe du chiffrement symétrique}
+
+\begin{itemize}
+	\item Une clé pour chiffrer un message
+	\item La même pour décrypter
+\end{itemize}
+
+\begin{center}
+	\includegraphics[scale=0.5]{sym}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Chiffre de Vigénère}
+
+\begin{block}{Principe}
+	\begin{itemize}
+		\item Choix d'une clé
+		\item Correspondance entre le texte en clair et la clé
+	\end{itemize}
+	
+	\begin{center}
+		\includegraphics[scale=0.08]{vigenere}
+	\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bilan}
+	
+	\begin{exampleblock}{Avantage}
+		\begin{itemize}
+			\item Très sûr (si clé assez longue)			
+		\end{itemize}
+	\end{exampleblock}
+	
+	\begin{alertblock}{Inconvénient}
+		\begin{itemize}
+			\item \'Echange de la clé
+		\end{itemize}
+	\end{alertblock}
+	
+\end{frame}
+
+\subsection{Chiffrements Asymétriques}
+
+\begin{frame}
+	\frametitle{Principe du chiffrement asymétrique}
+	
+	\begin{block}{Principe}
+	
+		\begin{itemize}
+			\item 2 clés
+			\item 1 clé publique distribuée à tout le monde
+			\item 1 clé privée gardée pour soi
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.5]{asym}
+	\end{center}	
+	
+\end{frame}
+
+\section{Conclusion}
+
+
+%\begin{columns}[c]
+%	\begin{column}{6cm}
+%		\begin{itemize}
+%			\item $f(x)=2x$
+%			\item $g(x)=-x+2$
+%		\end{itemize}
+%	\end{column}
+%	\begin{column}{6cm}
+%		\begin{itemize}
+%			\item $h(x)=3x-4$
+%			\item $i(x)=5$
+%		\end{itemize}
+%	\end{column}				
+%\end{columns}
+
+
+
+\end{document}
