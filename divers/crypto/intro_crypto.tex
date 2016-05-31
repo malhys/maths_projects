@@ -11,7 +11,7 @@
 
 \graphicspath{{./img/}}
 
-\title{Introduction à la cryptologie}
+\title{Introduction à la cryptographie}
 \author{O. FINOT}\institute{Lycée S$^t$ Vincent de Paul}
 
 
@@ -116,10 +116,38 @@
 	\item Toujours la même lettre d'arrivée pour une lettre donnée
 \end{itemize}
 
+\begin{center}
+	\includegraphics[scale=0.6]{gaston}
+\end{center}
 \end{frame}
 
 
 \subsection{Exemples}
+
+\begin{frame}
+	\frametitle{Substitution "aléatoire"}
+	
+	\begin{block}{Principe}
+		\begin{itemize}
+			\item Choix d'une lettre de remplacement pour chaque lettre d'origine
+		\end{itemize}
+	\end{block}
+	
+	\begin{exampleblock}{Exemple de substitution}
+		
+		\begin{center}
+			\includegraphics[scale=0.62]{subst}\pause
+		\end{center}
+		\begin{itemize}
+			\item SUBSTITUTION\pause
+			\item[$\Rightarrow$] MRXMNCNRNCDA
+		\end{itemize}
+		
+		
+	\end{exampleblock}
+	
+	
+\end{frame}
 
 \begin{frame}
 \frametitle{Chiffre de César}
@@ -167,29 +195,7 @@
 \end{frame}
 
 
-\begin{frame}
-	\frametitle{Substitution "aléatoire"}
-	
-	\begin{block}{Principe}
-		\begin{itemize}
-			\item Pas de distance fixe
-			\item Choix d'une lettre de remplacement pour chaque lettre d'origine
-		\end{itemize}
-	\end{block}
-	
-	\begin{exampleblock}{Exemple de substitution}
-		\begin{itemize}
-			\item ABCDEFGHIJKLMNOPQRSTUVWXYZ
-			\item AZERTYUIOPQSDFGHJKLMWXCVBN\pause
-			\item []
-			\item[$\Rightarrow$] SUBSTITUTION devient LWZLMOMWMOGF
-		\end{itemize}
-		
-		
-	\end{exampleblock}
-	
-	
-\end{frame}
+
 
 
 \subsection{Bilan}
@@ -215,6 +221,7 @@
 
 \begin{exampleblock}{Avantages}
 	\begin{itemize}
+		\item Nombre important de permutations
 		\item Faciles à comprendre
 		\item Faciles à utiliser
 	\end{itemize}
@@ -226,6 +233,39 @@
 	\end{itemize}
 \end{alertblock}
 \end{frame}
+
+\subsection{Exercices}
+\begin{frame}
+	\frametitle{Substitution monoalphabétique}	
+	
+	En utilisant la substitution suivante :
+	\begin{center}
+		\includegraphics[scale=0.65]{subst}
+	\end{center}
+	
+	\begin{block}{Chiffrer}
+		La Cigale ayant chanté tout l'été
+		Se trouva fort dépourvue
+		Quand la bise fut venue
+	\end{block}
+	
+	\begin{block}{Décrypter}
+		RA GYNCN QDMYWR U'W MRZZCN GDRQ ZWCQY ZQYUCQ I'KYQXY KWRNY YN NDRN IY GQY YN IYM HDRV MWRIYM LRC EKWANYAN WRMMC.
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Chiffre de César}	
+	
+	\begin{block}{Chiffrer en utilisant une distance de 3}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+	\end{block}
+	
+	\begin{block}{Déchiffrer}
+		PDLWU HFRUE HDXVX UXQDU EUHSH UFKHW HQDLW HQVRQ EHFXQ IURPD JHPDL WUHUH QDUGS DUORG HXUDO OHFKH OXLWL QWSHX SUHVF HODQJ DJHHW ERQMR XUPRQ VLHXU GXFRU EHDXT XHYRX VHWHV MROLT XHYRX VPHVH PEOHC EHDX
+	\end{block}
+\end{frame}
+
 \section{Chiffrements par clé}
 
 \subsection{Chiffrements symétriques}
@@ -290,13 +330,47 @@
 	\end{block}
 	
 	\begin{center}
-		\includegraphics[scale=0.5]{asym}
+		\includegraphics[scale=0.6]{asym}
 	\end{center}	
 	
 \end{frame}
 
+\begin{frame}
+\frametitle{Signature numérique}
+
+Un chiffrement asymétrique peut aussi être utiliser pour signer numériquement un document.
+
+\begin{center}
+	\includegraphics[scale=0.5]{sign}
+\end{center}
+\end{frame}
+
+\subsection{Exercices}
+
+\begin{frame}
+\frametitle{Vigénère}
+
+\begin{block}{Chiffrer en utilisant la clé : MUSIQUE}
+	j'adore ecouter la radio toute la journee
+\end{block}
+
+\begin{block}{Décrypter en utilisant la clé : SECRET}
+	UIELZ JYJIO IEXBF XTSUY BLPCR FXBGR FITPX MRGGC ILWTT IJIGL IIIEI KSPGQ VRMKS WWCEY GVOIU YGESV SLHNF IRLIE LW
+\end{block}
+\end{frame}
+
 \section{Conclusion}
 
+\begin{frame}
+\frametitle{Conclusion}
+
+\begin{itemize}
+	\item Présentation de notions de cryptographie
+	\item Chiffrements par substitution
+	\item Chiffrement par clé
+	\item Meilleure compréhension
+\end{itemize}
+\end{frame}
 
 %\begin{columns}[c]
 %	\begin{column}{6cm}
