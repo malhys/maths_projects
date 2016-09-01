@@ -203,6 +203,13 @@
 	\end{pasbox}
 }
 
+%------------------------------------------------------
+% Application
+\newenvironment{myapp}{
+	\begin{pasbox}[title=Application, style=rem ,degrade, color=NavyBlue]
+	}{
+\end{pasbox}
+}
 
 %------------------------------------------------------
 % Rappels
@@ -216,7 +223,7 @@
 
 %------------------------------------------------------
 \newenvironment{myact}[1]{
-	\begin{pasbox}[title=Activite #1, style=rem ,degrade, color=Orange]
+	\begin{pasbox}[title=Activite #1, style=rem ,degrade, color=Peach]
 	}{
 \end{pasbox}
 }
@@ -228,7 +235,14 @@
 \end{pasbox}
 }
 
-
+%-----------------------------------------
+% Exercices
+%-----------------------------------------
+\newenvironment{myexos}{
+	\begin{pasbox}[title=Exercices, style=rem ,degrade, color=Gray, pluriel]
+	}{
+\end{pasbox}
+}
 %-------------------------------------------------------
 % Organigrammes
 %-------------------------------------------------------
