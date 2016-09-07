@@ -39,11 +39,20 @@
 	\begin{enumerate}
 		\item  
 		\begin{enumerate}[label=\alph*. ]
-			\item Avec 130 craies, Léa remplit 5 boîtes, il lui reste 5 craies. (Car $130 \div 25 = 5, reste 5$).
-			\item Avec 500 craies, Carlo remplit 20 boîtes, il ne lui reste aucune craie. (Car $500 \div 25 = 20, reste 0$).
+			\item Avec 130 craies, Léa remplit 5 boîtes, il lui reste 5 craies. %(Car $130 \div 25 = 5, reste 5$).
+			\begin{equation*}
+				\opidiv{130}{25}
+			\end{equation*}
+			\item Avec 500 craies, Carlo remplit 20 boîtes, il ne lui reste aucune craie. %(Car $500 \div 25 = 20, reste 0$).
+				\begin{equation*}
+					\opidiv{157}{25}
+				\end{equation*}
 		\end{enumerate}
 		
-		\item Emma avait 157 craies à ranger (Car $157 \div 25 = 6, reste 7 $).
+		\item Emma avait 157 craies à ranger %(Car $157 \div 25 = 6, reste 7 $).
+			\begin{equation*}
+				\opidiv{157}{25}
+			\end{equation*}
 		
 		\item \begin{enumerate}[label=\alph*. ]
 			\item $650$ est un multiple de 25 (reste 0).
@@ -58,6 +67,7 @@
 \begin{mybilan}
 	Effectuer la \kw{division euclidienne} (ou division entière) d’un nombre entier $a$ par un nombre entier $b$, c’est trouver le \kw{quotient entier} et le \kw{reste} de la division de a par b.
 	Le nombre a est appelé le \kw{dividende} et le nombre b est appelé le \kw{diviseur}.
+	
 \end{mybilan}
 
 \begin{myexos}
@@ -67,5 +77,25 @@
 		\item 34, 36, 39 p 16
 	\end{itemize}
 	
+\end{myexos}
+
+\section{Multiples et diviseurs d'un nombre}
+
+\begin{mydef}
+	Un nombre entier $a$ est un \kw{multiple} d'un nombre entier $b$ $(b \neq 0)$ si le reste de la division euclidienne de $a$ par $b$ est $0$.
+	On dit que $b$ est un \kw{diviseur} de $a$ ou que $a$ est \kw{divisible} par $b$. 
+\end{mydef}
+
+\begin{myexs}
+	\begin{itemize}
+		\item $48 = 4 \times 12$, donc $48$ est un multiple de $12$, il est divisible par $12$. $12$ est un diviseur de $48$.
+		
+		\item 0 est un multiple de tous les nombres.
+		
+	\end{itemize}
+\end{myexs}
+
+\begin{myexos}
+	Exercices 
 \end{myexos}
 \end{document}
