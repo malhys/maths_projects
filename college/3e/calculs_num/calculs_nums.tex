@@ -1,0 +1,143 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+%\newcommand{\disp}{false}
+
+\lhead{CH1 : Calculs numériques}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+\chap[num=1, color=red]{Effectuer des calculs numériques}{Olivier FINOT, \today }
+
+\input{./obj}
+
+\section{Règles de calcul sue les puissances}
+
+\begin{myact}{1 : 1 p 11}
+	 
+	\begin{enumerate}[label=\alph*. ]
+		\item Dans une minute, il y a 60 secondes, dans une heure il y a 60 minutes et dans une journée il y a 24 heures.
+			\begin{equation*}
+				60 \times 60 \times 24 \times 365,25 = 3,156 \times 10^7
+			\end{equation*}
+			
+			Dans une année, il y a $3,156 \times 10^7$ secondes.
+		
+		\item Dans le vide la lumière se déplace à environ $3 \times 10^5$ kilomètres par secondes. 
+			\begin{eqnarray*}
+				3,156 \times 10^7 \times 3 \times 10^5 &=& 3,156 \times 3 \times 10^7 \times 10^5 \\
+														&=& 9,468 \times 10^{12}
+			\end{eqnarray*}
+			
+			Une année lumière correspond à $ \num{9.468 e12}$ kilomètres.
+			
+		\item Kepler-69c se trouve à $\num{2 700}$ années lumières de la Terre.
+		
+		\begin{equation*}
+			\num{2.7 e3} \times \num{9.468 e12} = \num{2.55636 e16}
+		\end{equation*}
+		
+		$\num{2.55630} > \num{1.324}$, donc Kepler-552b est la plus proche de la Terre.
+	\end{enumerate}
+		
+		
+\end{myact}
+
+\begin{myex}
+	\begin{itemize}
+		\item $5^2 \times 5^4 = 5 \times 5 \times 5 \times 5 \times 5 \times 5 = 5^6$
+		\item $\dfrac{\num{e5}}{\num{e3}} = \dfrac{\textcolor{red}{ 10 \times 10 \times 10} \times 10 \times 10}{\textcolor{red}{10 \times 10 \times 10}} = \num{e2}$
+		\item $(3 \times 7)^2 = (3 \times 7) \times (3 \times 7) = 3 \times 3 \times 7 \times 7 = 3^2 \times 7^2$
+		\item $(\num{e3})^2 = \num{e3} \times \num{e3} = \num{e6}$
+	\end{itemize}
+\end{myex}
+	
+	
+\begin{mybilan}	
+	$a$ et $b$ sont des nombres relatifs et $m$ et $n$ des nombres entiers relatifs.
+	
+	\begin{itemize}
+		\item $a^n \times a^m = a^{n+m}$
+		\item $\dfrac{a^n}{a^m}= a^{n-m}$
+		\item $(a \times b)^n = a^n \times b^n$
+		\item $(a^n)^m = a^{n+m}$
+	\end{itemize}
+	
+\end{mybilan}
+
+\begin{myexos}
+	\begin{itemize}
+		\item 11, 12, 13 p 14 (Projeté $\rightarrow$ Oral)
+		\item 28, 29, 30, 33, 34, 35, 40 - 46 page 15
+	\end{itemize}
+	
+\end{myexos}
+
+\section{Notation scientifique}
+
+\subsection*{Actvité 2 : 2 p 11}
+	
+\begin{enumerate}[label=\arabic*) ]
+	\item Dimension des bactéries sous forme décimale :
+		\begin{itemize}
+			\item Cellule humaine : $\num{0.00001}$ m
+			\item  Salmonelle : $\num{0.000003}$ m
+			\item Fièvre jaune : $\num{0.00000002}$ m
+			\item Tétanos : $\num{0.000004}$ m
+			\item Staphylocoque : $\num{0.000001}$ m
+			\item Globule rouge : $\num{0.0000075}$ m
+			\item Grippe : $\num{0.00000012}$ m
+		\end{itemize}
+		
+		$\num{0.00000002} < \num{0.00000012} < \num{0.000001} < \num{0.000003} < \num{0.000004} < \num{0.0000075} < \num{0.00001} $.
+		
+		On a donc, dans l'ordre croissant : Virus de la fièvre jaune, Virus de la grippe, Staphylocoque, Bactérie de la salmonelle, Bacille du tétanos, Globule rouge et Cellule humaine.
+		
+	\item 
+		\begin{enumerate}[label=\alph*. ]
+			\item $\num{0.003 e-3} = \num{3e-3} \times \num{e-3}= \num{3} \times 10^{-3-3} = \num{3e-6}$.
+			
+			Donc \num{3e-6} est la notation scientifique de la longueur de la bactérie de la salmonelle.	
+			
+			\item Dimension des bactéries en notation scientifique :
+			\begin{itemize}
+				\item Cellule humaine : $\num{1e-5}$ m
+				\item Salmonelle : $\num{3e-6}$ m
+				\item Fièvre jaune : $\num{2e-8}$ m
+				\item Tétanos : $\num{4e-6}$ m
+				\item Staphylocoque : $\num{1e-6}$ m
+				\item Globule rouge : $\num{7.5e-6}$ m
+				\item Grippe : $\num{1.2e-7}$ m
+			\end{itemize}
+		\end{enumerate}
+		
+		On a $\num{2e-8} < \num{1.2e-7} < \num{1e-6} < \num{3e-6} < \num{4e-6} < \num{7.5e-6} < \num{1e-5}$.
+
+		On a donc, dans l'ordre croissant : Virus de la fièvre jaune, Virus de la grippe, Staphylocoque, Bactérie de la salmonelle, Bacille du tétanos, Globule rouge et Cellule humaine.	
+	
+\end{enumerate}
+
+
+\end{document}
