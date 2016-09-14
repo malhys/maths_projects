@@ -79,7 +79,7 @@
 	
 \end{myexos}
 
-%\section{Multiples et diviseurs d'un nombre}
+\section{Multiples et diviseurs d'un nombre}
 
 \begin{mydef}
 	Un nombre entier $a$ est un \kw{multiple} d'un nombre entier $b$ $(b \neq 0)$ si le reste de la division euclidienne de $a$ par $b$ est $0$.
@@ -98,4 +98,27 @@
 \begin{myexos}
 	Exercices 
 \end{myexos}
+
+\section{Critères de divisibilité}
+
+\begin{mybilan}
+	Un nombre entier est divisible :
+	\begin{itemize}
+		\item \textbf{par \num{2}} si son chiffre des unités est \num{0}, \num{2}, \num{4}, \num{6} ou \num{8};
+		\item \textbf{par \num{3}} si la somme de ses chiffres est divisible par \num{3};
+		\item \textbf{par \num{4}} si le nombre formé par ses deux derniers chiffres est divisible par \num{4};
+		\item \textbf{par \num{5}} si son chiffre des unités est \num{0} ou \num{5};
+		\item \textbf{par \num{9}} si la somme de ses chiffres est divisible par \num{9};
+		\item \textbf{par \num{10}} si son chiffre des unités est \num{0}.
+	\end{itemize}
+\end{mybilan}
+
+\begin{myex}
+	Exemple : \num{2170} :
+	\begin{itemize}
+		\item le chiffre des unités est \num{0}, donc \num{2160} est divisible par \num{2}, \num{5} et \num{10};
+		\item \num{60} est divisible par \num{4}, donc \num{2160} est divisible par \num{4};
+		\item $\num{2}+\num{1}+\num{7}+\num{0}=\num{9}$, \num{9} est divisible par \num{3} et \num{9}, donc \num{2170} est divisible par \num{3} et \num{9}.
+	\end{itemize}
+\end{myex}
 \end{document}

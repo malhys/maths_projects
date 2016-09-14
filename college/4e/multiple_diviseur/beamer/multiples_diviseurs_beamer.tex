@@ -1,0 +1,95 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{CambridgeUS}
+\usecolortheme{rose}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+
+\graphicspath{{../img/}}
+
+\title{Effectuer des calculs numériques}
+\author{}\institute{}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+}
+
+
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\section{Division euclidienne}
+
+\section{Multiples et diviseurs}
+
+
+
+\begin{frame}
+	
+	\begin{alertblock}{A retenir :}
+
+	Effectuer la \kword{division euclidienne} (ou division entière) d’un nombre entier $a$ par un nombre entier $b$, c’est trouver le \kword{quotient entier} et le \kword{reste} de la division de a par b.
+	
+	
+	Le nombre a est appelé le \kword{dividende} et le nombre b est appelé le \kword{diviseur}.
+		
+		
+	\end{alertblock}
+	
+	\begin{exampleblock}<2>{Exemples}	
+		\begin{itemize}
+			\item $48$ est un multiple de $12$, car $48 = 4 \times 12;$
+			\item $0$ est multiple de tout nombre entier.
+		\end{itemize}
+	\end{exampleblock}
+	
+\end{frame}
+
+\section{Critères de divisibilité}
+
+\begin{frame}
+	
+	\begin{alertblock}{A retenir :}
+		Un nombre entier est divisible :
+		\begin{itemize}
+			\item<alert@2> \textbf{par \num{2}} \onslide*<2->{si son chiffre des unités est \num{0}, \num{2}, \num{4}, \num{6} ou \num{8};}
+			\item<alert@3> \textbf{par \num{3}} \onslide*<3->{si la somme de ses chiffres est divisible par \num{3};}
+			\item<alert@4> \textbf{par \num{4}} \onslide*<4->{si le nombre formé par ses deux derniers chiffres est divisible par \num{4};}
+			\item<alert@5> \textbf{par \num{5}} \onslide*<5->{si son chiffre des unités est \num{0} ou \num{5};}
+			\item<alert@6> \textbf{par \num{9}} \onslide*<6->{si la somme de ses chiffres est divisible par \num{9};}
+			\item<alert@7> \textbf{par \num{10}} \onslide*<7->{si son chiffre des unités est \num{0}.}
+		\end{itemize}
+	\end{alertblock}
+	
+	\begin{exampleblock}{Exemple : $\num{2160}$}<8->
+		\begin{itemize}
+			\item<9-> le chiffre des unités est \num{0}, donc \num{2160} est divisible par \num{2}, \num{5} et \num{10};
+			\item<10-> \num{60} est divisible par \num{4}, donc \num{2160} est divisible par \num{4};
+			\item<11-> $\num{2}+\num{1}+\num{7}+\num{0}=\num{9}$, \num{9} est divisible par \num{3} et \num{9}, donc \num{2170} est divisible par \num{3} et \num{9}.
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+\end{document}
