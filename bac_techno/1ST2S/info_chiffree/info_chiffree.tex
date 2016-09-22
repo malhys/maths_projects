@@ -177,4 +177,265 @@
 \begin{myexos}
 	9, 10, 11 p 23-24
 \end{myexos}
+
+\newpage
+
+\subsection{Additionner et comparer des pourcentages}
+
+\begin{enumerate}[label=\arabic*. ]
+	\item  Pourcentage d'enfants en surpoids dans les zones rurales :
+	\begin{equation*}
+		\num{100} - \num{87.2} = \num{12.8} \quad soit \; \num{12.8} \%.
+	\end{equation*}
+	
+	\medskip 
+	
+	\item  Pourcentage d'enfants obèses :
+	\begin{equation*}
+		\num{12.8} - \num{9.2} = \num{3.6} \quad soit \; \num{3.6} \%.
+	\end{equation*}
+	
+	\item \begin{enumerate}[label=\alph*)]
+		\item Dans l'agglomération parisienne, il y a \num{5} \% d'enfants obèses et \num{16} \% en surpoids; la proportion d'enfants obèses parmi ceux en surpoids est donc égale à $\dfrac{5}{16}=\num{0.301} \%,$ soit environ un peu plus de 3 enfants souffrant d'obésité pour 10 en surpoids. L'affirmation est donc juste.
+		
+		\item Les effectifs pour les différents types d'agglomération ne sont pas connus. On ne peut donc rien affirmer concernant le nombre d'enfants en surpoids.
+	\end{enumerate}
+	
+	
+\end{enumerate}
+
+\section{Pourcentage d'évolution, coefficient multiplicateur}
+
+TP2 page 10
+
+\subsection{Variation relative (taux d'évolution)}
+
+\begin{enumerate}[label=\arabic*. ]
+	
+	\item \begin{enumerate}[label=\alph*)]
+		\item Variation absolue du nombre de médecins généralistes en France entre 1990 et 2009 :
+		
+		\begin{equation*}
+			\num{107667} - \num{93380} = \num{8287}
+		\end{equation*}
+		$\rightarrow$  Soit une hausse de \num{8287} médecins.
+		
+		\item Variation relative (ou taux d'évolution) du nombre de généralistes entre \num{1990} et \num{2009} :
+		
+		\begin{table}[h!]
+			\centering
+			
+			
+			\begin{tabular}{|ccc|}
+				\hline
+				en \num{1990} & + \num{8.87} \%  & en \num{2009} \\
+				\num{93380} médecins& $\rightarrow$ & \num{101667} médecins \\
+				\hline
+			\end{tabular}
+		\end{table}
+		
+		\begin{equation*}
+			\dfrac{(\num{101667} - \num{93380})}{\num{93380}} \times 100 = \num{8.874}...
+		\end{equation*}
+		$\rightarrow$ Soit une hausse d'environ \num{8.87} \%.
+		
+		\item Entre 1990 et 2009 le nombre de médecins généralistes en France à augmenté de \num{8.87} \%.
+		
+	\end{enumerate}
+	
+	 
+	
+	\begin{myrem}
+		\begin{eqnarray*}
+			\num{1.0887} & = & 1 + \num{0.0887} \\
+						& = & 1 + \frac{\num{8.87}}{100}
+		\end{eqnarray*}
+		
+		Ainsi pour augmenter une grandeur de \num{8.87} \% il suffit de multiplier cette grandeur par $1 + \dfrac{8.87}{100}$ soit \num{1.0887}. Ce nombre s'appelle le \kw{coefficient multiplicateur} associé à une augmentation de \num{8.87} \%.
+	\end{myrem}
+	
+	\item \begin{enumerate}[label=\alph*)]
+		\item Variation absolue du nombre de médecins généralistes :
+		\begin{equation*}
+			\num{99670} - \num{101667} = \num{-1997}
+		\end{equation*}
+		Soit une baisse de \num{1997} médecins.
+		
+		\item Taux d'évolution correspondant
+			\begin{equation*}
+				\dfrac{(\num{99670} - \num{101667})}{\num{101667}}\times 100 \approx -\num{-1.96}
+			\end{equation*}
+			
+			Soit une baisse d'environ \num{-1.96} \%. 
+			
+		\item Entre \num{2009} et \num{2015}, le nombre de médecins généralistes en France devrait baisser d'environ \num{1.96} \%.
+	\end{enumerate}
+	
+	\begin{myrem}
+	%\end{myrem}
+	
+	%	\begin{table}[h!]
+	%		\centering
+			
+			
+			\begin{tabular}{|ccc|}
+				\hline
+				en \num{2009} & - \num{1.96} \%  & en \num{2015} \\
+									& {\LARGE $\rightarrow$} &			\\
+				\num{101667} médecins& $\times \num{0.9804}$ & \num{99670} médecins \\
+				\hline
+			\end{tabular}
+
+		\vspace*{1cm} 
+		On a : $\dfrac{99670}{101667} \approx \num{0.9804}$.
+		Et $1 - \dfrac{\num{1.96}}{\num{100}} = \num{0.9804}$
+	
+	
+		Pour diminuer une grandeur de \num{1.96} \%, il suffit de multiplier cette grandeur par $1 - \dfrac{\num{1.96}}{\num{100}}$, soit \num{0.9804}. \num{0.9804} est le \kw{coefficient multiplicateur} associé à une baisse de \num{1.96} \%.
+	\end{myrem}
+	
+	\begin{mybilan2}{Taux d'évolution et coefficient multiplicateur}
+		Le taux d'évolution $t$ (ou variation relative) d'une quantité passant de la valeur $y_1$ à une valeur $y_2$ est égal à :
+		\begin{equation*}
+			t = \dfrac{y_2 - y_1}{y_1} \left(\dfrac{V_{arrivée} - V_{départ}}{V_{départ}}\right)
+		\end{equation*}
+		
+		\underline{Remarque} : Un taux d'évolution positif traduit une hausse, un taux d'évolution négatif traduit une baisse.\\
+		
+		\underline{Coefficients multiplicateurs :} 
+		\begin{itemize}
+			\item \kw{Augmenter} une grandeur de $t \%$ revient à multiplier cette grandeur par $(1 + \dfrac{t}{100})$.
+			
+			\item \underline{Exemple :} $+ 5 \% = \times \num{1.05}$ ; $+ 20 \% = \times \num{1.20}$ \\
+			
+			\item \kw{Diminuer} une grandeur de $t \%$ revient à multiplier cette grandeur par $\qquad (1 - \dfrac{t}{100})$.
+			\item \underline{Exemple :} $- 12 \% = \times \num{0.88}$ ; $- 3 \% = \times \num{0.97}$ \\
+			
+			\item Dans le cas d'une \kw{hausse}, le coefficient multiplicateur est \kw{supérieur à 1}.
+			
+			\item Dans le cas d'une \kw{baisse}, le coefficient multiplicateur est \kw{inférieur à 1}.
+		\end{itemize}
+		
+		
+		
+	\end{mybilan2}
+	
+	\item Nombre de médecins des spécialités médicales en 2009 
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|ccc|}
+			\hline
+			en \num{1990} & + \num{23.63} \%  & en \num{2009} \\
+			& {\LARGE $\rightarrow$} &			\\
+			\num{48040} médecins& $\times \num{1.2363}$ & ? médecins \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	D'où : $\num{48040} \times \num{1.2363} = \num{59391.8}...$, soit environ \num{52392} médecins.
+	
+	\item Nombre de médecins des spécialités chirurgicales en 2015 
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|ccc|}
+			\hline
+			en \num{2009} & - \num{8.22} \%  & en \num{2015} \\
+			& {\LARGE $\rightarrow$} &			\\
+			\num{25163} médecins& $\times \num{0.9178}$ & ? médecins \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	D'où : $\num{25163} \times \num{0.9178} = \num{23094.60}...$, soit environ \num{23095} médecins.
+	
+	\vspace*{2cm}
+	\item Nombre de médecins des spécialités chirurgicales en 1990 
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|ccc|}
+			\hline
+			en \num{1990} & + \num{17.21} \%  & en \num{2009} \\
+			& {\LARGE $\rightarrow$} &			\\
+			? médecins& $\times \num{1.1721}$ & 25163 médecins \\
+			\hline
+			& {\LARGE $\leftarrow$} & \\
+			& $\div \num{1.1721}$ & \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	D'où : $\num{25163} \div \num{1.1721} = \num{21468.30475}...$, soit environ \num{21468} médecins.
+\end{enumerate}
+
+\begin{myexos}
+	Application exerices : 12, 13, 14 et 15 page 25
+\end{myexos}
+
+\subsection{\'Evolutions successives, évolution réciproque}
+
+\begin{enumerate}[label=\Alph*.]
+	\item \'Evolutions successives
+	
+		\begin{enumerate}[label=\arabic*)]
+			\item \ 
+			
+				\begin{table}[h!]
+					\centering
+					\begin{tabular}{|ccc|c|}
+						\hline
+						$P_1$ & + \num{25} \%  & $P_2$ &\\
+						& {\LARGE $\rightarrow$} &	&	$P_2 = \num{16} \times \num{1.25} = 20$, soit 20 \$ .	\\
+						\num{16} \$ & $\times \num{1.25}$ & ? \$ \\
+						\hline
+					\end{tabular}
+					
+				\end{table}
+				
+			\item \ 
+			
+				\begin{table}[h!]
+					\centering
+					\begin{tabular}{|ccc|c|}
+						\hline
+						$P_2$ & + \num{30} \%  & $P_3$ &\\
+						& {\LARGE$\rightarrow$} &	&	$P_2 = \num{20} \times \num{1.30} = 26$, soit 26 \$ .	\\
+						\num{20} \$ & $\times \num{1.30}$ & ? \$ & \\
+						\hline
+					\end{tabular}
+					
+				\end{table}
+			\item \ 
+			
+			\begin{table}[h!]
+				\centering
+				\begin{tabular}{|ccc|c|}
+					\hline
+					$P_1$ & + ... \%  & $P_3$ & \\
+							& {\LARGE$\rightarrow$} &	&	 $\dfrac{\num{26} - \num{16}}{\num{16}} = \num{0.625}$	\\
+					\num{16} \$ & $\times ...$ & 26 \$ & Soit une hausse globale de \num{62.5} \% \\
+					\hline
+				\end{tabular}
+											
+			\end{table}
+			
+			\underline{Calcul du coefficient multiplicateur :}
+			\begin{equation*}
+				 k = \dfrac{26}{16} = \num{1.625}
+			\end{equation*}
+			
+			On peut aussi calculer indépendamment des prix : $\num{1.25} \times \num{1.30} = \num{1.625}$, soit une hausse globale de \num{62.5} \%.\\
+			
+			\begin{myrem}
+				Le pourcentage de hausse globale \num{62.5} \% n'est pas égal à la somme des deux pourcentages de hausse successives \num{25} \% et \num{30} \%, car ces deux pourcentages ne s'appliquent pas sur le même prix, donc ne s'additionnent pas.
+			\end{myrem}
+			
+			\begin{mybilan2}{\'Evolutions successives}
+				Deux évolutions (hausse ou baisse) successives de coefficients multiplicateurs $c$ et $c'$  correspondent  une évolution globale (hausse ou baisse) de $c \times c'$ (on multiplie).
+			\end{mybilan2}
+		\end{enumerate}
+		
+\end{enumerate}
 \end{document}
