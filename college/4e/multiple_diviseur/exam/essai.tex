@@ -1,0 +1,154 @@
+\documentclass[a4paper,11pt]{exam}
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+%\addpoints % Pour compter les points
+ \noaddpoints % pour ne pas compter les points
+\qformat{\textbf{\thequestion ) }\hfill} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../../utils_maths}
+
+%\author{}
+\date{28 Septembre 2016}
+\title{Interrogation num\'ero 2}
+
+
+\begin{document}
+	
+	\maketitle
+\begin{small}
+\begin{center}
+	\begin{tabular}{|@{\ }l@{}|@{\ }c@{\ }|}
+		\hline
+		Effectuer une division euclidienne &  \\
+		\hline
+		Déterminer si un entier est ou n'est pas multiple ou diviseur d'un autre entier &  $\qquad$\\
+		\hline
+		Démontrer : utiliser un raisonnement logique et des règles établies pour parvenir à une conclusion. &  \\
+		\hline
+		Présenter la démarche suivie, les résultats obtenus, communiquer à l’aide d’un langage adapté. &  \\
+		\hline
+	\end{tabular}
+\end{center}
+\end{small}	
+	
+
+\section{Heure de fin d'un film}
+
+Le film Vice-Versa dure \num{5700} secondes. 
+
+
+\begin{questions}
+	\question Si la séance débute à 20 heures, à quelle heure se terminera-t-elle ?
+	
+	\begin{solution}
+		\begin{eqnarray*}
+			5700 \div 60 &=& 95  \\
+			95 \div 60 &=& 1 \quad (reste\; 35)\\
+		\end{eqnarray*}
+		
+		Le film dure 95 minutes, soit 1 heure et 35 minutes. Il terminera donc à 21 h 30.
+	\end{solution}
+\end{questions}
+	
+\section{Répartition d'une somme d'argent}
+	Un groupe de moins de 40 personnes doit se répartir équitablement une somme de 229 €. Il reste alors 19 euros. Une autre fois, ce même groupe doit se répartir équitablement 474  €, cette fois ci il reste 12 €.
+	\begin{questions} % Début de l'examen
+		
+		\question Combien y a t-il de personnes dans le groupe ?
+		\begin{solution}
+			\begin{eqnarray*}
+				\num{229} & - & \num{19} = \num{210} \\
+				\num{474} & - & \num{12} = \num{462} \\
+			\end{eqnarray*}
+			
+			Le reste le plus grand est 19, il y a donc plus de 19 personnes.
+			
+		\end{solution}
+		
+		\question Ce groupe de 21 personnes décide de se répartir ce qu'il reste équitablement. Combien chaque personne reçoit-elle en plus ? Quelle somme auront-ils reçu au total ?
+	\end{questions}
+	
+\section{Trouver un nombre}
+	
+	Je suis un nombre entier de 4 chiffres, multiple de 9 et de 10.
+	Mon chiffre des dizaines est le même que mon chiffre des centaines.
+	Mon chiffre des milliers divise tous les nombres.
+	
+	
+	\begin{questions}
+		\question Qui suis-je ?
+		\begin{solution}
+			Je suis \num{1440}.
+		\end{solution}
+	\end{questions}
+	
+%	\newpage
+	
+\section{Rangées de pièces}
+	Zoé possède 72 pièces de 1 €. Elle souhaite les disposer en rangées parallèles contenant toutes le même nombre de pièces et qu'il n'en reste aucune non rangée.
+	
+	\begin{questions}
+		\question Sur chaque rangée, Zoé peut-elle disposer 5 pièces ? 4 pièces ? Si oui, combien y a-t-il de rangées ?
+		\begin{solution}
+			72 est un multiple de 4 mais pas de 5. Donc elle peut disposer 4 pièces sur ses rangées ($72 \div 4 = 18$, donc 18 rangées), mais pas 5.
+		\end{solution}
+		
+		\question Déterminer toutes les dispositions possibles de ces 72 pièces.
+		\begin{solution}
+			Les possibilités :
+			\begin{multicols}{2}
+				\begin{itemize}
+					\item 2 rangées de 36 pièces;
+					\item 4 rangées de 18 pièces;
+					\item 6 rangées de 12 pièces;
+					\item 8 rangées de 9 pièces;
+					\item 9 rangées de 8 pièces;
+					\item 12 rangées de 6 pièces;
+					\item 18 rangées de 4 pièces;
+					\item 36 rangées de 2 pièces.
+				\end{itemize}
+			\end{multicols}
+			
+		\end{solution}
+	\end{questions}
+	
+	\section{Compléter un nombre}
+	
+	\begin{questions}
+		\question Par quels chiffres peut-on remplacer le symbole $\bullet$ pour que le nombre 56$\bullet$ soit divisible par 3 ?
+		\begin{solution}
+			$5+6 = 11$, pour obtenir un multiple de 3, on peut remplacer $\bullet$ par 1; 4 ou 7.
+		\end{solution}
+	\end{questions} 
+	
+\section{Trouver un nombre 2}
+
+On écrit un nombre avec les seuls chiffres 0, 1, 6 et 8 utilisés une seule fois chacun.
+\begin{questions}
+	\question \'Ecrire le plus grand multiple de 5, de 2.
+	\begin{solution}
+		\num{8610} est le plus grand multiple de 5 et 2 qu'il est possible d'écrire avec ces chiffres.
+	\end{solution}
+	
+	\question \'Ecrire le plus grand multiple de 4.
+	\begin{solution}
+		Le plus grand multiple de 4 qu'il est possible d'écrire est \num{8160}.
+	\end{solution}
+	
+	\question Est-il possible d'écrire un multiple de 3 ? Si oui, donner le plus grand possible.
+	\begin{solution}
+		$ 0 + 1 + 6 + 8 = 15$ 15 est un multiple de 3, donc on peut écrire un multiple de 3. Le plus grand est \num{8610}.
+	\end{solution}
+\end{questions}
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[a4paper,11pt]{exam}
+\printanswers % pour imprimer les réponses (corrigé)
+% \noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+%\addpoints % Pour compter les points
+ \noaddpoints % pour ne pas compter les points
+\qformat{\textbf{Question\thequestion}\quad(\thepoints)\hfill} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../utils_maths}
+
+\author{Olivier FINOT}
+\date{\today}
+\title{Interrogation num\'ero 2}
+
+
+\begin{document}
+	
+	\maketitle
+\section{Problème 1}
+	Un groupe de moins de 40 personnes doit se répartir équitablement une somme de 229 €. Il reste alors 19 euros. Une autre fois, ce même groupe doit se répartir équitablement 474  €, cette fois ci il reste 12 €.
+	\begin{questions} % Début de l'examen
+		
+		\question Combien y a t-il de personnes dans le groupe ?
+		\begin{solution}
+			\begin{eqnarray}
+				\num{229} & - & \num{19} = \num{210} \\
+				\num{474} & - & \num{12} = \num{462} \\
+			\end{eqnarray}
+		\end{solution}
+	\end{questions}
+\end{document}
