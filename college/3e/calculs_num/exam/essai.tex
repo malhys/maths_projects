@@ -1,6 +1,6 @@
 \documentclass[a4paper,11pt]{exam}
-\printanswers % pour imprimer les réponses (corrigé)
-%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+%\printanswers % pour imprimer les réponses (corrigé)
+\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
 %\addpoints % Pour compter les points
  \noaddpoints % pour ne pas compter les points
 \qformat{\textbf{\thequestion ) }\hfill} % Pour définir le style des questions (facultatif)
@@ -55,139 +55,164 @@
 \end{small}	
 	
 
-\section{Puissance de 10}
+\section{Calculs de puissances}
 
 Donner le résultat sous la forme d'une seule puissance.
 
+\begin{multicols}{2}
+	
+	\begin{questions}
+		\question $10^3 \times 10^4$
+	
+		\begin{solution}
+			$10^{3+4} = 10^7$
+		\end{solution}
+	
+		\question $(10^2)^4$
+	
+		\begin{solution}
+			$10^{2 \times 4} = 10^8$
+		\end{solution}
+	
+		\question  $\dfrac{10 \times \num{e5} \times \num{10}}{\num{e2}} $
+		\begin{solution}
+			$\dfrac{10^{1+5+1}}{\num{e2}}=\dfrac{\num{e7}}{\num{e2}}=\num{e5}$
+		\end{solution}
+	    
+	    \vspace*{0.5cm}
+	     
+		\question $\dfrac{5^3 \times 5^4}{5^2 \times 5^3}$
+		\begin{solution}
+			$\dfrac{5^{3+4}}{5^{2+3}} = \dfrac{5^7}{5^5} = 5^2$
+		\end{solution}
+	
+		\question $\dfrac{3^{4} \times 3^{-2}}{3 \times 3^{5}}$
+		\begin{solution}
+			$\dfrac{3^{4-2}}{3^{1+5}} = \dfrac{3^{2}}{3^{6}} = 3^{2-6} = 3^{-4}$
+		\end{solution}
+		
+		\question $\dfrac{5^{5}}{25}$
+		\begin{solution}
+			$\dfrac{5^{5}}{5^{2}} = 5^{5-2} = 5^3$
+		\end{solution}
+	\end{questions}
+\end{multicols}
+	
+\section{Les jurons du capitaine Haddock}
+	
+	Dans les \emph{Aventures de Tintin}, le capitaine HADDOCK est célèbre pour ses jurons. Recopier chaque juron et donner son écriture à l'aide d'une puissance de 10.
+	\begin{multicols}{2}
 
-\begin{questions}
-	\question $10^3 \times 10^4$
-	
-	\begin{solution}
-		$10^{3+4} = 10^7$
-	\end{solution}
-	
-	\question $(10^2)^4$
-	
-	\begin{solution}
-		$10^{2 \times 4} = 10^8$
-	\end{solution}
-	
-	\question  $\dfrac{10 \times \num{e5} \times \num{10}}{\num{e2}} $
-	\begin{solution}
-		$\dfrac{10^{1+5+1}}{\num{e2}}=\dfrac{\num{e7}}{\num{e2}}=\num{e5}$
-	\end{solution}
-	
-	\question $\dfrac{5^3 \times 5^4}{5^2 \times 5^3}$
-	\begin{solution}
-		$\dfrac{5^{3+4}}{5^{2+3}} = \dfrac{5^7}{5^5} = 5^2$
-	\end{solution}
-	
-	\question $\dfrac{3^{4} \times 3^{-2}}{dénominateur}$
-\end{questions}
-	
-\section{Répartition d'une somme d'argent}
-	Un groupe de moins de 40 personnes doit se répartir équitablement une somme de 229 €. Il reste alors 19 euros. Une autre fois, ce même groupe doit se répartir équitablement 474  €, cette fois ci il reste 12 €.
-	\begin{questions} % Début de l'examen
-		
-		\question Combien y a t-il de personnes dans le groupe ?
-		\begin{solution}
-			\begin{eqnarray*}
-				\num{229} & - & \num{19} = \num{210} \\
-				\num{474} & - & \num{12} = \num{462} \\
-			\end{eqnarray*}
+		\begin{questions} % Début de l'examen
 			
-			Le reste le plus grand est 19, il y a donc plus de 19 personnes.
-			\num{210} et \num{462} sont des multiples de 21 ($21 \times 10$ et $21 \times 22$)? Il y a donc 21 personnes dans le groupe. 
+			\question Mille tonnerres !
+			\begin{solution}
+				\num{e3}
+			\end{solution}
 			
-		\end{solution}
-		
-		\question Ce groupe de 21 personnes décide de se répartir ce qu'il reste équitablement. Combien chaque personne reçoit-elle en plus ? Quelle somme auront-ils reçu au total ?
-		
-		\begin{solution}
-			\begin{eqnarray*}
-				\num{19} + \num{12} &= \num{31} \\
-				\num{31} \div \num{21} &= 1 & (reste \; 10) \\
-			\end{eqnarray*}
-			Chaque personne reçoit une pièce de plus.
+			\question Mille millions de mille sabords!
+			\begin{solution}
+				\num{e12}
+			\end{solution}
+						
+			\question Mille millions de tonnerres de Brest!
+			\begin{solution}
+				\num{e9}
+			\end{solution}
 			
-			\begin{equation*}
-				\num{10} + \num{22} + \num{1} = \num{33}
-			\end{equation*}
-			Au total, ils reçoivent chacun \num{33} pièces.
-		\end{solution}
-	\end{questions}
-	
-\section{Trouver un nombre}
-	
-	Je suis un nombre entier de 4 chiffres, multiple de 9 et de 10.
-	Mon chiffre des dizaines est le même que mon chiffre des centaines.
-	Mon chiffre des milliers divise tous les nombres.
-	
-	
-	\begin{questions}
-		\question Qui suis-je ?
-		\begin{solution}
-			Je suis \num{1440}.
-		\end{solution}
-	\end{questions}
-	
-%	\newpage
-	
-\section{Rangées de pièces}
-	Zoé possède 72 pièces de 1 €. Elle souhaite les disposer en rangées parallèles contenant toutes le même nombre de pièces et qu'il n'en reste aucune non rangée.
-	
-	\begin{questions}
-		\question Sur chaque rangée, Zoé peut-elle disposer 5 pièces ? 4 pièces ? Si oui, combien y a-t-il de rangées ?
-		\begin{solution}
-			72 est un multiple de 4 mais pas de 5. Donc elle peut disposer 4 pièces sur ses rangées ($72 \div 4 = 18$, donc 18 rangées), mais pas 5.
-		\end{solution}
-		
-		\question Déterminer toutes les dispositions possibles de ces 72 pièces.
-		\begin{solution}
-			Les possibilités :
-			\begin{multicols}{2}
-				\begin{itemize}
-					\item 2 rangées de 36 pièces;
-					\item 4 rangées de 18 pièces;
-					\item 6 rangées de 12 pièces;
-					\item 8 rangées de 9 pièces;
-					\item 9 rangées de 8 pièces;
-					\item 12 rangées de 6 pièces;
-					\item 18 rangées de 4 pièces;
-					\item 36 rangées de 2 pièces.
-				\end{itemize}
-			\end{multicols}
+			\question Mille milliards de mille sabords!
+			\begin{solution}
+				\num{e15}
+			\end{solution}
 			
-		\end{solution}
-	\end{questions}
+			\question Mille millions de mille milliards de mille tonnerres de Brest !
+			\begin{solution}
+				\num{e24}
+			\end{solution}
+		\end{questions}
+	\end{multicols}
 	
-	\section{Compléter un nombre}
 	
-	\begin{questions}
-		\question Par quels chiffres peut-on remplacer le symbole $\bullet$ pour que le nombre 56$\bullet$ soit divisible par 3 ?
-		\begin{solution}
-			$5+6 = 11$, pour obtenir un multiple de 3, on peut remplacer $\bullet$ par 1; 4 ou 7.
-		\end{solution}
-	\end{questions} 
+\section{Volume globulaire moyen}
 	
-\section{Trouver un nombre 2}
+Le volume globulaire moyen (VGM) est le volume moyen d'un globule rouge d'une personne. Il se mesure lors q'une prise de sang. Chez un adolescent, le VGM est d'environ 90 femtolitres (1 femtolitre = 1fL = \num{e-15} L).
 
-On écrit un nombre avec les seuls chiffres 0, 1, 6 et 8 utilisés une seule fois chacun.
-\begin{questions}
-	\question \'Ecrire le plus grand multiple de 5, de 2.
-	\begin{solution}
-		\num{8610} est le plus grand multiple de 5 et 2 qu'il est possible d'écrire avec ces chiffres.
-	\end{solution}
+	\begin{questions}
+		\question Combien de litres occupent les vingt-cinq mille milliards de globules rouges présents en moyenne dans le corps ?  
+		
+		\begin{solution}
+			Vingt-cinq mille milliards = $25 \times \num{e3} \times \num{e9} = \num{25e12} = \num{2.5e13}$.
+			
+			90 femtolitres = $\num{90e-15}=\num{9e-14}$.
+			
+			$\num{2.5e13} \times \num{9e-14} = \num{22.5} \times 10^{13-14} = \num{22.5e-1} = \num{2.5}$.
+			
+			Donc, dans le corps d'un adolescent \num{2.5} litres sont occupés par des globules rouges. 
+		\end{solution}
+	\end{questions}
+
+\newpage	
+\section{Encadrement de nombres}
+
+Donner un encadrement par deux puissances de 10 consécutives 
+
+	\begin{questions}
+		\question En nombre d'années de l'âge de la Terre : environ \num{4.5} milliards d'années.
+		\begin{solution}
+			$\num{e9}<\num{4.5e9}<\num{e10}$
+		\end{solution}
+		
+		
+		\question En mètre, du diamètre d'une bactérie qui peut atteindre \num{3} $\mu m$.
+		\begin{solution}
+			$\num{e-6}<\num{3e-6}<\num{e-5}$
+			\end{solution}
+		
+
+		\question En hertz, de la fréquence d'un processeur tournant à \num{4.1} GHz.
+		\begin{solution}
+			$\num{e9}<\num{4.1e9}<\num{e10}$
+		\end{solution}
+	\end{questions}
 	
-	\question \'Ecrire le plus grand multiple de 4.
-	\begin{solution}
-		Le plus grand multiple de 4 qu'il est possible d'écrire est \num{8160}.
-	\end{solution}
+\section{Battements du c\oe ur}	
+
+Le c\oe ur humain effectue environ \num{5000} battements par heure.
+
+	\begin{questions}
+		\question \'Ecrire \num{5000} en notation scientifique.
+		\begin{solution}
+			$\num{5000} = \num{5e3}$
+		\end{solution}
+		
+		\question Calculer le nombre de battements effectués en un jour.
+		\begin{solution}
+			$ 24 \times \num{5e3} = \num{120e3} = \num{1.2e5}$
+		\end{solution}
+		
+		\question Calculer le nombre de battements effectués pendant une vie de 80 ans. On considère qu'une année comporte 365 jours. Donner la réponse en notation scientifique.
+		\begin{solution}
+			\begin{itemize}
+				\item Nombre de battements pour une année : $365 \times \num{1.2e5} = \num{438e5} = \num{4.38e7}$;
+				\item Nombre de battements pour 80 ans : $80 \times \num{4.38e7} = \num{350.4e7} = \num{3.504e9}.$
+				
+				Soit \num{3.504e9} battements de c\oe ur pendant 80 ans.
+			\end{itemize}
+		\end{solution}
+	\end{questions}
 	
-	\question Est-il possible d'écrire un multiple de 3 ? Si oui, donner le plus grand possible.
-	\begin{solution}
-		$ 0 + 1 + 6 + 8 = 15$. 15 est un multiple de 3, donc on peut écrire un multiple de 3. Le plus grand est \num{8610}.
-	\end{solution}
-\end{questions}
+\section{Coupe de la Terre}	
+	La structure interne de la Terre a été découpées en plusieurs couches en fonction des différentes densités de matière calculées :
+	\begin{itemize}
+		\item La croûte terrestre, épaisse d'une centaine de km;
+		\item Le manteau supérieur qui s'enfonce jusque 650 km;
+		\item Le manteau inférieur qui s'étend sur près de \num{2000} km;
+		\item Le noyau externe qui s'étend sur presque \num{2300} km;
+		\item Le noyau interne.
+		
+		\begin{questions}
+			\question Le rayon de la Terre étant de \num{6400} km environ, exprimer l'étendue de chaque couche en écriture scientifique (on donnera le résultat en km, puis un ordre de grandeur en cm).
+		\end{questions}
+	\end{itemize}
+	\label{LastPage}
 \end{document}
