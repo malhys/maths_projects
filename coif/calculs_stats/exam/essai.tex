@@ -1,15 +1,20 @@
 \documentclass[a4paper,11pt]{exam}
 \printanswers % pour imprimer les réponses (corrigé)
 % \noprintanswers % Pour ne pas imprimer les réponses (énoncé)
-%\addpoints % Pour compter les points
- \noaddpoints % pour ne pas compter les points
-\qformat{\textbf{\thequestion ) } }
-%\qformat{\textbf{Question\thequestion}\quad(\thepoints)\hfill} % Pour définir le style des questions (facultatif)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+\qformat{\textbf{Question\thequestion}\quad(\thepoints)\hfill} % Pour définir le style des questions (facultatif)
 \usepackage{color} % définit une nouvelle couleur
 \shadedsolutions % définit le style des réponses
 % \framedsolutions % définit le style des réponses
 \definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
 \renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+
+
+\input{../../../monexam}
 
 
 %\usepackage{../../pas-math}
@@ -27,9 +32,14 @@
 
 
 \begin{document}
-	
+%	\usepackage{fancyhdr}
+%	
+%	\pagestyle{fancy}
+%	\fancyhf{}
+	%\rhead{Share\LaTeX}
+
 	\maketitle
-\section{Prix d'un vélo}
+\section{Prix d'un vélo (7 points)}
 	
 	
 	L'étude suivante porte sur le prix d'un vélo dans 50 points de vente différents.
@@ -60,12 +70,12 @@
 
 	\begin{questions} % Début de l'examen
 		
-		\question Donner le caractère étudié et sa nature.
+		\question[1] Donner le caractère étudié et sa nature.
 		\begin{solution}
 			Le caractère étudié est le prix d'un vélo ; il est quantitatif.
 		\end{solution}
 		
-		\question Reporter les effectifs dans le tableau.
+		\question[1] Reporter les effectifs dans le tableau.
 		\begin{solution}
 			
 				\begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
@@ -78,17 +88,17 @@
 			
 		\end{solution}
 		
-		\question Quel est l'effectif total ?
+		\question[1] Quel est l'effectif total ?
 		\begin{solution}
 			L'effectif total est 50.
 		\end{solution}
 		
-		\question Combien de magasins vendent des vélos à moins de 300 euros ?
+		\question[2] Combien de magasins vendent des vélos à moins de 300 euros ?
 		\begin{solution}
 			25 magasins vendent des vélos à moins de 300 euros.
 		\end{solution}
 		
-		\question Calculer le nombre de magasins où des vélos sont vendus à un prix d'au moins 300 euros.
+		\question[2] Calculer le nombre de magasins où des vélos sont vendus à un prix d'au moins 300 euros.
 		\begin{solution}
 			25 magasins vendent des vélos à au moins 300 euros.
 		\end{solution}
@@ -97,7 +107,7 @@
 
 \newpage
 
-\section{Diner de gala}
+\section{Diner de gala (5 points)}
 
 	\begin{multicols}{2}
 		\ \\
@@ -110,7 +120,7 @@
 	\end{multicols}
 	 
 	\begin{questions}
-		\question A l'aide du diagramme, recopier et compléter le tableau suivant :
+		\question[5] A l'aide du diagramme, recopier et compléter le tableau suivant :
 	
 		\begin{footnotesize}
 			\begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
@@ -141,14 +151,14 @@
 		\end{solution}
 	\end{questions}
 	
-\section{Séances de cinéma}
+\section{Séances de cinéma (7 points)}
 
 	On demande à 25 personnes combien de fois elles sont allées au cinéma pendant l'été. On obtient les réponses suivantes : \\
 	
 	$3 \bullet 2 \bullet 0 \bullet 1 \bullet 5 \bullet 4 \bullet 2 \bullet 2 \bullet 1 \bullet 3 \bullet 2 \bullet 1 \bullet 4 \bullet 4 \bullet 0 \bullet 1 \bullet 2 \bullet 1 \bullet 0 \bullet 0 \bullet 2 \bullet 5 \bullet 4 \bullet 1 \bullet 2$
 	
 	\begin{questions}
-		\question Compléter le tableau suivant :
+		\question[2] Compléter le tableau suivant :
 		
 		\begin{center}
 			\begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
@@ -176,21 +186,25 @@
 			
 		\end{solution}
 		
-		\question Donner le caractère étudié et sa nature.
+		\question[1] Donner le caractère étudié et sa nature.
 		\begin{solution}
 			Le caractère étudié est le nombre de séances de cinéma, il est quantitatif.
 		\end{solution}
 		
-		\question Donner l'effectif total.
+		\question[1] Donner l'effectif total.
 		\begin{solution}
 			L'effectif total est 25 personnes.
 		\end{solution}
 		
-		\question Construire le diagramme en bâtons correspondant (prendre 1 cm ou 1 carreau pour 1 séance).
+		\question[3] Construire le diagramme en bâtons correspondant (prendre 1 cm ou 1 carreau pour 1 séance).
 		\begin{solution}
 			\begin{center}
 				\includegraphics[scale=0.6]{./cine}
 			\end{center} 
 		\end{solution}
 	\end{questions}
+	
+	\label{LastPage}
+	
+
 \end{document}
