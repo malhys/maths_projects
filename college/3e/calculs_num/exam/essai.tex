@@ -1,6 +1,6 @@
 \documentclass[a4paper,11pt]{exam}
-%\printanswers % pour imprimer les réponses (corrigé)
-\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
 %\addpoints % Pour compter les points
  \noaddpoints % pour ne pas compter les points
 \qformat{\textbf{\thequestion ) }\hfill} % Pour définir le style des questions (facultatif)
@@ -59,7 +59,7 @@
 
 Donner le résultat sous la forme d'une seule puissance.
 
-\begin{multicols}{2}
+%\begin{multicols}{2}
 	
 	\begin{questions}
 		\question $10^3 \times 10^4$
@@ -96,7 +96,7 @@ Donner le résultat sous la forme d'une seule puissance.
 			$\dfrac{5^{5}}{5^{2}} = 5^{5-2} = 5^3$
 		\end{solution}
 	\end{questions}
-\end{multicols}
+%\end{multicols}
 	
 \section{Les jurons du capitaine Haddock}
 	
@@ -212,6 +212,26 @@ Le c\oe ur humain effectue environ \num{5000} battements par heure.
 		
 		\begin{questions}
 			\question Le rayon de la Terre étant de \num{6400} km environ, exprimer l'étendue de chaque couche en écriture scientifique (on donnera le résultat en km, puis un ordre de grandeur en cm).
+			
+			\begin{solution}
+				\'Epaisseur de chaque couche en notation scientifique en km:
+				\begin{itemize}
+					\item Croûte terrestre : \num{e2}km;
+					\item Manteau supérieur : $\num{6.5e2} - \num{e2} = \num{5.5e2}$ km;
+					\item Manteau inférieur : \num{2e3} km;
+					\item Noyau externe : \num{2.3e3} km;
+					\item Noyau interne : $\num{6400} - (\num{100} + \num{550} + \num{2000} + \num{2300}) = \num{6400} - \num{4950} = \num{1450} = \num{1.45e3}$ km.\\
+				\end{itemize}
+				
+				Ordre de grandeur en cm :
+				\begin{itemize}
+					\item Croûte terrestre : $\num{e2} \times \num{e2} = \num{e4}$ cm;
+					\item Manteau supérieur : $\num{e3} \times \num{e2} =  \num{e5}$ cm;
+					\item Manteau inférieur : $\num{e3} \times \num{e2} =  \num{e5}$ cm;
+					\item Noyau externe : $\num{e3} \times \num{e2} =  \num{e5}$ cm;
+					\item Noyau interne : $\num{e3} \times \num{e2} =  \num{e5}$ cm.
+				\end{itemize}
+			\end{solution}
 		\end{questions}
 	\end{itemize}
 	\label{LastPage}

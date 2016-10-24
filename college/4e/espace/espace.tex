@@ -1,0 +1,126 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+\usepackage{textcomp}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+%\newcommand{\disp}{false}
+
+%\lhead{CH1 : Calculs numériques}
+%\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+	%\maketitle
+	
+	\chap[num=1, color=red]{Se repérer dans l'espace}{Olivier FINOT, \today }
+	
+	\input{./obj}
+
+\section{Repérage dans un parallélépipède rectangle}
+
+\begin{myact}
+	Activité 1 page 161
+\end{myact}
+
+
+\begin{mydef}
+
+	Dans un parallélépipède rectangle, un \textbf{repère} est formé par trois arêtes ayant un sommet commun appelé \textbf{origine du repère}.
+
+\end{mydef}
+
+\begin{myprop}
+	Tout point d'un parallélépipède rectangle est repéré par trois nombre, ses \textbf{coordonnées} : l'\textcolor{red}{abscisse}, l'\textcolor{green}{ordonnée}, l'\textcolor{blue}{altitude}.
+\end{myprop}
+
+\begin{myex}
+	
+	\begin{multicols}{2}
+	ABCDEFGH est un parallélépipède rectangle. 
+	Le repère formé par les arêtes $[AB]$, $[AD]$ et $[AE]$ a pour origine le point A. On le note (\textbf{A;B,D,E}).
+	
+	Les coordonnées du point D sont \mycoord{0}{1}{0}.\\
+	
+	De même, A\mycoord{0}{0}{0}, B\mycoord{1}{0}{0}, E\mycoord{0}{0}{1}.\\
+	
+	Le point M est "à la verticale" de C : il a même abscisse et même ordonnées que C, mais comme il se situe au milieu l'arête $[CG]$, son altitude est \num{0.5}. 
+	
+	Ainsi M\mycoord{1}{1}{0.5}
+%	\vspace*{1cm} 
+	%\includegraphics[scale=0.22]{figure}
+	\begin{center}
+		\input{./beamer/figure}
+	\end{center} 
+	\end{multicols}
+\end{myex}
+
+\section{Repérage sur la Terre}
+
+\begin{myact}{B}
+	Activité 2 p 161
+	
+	Les coordonnées géographiques de Oran sont $0$° Est et $35$° Nord.
+	
+	Celles de Kerguelen sont $70$° Est et $50$° Sud.
+	
+	Celles de Galapagos sont $90$° Ouest et $0$° Nord.
+\end{myact}
+
+
+\begin{mydef}
+	On considère que la Terre est une sphère.
+	
+	L'origine du repère est le centre de la Terre, les axes sont 
+	\begin{itemize}
+		\item Un cercle : l'\kw{équateur};
+		\item Un demi-cercle : le \kw{méridien de Greenwich}.
+	\end{itemize}
+	
+	La Terre est quadrillée par des cercles \kw{parallèles} à l'équateur, et des demi-cercles allant d'un pôle à l'autre, appelés \kw{méridiens} :
+	
+	\begin{multicols}{2}
+				\begin{itemize}
+			\item L'abscisse d'un point correspond à l'angle, orienté Ouest ou Est, entre le méridien de Greenwich et le méridien du point. C'est sa \kw{longitude}.
+			\item L'ordonnée d'un point correspond à l'angle, orienté Nord ou Sud, entre l'équateur et le parallèle du point. C'est sa \kw{latitude}.
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.55]{img/terre}
+		\end{center}
+		
+	\end{multicols}
+	
+\end{mydef}
+
+\begin{myex}
+	\begin{multicols}{2}
+		\begin{center}
+			\includegraphics[scale=0.5]{img/terre1}
+		\end{center}
+		La longitude de New York est $74$° Ouest.
+		
+		\begin{center}
+			\includegraphics[scale=0.5]{img/terre2}
+		\end{center}
+		La latitude de Madrid est $40$° Nord.
+	\end{multicols}
+\end{myex}
+\end{document}

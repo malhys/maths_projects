@@ -1,0 +1,207 @@
+\documentclass[a4paper,11pt]{exam}
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+\qformat{\textbf{\thequestion )}} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+
+
+\input{../../../../monexam}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../../utils_maths}
+
+
+%\usepackage{fullpage}
+\author{\ }
+\date{7 Octobre 2016}
+\title{DS num\'ero 1}
+
+
+\begin{document}
+%	\usepackage{fancyhdr}
+%	
+%	\pagestyle{fancy}
+%	\fancyhf{}
+	%\rhead{Share\LaTeX}
+
+	\maketitle
+	
+\section{A propos des acides gras oméga-3}
+On a récemment découvert que les acides gras oméga-3, présents dans des poissons comme la truite ou le saumon, ont un effet protecteur contre les maladies cardio-vasculaires.
+\emph{Les pourcentages demandés seront arrondis à \num{e-2}. \%} 
+
+\begin{questions}
+	\question Une portion de 180 g de saumon d'élevage fournit environ \num{1.5}g d'oméga-3. Calculer le pourcentage d'oméga-3 dans le saumon d'élevage.
+	\begin{solution}
+		$\dfrac{\num{1.5}}{\num{180}} \approx \num{0.0083}$, soit \num{0.83} \% d'oméga-3 dans le saumon d'élevage.
+	\end{solution}
+	
+	\question Le pourcentage d'omega-3 dans le saumon sauvage est de \num{0.78} \%. En déduire la quantité d'oméga-3 contenue dans une portion de 180g de saumon sauvage (arrondir à \num{0.1} g).
+	\begin{solution}
+		$180 \times \frac{\num{0.78}}{100} = \num{1.404}$, soit environ \num{1.4} g d'oméga-3 pour 180 g de saumon sauvage.
+	\end{solution}
+	
+	\question Consigner les résultats précédents dans le tableau suivant et finir de le compléter. Le détail des calculs n'est pas demandé.
+	
+	{\footnotesize \begin{tabular}{@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+		\cline{2-5}
+		& \multicolumn{2}{c|}{Elevage}               & \multicolumn{2}{c|}{Sauvage}               \\ \cline{2-5} 
+		& Pourcentage d'oméga-3 & Quantité d'oméga-3 & Pourcentage d'oméga-3 & Quantité d'oméga-3 \\ \hline
+		\multicolumn{1}{|@{\ }c@{\ }|}{Saumon (180 g)} &                       & \num{1.5} g      & \num{0.78}\%        &                    \\ \hline
+		\multicolumn{1}{|@{\ }c@{\ }|}{Truite (180 g)} &                       & \num{1.3} g      & \num{0.22}\%        &                    \\ \hline
+	\end{tabular}}
+	
+	\begin{solution}
+		{\footnotesize \begin{tabular}{@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+				\cline{2-5}
+				& \multicolumn{2}{c|}{Elevage}               & \multicolumn{2}{c|}{Sauvage}               \\ \cline{2-5} 
+				& Pourcentage d'oméga-3 & Quantité d'oméga-3 & Pourcentage d'oméga-3 & Quantité d'oméga-3 \\ \hline
+				\multicolumn{1}{|@{\ }c@{\ }|}{Saumon (180 g)} &  \num{0.83} \%   & \num{1.5} g      & \num{0.78}\%        &    \num{1.4} g                \\ \hline
+				\multicolumn{1}{|@{\ }c@{\ }|}{Truite (180 g)} &  \num{0.72} \%  & \num{1.3} g      & \num{0.22}\%        &  \num{0.4} g\\ \hline
+			\end{tabular}}
+	\end{solution}
+	
+	\question La consommation d'une portion de 180 g de truite d'élevage couvre environ 37 \% des besoins hebdomadaires d'un être humain. Montrer que ces besoins, arrondis à \num{0.1} g, sont de \num{3.5} g.
+	
+	\begin{solution}
+		Soit $x$ le besoin hebdomadaire en oméga-3 d'un être humain. On a $\dfrac{37 \times x}{100}=\num{1.3}$.
+		
+		Donc $x=\dfrac{\num{1.3}}{\num{0.37}} \approx \num{3.51}$ g.
+	\end{solution} 
+	
+	\question Retrouver la réponse précédente sachant que ces besoins hebdomadaires sont exactement couverts si on consomme 450 g de saumon sauvage.
+	\begin{solution}
+		$\dfrac{450 \times \num{0.78}}{100} = \num{3.51}$ soit \num{3.5} g.
+	\end{solution}
+	
+	\question Calculer la quantité de truite sauvage qu'il faudrait consommer pour couvrir la totalité de ces besoins hebdomadaires (arrondir à 10 g).
+	\begin{solution}
+		$\dfrac{\num{3.5}}{\num{0.4}}\times 180 = 1575$, soit 1570 g de truite sauvage pour couvrir les besoins hebdomadaires en oméga-3. 
+	\end{solution}
+\end{questions}
+
+
+
+\section{\'Evolution de la population de deux communes}
+	
+	
+	Le graphique ci-dessous représente l'évolution du nombre d'habitants de deux communes voisines, nommées A et B, de l'année 1986 à l'année 2010 (de quatre années en quatre années) .
+	
+	\begin{center}
+		\includegraphics[scale=0.7]{./graph}
+	\end{center}
+
+
+\subsection{Lecture graphique}				
+
+Répondre aux questions suivantes en utilisant uniquement le graphique ci-dessus.
+
+\begin{questions}
+	\question En quelle année, la population de la commune A a été maximale ?
+	\begin{solution}
+		La population de la commune A a été maximale en 2002.
+	\end{solution}
+	
+	\question Préciser les années où les deux communes on eu le même nombre d'habitants.
+	\begin{solution}
+		Les deux villes ont eu la même population en 1992 et 2008.
+	\end{solution}
+	
+	\question Quelles sont les périodes où la commune B a eu plus d'habitants que la commune A.
+	\begin{solution}
+		La commune B a eu plus d'habitants que la commune A entre 1986 et 1992 et entre 2008 et 2010.
+	\end{solution}
+	
+	\question En quelle année l'écart entre le nombre d'habitants des deux communes a-t-il été le plus important.
+	\begin{solution}
+		L'écart entre les deux communes a été le plus important en 1998.
+	\end{solution}
+	
+	\question Préciser, en justifiant la réponse, pendant quelle période de quatre années, la commune A a eu la plus forte augmentation de sa population.
+	\begin{solution}
+		La plus forte augmentation de la population de la commune A a eu lieu entre 1994 et 1998. L'angle de la pente de la courbe est la plus importante sur cette période.
+	\end{solution}
+\end{questions}
+
+\subsection{Pourcentage d'évolution}
+
+\begin{multicols}{2}
+
+\vspace*{0.1cm}	
+On s'intéresse à l'évolution de la population dans ces communes entre 2006 et 2010. Le tableau suivant indique le nombre d'habitants dans ces deux communes en 2006 et en 2010. 
+
+
+
+	\begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+		\hline
+		\textbf{Années} & \textbf{2006} & \textbf{2010}\\
+		\hline
+		\textbf{Commune A} & \num{863} & \num{795}  \\
+		\hline 
+		\textbf{Commune B} & \num{711} & \num{947}  \\
+		\hline
+	\end{tabular}
+
+\end{multicols}	
+
+Les questions sont indépendantes.
+
+\begin{questions}
+	\question Justifier que, de 2006 à 2010, la population à baissé d'environ \num{7.9} \%.
+	\begin{solution}
+		$\dfrac{795 - 863}{863} \approx \num{-0.079} $, soit une baisse de \num{7.9} \%.
+	\end{solution}
+	
+	\question Déterminer le pourcentage d'augmentation de la population de la commune B dans cette même période (on donnera le résultat arrondi à \num{0.1} \%).
+	\begin{solution}
+		$\dfrac{947-711}{711}\approx \num{0.331}$, soit une hausse de \num{33.1}\%.
+	\end{solution}
+	
+	\question Si on considère la population des deux communes réunies, déterminer le pourcentage de cette évolution pendant durant cette période (on donnera le résultat arrondi à \num{0.1} \%).
+	\begin{solution}
+		\begin{itemize}
+			\item Population globale en 2006 : $863 + 711 = 1574$ habitants.
+			\item Population globale en 2010 : $795 + 947 = 1742$ habitants.
+			\item \'Evolution globale : $\dfrac{1742-1574}{1574} \approx \num{0.107}$, soit une hausse de \num{10.7} \%.
+		\end{itemize}
+	\end{solution}
+	
+\end{questions}
+
+
+\section{Le laboratoire perd du terrain}
+
+Le chiffre d'affaires annuel d'un laboratoire pharmaceutique était en 2008 de \num{32860000} euros et en 2009 de \num{28947000} euros.
+\begin{questions}
+	\question Calculer le pourcentage de baisse du chiffre d'affaire de l'entreprise entre 2008 et 2009. Arrondir à \num{0.01} \%.
+	\begin{solution}
+		$\dfrac{\num{28947000} - \num{32860000}}{\num{32860000}} \approx \num{-0.1191}$, soit une baisse de \num{11.91} \%.
+	\end{solution}
+	
+	\question Calculer le pourcentage de hausse qui ramènerait, en 2010, le chiffre d'affaires au niveau de 2008. Arrondir les coefficients multiplicateurs à \num{e-4}.
+	\begin{solution}
+		Le coefficient multiplicateur correspondant à une baisse de \num{11.91} \% est ($1-\num{0.1191} = \num{0.8809}$).
+		
+		$\dfrac{1}{\num{0.8809}} = \num{1.1352}$, soit une hausse de \num{13.52} \%.
+	\end{solution}
+\end{questions}
+
+
+	\label{LastPage}
+	
+
+\end{document}

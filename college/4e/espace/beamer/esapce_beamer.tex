@@ -1,0 +1,113 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{CambridgeUS}
+\usecolortheme{rose}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+
+\graphicspath{{../img/}}
+
+\title{Utiliser le théorème de Thalès}
+\author{}\institute{}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+}
+
+
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\section{Repérage dans un parallélépipède rectangle}
+
+
+
+
+
+\section{Repérage sur Terre}
+
+\begin{frame}
+	\begin{alertblock}{Définition}
+		On considère que la Terre est une sphère. L'origine du repère est le centre de la Terre, les axes sont :
+		\begin{itemize}
+			\item Un cercle : l'\kword{équateur};
+			\item Un demi-cercle : le \kword{méridien de Greenwich}.
+		\end{itemize}
+		
+		
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\begin{alertblock}{Définition}
+		La Terre est quadrillée par des cercles \kword{parallèles} à l'équateur, et des demi-cercles allant d'un pôle à l'autre, appelés \kword{méridiens} :
+		\begin{columns}
+			\begin{column}{7cm}
+				\begin{itemize}
+					\item l'abscisse d'un point correspond à l'angle, orienté Ouest ou Est, entre le méridien de Greenwich et et le méridien du point. C'est sa \kword{longitude}. 
+					\item L'ordonnée d'un point correspond à l'angle, orienté Nord ou Sud, entre l'équateur et le parallèle du point. C'est sa \kword{latitude}.
+				\end{itemize}
+			\end{column}
+			
+			\begin{column}{5cm}
+				\begin{center}
+					\includegraphics[scale=0.45]{../img/terre}
+				\end{center}
+			\end{column}
+		\end{columns}
+		
+		
+		
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\begin{exampleblock}{Exemples}
+		
+		\begin{center}
+			\includegraphics[scale=0.6]{../img/terre1}
+		\end{center}
+				
+		La longitude de New York est \pause $74$° Ouest
+
+	\end{exampleblock}
+\end{frame}			
+
+
+\begin{frame}
+	\begin{exampleblock}{Exemples}
+		
+		\begin{center}
+			\includegraphics[scale=0.6]{../img/terre2}
+		\end{center}
+		
+		La latitude de Madrid est \pause $40$° Nord.
+		
+	\end{exampleblock}
+\end{frame}			
+
+
+\end{document}

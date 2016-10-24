@@ -1,0 +1,113 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+%\newcommand{\disp}{false}
+
+%\lhead{CH1 : Calculs numériques}
+%\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+	%\maketitle
+	
+	\chap[num=1, color=red]{Utiliser le théorème de Thalès}{Olivier FINOT, \today }
+	
+	\input{./obj}
+
+\section{Homothéties}
+
+\begin{myact}
+	Activité 1 page 157 (à l'oral et au TBI)
+\end{myact}
+
+
+\begin{mydef}
+\begin{multicols}{2}
+
+
+	Le point $M'$ est l'image du point $M$ par l'\kw{\homo\ de centre $O$ et de rapport $k$} ($k$ est un nombre différent de $0$) lorsque :
+	\begin{itemize}
+		\item si $k$ est positif : $M' \in [OM) $ ou si $k$ est négatif : $O \in [MM']$
+		\item $OM' = k \times OM$ si $k$ est positif, $OM'=-k \times OM$ si $k$ est négatif.
+	\end{itemize}
+
+\begin{center}
+	\includegraphics[scale=0.8]{img/homo_v2}	
+\end{center}
+
+\end{multicols}
+
+\end{mydef}
+
+\begin{myrem}
+	\begin{itemize}
+		\item Si $k>1$ ou $k<-1$, la figure est un agrandissement de la figure initiale.
+		\item Si $-1<k<0$ ou $0<k<1$, la figure est une réduction de a figure initiale. 
+	\end{itemize}
+\end{myrem}
+
+\begin{myprops}
+	Par une \homo\ de rapport $k$, l'image :
+	\begin{itemize}
+		\item d'une droite est une droite qui lui est parallèle;
+		\item d'un segment $[MN]$ est un segment $[M'N']$ de longueur $k \times MN$ (si $k>0$) ou $-k \times MN$ (si $k<0$)
+	\end{itemize}
+\end{myprops}
+
+\section{Théorème de Thalès}
+
+\begin{myact}{2 page 157}
+	Le triangle AMN est l'image du triangle ABC par une \homo de rapport $k$.
+	\begin{enumerate}[label=\alph*.]
+		\item Le point $A$ est le centre de cette \homo .
+		\item \begin{itemize}
+			\item Le coté \seg{AM} est l'image de \seg{AB} par cette \homo , donc $\frac{AM}{AB}=k$.  
+			\item Le coté \seg{AN} est l'image de \seg{AC} par cette \homo , donc $\frac{AN}{AC}=k$.
+			\item Le coté \seg{MN} est l'image de \seg{BC} par cette \homo , donc $\frac{MN}{BC}=k$.
+		\end{itemize}
+		
+		On a donc : \begin{equation*}
+			k=\dfrac{AM}{AB}=\dfrac{AN}{AC}=\dfrac{MN}{BC}
+		\end{equation*}
+		
+		\item La figure d'origine et l'image sont du même coté du centre de l'\homo\ $A$, donc $k$ est positif ; le triangle AMN est une réduction du triangle ABC donc $k$ est inférieur à 1. On a ici $0<k<1$. 
+	\end{enumerate}
+\end{myact}
+
+\begin{myprop}
+	Si deux droites \dte{BM} et \dte{CN} sécantes en $A$ sont coupées par deux droites parallèles \dte{BC} et \dte{MN}, \textbf{alors :}
+		
+	\begin{equation*}
+		\dfrac{A\textcolor{Blue}{M}}{A\textcolor{Red}{B}}=\dfrac{A\textcolor{Blue}{N}}{A\textcolor{Red}{C}}=\dfrac{\textcolor{Blue}{MN}}{\textcolor{Red}{BC}}
+	\end{equation*}
+	
+	\vspace*{0.5cm}
+	\textbf{Configurations de Thalès :}
+	\begin{multicols}{3}
+		\includegraphics[scale=0.4]{./img/thales3}
+		\includegraphics[scale=0.4]{./img/thales2}
+		\includegraphics[scale=0.4]{./img/thales1}
+	\end{multicols}
+	
+	Le triangle AMN est l'image du triangle ABC par une \homo\ de centre A.
+\end{myprop}
+\end{document}

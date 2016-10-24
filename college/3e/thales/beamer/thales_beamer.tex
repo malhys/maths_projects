@@ -1,0 +1,128 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{CambridgeUS}
+\usecolortheme{rose}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+
+\graphicspath{{../img/}}
+
+\title{Utiliser le théorème de Thalès}
+\author{}\institute{}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+}
+
+
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\section{Homothéties}
+
+\begin{frame}
+	\frametitle{Homothéties}
+	\framesubtitle{}
+	
+	\begin{alertblock}{Définition}
+		
+		\begin{columns}
+			\begin{column}{8cm}
+				
+				Le point $M'$ est l'image du point $M$ par l'\kw{\homo\ de centre $O$ et de rapport $k$} ($k$ est un nombre différent de $0$) lorsque :
+				\begin{itemize}
+					\item si $k$ est positif : $M' \in [OM) $ ou si $k$ est négatif : $O \in [MM']$
+					\item $OM' = k \times OM$ si $k$ est positif, $OM'=-k \times OM$ si $k$ est négatif.
+				\end{itemize}	
+				
+			\end{column}
+			\begin{column}{4cm}
+				\begin{center}
+					\includegraphics[scale=0.65]{../img/homo_v2}
+				\end{center}
+			\end{column}
+		\end{columns}
+		
+			
+			
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Homothéties}
+	\framesubtitle{}
+	
+	\begin{block}{Remarque}
+		\begin{itemize}
+			\item Si $k>1$ ou $k<-1$, \pause la figure est un agrandissement de la figure initiale.\pause
+			\item Si $-1<k<0$ ou $0<k<1$,\pause la figure est une réduction de a figure initiale. 
+		\end{itemize}
+	\end{block}
+	
+	\begin{block}{Propriétés}
+		Par une \homo\ de rapport $k$, l'image :
+		\begin{itemize}
+			\item d'une droite est une droite qui lui est parallèle;
+			\item d'un segment $[MN]$ est un segment $[M'N']$ de longueur $k \times MN$ (si $k>0$) ou $-k \times MN$ (si $k<0$)
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\section{Théorème de Thalès}
+
+\begin{frame}
+	%\frametitle{Théorème de Thalès}
+
+	\begin{alertblock}{Propriété}
+		Si deux droites \dte{BM} et \dte{CN} sécantes en $A$ sont coupées par deux droites parallèles \dte{BC} et \dte{MN}, \textbf{alors :}
+		
+		\begin{equation*}
+		\dfrac{A\textcolor{Blue}{M}}{A\textcolor{Red}{B}}=\dfrac{A\textcolor{Blue}{N}}{A\textcolor{Red}{C}}=\dfrac{\textcolor{Blue}{MN}}{\textcolor{Red}{BC}}
+		\end{equation*}
+	\end{alertblock}
+	
+	\begin{block}{Configurations de Thalès}
+		\begin{columns}
+			\begin{column}{3cm}
+				\includegraphics[scale=0.3]{../img/thales3}
+			\end{column}
+			\begin{column}{3cm}
+				\includegraphics[scale=0.27]{../img/thales2}
+			\end{column}
+			
+			\begin{column}{3cm}
+				\includegraphics[scale=0.3]{../img/thales1}
+			\end{column}
+		\end{columns}
+		
+		Le triangle AMN est l'image du triangle ABC par une \homo\ de centre A.
+	\end{block}
+\end{frame}
+
+
+\section{Réciproque du théorème de Thalès}
+
+\end{document}
