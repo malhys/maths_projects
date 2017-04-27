@@ -1,0 +1,158 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../pas-math}
+\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+
+
+%\newcommand{\disp}{false}
+
+\lhead{CH1 : Logique booléenne}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+\chap[num=1, color=red]{\large Logique Booléenne et instructions conditionnelles}{Olivier FINOT, \today }
+
+\section{Contexte et exemple}
+
+	\subsection{Contexte}
+	
+	\begin{itemize}
+		\item Programmes rarement linéaires;
+		\item Besoin de faire des choix;
+		\item Selon la situation, plusieurs choix sont possibles;
+		\item[$\Rightarrow$] Besoin d'indiquer au programme quel choix il doit faire.
+	\end{itemize}
+	
+	
+	\subsection{Exemple : Loto}
+	
+	\begin{itemize}
+		\item L'animateur tire un numéro;
+		\item Le joueur pose un pion s'il a le numéro;
+		\item Si la grille est pleine il a gagné;
+\end{itemize}
+
+\section{Instructions conditionnelles}
+
+	\subsection{Expression booléenne}
+		\begin{itemize}
+			\item Expression qui peut être vraie ou fausse (rien d'autre)
+			\item Comparaison 
+			\item Structure : \texttt{valeur opérateur valeur}
+			\item Opérateurs de comparaison
+		\end{itemize}
+	
+	\subsection{Si...Alors}
+	
+		\begin{algorithm}[h!]
+			\If{condition}{instructions si condition vraie}
+		\end{algorithm}
+	
+		%\begin{itemize}
+		%	\item Les instruction ne sont exécutées que si la condition est vraie. 
+		%\end{itemize}
+	
+	\subsection{Si...Alors...Sinon}
+	
+		\begin{algorithm}[h!]
+			\eIf{condition}{instructions si vrai}{instrauctions si faux}
+		\end{algorithm}
+	\ 
+	
+	\subsection{Conditions imbriquées}
+	
+	\ 
+		\begin{algorithm}[h!]
+			\eIf{condition1}{\eIf{condition2}{instructions si condition1 et condition 2 vraies}{instructions si condition1 vraie et condition2 fausse}}{instrauctions si condition1 faux}
+		\end{algorithm}
+
+\section{Conditions complexes}
+
+	\subsection{Principe et présentation}
+	
+		\begin{itemize}
+			\item Dans cas réalistes la condition peut être plus complexe qu'une simple comparaison;
+			\item Utilisation d'opérateurs spécifiques;
+			\item Notion de table de vérité.
+		\end{itemize}
+		
+	\subsection{Opérateur \textbf{ET}}
+	
+	\begin{tabular}{@{ }c@{ }@{ }c | c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{ }}
+		A & B & ( & A & $\&$ & B & )\\
+		\hline 
+		1 & 1 &  & 1 & \textcolor{red}{1} & 1 & \\
+		1 & 0 &  & 1 & \textcolor{red}{0} & 0 & \\
+		0 & 1 &  & 0 & \textcolor{red}{0} & 1 & \\
+		0 & 0 &  & 0 & \textcolor{red}{0} & 0 & \\
+	\end{tabular}
+
+	\subsection{Opérateur \textbf{OU}}
+	
+	\begin{tabular}{@{ }c@{ }@{ }c | c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{ }}
+		A & B & ( & A & $\lor$ & B & )\\
+		\hline 
+		1 & 1 &  & 1 & \textcolor{red}{1} & 1 & \\
+		1 & 0 &  & 1 & \textcolor{red}{1} & 0 & \\
+		0 & 1 &  & 0 & \textcolor{red}{1} & 1 & \\
+		0 & 0 &  & 0 & \textcolor{red}{0} & 0 & \\
+	\end{tabular}
+
+	\subsection{Opérateur \textbf{NON}}
+	
+	\begin{tabular}{@{ }c | c@{ }@{ }c}
+		A & $\sim$ & A\\
+		\hline 
+		1 & \textcolor{red}{0} & 1\\
+		0 & \textcolor{red}{1} & 0\\
+	\end{tabular}
+
+	\subsection{Combinaison d'opérateurs}
+	
+	\begin{itemize}
+		\item Possibilité de combiner les opérateurs logiques
+	\end{itemize}
+
+	\begin{tabular}{@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{ }}
+		A & B & $\sim$ & ( & A & $\&$ & B & )\\
+		\hline 
+		1 & 1 & \textcolor{red}{0} &  & 1 & 1 & 1 & \\
+		1 & 0 & \textcolor{red}{1} &  & 1 & 0 & 0 & \\
+		0 & 1 & \textcolor{red}{1} &  & 0 & 0 & 1 & \\
+		0 & 0 & \textcolor{red}{1} &  & 0 & 0 & 0 & \\
+	\end{tabular}
+
+	\ \\
+
+	\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{ }}
+		A & B & C & ( & ( & A & $\&$ & B & ) & $\lor$ & C & )\\
+		\hline 
+		1 & 1 & 1 &  &  & 1 & 1 & 1 &  & \textcolor{red}{1} & 1 & \\
+		1 & 1 & 0 &  &  & 1 & 1 & 1 &  & \textcolor{red}{1} & 0 & \\
+		1 & 0 & 1 &  &  & 1 & 0 & 0 &  & \textcolor{red}{1} & 1 & \\
+		1 & 0 & 0 &  &  & 1 & 0 & 0 &  & \textcolor{red}{0} & 0 & \\
+		0 & 1 & 1 &  &  & 0 & 0 & 1 &  & \textcolor{red}{1} & 1 & \\
+		0 & 1 & 0 &  &  & 0 & 0 & 1 &  & \textcolor{red}{0} & 0 & \\
+		0 & 0 & 1 &  &  & 0 & 0 & 0 &  & \textcolor{red}{1} & 1 & \\
+		0 & 0 & 0 &  &  & 0 & 0 & 0 &  & \textcolor{red}{0} & 0 & \\
+	\end{tabular}
+\end{document}
