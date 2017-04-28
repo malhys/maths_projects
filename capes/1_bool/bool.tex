@@ -43,12 +43,11 @@
 	\end{itemize}
 	
 	
-	\subsection{Exemple : Loto}
+	\subsection{Exemple : Parité d'un nombre}
 	
 	\begin{itemize}
-		\item L'animateur tire un numéro;
-		\item Le joueur pose un pion s'il a le numéro;
-		\item Si la grille est pleine il a gagné;
+		\item Saisie d'un nombre au clavier;
+		\item Le programme détermine si le nombre est pair.
 \end{itemize}
 
 \section{Instructions conditionnelles}
@@ -64,7 +63,7 @@
 	\subsection{Si...Alors}
 	
 		\begin{algorithm}[h!]
-			\If{condition}{instructions si condition vraie}
+			\If{nombre \% 2 = 0}{Le nombre est pair}
 		\end{algorithm}
 	
 		%\begin{itemize}
@@ -74,13 +73,14 @@
 	\subsection{Si...Alors...Sinon}
 	
 		\begin{algorithm}[h!]
-			\eIf{condition}{instructions si vrai}{instrauctions si faux}
+			\eIf{nombre \% 2  = 0}{le nombre est pair}{le nombre est impair}
 		\end{algorithm}
 	\ 
 	
 	\subsection{Conditions imbriquées}
 	
 	\ 
+	
 		\begin{algorithm}[h!]
 			\eIf{condition1}{\eIf{condition2}{instructions si condition1 et condition 2 vraies}{instructions si condition1 vraie et condition2 fausse}}{instrauctions si condition1 faux}
 		\end{algorithm}
@@ -119,12 +119,14 @@
 
 	\subsection{Opérateur \textbf{NON}}
 	
-	\begin{tabular}{@{ }c | c@{ }@{ }c}
+	\begin{small}
+		\begin{tabular}{@{ }c | c@{ }@{ }c}
 		A & $\sim$ & A\\
 		\hline 
 		1 & \textcolor{red}{0} & 1\\
 		0 & \textcolor{red}{1} & 0\\
 	\end{tabular}
+	\end{small}
 
 	\subsection{Combinaison d'opérateurs}
 	
@@ -132,7 +134,8 @@
 		\item Possibilité de combiner les opérateurs logiques
 	\end{itemize}
 
-	\begin{tabular}{@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{ }}
+	\begin{small}
+		\begin{tabular}{@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{ }}
 		A & B & $\sim$ & ( & A & $\&$ & B & )\\
 		\hline 
 		1 & 1 & \textcolor{red}{0} &  & 1 & 1 & 1 & \\
@@ -140,19 +143,40 @@
 		0 & 1 & \textcolor{red}{1} &  & 0 & 0 & 1 & \\
 		0 & 0 & \textcolor{red}{1} &  & 0 & 0 & 0 & \\
 	\end{tabular}
+	\end{small}
 
 	\ \\
+	\begin{small}
+		\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{ }}
+			A & B & C & ( & ( & A & $\&$ & B & ) & $\lor$ & C & )\\
+			\hline 
+			1 & 1 & 1 &  &  & 1 & 1 & 1 &  & \textcolor{red}{1} & 1 & \\
+			1 & 1 & 0 &  &  & 1 & 1 & 1 &  & \textcolor{red}{1} & 0 & \\
+			1 & 0 & 1 &  &  & 1 & 0 & 0 &  & \textcolor{red}{1} & 1 & \\
+			1 & 0 & 0 &  &  & 1 & 0 & 0 &  & \textcolor{red}{0} & 0 & \\
+			0 & 1 & 1 &  &  & 0 & 0 & 1 &  & \textcolor{red}{1} & 1 & \\
+			0 & 1 & 0 &  &  & 0 & 0 & 1 &  & \textcolor{red}{0} & 0 & \\
+			0 & 0 & 1 &  &  & 0 & 0 & 0 &  & \textcolor{red}{1} & 1 & \\
+			0 & 0 & 0 &  &  & 0 & 0 & 0 &  & \textcolor{red}{0} & 0 & \\
+		\end{tabular}
+	\end{small}
+	
 
-	\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{ }}
-		A & B & C & ( & ( & A & $\&$ & B & ) & $\lor$ & C & )\\
-		\hline 
-		1 & 1 & 1 &  &  & 1 & 1 & 1 &  & \textcolor{red}{1} & 1 & \\
-		1 & 1 & 0 &  &  & 1 & 1 & 1 &  & \textcolor{red}{1} & 0 & \\
-		1 & 0 & 1 &  &  & 1 & 0 & 0 &  & \textcolor{red}{1} & 1 & \\
-		1 & 0 & 0 &  &  & 1 & 0 & 0 &  & \textcolor{red}{0} & 0 & \\
-		0 & 1 & 1 &  &  & 0 & 0 & 1 &  & \textcolor{red}{1} & 1 & \\
-		0 & 1 & 0 &  &  & 0 & 0 & 1 &  & \textcolor{red}{0} & 0 & \\
-		0 & 0 & 1 &  &  & 0 & 0 & 0 &  & \textcolor{red}{1} & 1 & \\
-		0 & 0 & 0 &  &  & 0 & 0 & 0 &  & \textcolor{red}{0} & 0 & \\
-	\end{tabular}
+	\section{Exemples / exercices}
+	
+		\subsection{Année bissextile}
+		
+		\begin{itemize}
+			\item Année divisible par 4;
+			\item Année en 00 divisibles par 400.
+		\end{itemize}
+	
+		\subsection{Calcul de remise}
+		
+		\begin{itemize}
+			\item $O \%$, pour un montant TTC inférieur à $1000$ \officialeuro ;
+			\item $1 \%$, pour un montant TTC supérieur ou égal à $1000$ \officialeuro\ et inférieur à $2000$ \officialeuro ;
+			\item $2 \%$, pour un montant TTC supérieur ou égal à $2000$ \officialeuro\ et inférieur à $5000$ \officialeuro ;
+			\item $1 \%$, pour un montant TTC supérieur ou égal à $1000$ \officialeuro .
+		\end{itemize}
 \end{document}
