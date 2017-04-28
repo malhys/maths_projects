@@ -63,7 +63,7 @@
 	\subsection{Si...Alors}
 	
 		\begin{algorithm}[h!]
-			\If{nombre \% 2 = 0}{Le nombre est pair}
+			\Si{nombre \% 2 = 0}{Le nombre est pair}
 		\end{algorithm}
 	
 		%\begin{itemize}
@@ -73,7 +73,7 @@
 	\subsection{Si...Alors...Sinon}
 	
 		\begin{algorithm}[h!]
-			\eIf{nombre \% 2  = 0}{le nombre est pair}{le nombre est impair}
+			\eSi{nombre \% 2  = 0}{le nombre est pair}{le nombre est impair}
 		\end{algorithm}
 	\ 
 	
@@ -82,7 +82,7 @@
 	\ 
 	
 		\begin{algorithm}[h!]
-			\eIf{condition1}{\eIf{condition2}{instructions si condition1 et condition 2 vraies}{instructions si condition1 vraie et condition2 fausse}}{instrauctions si condition1 faux}
+			\eSi{condition1}{\eSi{condition2}{instructions si condition1 et condition 2 vraies}{instructions si condition1 vraie et condition2 fausse}}{instrauctions si condition1 faux}
 		\end{algorithm}
 
 \section{Conditions complexes}
@@ -97,7 +97,8 @@
 		
 	\subsection{Opérateur \textbf{ET}}
 	
-	\begin{tabular}{@{ }c@{ }@{ }c | c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{ }}
+	\begin{center}
+		\begin{tabular}{@{ }c@{ }@{ }c | c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{ }}
 		A & B & ( & A & $\&$ & B & )\\
 		\hline 
 		1 & 1 &  & 1 & \textcolor{red}{1} & 1 & \\
@@ -105,10 +106,12 @@
 		0 & 1 &  & 0 & \textcolor{red}{0} & 1 & \\
 		0 & 0 &  & 0 & \textcolor{red}{0} & 0 & \\
 	\end{tabular}
+	\end{center}
 
 	\subsection{Opérateur \textbf{OU}}
 	
-	\begin{tabular}{@{ }c@{ }@{ }c | c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{ }}
+	\begin{center}
+		\begin{tabular}{@{ }c@{ }@{ }c | c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{ }}
 		A & B & ( & A & $\lor$ & B & )\\
 		\hline 
 		1 & 1 &  & 1 & \textcolor{red}{1} & 1 & \\
@@ -116,17 +119,18 @@
 		0 & 1 &  & 0 & \textcolor{red}{1} & 1 & \\
 		0 & 0 &  & 0 & \textcolor{red}{0} & 0 & \\
 	\end{tabular}
+	\end{center}
 
 	\subsection{Opérateur \textbf{NON}}
 	
-	\begin{small}
+	\begin{center}
 		\begin{tabular}{@{ }c | c@{ }@{ }c}
 		A & $\sim$ & A\\
 		\hline 
 		1 & \textcolor{red}{0} & 1\\
 		0 & \textcolor{red}{1} & 0\\
 	\end{tabular}
-	\end{small}
+	\end{center}
 
 	\subsection{Combinaison d'opérateurs}
 	
@@ -134,7 +138,7 @@
 		\item Possibilité de combiner les opérateurs logiques
 	\end{itemize}
 
-	\begin{small}
+	\begin{center}
 		\begin{tabular}{@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{ }}
 		A & B & $\sim$ & ( & A & $\&$ & B & )\\
 		\hline 
@@ -143,10 +147,10 @@
 		0 & 1 & \textcolor{red}{1} &  & 0 & 0 & 1 & \\
 		0 & 0 & \textcolor{red}{1} &  & 0 & 0 & 0 & \\
 	\end{tabular}
-	\end{small}
+	\end{center}
 
 	\ \\
-	\begin{small}
+	\begin{center}
 		\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{ }}
 			A & B & C & ( & ( & A & $\&$ & B & ) & $\lor$ & C & )\\
 			\hline 
@@ -159,9 +163,9 @@
 			0 & 0 & 1 &  &  & 0 & 0 & 0 &  & \textcolor{red}{1} & 1 & \\
 			0 & 0 & 0 &  &  & 0 & 0 & 0 &  & \textcolor{red}{0} & 0 & \\
 		\end{tabular}
-	\end{small}
+	\end{center}
 	
-
+\newpage
 	\section{Exemples / exercices}
 	
 		\subsection{Année bissextile}
@@ -178,5 +182,13 @@
 			\item $1 \%$, pour un montant TTC supérieur ou égal à $1000$ \officialeuro\ et inférieur à $2000$ \officialeuro ;
 			\item $2 \%$, pour un montant TTC supérieur ou égal à $2000$ \officialeuro\ et inférieur à $5000$ \officialeuro ;
 			\item $1 \%$, pour un montant TTC supérieur ou égal à $1000$ \officialeuro .
+		\end{itemize}
+	
+		\subsection{Nombre de jours dans un mois}
+		
+		\begin{itemize}
+			\item L'utilisateur donne le numéro d'un mois;
+			\item Donner le nombre de jours du mois (année non bissextile);
+			\item Gérer les erreurs de saisie.
 		\end{itemize}
 \end{document}
