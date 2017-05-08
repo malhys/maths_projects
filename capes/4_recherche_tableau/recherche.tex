@@ -1,0 +1,55 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../pas-math}
+\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+
+
+%\newcommand{\disp}{false}
+
+\lhead{CH4 : Recherche}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+\chap[num=1, color=red]{\normalsize Algorithmes de recherche dans un tableau ou dans une liste}{Olivier FINOT, \today }
+
+\section{Structures de données linéaires}
+
+\begin{itemize}
+	\item Besoin de stocker/organiser plus d'information / d'éléments dans une variable
+\end{itemize}
+
+\subsection{Tableau}
+	\begin{itemize}
+		\item Éléments stockés dans des espaces mémoire contigus;
+		\item $\oplus$  Accès indicé aux éléments contenus ($t[i]$);;
+		\item $\ominus$ Taille fixe.
+	\end{itemize}
+	
+
+\subsection{Liste chainée}
+
+	\begin{itemize}
+		\item \'Eléments non contigus, chaque "case" renvoie vers la suivante;
+		\item  $\oplus$ Pas besoin de définir la taille à la création, ajout d'éléments aisé;
+		\item $\ominus$ Accès séquentiel, pas indicé.
+	\end{itemize}
+\end{document}
