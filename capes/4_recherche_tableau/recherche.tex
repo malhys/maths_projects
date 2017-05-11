@@ -52,4 +52,82 @@
 		\item  $\oplus$ Pas besoin de définir la taille à la création, ajout d'éléments aisé;
 		\item $\ominus$ Accès séquentiel, pas indicé.
 	\end{itemize}
+
+\section{Recherche dans une structure non triée}
+
+\subsection{Présence d'une valeur dans la structure}
+
+\begin{itemize}
+	\item Recherche séquentielle, parcours linéaire de la structure;
+	\item Fin du parcours si la valeur recherchée est trouvée;
+	\item Si la fin est atteinte alors la valeur n'est pas présente.
+\end{itemize}
+
+\begin{algorithm}[h!]
+	\Entree{$v$ : la valeur recherchée \\ $tab$ : le tableau dans lequel on cherche}
+	\Sortie{$vrai$ si $v$ est présent dans $tab$, $faux$ sinon}
+	\Deb{n $\leftarrow $ longueur de $tab$ \\
+	\Pour{i de 0 à n-1}{
+		\Si{$tab[i]$ == $n$}{\Retour{$vrai$}}
+	}
+	\Retour{$faux$}}
+\end{algorithm}
+
+\newpage
+
+\subsection{Recherche d'un minimum/maximum local}
+
+\begin{itemize}
+	\item Choix d'une valeur référence (premier élément);
+	\item Chaque élément est comparé à la valeur référence;
+	\item Si il est plus petit (plus grand) on met à jour la valeur référence.
+\end{itemize}
+
+	\begin{algorithm}[h!]
+		\Entree{$tab$ : le tableau dans lequel on cherche}
+		\Sortie{La valeur minimale présente dans le tableau}
+		\Deb{n $\leftarrow $ longueur de $tab$ \\
+			min $\leftarrow $ $tab[0]$ \\
+			\Pour{i de 1 à n-1}{
+				\Si{$tab[i]$ < $min$}{min $\leftarrow $ $tab[i]$}
+			}
+			\Retour{min}}
+	\end{algorithm}
+
+\newpage
+
+\section{Recherche dans une structure triée}
+
+
+\subsection{Présence d'une valeur dans la structure}
+
+	\begin{itemize}
+		\item Recherche dichotomique;
+		\item Besoin d'un accès indicé (impossible avec une liste chaînée).
+	\end{itemize}
+
+	\begin{function}[h!]{search($tab$, $v$, $debut$, $fin$)\\}
+		\Entree{$v$ : la valeur recherchée \\ $tab$ : le tableau dans lequel on cherche \\$debut$ : indice de début de la recherche (par défaut 0) \\ $fin$ : indice de fin (par défaut longueur de $tab$)}
+		
+		\Sortie{$vrai$ si $v$ est présent dans $tab$, $faux$ sinon}
+		\Deb{
+			
+			milieu $\leftarrow$ $(debut + fin) \div 2$
+			
+			\eSi{fin - debut $\leq$ 1}{\Retour{$faux$}}{
+				
+				
+				\eSi{$tab[milieu] = v$}{\Retour{$vrai$}}{
+					\eSi{$t[milieu] > v$}{\Retour{search(tab, v, debut, milieu)}} {\Retour{search(tab, v, milieu, fin)}}
+				}
+			}		
+		}
+		 
+			
+	\end{function}
+\subsection{Recherche d'un minimum/maximum local}
+
+\begin{itemize}
+	\item Prendre le premier / dernier élément de la structure
+\end{itemize}
 \end{document}
