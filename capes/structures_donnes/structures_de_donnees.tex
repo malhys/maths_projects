@@ -1,0 +1,139 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../pas-math}
+\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+
+
+%\newcommand{\disp}{false}
+
+\lhead{Structures de données}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+\chap[num=1, color=red]{Structures de données linéaires}{Olivier FINOT, \today }
+
+\section{Structures de données linéaires}
+
+\begin{itemize}
+	\item Besoin de stocker/organiser plus d'information / d'éléments dans une variable
+\end{itemize}
+
+\subsection{Tableau}
+	\begin{itemize}
+		\item Éléments stockés dans des espaces mémoire contigus;
+		\item $\oplus$  Accès indicé aux éléments contenus ($t[i]$);
+		\item $\ominus$ Taille fixe.
+	\end{itemize}
+	
+
+\subsection{Liste chainée}
+
+	\begin{itemize}
+		\item \'Eléments non contigus, chaque "case" renvoie vers la suivante;
+		\item  $\oplus$ Pas besoin de définir la taille à la création, ajout d'éléments aisé;
+		\item $\ominus$ Accès séquentiel, pas indicé.
+	\end{itemize}
+
+\section{Recherche dans une structure non triée}
+
+\subsection{Présence d'une valeur dans la structure}
+
+\begin{itemize}
+	\item Recherche séquentielle, parcours linéaire de la structure;
+	\item Fin du parcours si la valeur recherchée est trouvée;
+	\item Si la fin est atteinte alors la valeur n'est pas présente.
+	\item complexité : $O(n)$
+\end{itemize}
+
+\begin{algorithm}[h!]
+	\Entree{$v$ : la valeur recherchée \\ $tab$ : le tableau dans lequel on cherche}
+	\Sortie{$vrai$ si $v$ est présent dans $tab$, $faux$ sinon}
+	\Deb{n $\leftarrow $ longueur de $tab$ \\
+	\Pour{i de 0 à n-1}{
+		\Si{$tab[i]$ == $n$}{\Retour{$vrai$}}
+	}
+	\Retour{$faux$}}
+\end{algorithm}
+
+\newpage
+
+\subsection{Recherche d'un minimum/maximum local}
+
+\begin{itemize}
+	\item Choix d'une valeur référence (premier élément);
+	\item Chaque élément est comparé à la valeur référence;
+	\item Si il est plus petit (plus grand) on met à jour la valeur référence.
+	\item complexité : $O(n)$
+\end{itemize}
+
+	\begin{algorithm}[h!]
+		\Entree{$tab$ : le tableau dans lequel on cherche}
+		\Sortie{La valeur minimale présente dans le tableau}
+		\Deb{n $\leftarrow $ longueur de $tab$ \\
+			min $\leftarrow $ $tab[0]$ \\
+			\Pour{i de 1 à n-1}{
+				\Si{$tab[i]$ < $min$}{min $\leftarrow $ $tab[i]$}
+			}
+			\Retour{min}}
+	\end{algorithm}
+
+\newpage
+
+\section{Recherche dans une structure triée}
+
+
+\subsection{Présence d'une valeur dans la structure}
+
+	\begin{itemize}
+		\item Recherche dichotomique;
+		\item Besoin d'un accès indicé (impossible avec une liste chaînée).
+		\item complexité : $O(log n)$
+	\end{itemize}
+
+	\begin{function}[h!]{search($tab$, $v$, $debut$, $fin$)\\}
+		\Entree{$v$ : la valeur recherchée \\ $tab$ : le tableau dans lequel on cherche \\$debut$ : indice de début de la recherche (par défaut 0) \\ $fin$ : indice de fin (par défaut longueur de $tab$)}
+		
+		\Sortie{$vrai$ si $v$ est présent dans $tab$, $faux$ sinon}
+		\Deb{
+			
+			milieu $\leftarrow$ $(debut + fin) \div 2$
+			
+			\eSi{fin - debut $\leq$ 1}{\Retour{$faux$}}{
+				
+				
+				\eSi{$tab[milieu] = v$}{\Retour{$vrai$}}{
+					\eSi{$t[milieu] > v$}{\Retour{search(tab, v, debut, milieu)}} {\Retour{search(tab, v, milieu, fin)}}
+				}
+			}		
+		}
+		 
+			
+	\end{function}
+\subsection{Recherche d'un minimum/maximum local}
+
+\begin{itemize}
+	\item Prendre le premier / dernier élément de la structure
+	\item complexité : $O(1)$
+\end{itemize}
+
+
+\end{document}

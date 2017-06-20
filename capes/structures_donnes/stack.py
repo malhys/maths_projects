@@ -20,7 +20,7 @@ class stack(object):
         
         return 0
         
-    def pop(self, elem):
+    def pop(self):
         """Retire et renvoie le dernier élément ajouté"""
         
         if self.size > 0:
