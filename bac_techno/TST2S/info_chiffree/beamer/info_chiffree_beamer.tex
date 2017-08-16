@@ -1,0 +1,127 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+\usecolortheme{}
+
+\input{../../../../utils_maths_beamer}
+
+
+%\usepackage{../../../../pas-math}
+%\usepackage{../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+
+\graphicspath{{../img/}}
+
+\title{Quel espace un gaz peut-il occuper ?}
+\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
+	\end{frame} 
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+	
+
+
+
+\section{Effectifs et proportions}
+
+\subsection{Expression d'une proportion à l'aide d'un pourcentage (TP1 p 6)}
+
+\begin{frame}[allowframebreaks]{}
+
+\begin{enumerate}%[label=\arabic*.]
+	\item 
+	\begin{enumerate} [a]
+		\item Proportion de cyclomotoristes de 16 ans parmi les cyclomotoristes âgés de 12 à 18 ans victimes d'accidents de la route :
+		\begin{eqnarray*}
+			\dfrac{2549}{9493} \approx 0,2685 = \textcolor{red}{\underline{26,85\%}}
+		\end{eqnarray*}
+		
+		\item Pourcentage des utilisateurs de "deux roues" parmi les victimes d'accidents de la route de 12 à 18 ans :
+		
+		\begin{equation*}
+		\dfrac{923 + 9435 + 745}{17914} = \dfrac{11 161}{17914} \approx 0,6230 = \textcolor{red}{\underline{62,30 \%}}
+		\end{equation*}
+		
+		\item Pourcentage de 12-16 ans parmi les victimes de "deux roues" :
+		
+		\begin{equation*}
+		\dfrac{218 + 310 + 1180 + 1897 + 2796}{11161} = \dfrac{6401}{11161} \approx 0,5735 = \textcolor{red}{\underline{57,37 \%}}
+		\end{equation*}
+	\end{enumerate}
+	
+	\item Soit $N$ le nombre total de motocyclistes accidentés. On a :
+	
+	\begin{eqnarray*}
+		N \times \dfrac{\num{4.48}}{100} &=& 745 \\
+		N &=& \dfrac{745 \times 100}{\num{4.48}} \\
+		N &=&  \mykw{\num{16629.46}}
+	\end{eqnarray*}
+	Soit environ \num{16629} motocyclistes accidentés.
+	
+	\item Pourcentage de <<porteurs de casque >> parmi les cyclistes de 12 à 18 ans accidentés :
+	\begin{equation*}
+	\num{8.6} + \num{14.6} = \num{13.2} \qquad soit \; \num{13.2}\%.
+	\end{equation*}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+%\begin{align}
+%			N \times \dfrac{\num{4.48}}{100} &=& 745 \\
+%			N &=& \dfrac{745 \times 100}{\num{4.48}} \\
+%			N &=&  \myres{\num{16629.46}}
+%\end{align}
+\begin{eqnarray*}
+N \times \dfrac{\num{4.48}}{100} &=& 745 \\
+N &=& \dfrac{745 \times 100}{\num{4.48}} \\
+N &=&  \mykw{\num{16629.46}}
+\end{eqnarray*}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{}
+A\\ A\\ A\\ A\\ A\\ A\\ A\\ A\\ A\\ A\\ A\\ A\\ A\\
+\framebreak
+B\\ B\\ B\\ B\\ B\\ B\\ B\\\framebreak B\\ B\\ B\\ B\\ B\\ B\\
+\end{frame}
+
+
+%\begin{frame}
+%
+%
+%%\begin{mybilan2}{Proportion}
+%	La \kw{proportion ou fréquence} d'une partie $A$ d'une population $E$, est le rapport $p$ des effectifs de $A$ et de $E$ :
+%	
+%	\begin{eqnarray*}
+%		p = \dfrac{n_A}{n_E} \; \left(\dfrac{Effectif de A}{Effectif de E}\right)
+%	\end{eqnarray*}
+%%\end{mybilan2}
+%\end{frame}
+
+\end{document}

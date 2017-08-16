@@ -29,6 +29,8 @@
 \begin{document}
 %\maketitle
 
+\setlength{\tabcolsep}{5pt}
+
 \chap[num=1, color=red]{Information chiffrée (révisions)}{Olivier FINOT, \today }
 
 \input{./obj}
@@ -36,7 +38,9 @@
 
 \section{Effectifs et proportions}
 
-\subsection{Expression d'une proportion à l'aide d'un pourcentage (TP1 page 6)}
+\subsection{Expression d'une proportion à l'aide d'un pourcentage}
+
+TP1 p 6
 
 \begin{enumerate}[label=\arabic*.]
 	\item 
@@ -58,5 +62,377 @@
 				\dfrac{218 + 310 + 1180 + 1897 + 2796}{11161} = \dfrac{6401}{11161} \approx 0,5735 = \textcolor{red}{\underline{57,37 \%}}
 			\end{equation*}
 	\end{enumerate}
+
+	\item Soit $N$ le nombre total de motocyclistes accidentés. On a :
+	
+		\begin{eqnarray*}
+			N \times \dfrac{\num{4.48}}{100} &=& 745 \\
+			N &=& \dfrac{745 \times 100}{\num{4.48}} \\
+			N &=&  \myres{\num{16629.46}}
+		\end{eqnarray*}
+	Soit environ \num{16629} motocyclistes accidentés.
+	
+	\item Pourcentage de <<porteurs de casque >> parmi les cyclistes de 12 à 18 ans accidentés :
+	\begin{equation*}
+		\num{8.6} + \num{14.6} = \num{13.2} \qquad soit \; \num{13.2}\%.
+	\end{equation*}
 \end{enumerate}
+
+ \begin{mybilan2}{Proportion}
+		La \kw{proportion ou fréquence} d'une partie $A$ d'une population $E$, est le rapport $p$ des effectifs de $A$ et de $E$ :
+		
+		\begin{eqnarray*}
+			p = \dfrac{n_A}{n_E} \; \left(\dfrac{Effectif de A}{Effectif de E}\right)
+		\end{eqnarray*}
+	\end{mybilan2}
+
+\begin{myexs}
+	\twoCol{
+	\begin{itemize}
+		\item \exo{1}{14}
+		\item \exo{2}{14}
+		\item \exo{3}{14}
+		\item \exo{29}{22}
+		\item \exo{30}{23}
+	\end{itemize}}
+\end{myexs}
+
+\subsection{Comparaison de pourcentages, pourcentage de pourcentages}
+
+TP2 Page 6.
+
+\begin{enumerate}[label=\arabic*.]
+	\item \begin{enumerate}[label=\alph*)]
+		\item Pourcentage d'hommes parmi les personnes décédées d'une tumeur :
+		\begin{equation*}
+			\dfrac{\num{28259}}{\num{43875}} \approx \num{0.6441} \: = \: \mykw{\num{64.41} \%}.
+		\end{equation*} 
+		
+		\item Pourcentage de décès par une tumeur parmi l'ensemble des personnes décédées :
+		\begin{equation*}
+			\dfrac{\num{43875}}{\num{113537}} \approx \num{0.3864}\: = \: \mykw{\num{38.64} \%}.
+		\end{equation*}
+		
+		\item Proportion de femmes décédées d'une tumeur parmi l'ensemble des femmes décédées :
+		\begin{equation*}
+			\dfrac{\num{15616}}{\num{35101}} \approx \num{0.4449} \: = \: \mykw{\num{44.49} \%}.
+		\end{equation*}
+		
+		\item Proportion d'hommes parmi les <<décès prématurés>> :
+		\begin{equation*}
+			\dfrac{\num{78436}}{\num{113537}} \approx \num{0.6908} \: = \: \mykw{\num{69.08} \%}.
+		\end{equation*}
+	\end{enumerate}
+
+	\item \begin{enumerate}[label=\alph*)]
+		\item Proportion d'hommes décédés  d'une maladie du système nerveux parmi les hommes décédés avant 65 ans :
+		
+		\begin{equation*}
+			\dfrac{\num{2011}}{\num{78436}} \approx \num{0.0256} \: = \: \mykw{\num{2.56} \%}.
+		\end{equation*}
+		
+		\item Proportions de femmes décédées d'une maladie du système nerveux parmi les femmes décédées avant 65 ans :
+		\begin{equation*}
+			\dfrac{\num{1217}}{\num{35101}} \approx \num{0.0347} 	\: = \:  \mykw{\num{3.47} \%}.
+		\end{equation*}
+		
+		\item En terme d'effectifs il y a plus d'hommes que de femmes qui décèdent d'une maladie du système nerveux, mais en pourcentage il y a plus de femmes. Il y a moins de femmes que d'hommes qui décèdent prématurément mais en proportion elles meurent plus de maladie du système nerveux.
+	\end{enumerate}
+
+	\item \begin{enumerate}[label=\alph*)]
+		\item Proportion $p_1$ de femmes décédées d'une maladie infectieuse ou parasitaire parmi l'ensemble des des personnes décédées d'une maladie infectieuse ou parasitaire :
+		\begin{equation*}
+			p_1 = \dfrac{\num{747}}{\num{2568}} \approx \num{0.2909} = \mykw{\num{29.09} \%}.
+		\end{equation*}
+		
+		\item Proportion $p_2$ de personnes décédées d'une maladie infectieuse ou parasitaire parmi l'ensemble des personnes décédées avant 65 ans :
+		\begin{equation*}
+			p_2 = \dfrac{\num{2568}}{\num{113537}} \approx \num{0.0226} = \mykw{\num{2.26} \%}.
+		\end{equation*}
+		
+		\item Proportion $p_2$ de femmes décédées d'une maladie infectieuse ou parasitaire parmi l'ensemble des personnes décédées avant 65 ans :
+		\begin{equation*}
+			p_3 = \dfrac{\num{747}}{\num{113537}} \approx \num{0.0066} = \mykw{\num{0.66} \%}.
+		\end{equation*}
+		
+		\item On a $p_1 \times p_2 = p_3$.
+		
+	\end{enumerate}
+\end{enumerate}
+
+\begin{myrem}
+	\begin{equation*}
+		\dfrac{\num{747}}{\num{2568}} \times \dfrac{\num{2568}}{\num{113537}} = \dfrac{\num{747}}{\num{113537}}, \: donc \: p_1\times p_2 = p_3.
+	\end{equation*}
+	
+	On peut aussi calculer $\num{2.26}$ \% de $\num{29.09}$ \% :
+	\begin{equation*}
+		\dfrac{\num{2.26}}{\num{100}} \times \dfrac{\num{29.09}}{\num{100}} = \num{0.00657434} \qquad soit \: environ \: \num{0.66} \%.
+	\end{equation*}
+\end{myrem}
+
+\begin{myexs}
+	\twoCol{
+	\begin{itemize}
+		\item \exo{4}{19}
+		\item \exo{17}{19}
+		\item \exo{33}{24}
+		\item \exo{34}{24}
+	\end{itemize}}
+
+\end{myexs}
+
+\subsection{Additionner et comparer des pourcentages}
+
+\begin{enumerate}[label=\arabic*.]
+	\item Pourcentage d'enfants en surpoids dans les zones rurales :
+	\begin{equation*}
+		\num{100} - \num{87.2} = \mykw{\num{12.8}  \%}
+	\end{equation*}
+	
+	\item Pourcentage d'enfants obèses dans les zones rurales :
+	\begin{equation*}
+		\num{12.8} - \num{9.2} = \mykw{\num{3.6}  \%}
+	\end{equation*}
+	
+	\item \begin{enumerate}[label=\alph*)]
+		\item Dans l'agglomération parisienne, il y a \num{5} \% d'enfants obèses et \num{16} \% en surpoids; la proportion d'enfants obèses parmi ceux en surpoids est donc égale à $\dfrac{5}{16}=\num{0.301} \%,$ soit environ un peu plus de 3 enfants souffrant d'obésité pour 10 en surpoids. L'affirmation est donc juste.
+		
+		\item Les effectifs pour les différents types d'agglomération ne sont pas connus. On ne peut donc rien affirmer concernant le nombre d'enfants en surpoids.
+	\end{enumerate}
+\end{enumerate}
+
+\begin{myexs}
+	\twoCol{
+	\begin{itemize}
+		\item \exo{4}{15}
+		\item \exo{35}{24}
+		\item \exo{36}{25}
+		\item \exo{37}{25}
+	\end{itemize}}
+\end{myexs}
+
+\section{Pourcentage d'évolution, coefficient multiplicateur}
+
+\subsection{Variation relative, taux d'évolution}
+
+TP4 page 8
+
+\begin{enumerate}[label=\arabic*)]
+	\item Entre 1990 et 2005, le nombre de médecins généralistes en France à \mykw{augmenté} de \mykw{\num{8.45}} \%. ($\frac{\num{1012067} - \num{93380}}{\num{93380}}$)
+	\item Entre 2005 et 2015, le nombre de médecins généralistes en France devrait \mykw{diminuer} de \mykw{\num{1.58}} \%.($\frac{\num{99670} - \num{1012067}}{\num{1012067}}$)
+	
+	\item Nombre de médecins des spécialités chirurgicales en 2005 : 
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|ccc|}
+			\hline
+			en \num{1990} & + \num{14.21} \%  & en \num{2005} \\
+			& {\LARGE $\rightarrow$} &			\\
+			\num{21390} médecins& $\times \num{1.1421}$ & ? médecins \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	D'où : $\num{21390} \times \num{1.1421} = \num{24429.519}$, soit environ \num{24430} médecins.
+	
+	\item Nombre de médecins des spécialités médicales en 2015 
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|ccc|}
+			\hline
+			en \num{2005} & - \num{6.90} \%  & en \num{2015} \\
+			& {\LARGE $\rightarrow$} &			\\
+			\num{58489} médecins& $\times \num{0.931}$ & ? médecins \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	D'où : $\num{58489} \times \num{0.931} = \num{54453.259}$, soit environ \num{54453} médecins.
+	
+	\newpage
+	
+	\item Nombre de médecins des spécialités médicales en 1990 
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|ccc|}
+			\hline
+			en \num{1990} & + \num{21.77} \%  & en \num{2005} \\
+			& {\LARGE $\rightarrow$} &			\\
+			? médecins& $\times \num{1.2177}$ & \num{58489} médecins \\
+			\hline
+			& {\LARGE $\leftarrow$} & \\
+			& $\div \num{1.2177}$ & \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	D'où : $\num{58489} \div \num{1.2177} = \num{48032.35}...$, soit environ \num{48032} médecins.
+\end{enumerate}
+
+\begin{mybilan2}{Taux d'évolution et coefficient multiplicateur}
+	Le taux d'évolution $t$ (ou variation relative) d'une quantité passant de la valeur $y_1$ à une valeur $y_2$ est égal à :
+	\begin{equation*}
+	t = \dfrac{y_2 - y_1}{y_1} \left(\dfrac{V_{arrivée} - V_{départ}}{V_{départ}}\right)
+	\end{equation*}
+	
+	\underline{Remarque} : Un taux d'évolution positif traduit une hausse, un taux d'évolution négatif traduit une baisse.\\
+	
+	\underline{Coefficients multiplicateurs :} 
+	\begin{itemize}
+		\item \kw{Augmenter} une grandeur de $t \%$ revient à multiplier cette grandeur par $(1 + \dfrac{t}{100})$.
+		
+		\item \underline{Exemple :} $+ 5 \% = \times \num{1.05}$ ; $+ 20 \% = \times \num{1.20}$ \\
+		
+		\item \kw{Diminuer} une grandeur de $t \%$ revient à multiplier cette grandeur par $\qquad (1 - \dfrac{t}{100})$.
+		\item \underline{Exemple :} $- 12 \% = \times \num{0.88}$ ; $- 3 \% = \times \num{0.97}$ \\
+		
+		\item Dans le cas d'une \kw{hausse}, le coefficient multiplicateur est \kw{supérieur à 1}.
+		
+		\item Dans le cas d'une \kw{baisse}, le coefficient multiplicateur est \kw{inférieur à 1}.
+	\end{itemize}	
+	
+\end{mybilan2}
+
+\begin{myexs}
+	\twoCol{
+	\begin{itemize}
+		\item \exo{10}{17}
+		\item \exo{11}{17}
+		\item \exo{40}{25-26}
+		\item \exo{42}{26}
+		\item \exo{43}{26}
+		\item \exo{45}{26}
+	\end{itemize}
+	}
+\end{myexs}
+
+\newpage
+
+\subsection{\'Evolutions successives, évolution réciproque}
+
+TP5 page 8
+
+\begin{enumerate}[label=\Alph*.]
+	\item \'Evolutions successives
+	
+	\begin{enumerate}[label=\arabic*)]
+		\item \ 
+
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{|ccc|c|}
+				\hline
+				$P_1$ & + \num{25} \%  & $P_2$ &\\
+				& {\LARGE $\rightarrow$} &	&	$P_2 = \num{16} \times \num{1.25} = 20$, soit 20 \$ .	\\
+				\num{16} \$ & $\times \num{1.25}$ & ? \$ \\
+				\hline
+			\end{tabular}
+			
+		\end{table}
+		
+		\item \ 
+		
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{|ccc|c|}
+				\hline
+				$P_2$ & + \num{30} \%  & $P_3$ &\\
+				& {\LARGE$\rightarrow$} &	&	$P_2 = \num{20} \times \num{1.30} = 26$, soit 26 \$ .	\\
+				\num{20} \$ & $\times \num{1.30}$ & ? \$ & \\
+				\hline
+			\end{tabular}
+			
+		\end{table}
+		\item \ 
+		
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{|ccc|c|}
+				\hline
+				$P_1$ & + ... \%  & $P_3$ & \\
+				& {\LARGE$\rightarrow$} &	&	 $\dfrac{\num{26} - \num{16}}{\num{16}} = \num{0.625}$	\\
+				\num{16} \$ & $\times ...$ & 26 \$ & Soit une hausse globale de \num{62.5} \% \\
+				\hline
+			\end{tabular}
+			
+		\end{table}
+		
+		\underline{Calcul du coefficient multiplicateur :}
+		\begin{equation*}
+		k = \dfrac{26}{16} = \num{1.625}
+		\end{equation*}
+		
+		On peut aussi calculer indépendamment des prix : $\num{1.25} \times \num{1.30} = \num{1.625}$, soit une hausse globale de \num{62.5} \%.\\
+		
+		\begin{myrem}
+			Le pourcentage de hausse globale \num{62.5} \% n'est pas égal à la somme des deux pourcentages de hausse successives \num{25} \% et \num{30} \%, car ces deux pourcentages ne s'appliquent pas sur le même prix, donc ne s'additionnent pas.
+		\end{myrem}
+		
+		\begin{mybilan2}{\'Evolutions successives}
+			Deux évolutions (hausse ou baisse) successives de coefficients multiplicateurs $c$ et $c'$  correspondent  une évolution globale (hausse ou baisse) de $c \times c'$ (on multiplie).
+		\end{mybilan2}
+	\end{enumerate}
+	
+	\item \'Evolution réciproque
+	\begin{enumerate}[label=\arabic*)]
+		\item 
+		\begin{enumerate}[label=\alph*)]
+			\item \ 
+			\begin{table}[h!]
+				\centering{\ }
+				\begin{tabular}{|@{\ \ }c@{\ \ }c@{\ \ }c@{\ \ }c@{\ \ }c@{\ \ }|}
+					\hline
+					$P_1$ & +\num{25} \%  & $P_2$ & -\num{25} \%  & $P'_3$ \\
+					& {\LARGE$\rightarrow$} &	&	 {\LARGE$\rightarrow$} &	\\
+					\num{16} \$ & $\times \num{1.25} $ & 20 \$ &  $\times \num{0.75}$ & \num{15} \$ \\
+					\hline
+				\end{tabular}
+				
+			\end{table}
+			
+			\item On constate que la baisse de \num{25} \% n'annule pas la hausse de \num{25} \%.
+		\end{enumerate}
+		
+		\begin{myrem}
+			\begin{eqnarray*}
+				P'_3 &=& \num{16} \times \num{1.25} \times \num{0.75} \\
+				P'_3 &=& \num{16} \times \num{0.9375} \\
+				On\;a\; & &\num{0.9375} \neq 1
+			\end{eqnarray*}
+		\end{myrem}
+		
+		\item \ 
+		\begin{table}[h!]
+			\centering{\ }
+			\begin{tabular}{|@{\ \ }c@{\ \ }c@{\ \ }c@{\ \ }c@{\ \ }c@{\ \ }|}
+				\hline
+				$P_1$ & +\num{25} \%  & $P_2$ & -\num{25} \%  & $P_1$ \\
+				& {\LARGE$\rightarrow$} &	&	 {\LARGE$\rightarrow$} &	\\
+				\num{16} \$ & $\times \num{1.25} $ & 20 \$ &  $\times \num{0.75}$ & \num{15} \$ \\
+				\hline
+			\end{tabular}
+			
+		\end{table}
+	\end{enumerate}
+	
+\end{enumerate}
+
+\begin{mybilan2}{\'Evolution réciproque}
+	Deux évolutions (hausse et baisse) successives sont réciproques si et seulement si leur \kw{coefficients multiplicateurs $c$ et $c'$ sont inverses} : $c \times c' = 1$
+\end{mybilan2}
+
+\begin{myexs}
+	\twoCol{
+	\begin{itemize}
+		\item \exo{14}{18}
+		\item \exo{19}{19-20}
+		\item  \exo{55}{28}
+		\item \exo{56}{29}
+	\end{itemize}
+	}
+\end{myexs}
 \end{document}
