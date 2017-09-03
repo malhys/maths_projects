@@ -1,0 +1,167 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+
+\input{../../../../utils_maths_beamer}
+
+
+%\usepackage{../../../../pas-math}
+%\usepackage{../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+
+\graphicspath{{../img/}}
+
+\title{Information chiffrée}
+\author{O. FINOT}\institute{Lycée S$^t$ Vincent}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
+	\end{frame} 
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+	
+
+\begin{frame}{Objectifs}
+
+\begin{block}{Être capable :}
+	
+	\begin{enumerate}
+		\item de reconnaître des pourcentages d'évolution : augmentations et baisses successives;
+		\item d'additionner et de comparer des pourcentages : pourcentages relatifs à un même ensemble, comparaison de deux pourcentages relatifs à deux ensembles de référence distincts;
+		\item de déterminer et d'analyser des pourcentages de pourcentages;
+		\item d'analyser des des variations d'un pourcentage;
+		\item d'apprendre à distinguer les pourcentages décrivant le rapport d'une partie au tout des pourcentages d'évolution (augmentation ou baisse).
+	\end{enumerate}
+\end{block}
+\end{frame}
+
+\section{Effectifs et proportions (Activité : TP 1 page 8)}
+
+
+\subsection{Expression d'une proportion à l'aide d'un pourcentage}
+
+\begin{frame}{}
+
+\begin{enumerate}%[label=\arabic*.]
+	\item 
+	\begin{enumerate} [a]
+		\item Proportion des "pratiquants de roller" parmi les personnes interrogées:\pause
+		\begin{itemize}
+			\item Sous forme de fraction : $\dfrac{1192}{13685}$\pause
+			\item Sous forme d'un nombre décimal arrondi à $10^{-4}$ : $\approx 0,0871$ ($10^{-4} = 0,0001=\frac{1}{10000}=\frac{1}{10^4}$)\pause
+			\item Sous la forme d'un pourcentage arrondi à $10^{-2} \approx 8,71 \% $\pause
+		\end{itemize}
+		
+		\vspace*{0.2cm}
+		
+		\begin{alertblock}{A retenir : Proportion}
+			La \mykw{proportion ou fréquence} d'une partie $A$ d'une population $E$, est le rapport $p$ des effectifs de $A$ et de $E$ :
+			\vspace*{-0.2cm}
+			\begin{eqnarray*}
+				p = \dfrac{n_A}{n_E} \; \left(\dfrac{Effectif de A}{Effectif de E}\right)
+			\end{eqnarray*}
+		\end{alertblock}
+	
+		\vspace*{0.2cm}
+		
+		\item Pourcentage de femmes parmi ces "pratiquants du roller" :\pause
+		
+		\begin{align*}
+		\dfrac{657}{1192} \times 100 = 55,117, soit\; environ\; 55,12 \%
+		\end{align*}
+	\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+
+
+
+\begin{frame}{}
+
+\begin{enumerate}%[label=\arabic*.]
+	\setcounter{enumi}{1}
+	\item 
+	\begin{enumerate} [a]
+		\item Nombre des 16-25 ans interrogés qui pratiquent le roller :\pause
+		
+		\begin{eqnarray*}
+			\dfrac{521 \times 19}{100} = 521 \times 0,19 = 98,99
+		\end{eqnarray*}
+		
+		Soit environ 99 "16-25 ans".\pause
+		
+		
+		\item Soit $N$ le nombre des "12-24" ans interrogées. On a :\pause
+		
+		\begin{eqnarray*}
+			N \times \dfrac{43,15}{100} &= 356 \\
+			N &= \dfrac{356 \times 100}{43,15} = 825,02
+		\end{eqnarray*}
+		Soit environ 825 "12-24 ans".
+	\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{}
+
+\begin{enumerate}%[label=\arabic*.]
+	\setcounter{enumi}{3}
+	\item Pourcentage de "porteurs de casque" parmi les "pratiquants de roller" :\pause
+	
+	\begin{eqnarray*}
+		657 \times 0,088 + 535 \times 0,144 = 134,856 = 135\; porteurs\; de\; casque. \pause
+	\end{eqnarray*}
+	
+	\begin{eqnarray*}
+		\dfrac{135}{1192}=0,11325 \approx 11,33 \%
+	\end{eqnarray*}
+	
+\end{enumerate}
+
+\end{frame}
+
+%\begin{align}
+%			N \times \dfrac{\num{4.48}}{100} &=& 745 \\
+%			N &=& \dfrac{745 \times 100}{\num{4.48}} \\
+%			N &=&  \myres{\num{16629.46}}
+%\end{align}
+
+%\begin{frame}
+%
+%
+%%\begin{mybilan2}{Proportion}
+%	La \kw{proportion ou fréquence} d'une partie $A$ d'une population $E$, est le rapport $p$ des effectifs de $A$ et de $E$ :
+%	
+%	\begin{eqnarray*}
+%		p = \dfrac{n_A}{n_E} \; \left(\dfrac{Effectif de A}{Effectif de E}\right)
+%	\end{eqnarray*}
+%%\end{mybilan2}
+%\end{frame}
+
+\end{document}
