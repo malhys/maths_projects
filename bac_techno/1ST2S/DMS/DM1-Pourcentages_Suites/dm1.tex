@@ -1,0 +1,186 @@
+\documentclass[a4paper,11pt]{exam}
+%\printanswers % pour imprimer les réponses (corrigé)
+\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+\qformat{\textbf{\thequestion )}} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+\usepackage{fullpage}
+
+
+
+\input{../../../../monexam}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../../utils_maths}
+
+
+%\usepackage{fullpage}
+\author{\ }
+\date{A rendre pour le 6 Novembre 2017}
+\title{$1^{ère}$ $ST_2S$ : DM num\'ero 1}
+
+
+\begin{document}
+%	\usepackage{fancyhdr}
+%	
+%	\pagestyle{fancy}
+%	\fancyhf{}
+	%\rhead{Share\LaTeX}
+
+	\maketitle
+
+
+\section{A propos des acides gras oméga-3}
+On a récemment découvert que les acides gras oméga-3, présents dans des poissons comme la truite ou le saumon, ont un effet protecteur contre les maladies cardio-vasculaires.
+\emph{Les pourcentages demandés seront arrondis à \num{e-2}. \%} 
+
+\begin{questions}
+	\question Une portion de 180 g de saumon d'élevage fournit environ \num{1.5}g d'oméga-3. Calculer le pourcentage d'oméga-3 dans le saumon d'élevage.
+	\begin{solution}
+		$\dfrac{\num{1.5}}{\num{180}} \approx \num{0.0083}$, soit \num{0.83} \% d'oméga-3 dans le saumon d'élevage.
+	\end{solution}
+	
+	\question Le pourcentage d'omega-3 dans le saumon sauvage est de \num{0.78} \%. En déduire la quantité d'oméga-3 contenue dans une portion de 180g de saumon sauvage (arrondir à \num{0.1} g).
+	\begin{solution}
+		$180 \times \frac{\num{0.78}}{100} = \num{1.404}$, soit environ \num{1.4} g d'oméga-3 pour 180 g de saumon sauvage.
+	\end{solution}
+	
+	\question Consigner les résultats précédents dans le tableau suivant et finir de le compléter. 
+	
+	{\footnotesize \begin{tabular}{@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+		\cline{2-5}
+		& \multicolumn{2}{c|}{Elevage}               & \multicolumn{2}{c|}{Sauvage}               \\ \cline{2-5} 
+		& Pourcentage d'oméga-3 & Quantité d'oméga-3 & Pourcentage d'oméga-3 & Quantité d'oméga-3 \\ \hline
+		\multicolumn{1}{|@{\ }c@{\ }|}{Saumon (180 g)} &                       & \num{1.5} g      & \num{0.78}\%        &                    \\ \hline
+		\multicolumn{1}{|@{\ }c@{\ }|}{Truite (180 g)} &                       & \num{1.3} g      & \num{0.22}\%        &                    \\ \hline
+	\end{tabular}}
+	
+	\begin{solution}
+		{\footnotesize \begin{tabular}{@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+				\cline{2-5}
+				& \multicolumn{2}{c|}{Elevage}               & \multicolumn{2}{c|}{Sauvage}               \\ \cline{2-5} 
+				& Pourcentage d'oméga-3 & Quantité d'oméga-3 & Pourcentage d'oméga-3 & Quantité d'oméga-3 \\ \hline
+				\multicolumn{1}{|@{\ }c@{\ }|}{Saumon (180 g)} &  \num{0.83} \%   & \num{1.5} g      & \num{0.78}\%        &    \num{1.4} g                \\ \hline
+				\multicolumn{1}{|@{\ }c@{\ }|}{Truite (180 g)} &  \num{0.72} \%  & \num{1.3} g      & \num{0.22}\%        &  \num{0.4} g\\ \hline
+			\end{tabular}}
+	\end{solution}
+	
+	\question La consommation d'une portion de 180 g de truite d'élevage couvre environ 37 \% des besoins hebdomadaires d'un être humain. Montrer que ces besoins, arrondis à \num{0.1} g, sont de \num{3.5} g.
+	
+	\begin{solution}
+		Soit $x$ le besoin hebdomadaire en oméga-3 d'un être humain. On a $\dfrac{37 \times x}{100}=\num{1.3}$.
+		
+		Donc $x=\dfrac{\num{1.3}}{\num{0.37}} \approx \num{3.51}$ g.
+	\end{solution} 
+	
+	\question Retrouver la réponse précédente sachant que ces besoins hebdomadaires sont exactement couverts si on consomme 450 g de saumon sauvage.
+	\begin{solution}
+		$\dfrac{450 \times \num{0.78}}{100} = \num{3.51}$ soit \num{3.5} g.
+	\end{solution}
+	
+	\question Calculer la quantité de truite sauvage qu'il faudrait consommer pour couvrir la totalité de ces besoins hebdomadaires (arrondir à 10 g).
+	\begin{solution}
+		$\dfrac{\num{3.5}}{\num{0.4}}\times 180 = 1575$, soit 1570 g de truite sauvage pour couvrir les besoins hebdomadaires en oméga-3. 
+	\end{solution}
+\end{questions}
+
+
+
+\section{Efficacité d'un médicament}
+
+120 personnes atteintes d'une maladie ont accepté de tester l'efficacité d'un nouveau médicament. 
+
+Pendant un mois 80 personnes parmi elles ont pris le médicament, les autres ont prit le placebo.
+
+A l'issue de l'expérimentation :
+\begin{itemize}
+	\item parmi les personnes ayant pris le médicament, 75\% ont vu leur santé s'améliorer;
+	\item parmi les personnes ayant prit le placebo, seulement 5 personnes ont vu leur santé s'améliorer.
+\end{itemize} 
+\begin{center}
+	
+	{\small \begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+			\hline
+			& Ont vu leur santé s'améliorer & N'ont pas vu leur santé s'améliorer &  Total  \\
+			\hline
+			Ont pris le médicament &  &  &    \\
+			\hline
+			Ont prit le placebo &  &  &   \\
+			\hline
+			Total &  &  & 120   \\
+			\hline
+	\end{tabular}}
+\end{center}
+
+
+\begin{questions}
+	\question Compléter le tableau.
+	
+	\begin{solution}
+		{\small \begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+				\hline
+				& Ont vu leur santé s'améliorer & N'ont pas vu leur santé s'améliorer &  Total  \\
+				\hline
+				Ont pris le médicament &  60 & 20 & 80   \\
+				\hline
+				Ont prit le placebo & 5 & 35 &  40 \\
+				\hline
+				Total &  65 & 55 & 120   \\
+				\hline
+		\end{tabular}}
+		
+	\end{solution}
+	\question \begin{parts}
+		\part Calculer le pourcentage de personnes qui ont vu leu santé s'améliorer (arrondir à \num{0.01}\% près).
+		\begin{solution}
+			$ \dfrac{65}{120} \approx \num{0.5417} $ Soit \num{54.17} \%.
+		\end{solution}
+		\part Parmi les personnes qui n'ont pas prit le médicament, calculer le pourcentage de celles qui ont vu leur santé s'améliorer.
+		\begin{solution}
+			$ \dfrac{60}{80} = \num{0.75} $ Soit \num{75} \%.
+		\end{solution}
+		\part Parmi les personnes qui ont vu leur santé s'améliorer, calculer le pourcentage de celles qui ont prit le médicament (arrondir à \num{0.1}\% près).
+		\begin{solution}
+			$ \dfrac{60}{65} \approx \num{0.923} $ Soit \num{92.3} \%.
+		\end{solution}
+	\end{parts}
+\end{questions}
+
+\section{Cultures marines}
+
+Une ferme aquacole de Vendée décide de cultiver des micro-algues sur de l'eau de forage.
+
+Elle fait appel à une entreprise A pour creuser un puits. Le coût prévu pour ce travail comprend :
+\begin{itemize}
+	\item un forfait de mise en place du matériel de 800 €;
+	\item 200 € par mètre creusé.	
+\end{itemize}
+
+On note $u_0$, le montant forfaitaire, $u_1$ le coût du forage à 1 mètre, $u_2$ le coût du forage à 2 mètres..., $u_n$ le coût du forage à $n$ mètres.
+\begin{questions}
+	\question Calculer $u_1$, $u_2$ et $u_3$.
+	\question Donner la nature de la suite $(u_n)$, préciser sa raison.
+	\question
+		\begin{parts}
+			\part Exprimer $u_n$ en fonction de $n$.
+			\part Calculer $u_{13}$.
+		\end{parts}
+	
+	\question La profondeur prévue pour le forage est 12 mètres. Une autre entreprise, l'entreprise B propose de forer à 12 mètres pour un coût global de \num{3500} €. PArmi les deux entreprises, laquelle est la plus avantageuse ?
+\end{questions}
+	\label{LastPage}
+	
+
+\end{document}
