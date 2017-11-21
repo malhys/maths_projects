@@ -111,4 +111,50 @@
 %	\end{multicols}
 %	
 \end{mybilan}
+
+\newpage 
+
+\subsection{Sens de variation}
+
+\begin{mybilan}
+	Une suite géométrique de raison $q$ positive et de premier terme positif est :
+	\begin{itemize}
+		\item croissante, si $q > 1$;
+		\item décroissante, si $q < 1$;
+		\item constante, si $q = 1$.
+	\end{itemize}
+\end{mybilan}
+
+\subsection{Somme de termes consécutifs d'une suite géométrique}
+
+\begin{mybilan}
+	 
+	 $(u_n)$ est une suite géométrique de raison $q$, $S_n$ est la somme de ses termes jusqu'à $u_n$ ; on a :
+	\begin{itemize}
+		\item \kw{$S_n = u_0 \times \dfrac{1-q^{n + 1}}{1-q}$} (lorsque le terme initial est $u_0$) 
+		\item \kw{$S_n = u_1 \times \dfrac{1-q^{n}}{1-q}$} (lorsque le terme initial est $u_1$)
+	\end{itemize}
+\end{mybilan}
+
+\begin{myexs}
+	\begin{enumerate}
+		\item $(u_n)$ est la suite des puissances de 2 ($u_0 = 1$ et $q = 2$), on a :
+		
+		\begin{eqnarray*}
+			S_8 &=& u_0 \times \frac{1 - q^{8+1}}{1 - q} \\
+			S_8 &=& 1 \times \frac{1 - 2^9}{1 - 2} \\
+			S_8 &=& 1 \times \frac{1 - 512}{1 - 2} \\
+			S_8 &=& 511
+		\end{eqnarray*} 
+	
+		\item $(v_n)$ est la suite définie par ($u_0 = \num{100000}$ et $q = \num{1.2}$), on a :
+		
+		\begin{eqnarray*}
+			S_4 &=& u_0 \times \frac{1 - q^{4+1}}{1 - q} \\
+			S_4 &=& \num{100000} \times \frac{1 - \num{1.2}^5}{1 - \num{1.2}} \\
+			S_4 &=& \num{100000} \times \frac{1 - \num{2.48832}}{1 - \num{1.2}} \\
+			S_4 &=& \num{744160}
+		\end{eqnarray*} 
+	\end{enumerate}
+\end{myexs}
 \end{document}
