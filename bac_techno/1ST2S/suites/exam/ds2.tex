@@ -1,0 +1,157 @@
+\documentclass[a4paper,11pt]{exam}
+%\printanswers % pour imprimer les réponses (corrigé)
+\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+\qformat{\textbf{\thequestion )} (\thepoints) \\  } % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+
+
+\input{../../../../monexam}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../../utils_maths}
+
+\usepackage{tabu}
+
+%\usepackage{fullpage}
+\author{\ }
+\date{27 Novembre 2017}
+\title{$1^{ère}$ $ST_2S$ : DS num\'ero 2}
+
+
+\begin{document}
+%	\usepackage{fancyhdr}
+%	
+%	\pagestyle{fancy}
+%	\fancyhf{}
+	%\rhead{Share\LaTeX}
+
+	\maketitle
+
+\section{Comparaison de deux suites (6 points)}
+
+Les parents de Paul et Carine ont hérité d'une somme de \num{5000} € qu'ils offrent en deux parts égales à leurs enfants : chacun reçoit \num{2500} €.
+
+Paul place la totalité de sa part sur un livret d'épargne aux taux de 2 \% par an à intérêts composés.
+
+Carine place \num{1200} € sur un livret d'épargne à 4 \% à intérêts composés et garde le reste chez elle, dans sa tirelire.
+
+On suppose que les deux enfants ne font plus désormais ni retrait ni versement.
+
+\textit{Les résulats seront donnés à l'euro près}
+
+\begin{questions}
+	\question[2] 
+	On note $S_n$ le capital de Paul au bout de $n$ années.
+	\begin{parts}
+		\part[1]  Calculer $S_1$, $S_2$, $S_3$.
+		
+		\part[1] $(S_n)$ est une suite géométrique, exprimer $S_n$ en fonction de $n$.
+		
+	\end{parts}
+	
+	\question[2] On note $T_n$, le capital total (livret et tirelire) de Carine au bout de $n$ années.
+	\begin{parts}
+		\part[1] Calculer $T_1$, $T_2$, $T_3$.
+		\part[1] Exprimer $T_n$ en fonction de $n$
+	\end{parts}
+	
+	\question[1] Compléter le tableau suivant :
+	
+	\begin{center}
+		
+		\begin{tabular}{|@{$\quad $}c@{$\quad $}| @{$\qquad $}c@{$\qquad $} | @{$\qquad $}c@{$\qquad $} | @{$\qquad $}c@{$\qquad $} | @{$\qquad $}c@{$\qquad $} |@{$\qquad $}c@{$\qquad $} |@{$\qquad $}c@{$\qquad $} |@{$\qquad $}c@{$\qquad $}|@{$\qquad $}c@{$\qquad $}|}
+			\hline
+			$n$                           & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline
+			$S_n$ &   &   &   &   &   &   &   &   \\ \hline
+			$T_n$ &   &   &   &   &   &   &   &   \\ \hline
+		\end{tabular}
+	\end{center}
+	
+	\question[1] En déduire, en fonction du nombre d'années, qui de Paul ou de Carine, fait le meilleur placement.
+	
+\end{questions}
+
+\section{Chiffre d'affaires (6 points)}
+
+Le chiffre d'affaires d'un laboratoire pharmaceutique augmente tous les ans de \num{50000} €.
+En 2007, le chiffre d'affaires était de \num{500000} €. On note $C_0 = \num{500000}$ et $C_n$ le chiffre d'affaires au cours de l'année $2007 + n$.
+
+\begin{questions}
+	\question[1] Donner pour tout entier $n$, l'expression de $C_{n+1}$ en fonction de $C_n$.
+	\question[3] 
+	\begin{parts}
+		\part[1] En déduire que les nombres $C_0$, $C_1$, $C_2$, ... $C_n$ sont des termes successifs d'une suite arithmétique de premier terme $C_0$ dont on précisera la raison.
+		
+		\part[1] Calculer $C_5$. Que représente $C_5$ ?
+		
+		\part[1] Calculer le chiffre d'affaires  prévisible pour 2013.
+	\end{parts}	
+	
+	\question[2] Déterminer en quelle année on peut prévoir un chiffre d'affaire de \num{1050000} €.
+	
+\end{questions}
+
+\section{La croissance du f\oe tus (8 points)}
+
+Lors de la grossesse d'une femme, les médecins surveillent à l'aide de l'échographie, les médecins surveillent la croissance du f\oe tus durant les 39 semaines de grossesse.
+
+Voici quelques indicateurs de cette surveillance :
+\begin{itemize}
+	\item Durant les premières semaines, on mesure la longueur du f\oe tus (longueur tête-fesses).
+	\item Ensuite, lorsque le f\oe tus est trop grand pour être visualisé complètement sur l'écran et donc être mesuré, on s'intéresse à la dimension de sa tête. On mesure le diamètre bipariétal (l'écartement entre les deux os qui se trouvent de chaque coté de la face, au dessus des oreilles). Le graphique ci-dessous donne le diamètre bipariétal d'une f\oe tus entre les semaines 11 à 24.
+	
+	\begin{center}
+		\includegraphics[scale=0.2]{graph_foetus}
+	\end{center}
+
+\end{itemize}
+
+
+\begin{questions}
+	\question[2] 
+		\begin{parts}
+			\part[1] Déterminer graphiquement le diamètre bipariétal au bout de 11 semaines.
+			
+			\part[1] On désigne par $u_{11}$, $u_{12}$, ..., $u_{24}$ les valeurs du diamètre bipariétal pour les semaines 11 à 24. Quelle semble être la nature de la suite formée par ces termes successifs ?
+		\end{parts}
+	
+	\question[2]
+		Dans cette question, on étudie la croissance du f\oe tus durant les semaines 4 à 10. Dans un tableur, on saisit les données concernant la taille du f\oe tus et on fait calculer le rapport entre deux valeurs consécutives.
+		Les résultats sont donnés dans le tableau suivant :
+		
+		\begin{center}
+			\includegraphics[scale=0.2]{tabl_foetus}
+		\end{center}
+		
+		Pour simplifier, on retient \num{1.42} comme valeur approchée des résultats de la dernière colonne. Quelle est l'augmentation en pourcentage de la taille du f\oe tus en une semaine ?
+		
+	\question[4]
+		On considère la suite géométrique $(u_n)$ de raison \num{1.42} et telle que $u_0 = 7$. Le terme $u_n$ de rang $n$ représenterait la taille du f\oe tus en mm la semaine 4 + $n$.
+		\begin{parts}
+			\part[1] Que représenterait $u_{16}$ ?
+			\part[1] Calculer une valeur approchée à l'unité de $u_{16}$.
+			\part[2] Le modèle <<suite géométrique>> est-il pertinent au bout de 20 semaines ?
+		\end{parts}
+\end{questions}
+
+
+
+
+	\label{LastPage}
+	
+
+\end{document}
