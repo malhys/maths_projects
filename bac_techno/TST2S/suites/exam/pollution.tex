@@ -8,7 +8,7 @@ De nouvelles normes antipollution ont été mises en place à partir de 2001. Le
 \subsection{}
 Chaque année, si ses rejets dépassent la quantité autorisée, le groupe doit payer une amende.
 
-Tant que le groupe ne prend pas de mesure pour faire baisser sa quantité de rejets, l'amande augmente de \num{6000} € tous les ans. En 2001, le groupe a payé une amende de \num{83000} €.
+Tant que le groupe ne prend pas de mesure pour faire baisser sa quantité de rejets, l'amende augmente de \num{6000} € tous les ans. En 2001, le groupe a payé une amende de \num{83000} €.
 
 \textit{Dans toute cette partie, on fait l'hypothèse que le groupe ne prend aucune mesure pour diminuer sa quantité de rejets.}
 
@@ -16,26 +16,66 @@ On appelle $C_1$ l'amende payée en 2001 et $C_n$ l'amende payée l'année $2000
 
 \begin{questions}
 	\question[1] Calculer la valeur de l'amende payée par l'entreprise en 2002 et en 2003.
+		\begin{solution}
+			\begin{itemize}
+				\item $C_2 = C_1 + \num{6000} = \num{83000} + \num{6000} = \num{89000}$;
+				\item $C_3 = C_2 + \num{6000} = \num{89000} + \num{6000} = \num{95000}$.
+			\end{itemize}
+		
+		L'entreprise a payé \num{89000} € en 2002 et \num{95000} en 2003.
+		\end{solution}
 	\question[1] Quelle est la nature de la suite $(C_n)$ ?
+		\begin{solution}
+			Tous les ans, l'amende augmente de \num{6000} €, donc pour passer d'un terme à l'autre, on ajoute \num{6000}. C'est donc une suite arithmétique de raison \num{6000}.
+		\end{solution}
 	\question[1] Calculer l'amende que le groupe devra payer en 2015.
+		\begin{solution}
+			$2015 = 2000 + 15$, on calcule la valeur de $C_{15}$.
+			\begin{eqnarray*}
+				C_{n} & = & C_1 + (n - 1) \times \num{6000} \\
+				C_{15} & = & \num{83000} + 14 \times \num{6000} \\
+				C_{15} & = & \num{83000} + \num{84000} \\
+				C_{15} & = & \num{167000}
+			\end{eqnarray*}
+		
+		En 2015, le groupe devra payer \num{167000} €.
+		\end{solution}
 \end{questions}
 
 \subsection{}
 
 Au vu des résultats précédents, le groupe a décidé en 2004 de mettre en place un dispositif lui permettant de se mettre aux normes progressivement, l'objectif étant de ramener sa quantité de déchets à une valeur inférieure ou égale à \num{42000} tonnes en 2014.
 
-Le groupe s'est engagé à réduire sa production de déchets de 4 \% à partir de 2004.\\
+Le groupe s'est engagé à réduire chaque année sa production de déchets de 4 \% à partir de 2004.\\
 
 \begin{questions}
 	\question[1] Si le groupe a rejeté \num{66000} tonnes en 2005, a-t-il respecté son engagement ? \\
+	\begin{solution}
+		$\num{68000} \times \num{0.96} = \num{65280}$
+		
+		Non le groupe n'a pas respecté son engagement, il aurait du rejeter \num{65280} tonnes de déchets.
+	\end{solution}
+	
 	
 	\question On appelle $Q_n$ la quantité de rejets prévue pour l'année $2004 + n$. Ainsi, $Q_0 = \num{68000}$.
 	
 	\begin{parts}
 		\part[1] Quelle est la nature de la suite $(Q_n)$ ?
-		
+			\begin{solution}
+				L'entreprise s'est engagée à diminuer ses rejets de 4 \% chaque année. Le coefficient multiplicateur correspondant à cette baisse est \num{0.96} ; donc chaque terme de la suite est obtenu en multipliant le précédent par \num{0.96}. J'en déduis que la suite $(Q_n)$ est une suite géométrique de raison \num{0.96}.
+			\end{solution}
 		\part[1] Exprimer $Q_n$ en fonction de $n$.
+			\begin{solution}
+				$Q_n = Q_0 \times q^n  =  \num{68000} \times \num{0.96}^n.$
+			\end{solution}
 		
 		\part[1] Calculer à la tonne près, la quantité de rejets prévue pour l'année 2014. L'entreprise aura-t-elle atteint son objectif ?
+			\begin{solution}
+				$2014 = 2004 + 10 $. Je calcule $Q_{10}$ :
+				
+				$Q_{10} = \num{68000} \times \num{0.96}^{10} = \num{45209}$.
+				
+				La quantité de rejets prévue pour l'année 2014 est de \num{45209} tonnes, donc l'entreprise n'aura pas atteint son objectif.
+			\end{solution}
 	\end{parts}
 \end{questions}

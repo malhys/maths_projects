@@ -1,4 +1,4 @@
-\section{Offres de prêt \textit{( points)}}
+\section{Offres de prêt \textit{(8 points)}}
 
 Une infirmière souhaitant créer un cabinet a besoin de d'un prêt de \num{100000} €. Elle contacte deux banques, A et B.\\
 
@@ -8,21 +8,68 @@ Une infirmière souhaitant créer un cabinet a besoin de d'un prêt de \num{1000
 	
 	\begin{parts}
 		\part[1] Calculer le montant des versements $u_1$, $u_2$, $u_3$, $u_4$, $u_5$ et $u_6$.
+			\begin{solution}
+				\begin{itemize}
+					\item $u_1 = u_0 + \num{1800} = \num{15000} + \num{1800} = \num{16800}$;
+					\item $u_2 = u_1 + \num{1800} = \num{16800} + \num{1800} = \num{18600}$;
+					\item $u_3 = u_2 + \num{1800} = \num{18600} + \num{1800} = \num{20400}$;
+					\item $u_4 = u_3 + \num{1800} = \num{20400} + \num{1800} = \num{22200}$;
+					\item $u_5 = u_4 + \num{1800} = \num{22200} + \num{1800} = \num{24000}$;
+					\item $u_6 = u_5 + \num{1800} = \num{24000} + \num{1800} = \num{25800}$.
+				\end{itemize}
+			\end{solution}
 		\part[1\half] Quelle serait la somme totale remboursée si l'infirmière souscrivait le prêt auprès de la banque A ?\\
+		
+			\begin{solution}
+				\begin{eqnarray*}
+					S_n &=& \frac{(u_0 + u_n) \times (n +1)}{2} \\
+					S_6 &=& \frac{(u_0 + u_6) \times 7}{2} \\
+					S_6 &=& \frac{(\num{15000} + \num{25800}) \times 7}{2} \\
+					S_6 &=& \frac{\num{39000} \times 7}{2} \\
+					S_6 &=& \frac{\num{273000}}{2} \\
+					S_6 &=& \num{136500} \\
+				\end{eqnarray*}
+				
+				Si elle souscrivait le prêt auprès de la banque A, elle devrait rembourser \num{136500} €.
+			\end{solution}
 	\end{parts}
 
 	\question La banque B propose également de rembourser le prêt sur 7 ans, en 7 versements. Le premier remboursement noté $v_0$ serait de \num{20000} €. Les remboursements suivants, notés $v_1$, $v_2$, $v_3$, $v_4$, $v_5$ et $v_6$ seraient chacun en augmentation de 2 \% par rapport au remboursement précédent.
 	
 	\begin{parts}
 		\part[1] Calculer $v_1$ en précisant par quel calcul on passe de $v_0$ à $v_1$. Calculer $v_2$.
+			\begin{solution}
+				\begin{itemize}
+					\item $ v_1 = v_0 \times \num{1.02} = \num{2000} \times \num{1.02} = \num{2040} $;
+					\item $ v_2 = v_1 \times \num{1.02} = \num{2040} \times \num{1.02} = \num{2080.8} $.
+				\end{itemize}
+			\end{solution}
 		
 		\part[1] Donner pour tout entier $n$, $0 \leq n \leq 5$, l'expression de $v_{n+1}$ en fonction de $v_n$.
+			\begin{solution}
+				$v_{n+1} = v_n \times \num{1.02}$.
+			\end{solution}
 		
 		\part[1] En déduire que les nombres $v_0$, ..., $v_6$ sont des termes consécutifs d'une suite géométrique de premier terme $v_0$ dont on précisera la raison $q$.
+			\begin{solution}
+				Pour passer d'un terme à l'autre, on multiplie toujours par \num{1.02}, donc $ (v_n)$ est une suite géométrique de raison $q = \num{1.02}$.
+			\end{solution}
 		
 		\part[1\half] Quelle serait la somme totale remboursée si l'infirmière souscrivait le prêt auprès de la banque B ? Arrondir à l'euro.\\
-		
+			\begin{solution}
+				\begin{eqnarray*}
+					S_n &=& v_0  \times \frac{1 - q^{n+1}}{1 - q} \\
+					S_6 &=& \num{20000}  \times \frac{1 - \num{1.02}^{7}}{1 - \num{1.02}} \\
+					S_6 &=& \num{148686} 
+				\end{eqnarray*}
+				
+				Si elle souscrivait le prêt auprès de la banque A, elle devrait rembourser \num{148686} €.
+			\end{solution}
 	\end{parts}
 
 	\question[1] Quelle banque offre la solution la plus avantageuse ?
+	
+		\begin{solution}
+			\num{136500} < \num{148686}, donc la banque A est plus avantageuse que la banque B.
+		\end{solution}
 \end{questions}
