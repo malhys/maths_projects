@@ -1,6 +1,6 @@
 \documentclass[a4paper,11pt]{exam}
-%\printanswers % pour imprimer les réponses (corrigé)
-\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
 \addpoints % Pour compter les points
 % \noaddpoints % pour ne pas compter les points
 %\qformat{\textbf{\thequestion ) } }
@@ -58,15 +58,34 @@ On suppose que les deux enfants ne font plus désormais ni retrait ni versement.
 	On note $S_n$ le capital de Paul au bout de $n$ années.
 	\begin{parts}
 		\part[1]  Calculer $S_1$, $S_2$, $S_3$.
+			\begin{solution}
+				\begin{itemize}
+					\item $S_1 = S_0 \times \num{1.02}  = 2550 $ 
+					\item $S_2 = 2601$ 
+					\item $S_3 = 2653$
+				\end{itemize}
+				
+			\end{solution}
 		
 		\part[1] $(S_n)$ est une suite géométrique, exprimer $S_n$ en fonction de $n$.
+		\begin{solution}
+			$S_n = 2500 \times \num{1.02}^{n}$
+		\end{solution}
 		
 	\end{parts}
 	
 	\question[2] On note $T_n$, le capital total (livret et tirelire) de Carine au bout de $n$ années.
 	\begin{parts}
 		\part[1] Calculer $T_1$, $T_2$, $T_3$.
+		\begin{itemize}
+			\item $T_1 = 1200 \times \num{1.04} + 1300 = 1243 + 1300 = 2543 $ 
+			\item $S_2 = 1243 \times \num{1.04} + 1300 = 1298 + 1300 = 2598 $ 
+			\item $S_3 = 1298 \times \num{1.04} + 1300 = 1350 + 1300 = 2650 $ 
+		\end{itemize}
 		\part[1] Exprimer $T_n$ en fonction de $n$
+		\begin{solution}
+			$S_n = 1200 \times \num{1.04}^{n} + 1300$
+		\end{solution}
 	\end{parts}
 	
 	\question[1] Compléter le tableau suivant :
@@ -80,8 +99,26 @@ On suppose que les deux enfants ne font plus désormais ni retrait ni versement.
 			$T_n$ &   &   &   &   &   &   &   &   \\ \hline
 		\end{tabular}
 	\end{center}
+
+	\begin{solution}
+		\begin{small}
+			
+		\begin{center}
+			
+			\begin{tabular}{|@{$\quad $}c@{$\quad $}| @{\ }c@{\ } | @{\ }c@{\ } | @{\ }c@{\ } | @{\ }c@{\ } |@{\ }c@{\ } |@{\ }c@{\ } |@{\ }c@{\ }|@{\ }c@{\ }|}
+				\hline
+				$n$                           & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline
+				$S_n$ & 2550  & 2601  & 2653  & 2706  & 2760  & 2815  & 2872  & 2929  \\ \hline
+				$T_n$ &  2548 &  2598 &  2650 &  2703 &  2759 &  2818 &  2879 &  2942 \\ \hline
+			\end{tabular}
+		\end{center}
+		\end{small}
+	\end{solution}
 	
 	\question[1] En déduire, en fonction du nombre d'années, qui de Paul ou de Carine, fait le meilleur placement.
+	\begin{solution}
+		Jusqu'à 6 ans, PAul à fait le meilleur placement, àrès 6 ans, c'est Carine.
+	\end{solution}
 	
 \end{questions}
 
@@ -92,16 +129,47 @@ En 2007, le chiffre d'affaires était de \num{500000} €. On note $C_0 = \num{5
 
 \begin{questions}
 	\question[1] Donner pour tout entier $n$, l'expression de $C_{n+1}$ en fonction de $C_n$.
+	\begin{solution}
+		$C_{n+1} = C_n + \num{50000}$
+	\end{solution}
+
 	\question[3] 
 	\begin{parts}
 		\part[1] En déduire que les nombres $C_0$, $C_1$, $C_2$, ... $C_n$ sont des termes successifs d'une suite arithmétique de premier terme $C_0$ dont on précisera la raison.
+		\begin{solution}
+			Tous les ans, le chiffre d'affaires augmente de \num{50000} €, donc pour passer d'un terme à l'autre an ajoute \num{50000}. J'en déduis qu'il s'agit d'une suite arithmétique de raison $r=\num{50000}$.
+		\end{solution}
 		
 		\part[1] Calculer $C_5$. Que représente $C_5$ ?
+		\begin{solution}
+			$C_5$ représente le chiffre d'affaires du laboratoire en 2012 (2007 + 5 = 2012).
+			
+			On a $C_5 = \num{500000} + 5 \times \num{50000} = \num{750000}$ .
+		\end{solution}
 		
 		\part[1] Calculer le chiffre d'affaires  prévisible pour 2013.
+		\begin{solution}
+			D'après la question $(a)$, je sais que $C_5$ correspond au chiffre d'affaires de l'année 2012. Donc pour 2013, il faut calculer $C_6$.
+			
+			On a : $C_6 = C_5 + \num{50000} =  \num{750000} + \num{50000} = \num{800000}$
+		\end{solution}
 	\end{parts}	
 	
 	\question[2] Déterminer en quelle année on peut prévoir un chiffre d'affaire de \num{1050000} €.
+	\begin{solution}
+		Je sais que $C_n = \num{500000} + n \times \num{50000}$.
+		Je cherche la valeur de $n$ pour laquelle $C_n = \num{1050000}$ :
+		
+		\begin{eqnarray*}
+			\num{1050000} &  = & \num{500000} + n \times \num{50000} \\
+			\num{1050000} - \num{500000} & = & n \times \num{50000} \\
+			\num{550000} & = & n \times \num{50000} \\
+			\frac{\num{550000}}{\num{50000}} & = & n \\
+			11 &=& n			
+		\end{eqnarray*}
+	
+		Donc le chiffre d'affaires de \num{1050000} est atteint la 11$^e$ année, c'est à dire 2018.
+	\end{solution}
 	
 \end{questions}
 
@@ -125,8 +193,14 @@ Voici quelques indicateurs de cette surveillance :
 	\question[2] 
 		\begin{parts}
 			\part[1] Déterminer graphiquement le diamètre bipariétal au bout de 11 semaines.
+			\begin{solution}
+				Le diamètre bipariétal à 11 semaines est d'environ 25 mm.
+			\end{solution}
 			
 			\part[1] On désigne par $u_{11}$, $u_{12}$, ..., $u_{24}$ les valeurs du diamètre bipariétal pour les semaines 11 à 24. Quelle semble être la nature de la suite formée par ces termes successifs ?
+			\begin{solution}
+				Les points représentant les termes de la suite sont alignés, donc la suite est arithmétique.
+			\end{solution}
 		\end{parts}
 	
 	\question[2]
@@ -139,12 +213,32 @@ Voici quelques indicateurs de cette surveillance :
 		
 		Pour simplifier, on retient \num{1.42} comme valeur approchée des résultats de la dernière colonne. Quelle est l'augmentation en pourcentage de la taille du f\oe tus en une semaine ?
 		
+		\begin{solution}
+			\begin{equation*}
+				\num{1.42} - 1 = \num{0.42}
+			\end{equation*}
+			
+			Donc chaque semaine, la taille du f\oe tus augmente de 42 \%.
+		\end{solution}
+		
 	\question[4]
 		On considère la suite géométrique $(u_n)$ de raison \num{1.42} et telle que $u_0 = 7$. Le terme $u_n$ de rang $n$ représenterait la taille du f\oe tus en mm la semaine 4 + $n$.
 		\begin{parts}
 			\part[1] Que représenterait $u_{16}$ ?
+				\begin{solution}
+					$u_{16}$ représenterait la taille du f\oe tus en mm la semaine 20 (4 + 16).
+				\end{solution}
 			\part[1] Calculer une valeur approchée à l'unité de $u_{16}$.
+				\begin{solution}
+					\begin{eqnarray*}
+						u_{16} & = & 7 \times \num{1.42}^{16} \\
+						u_{16} & = & \num{1913}
+					\end{eqnarray*}
+				\end{solution}
 			\part[2] Le modèle <<suite géométrique>> est-il pertinent au bout de 20 semaines ?
+				\begin{solution}
+					Si on suit ce modèle, à la vingtième semaine le f\oe tus mesurerait 1913 millimètres, soit presque 2 mètres. Ce n'est pas réaliste, donc le modèle n'est pas pertinent.
+				\end{solution}
 		\end{parts}
 \end{questions}
 
