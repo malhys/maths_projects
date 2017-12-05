@@ -1,0 +1,66 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{Information chiffrée }
+
+%\newcommand{\disp}{false}
+
+\lhead{CH3 : Statistiques}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+\chap[num=3, color=red]{Statistiques}{Olivier FINOT, \today }
+
+\input{./obj}
+
+\section{Vocabulaire et représentations graphiques}
+
+\subsection{Vocabulaire}
+
+\begin{mydefs}
+	Une \kw{population} est un ensemble de personnes ou d'objets, appelés \kw{individus}, définis par une propriété commune. 
+	Pour une population choisie, on peut étudier un caractère de ses individus, il est :
+	
+	\begin{itemize}
+		\item \kw{quantitatif} quand il est mesurable :
+		\begin{itemize}
+			\item \kw{discret} si les valeurs sont des nombres isolés ;
+			\item \kw{continu} si les valeurs ne sont pas isolées. Les valeurs sont regroupées en \kw{classes} ou \kw{intervalles}  $\intervFO{a}{b}$ %; l'\kw{amplitude} de l'intervalle est $b -a$.
+		\end{itemize}
+		\item \kw{qualitatif} quand il n'est pas mesurable. %, les valeurs s'appellent alors $\ll$ modalités $\gg$ .
+	\end{itemize}
+
+	L'\kw{effectif} $n_i$ est le nombre d'individus correspondant à une valeur du caractère. L'\kw{effectif total} $N$ est le nombre total d'individus de la population étudiée.
+	Pour chaque valeur du caractère la \kw{fréquence} $f_i$ est calculée en divisant l'effectif correspondant à la valeur par l'effectif total  ($\frac{n_i}{N}$).
+\end{mydefs}
+
+\subsection{Représentation graphique}
+
+\begin{mybilan}
+	\begin{itemize}
+		\item Le \kw{diagramme en secteurs (ou circulaire)} est une représentation adaptée une série à \kw{caractère qualitatif}.
+		\item Le \kw{diagramme en bâtons (ou en barres)} est une représentation adaptée pour une série à \kw{caractère quantitatif discret}.
+		\item L'\kw{histogramme} est utilisé pour représenter les séries à \kw{caractère quantitatif continu}.
+	\end{itemize}
+\end{mybilan}
+\end{document}
