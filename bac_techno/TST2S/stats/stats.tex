@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{Information chiffrée }
+
+%\newcommand{\disp}{false}
+
+\lhead{CH2 : Suites numériques}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+\chap[num=3, color=red]{Séries statistiques à deux variables}{Olivier FINOT, \today }
+
+\input{./obj}
+
+\section{Statistiques à une variable (révisions)}
+
+\subsection{Médiane et moyenne}
+\begin{mydef}
+	La \kw{médiane $Me$} d'une série statistique est le nombre qui \kw{partage la série en deux} séries ayant \kw{le même effectif}.
+	
+	La moitié (ou 50 \%)  des valeurs de la série sont inférieures ou égales à la médiane et l'autre moitié (50 \%) lui sont supérieures ou égales.
+\end{mydef}
+
+\begin{mydef}
+	On note $x_1, x_2, ..., x_p$ les valeurs du caractère étudié et $n_1, n_2, ...,n_p$ les effectifs correspondants.
+	
+	La \kw{moyenne $\bar{x}$} de la série statistique est $\bar{x} = \dfrac{n_1x_1 + n_2x_2 + ... + n_px_p}{N} = \dfrac{\Sigma n_ix_i}{N} $
+	
+\end{mydef}
+
+\subsection{\'Etendue}
+
+\begin{mydef}
+	L'\kw{étendue $e$} d'une série statistique est la différence entre la plus grande et la plus petite valeur de la série.
+\end{mydef}	
+
+
+
+\subsection{Quartiles}
+
+\begin{mydef}
+	\begin{itemize}
+		\item Le \kw{premier quartile $Q_1$}, est la plus petite valeur à laquelle un quart (ou 25 \%) des valeurs sont inférieures ou égales.
+		\item Le \kw{troisième quartile $Q_3$}, est la plus petite valeur à laquelle trois quarts (ou 75 \%) des valeurs sont inférieures ou égales.
+		\item L'\kw{écart interquartile $Q_3-Q_1$} est la différence entre les 3$^e$ et 1$^{er}$ quartiles : $Q_3 - Q_1$. Il regroupe au moins 50 \% des effectifs de la série avec un nombre égal de valeurs réparties de part et d'autre de la médiane $Me$.
+	\end{itemize}
+	
+\end{mydef}	
+
+\subsection{\'Ecart type}
+
+\begin{mydef}
+	L'\kw{écart type $\sigma$} (sigma), fourni par la calculatrice ou le tableur, mesure la dispersion de la série autour de la moyenne $\bar{x}$. 
+	
+	Plus l'écart type $\sigma$ est grand, plus les valeurs sont <<\kw{dispersées}>> autour de la moyenne. 
+	
+	Inversement, plus l'écart type $\sigma$ est grand, plus les valeurs sont <<\kw{resserrées}>> autour de la moyenne.
+\end{mydef}	
+
+\end{document}
