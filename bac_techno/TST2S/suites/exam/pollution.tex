@@ -17,6 +17,7 @@ On appelle $C_1$ l'amende payée en 2001 et $C_n$ l'amende payée l'année $2000
 \begin{questions}
 	\question[1] Calculer la valeur de l'amende payée par l'entreprise en 2002 et en 2003.
 		\begin{solution}
+			L'amende payée en en 2002 est $C_2$ et celle payée en 2003 est $C_3$. 
 			\begin{itemize}
 				\item $C_2 = C_1 + \num{6000} = \num{83000} + \num{6000} = \num{89000}$;
 				\item $C_3 = C_2 + \num{6000} = \num{89000} + \num{6000} = \num{95000}$.
@@ -51,6 +52,9 @@ Le groupe s'est engagé à réduire chaque année sa production de déchets de 4
 \begin{questions}
 	\question[1] Si le groupe a rejeté \num{66000} tonnes en 2005, a-t-il respecté son engagement ? \\
 	\begin{solution}
+		L'entreprise s'est engagée à diminuer ses rejets de 4 \% chaque année. Le coefficient multiplicateur correspondant à cette baisse est \num{0.96}. Je calcule les rejets prévu pour 2005 :\\
+		
+		
 		$\num{68000} \times \num{0.96} = \num{65280}$
 		
 		Non le groupe n'a pas respecté son engagement, il aurait du rejeter \num{65280} tonnes de déchets.
@@ -62,7 +66,7 @@ Le groupe s'est engagé à réduire chaque année sa production de déchets de 4
 	\begin{parts}
 		\part[1] Quelle est la nature de la suite $(Q_n)$ ?
 			\begin{solution}
-				L'entreprise s'est engagée à diminuer ses rejets de 4 \% chaque année. Le coefficient multiplicateur correspondant à cette baisse est \num{0.96} ; donc chaque terme de la suite est obtenu en multipliant le précédent par \num{0.96}. J'en déduis que la suite $(Q_n)$ est une suite géométrique de raison \num{0.96}.
+				 Les rejets doivent baisser chaque année de 4 \%, donc chaque terme de la suite est obtenu en multipliant le précédent par \num{0.96}. J'en déduis que la suite $(Q_n)$ est une suite géométrique de raison \num{0.96}.
 			\end{solution}
 		\part[1] Exprimer $Q_n$ en fonction de $n$.
 			\begin{solution}
@@ -71,7 +75,7 @@ Le groupe s'est engagé à réduire chaque année sa production de déchets de 4
 		
 		\part[1] Calculer à la tonne près, la quantité de rejets prévue pour l'année 2014. L'entreprise aura-t-elle atteint son objectif ?
 			\begin{solution}
-				$2014 = 2004 + 10 $. Je calcule $Q_{10}$ :
+				$2014 = 2004 + 10 $. Je calcule $Q_{10}$ :\\
 				
 				$Q_{10} = \num{68000} \times \num{0.96}^{10} = \num{45209}$.
 				
