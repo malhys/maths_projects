@@ -78,4 +78,127 @@
 	Inversement, plus l'écart type $\sigma$ est grand, plus les valeurs sont <<\kw{resserrées}>> autour de la moyenne.
 \end{mydef}	
 
+\section{Tableaux croisés d'effectifs}
+
+
+\subsection{Rappel sur les fréquences}
+
+\begin{mydef}
+	La fréquance $f$ d'une population $A$ dans une population $E$ est le rapport des effectifs :
+	
+	\begin{eqnarray*}
+		f & = & \dfrac{n_A \; (Effectif de A) }{n_E \; (Effectif de E)}  \\
+	\end{eqnarray*}
+\end{mydef}
+
+
+\begin{myex}
+	On considère les montant des achats, en euros de $N = 200$ personnes dans une pharmacie un jour donné :
+	
+	\begin{center}
+		
+		\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+			\hline
+			Montant des achats & {[}0, 20{[} & {[}20, 40{[} & {[}40, 60{[} & {[}60, 80{[} \\ \hline
+			Effectif $n_i$      & 52          & 110          & 30           & 8            \\ \hline
+			Fréquence $f_i$     & \num{0.26}        & \num{0.55}         & \num{0.15}         & \num{0.04}         \\ \hline
+		\end{tabular}
+	\end{center}	
+\end{myex}
+
+\subsection{Fréquence conditionnelle}
+
+\input{act1}
+
+\begin{enumerate}[label=\arabic*)]
+	\item \begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{$\quad$}c@{$\quad$}|}
+		\hline
+		& Compétition $(C)$ & Pas compétition $(\bar{C})$ & Total \\ \hline
+		Fumeurs  $(F)$   & 18 & 36 & 54 \\ \hline
+		Non fumeurs $(\bar{F})$ & 216 & 90 & 306 \\ \hline
+		Total & 234 & 126 & 360 \\ \hline
+	\end{tabular}
+
+	\item \begin{enumerate}[label=\alph*)]
+		\item \begin{eqnarray*}
+			f(C) &=& \frac{Effectif\; de\; C}{Effectif\; total} \\
+			f(C) &=& \frac{234}{360} \\
+			f(C) &=& \num{0.65}
+		\end{eqnarray*}
+	
+	La proportion de personnes pratiquant la compétition est \num{0.65}.
+	
+		\item \begin{eqnarray*}
+			f(F) &=& \frac{Effectif\; de\; F}{Effectif\; total} \\
+			f(F) &=& \frac{54}{360} \\
+			f(F) &=& \num{0.15}
+		\end{eqnarray*}
+		
+		La proportion de fumeurs est \num{0.15}.
+		
+		\item \begin{eqnarray*}
+			f(F \cap C) &=& \frac{Effectif\; des\; fumeurs \; pratiquant\; la\; compétition}{Effectif\; total} \\
+			f(F \cap C) &=& \frac{18}{360} \\
+			f(F \cap C) &=& \num{0.05}
+		\end{eqnarray*}
+		
+		La proportion de personnes qui fument et pratiquent la compétition est \num{0.05}.
+		
+		\item \begin{eqnarray*}
+			f_C(F) &=& \frac{Effectif\; des\; fumeurs \; pratiquant\; la\; compétition}{Effectif\; des\; personnes\; pratiquant\; la\; compétition} \\
+			f_C(F) &=& \frac{18}{234} \\
+			f_C(F) &\approx& \num{0.08}
+		\end{eqnarray*}
+		
+		La proportion de fumeurs parmi les personnes pratiquent la compétition est \num{0.08}.
+		
+		\item \begin{eqnarray*}
+			f(F \cup C) &=& \frac{Effectif\; des\; fumeurs + Effectif\; des\; pratiquants\; de\; la\; compétition}{Effectif\; total} \\
+			f(F \cup C) &=& \frac{54 + 234}{360} \\
+			f(F \cup C) &=& \frac{288}{360} \\
+			f(F \cup C) &=& \num{0.8}
+		\end{eqnarray*}
+		
+		La proportion de personnes qui fument ou pratiquent la compétition est \num{0.8}.
+	\end{enumerate}
+
+\end{enumerate}
+
+
+\begin{mybilan}
+	$A$ et $B$ sont deux sous-populations d'une population $E$.
+	\begin{itemize}
+		\item $\mathbf{f_B}$ est la \kw{fréquence marginale} de $B$ :
+		
+		\begin{eqnarray*}
+			f_B &=& \dfrac{Effectif\; de\; B }{Effectif\; de\; E}
+		\end{eqnarray*}
+	
+		\item $f(A \cup B)$ est la \kw{fréquence de la réunion} de $A$ et $B$ :
+		
+		\begin{eqnarray*}
+			f(A \cup B) &=& \dfrac{Effectif\; de\; A + Effectif\; de\; B }{Effectif\; de\; E}
+		\end{eqnarray*}
+	
+		\item $f(A \cap B)$ est la \kw{fréquence conjointe} de $A$ et $B$ :
+		
+		\begin{eqnarray*}
+			f(A \cap B) &=& \dfrac{Effectif\; du\; croisement \; de\;A\; et\; de\; B }{Effectif\; de\; E}
+		\end{eqnarray*}
+	
+		\item $f_B(A)$ est la \kw{fréquence conditionnelle} de $A$ \kw{sachant} $B$ :
+		
+		\begin{eqnarray*}
+			f_B(A) &=& \dfrac{Effectif\; du\; croisement \; de\;A\; et\; de\; B }{Effectif\; de\; B}
+		\end{eqnarray*}
+	
+		ou 
+				
+		\begin{eqnarray*}
+			f_B(A) &=& \dfrac{f(A \cap B)}{f_B}
+		\end{eqnarray*}
+	
+	
+	\end{itemize}
+\end{mybilan}
 \end{document}
