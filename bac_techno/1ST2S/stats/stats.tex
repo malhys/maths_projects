@@ -85,7 +85,7 @@
 	
 	\begin{small}
 		\begin{eqnarray*}
-			\bar{x} & = & \dfrac{\num{930} \times \num{1.8} + \num{1130} \times \num{1.0} + \num{420} \times \num{20.2} + \num{1710} \times \num{0} + \num{1450} \times \num{0.6} + \num{1430} \times \num{0} + \num{1920} \times \num{0.8} + \num{530} \times \num{2.6} + \num{1250} \times \num{0}}{\num{930} + \num{1130} + \num{420}  + \num{1710} + \num{1450} + \num{1430} + \num{1920} + \num{530} + \num{1250} } \\
+			\bar{x} & = & \dfrac{\num{930} \times \num{1.8} + \num{1130} \times \num{1.0} + ... + \num{1250} \times \num{0}}{\num{930} + \num{1130} + ... + \num{530} + \num{1250} } \\
 			\bar{x} & = & \frac{15072}{10770} \\
 			\bar{x} & \approx & \num{1.4} \\
 		\end{eqnarray*}
@@ -95,6 +95,104 @@
 	
 	\item Pour estimer les frais supplémentaires créés par les déplacement entre les lycées et les piscines il faut tenir compte du nombre d'élèves donc la deuxième distance moyenne est la plus appropriée.
 	
+	\item Calcul de la distance moyenne à la piscine en prenant en compte les nouveaux effectifs :
 	  
-\end{enumerate}
+	  \begin{small}
+	  	\begin{eqnarray*}
+	  		\bar{x} & = & \dfrac{\num{1450} \times \num{1.8} + \num{1130} \times \num{1.0} + ... + \num{530} \times \num{0}}{\num{930} + \num{1130} + ... + \num{530} + \num{1250} } \\
+	  		\bar{x} & = & \frac{48864}{10770} \\
+	  		\bar{x} & \approx & \num{5.54} \\
+	  	\end{eqnarray*}
+	  \end{small}
+  
+  	Cette modification de la répartition des élèves dans les lycées multiplie la distance moyenne à la piscine par \num{3.2}.
+\end{enumerate} 	
+  	
+  	\begin{mybilan}
+  		  		
+  		Pour calculer une moyenne d'une série quantitative de $N$ éléments, notée $\bar{x}$, on distingue trois cas :
+  		
+  		\begin{itemize}
+  			\item \textbf{$1^{er}$ cas :} la population est donnée par la liste de ses $N$ éléments : $x_1$, $x_2$, ..., $x_N$.
+  			
+  			\begin{eqnarray*}
+  				\bar{x} &= & \frac{Somme\; des \; élements}{Nombre\; d'éléments}\\
+  				\bar{x} &= & \frac{x_1 + x_2 + ... + x_N}{N}
+  			\end{eqnarray*}
+  		
+  			\item \textbf{$2^{e}$ cas :} la population est donnée par le tableau des effectifs $n_i$ de chacune des $p$ valeurs $x_i$ : $x_1$, $x_2$, ..., $x_N$.
+  			
+  			\begin{eqnarray*}
+  				\bar{x} &= & \frac{Somme\; des \; produits}{Effectif\; total}\\
+  				\bar{x} &= & \frac{x_1 \times p_1 + x_2 \times p_2 + ... + x_p \times n_p}{N}
+  			\end{eqnarray*}
+  		
+  			\item \textbf{$3^{e}$ cas :} la population est donnée par le tableau des effectifs $n_i$ de chacune des $p$ classes $[a_i; b_i[$ de centre $c_i = \frac{a_i +  b_i}{2} $: On se ramène au cas discret en remplaçant chaque classe par son centre.
+  			
+  			\begin{eqnarray*}
+  				\bar{x} &= & \frac{Somme\; des \; produits}{Effectif\; total}\\
+  				\bar{x} &= & \frac{c_1 \times p_1 + c_2 \times p_2 + ... + c_p \times n_p}{N}
+  			\end{eqnarray*}
+  		
+  		\end{itemize}
+  	\end{mybilan}
+
+	\begin{myex}
+		On a relevé la taille en cm de 20 personnes :
+		
+		Dans ce cas, il faut déterminer le centre de la classe.
+		
+		\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+			\hline
+			Classe           & $[145 ; 155[$ & $[155 ; 165[$ & $[165 ; 175[$ & $[175 ; 185[$ & $[185 ; 195[$ \\ \hline
+			Centre de classe & 150           & 160           & 170           & 180           & 190           \\ \hline
+			Effectif         & 2             & 5             & 8             & 4             & 1            \\ \hline
+		\end{tabular}
+	
+	\vspace*{0.5cm}
+	
+	On remarque que l'effectif total est 20, la moyenne des tailles est :
+	
+	\begin{eqnarray*}
+		\bar{x} &=& \frac{150 \times 2 + 160 \times 5 + 170 \times 8 + 180 \times 4 + 190 \times 1}{20}\\
+		\bar{x} &=& \num{168.5}
+	\end{eqnarray*}
+	\end{myex}
+
+\subsection{Médiane}
+
+\begin{mydef}
+	Soit une série quantitative ordonnée. La médiane, notée $Me$ est un nombre qui sépare la population en \kw{deux sous-ensembles de même effectif}. 
+\end{mydef}
+
+\begin{mymeth}{Calculer la médiane d'une série}
+	\begin{enumerate}
+		\item Classer les valeurs par ordre croissant;
+		\item Déterminer l'effectif total de la série $N$;
+		\item 
+			\begin{itemize}
+				\item Si $N$ est impair, alors la médiane est la valeur de rang $\frac{N + 1}{2}$
+				\item Si $N$ est pair, alors la médiane se trouve entre les valeurs de rang $\frac{N}{2}$ et $\frac{N}{2}+1$.
+			\end{itemize} 
+		
+	\end{enumerate}
+\end{mymeth}
+
+\begin{myexs}
+	\begin{enumerate}
+		\item On considère la série des notes suivantes : 
+		
+		\num{10} ; \num{12} ; \num{15} ; \num{17} ; \num{12.5} ; \num{9} ; \num{13} ; \num{18.5} ; \num{16.5}
+		
+		\begin{itemize}
+			\item Je range, ces notes par ordre croissant :
+			\num{9} ; \num{10} ; \num{12} ; \num{12.5} ; \num{13} ; \num{15} ; \num{16.5} ; \num{17} ; \num{18.5};
+			
+			\item Il y a neuf notes, donc $N = 9$, c'est un nombre impair;
+			\item $\frac{9+1}{2} = 5$, donc la médiane est la $5^{eme}$ note;
+			\item $Me = 13$.
+		\end{itemize}
+		
+	\end{enumerate}
+\end{myexs}
 \end{document}
