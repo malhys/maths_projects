@@ -153,13 +153,13 @@
 		La proportion de fumeurs parmi les personnes pratiquent la compétition est \num{0.08}.
 		
 		\item \begin{eqnarray*}
-			f(F \cup C) &=& \frac{Effectif\; des\; fumeurs + Effectif\; des\; pratiquants\; de\; la\; compétition}{Effectif\; total} \\
-			f(F \cup C) &=& \frac{54 + 234}{360} \\
-			f(F \cup C) &=& \frac{288}{360} \\
-			f(F \cup C) &=& \num{0.8}
+			f(F \cup C) &=& \frac{fumeurs + pratiquants - fumeurs\; pratiquants}{Effectif\; total} \\
+			f(F \cup C) &=& \frac{54 + 234 - 18}{360} \\
+			f(F \cup C) &=& \frac{270}{360} \\
+			f(F \cup C) &=& \num{0.75}
 		\end{eqnarray*}
 		
-		La proportion de personnes qui fument ou pratiquent la compétition est \num{0.8}.
+		La proportion de personnes qui fument ou pratiquent la compétition est \num{0.75}.
 	\end{enumerate}
 
 \end{enumerate}
@@ -168,34 +168,38 @@
 \begin{mybilan}
 	$A$ et $B$ sont deux sous-populations d'une population $E$.
 	\begin{itemize}
-		\item $\mathbf{f_B}$ est la \kw{fréquence marginale} de $B$ :
+		\item $\mathbf{f(B)}$ est la \kw{fréquence marginale} de $B$ :
 		
 		\begin{eqnarray*}
-			f_B &=& \dfrac{Effectif\; de\; B }{Effectif\; de\; E}
+			f(B) &=& \dfrac{Effectif\; de\; B }{Effectif\; de\; E}
 		\end{eqnarray*}
 	
-		\item $f(A \cup B)$ est la \kw{fréquence de la réunion} de $A$ et $B$ :
-		
-		\begin{eqnarray*}
-			f(A \cup B) &=& \dfrac{Effectif\; de\; A + Effectif\; de\; B }{Effectif\; de\; E}
-		\end{eqnarray*}
-	
-		\item $f(A \cap B)$ est la \kw{fréquence conjointe} de $A$ et $B$ :
+		\item $\mathbf{f(A \cap B)}$ est la \kw{fréquence conjointe} de $A$ et $B$ :
 		
 		\begin{eqnarray*}
 			f(A \cap B) &=& \dfrac{Effectif\; du\; croisement \; de\;A\; et\; de\; B }{Effectif\; de\; E}
 		\end{eqnarray*}
 	
-		\item $f_B(A)$ est la \kw{fréquence conditionnelle} de $A$ \kw{sachant} $B$ :
+		\item $\mathbf{f(A \cup B)}$ est la \kw{fréquence de la réunion} de $A$ et $B$ :
+		
+		\begin{eqnarray*}
+			f(A \cup B) &=& \dfrac{Eff.\; de\; A + Eff.\; de\; B  - Eff.\; du\; croisement \; de\;A\; et\; de\; B}{Effectif\; de\; E}
+		\end{eqnarray*}
+	
+		\centering{ou}
+		\begin{eqnarray*}
+			f(A \cup B) &=& f(A) + f(B) - f(A \cap B)
+		\end{eqnarray*}
+	
+		\item $\mathbf{f_B(A)}$ est la \kw{fréquence conditionnelle} de $A$ \kw{sachant} $B$ :
 		
 		\begin{eqnarray*}
 			f_B(A) &=& \dfrac{Effectif\; du\; croisement \; de\;A\; et\; de\; B }{Effectif\; de\; B}
 		\end{eqnarray*}
 	
-		ou 
-				
+		\centering{ou} 				
 		\begin{eqnarray*}
-			f_B(A) &=& \dfrac{f(A \cap B)}{f_B}
+			f_B(A) &=& \dfrac{f(A \cap B)}{f(B)}
 		\end{eqnarray*}
 	
 	

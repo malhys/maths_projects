@@ -1,0 +1,149 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+\usecolortheme{}
+\usefonttheme[onlymath]{serif}
+
+\input{../../../../utils_maths_beamer}
+
+
+%\usepackage{../../../../pas-math}
+%\usepackage{../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+
+\graphicspath{{../img/}}
+
+\title{Statistiques à 2 variables}
+\author{O. FINOT}\institute{Lycée S$^t$ Vincent}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
+	\end{frame} 
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\begin{frame}{A retenir}
+	
+	$A$ et $B$ sont deux sous-populations d'une population $E$.
+	
+	\begin{itemize}
+		\item $ f(B) $ est la \textcolor{red}{fréquence marginale} de $B$ :
+					
+			\begin{eqnarray*}
+				f(B) &=& \dfrac{Effectif\; de\; B }{Effectif\; de\; E}
+			\end{eqnarray*}\pause
+					
+		\item $f(A \cap B)$ est la \textcolor{red}{fréquence conjointe} de $A$ et $B$ :
+					
+			\begin{eqnarray*}
+				f(A \cap B) &=& \dfrac{Effectif\; du\; croisement \; de\;A\; et\; de\; B }{Effectif\; de\; E}
+			\end{eqnarray*}
+		
+
+			
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{A retenir}
+
+\begin{itemize}
+	
+	
+	\item $f(A \cup B)$ est la \textcolor{red}{fréquence de la réunion} de $A$ et $B$ :
+	
+	\begin{eqnarray*}
+		f(A \cup B) &=& \dfrac{Ef.\, de\, A + Ef.\, de\, B  - Ef.\, du\, croisement \, de\,A\, et\, de\, B}{Effectif\; de\; E}
+	\end{eqnarray*}
+	
+	\centering{ou}
+	\begin{eqnarray*}
+		f(A \cup B) &=& f(A) + f(B) - f(A \cap B)
+	\end{eqnarray*}
+
+	
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{A retenir}
+
+\begin{itemize}	
+	
+	\item $f_B(A)$ est la \textcolor{red}{fréquence conditionnelle} de $A$ \textcolor{red}{sachant} $B$ :
+	
+	\begin{eqnarray*}
+		f_B(A) &=& \dfrac{Effectif\; du\; croisement \; de\;A\; et\; de\; B }{Effectif\; de\; B}
+	\end{eqnarray*}
+	
+	\centering{ou} 				
+	\begin{eqnarray*}
+		f_B(A) &=& \dfrac{f(A \cap B)}{f(B)}
+	\end{eqnarray*}
+	
+\end{itemize}
+\end{frame}
+%
+%\begin{frame}{A retenir}
+%	%\begin{alertblock}{}
+%		\begin{itemize}
+%			\item $\mathbf{f_B}$ est la \kw{fréquence marginale} de $B$ :
+%			
+%			\begin{eqnarray*}
+%				f_B &=& \dfrac{Effectif\; de\; B }{Effectif\; de\; E}
+%			\end{eqnarray*}
+%			
+%			\item $\mathbf{f(A \cap B)}$ est la \kw{fréquence conjointe} de $A$ et $B$ :
+%			
+%			\begin{eqnarray*}
+%				f(A \cap B) &=& \dfrac{Effectif\; du\; croisement \; de\;A\; et\; de\; B }{Effectif\; de\; E}
+%			\end{eqnarray*}
+%		\end{itemize}
+%	%\end{alertblock}
+%	
+%\end{frame}
+
+	
+
+
+
+
+
+
+%\begin{frame}
+%
+%
+%%\begin{mybilan2}{Proportion}
+%	La \kw{proportion ou fréquence} d'une partie $A$ d'une population $E$, est le rapport $p$ des effectifs de $A$ et de $E$ :
+%	
+%	\begin{eqnarray*}
+%		p = \dfrac{n_A}{n_E} \; \left(\dfrac{Effectif de A}{Effectif de E}\right)
+%	\end{eqnarray*}
+%%\end{mybilan2}
+%\end{frame}
+
+\end{document}
