@@ -1,11 +1,10 @@
-\documentclass[a4paper,12pt]{exam}
-%\printanswers % pour imprimer les réponses (corrigé)
-\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\documentclass[a4paper,11pt]{exam}
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
 \addpoints % Pour compter les points
 % \noaddpoints % pour ne pas compter les points
-%\pointsinmargin
 %\qformat{\textbf{\thequestion ) } }
-\qformat{\textbf{\thequestion )} (\textit{\thepoints}) \\  }  % Pour définir le style des questions (facultatif)
+\qformat{\textbf{\thequestion )} (\thepoints) \\  } % Pour définir le style des questions (facultatif)
 \usepackage{color} % définit une nouvelle couleur
 \shadedsolutions % définit le style des réponses
 % \framedsolutions % définit le style des réponses
@@ -15,7 +14,7 @@
 
 
 
-\input{../../../../monbacblanc}
+\input{../../../../monexam}
 
 
 %\usepackage{../../pas-math}
@@ -25,11 +24,12 @@
 %\usepackage{pas-cours}
 \input{../../../../utils_maths}
 
+\usepackage{tabu}
 
 %\usepackage{fullpage}
 \author{\ }
-\date{24 Décembre 2017}
-\title{Terminale ST$_2$S : DS num\'ero 2}
+\date{7 Février 2018}
+\title{$1^{ère}$ $ST_2S$ : DS num\'ero 3}
 
 
 \begin{document}
@@ -39,32 +39,14 @@
 %	\fancyhf{}
 	%\rhead{Share\LaTeX}
 
-	%\maketitle
-	
-	\input{title}
+	\maketitle
 
-\ 
-\ 
-\\
+\input{eoliennes}
 
-\newpage
-
-
-
-\input{qcm}
-
-
-\newpage
-
-\input{soins}
-
-\newpage
-	
-\input{bacille}
 
 \appendix
 
-\label{annexe}
+
 	\label{LastPage}
 	
 
