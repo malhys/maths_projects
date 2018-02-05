@@ -4,7 +4,7 @@
 \addpoints % Pour compter les points
 % \noaddpoints % pour ne pas compter les points
 %\qformat{\textbf{\thequestion ) } }
-\qformat{\textbf{\thequestion )} (\thepoints) \\  } % Pour définir le style des questions (facultatif)
+\qformat{\textbf{\thequestion )} \textit{(\thepoints)} \\  } % Pour définir le style des questions (facultatif)
 \usepackage{color} % définit une nouvelle couleur
 \shadedsolutions % définit le style des réponses
 % \framedsolutions % définit le style des réponses
@@ -41,14 +41,15 @@
 
 	\maketitle
 
-\input{vrai-faux}
+%\input{vrai-faux}
 
-\input{eoliennes}
+
 
 \input{repartition_medecins}
-%\appendix
 
+\newpage
 
+\input{eoliennes}
 	\label{LastPage}
 	
 
