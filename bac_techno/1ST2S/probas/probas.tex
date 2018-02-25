@@ -1,0 +1,76 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{Information chiffrée }
+
+%\newcommand{\disp}{false}
+
+\lhead{CH3 : Statistiques}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+\chap[num=4, color=red]{Probabilités}{Olivier FINOT, \today }
+
+\input{./obj}
+
+\section{Vocabulaire}
+
+\subsection{Expérience aléatoire et univers}
+
+\begin{mydefs}
+ Une expérience dont on ne peut pas prévoir en avance le résultat est une \kw{expérience aléatoire}. Le résultat obtenu est l'\kw{issue} de l'expérience. L'ensemble de toutes les issues possibles de l'expérience est l'\kw{univers}, noté $\Omega$ (omega)
+\end{mydefs}
+
+\begin{myex}
+	Soit l'expérience suivante : lancé d'un dé cubique \textit{non pipé} :
+	\begin{itemize}
+		\item $2$ est une issue de l'expérience.
+		\item L'univers est $\Omega = \{1 ; 2 ; 3 ; 4 ; 5 ; 6\}$.
+	\end{itemize}
+\end{myex}
+
+\subsection{\'Evénements}
+
+\begin{mydefs}
+	Un \kw{événement} est une partie de l'univers. 
+	\begin{itemize}
+		\item Un événement qui contient toutes les issues de l'univers est un événement \kw{certain}.
+		\item Un événement qui contient une seule issue est un \kw{événement élémentaire}.
+		\item Un événement qui ne contient aucune issue est \kw{impossible}
+		\item L'événement contraire d'un événement $A$ est noté $\bar{A}$, il contient toutes les issues qui ne correspondent pas à $A$.
+	\end{itemize}
+\end{mydefs}
+
+\begin{myex}
+	Dans le cas du lancé d'un dé à 6 faces non truqué, on appelle $A$ l'événement <<obtenir un 5>>, $B$ l'événement <<obtenir un nombre pair>> et $C$ <<obtenir un résultat inférieur à 6>>.
+	\begin{itemize}
+		\item L'événement $A$ correspond à l'ensemble $\{5\}$, c'est un événement élémentaire.
+		\item On a $B$ = $\{2;4;6\}$.
+		\item L'événement contraire de $B$ est <<obtenir un résultat impair>>, on a $\bar{B} $ = $\{1;3;5\}$.
+		\item L'événement  $C$ est certain, on a $C=\Omega$.
+		\item L'événement $\bar{C}$ est impossible, on a $\bar{C} = \emptyset$.
+	\end{itemize}
+\end{myex}
+
+
+\end{document}
