@@ -72,5 +72,62 @@
 	\end{itemize}
 \end{myex}
 
+\section{Calcul de probabilités}
 
+\subsection{Définition}
+
+\begin{mydef}
+	\begin{itemize}
+		\item La \kw{probabilité} d'un événement $A$, notée $P(A)$ est la somme des probabilités des événements élémentaires qui le composent.
+		\item Pour tout événement $A$, $0\leq P(A) \leq 1$
+	\end{itemize}
+	
+\end{mydef}
+
+
+\subsection{\'Equiprobailité}
+
+
+\begin{mybilan}
+	
+		Il y a \kw{équiprobabilté} dans le cas où tous les évévnements élémentaires ont la même probabilité.
+		Dans ce cas, la probabilité d'un événement élémentaire est :
+		\begin{equation*}
+			\dfrac{1}{nombre\; d'éléments\; de\; \Omega}
+		\end{equation*}
+
+
+\end{mybilan}
+
+\begin{myex}
+	Il y a équiprobabilité dans le cas où l'on tire une carte au hasard dans un jeu de 32 cartes standard. Ici l'univers $\Omega$ contient 32 éléments, 1 pour chacune des cartes. Donc la probabilité de chaque événement élémentaire est :
+	\begin{equation*}
+		\dfrac{1}{32}
+	\end{equation*}
+\end{myex}
+
+\begin{mybilan}
+	Dans une situation d'équiprobabilité, la probabilité d'un événement $A$ est :
+	\begin{equation*}
+		P(A)=\dfrac{nombre\;d'\;éléments\;de\;A}{nombre\; d'éléments\; de\; \Omega}=\dfrac{nombre\; de\; cas\;favorbales}{nombre\; de\; cas\;possibles}
+	\end{equation*}
+\end{mybilan}
+
+\begin{myex}
+	Dans la situation où on tire une carte au hasard parmi 32. 
+	\begin{itemize}
+		\item Soit $A$ l'événement <<tirer un c\oe ur>>. $A$ est constitué des 8 événements élémentaires qui correspondent aux 8 cartes de c\oe ur. On a donc :
+		\begin{eqnarray*}
+			P(A)&=&\dfrac{1}{32}+\dfrac{1}{32}+...+\dfrac{1}{32}\\
+			P(A)&=&\dfrac{8}{32}\\
+			P(A)&=&\dfrac{1}{4}
+		\end{eqnarray*}
+	
+		\item Soit $B$ l'événement <<tirer un as>>, $B$ est constitué des 4 événements élémentaires qui correspondent aux 4 as du jeu. On a donc : 
+		\begin{eqnarray*}
+			P(B)&=&\dfrac{4}{32}\\
+			P(B)&=&\dfrac{1}{8}
+		\end{eqnarray*}
+	\end{itemize}
+\end{myex}
 \end{document}
