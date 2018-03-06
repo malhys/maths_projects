@@ -57,18 +57,18 @@
 		\item Un événement qui contient toutes les issues de l'univers est un événement \kw{certain}.
 		\item Un événement qui contient une seule issue est un \kw{événement élémentaire}.
 		\item Un événement qui ne contient aucune issue est \kw{impossible}
-		\item L'événement contraire d'un événement $A$ est noté $\bar{A}$, il contient toutes les issues qui ne correspondent pas à $A$.
+		\item L'\kw{événement contraire} d'un événement $A$ est noté \kw{$\bar{A}$}, il contient toutes les issues qui ne correspondent pas à $A$.
 	\end{itemize}
 \end{mydefs}
 
 \begin{myex}
-	Dans le cas du lancé d'un dé à 6 faces non truqué, on appelle $A$ l'événement <<obtenir un 5>>, $B$ l'événement <<obtenir un nombre pair>> et $C$ <<obtenir un résultat inférieur à 6>>.
+	Dans le cas du lancé d'un dé à 6 faces non truqué, on appelle $A$ l'événement <<obtenir un nombre pair>>, $B$ l'événement <<obtenir un nombre supérieur ou égal à 5>>, $C$ l'événement <<obtenir un 3>>, et $D$ <<obtenir un nombre inférieur ou égal à 6>>.
 	\begin{itemize}
-		\item L'événement $A$ correspond à l'ensemble $\{5\}$, c'est un événement élémentaire.
-		\item On a $B$ = $\{2;4;6\}$.
-		\item L'événement contraire de $B$ est <<obtenir un résultat impair>>, on a $\bar{B} $ = $\{1;3;5\}$.
-		\item L'événement  $C$ est certain, on a $C=\Omega$.
-		\item L'événement $\bar{C}$ est impossible, on a $\bar{C} = \emptyset$.
+		\item L'événement $C$ correspond à l'ensemble $\{3\}$, c'est un événement élémentaire.
+		\item On a $A$ = $\{2;4;6\}$.
+		\item L'événement contraire de $A$ est <<obtenir un résultat impair>>, on a $\bar{A} $ = $\{1;3;5\}$.
+		\item L'événement  $D$ est certain, on a $D=\Omega$.
+		\item L'événement $\bar{D}$ est impossible, on a $\bar{D} = \emptyset$.
 	\end{itemize}
 \end{myex}
 
@@ -79,7 +79,9 @@
 \begin{mydef}
 	\begin{itemize}
 		\item La \kw{probabilité} d'un événement $A$, notée $P(A)$ est la somme des probabilités des événements élémentaires qui le composent.
-		\item Pour tout événement $A$, $0\leq P(A) \leq 1$
+		\item Pour tout événement $A$, \kw{$0\leq P(A) \leq 1$}
+		\item Si $A$ est un événement \kw{certain}, alors \kw{$P(A)=1$}.
+		\item Si $A$ est un événement \kw{impossible}, alors \kw{$P(A)=0$}.
 	\end{itemize}
 	
 \end{mydef}
@@ -100,9 +102,9 @@
 \end{mybilan}
 
 \begin{myex}
-	Il y a équiprobabilité dans le cas où l'on tire une carte au hasard dans un jeu de 32 cartes standard. Ici l'univers $\Omega$ contient 32 éléments, 1 pour chacune des cartes. Donc la probabilité de chaque événement élémentaire est :
+	Il y a équiprobabilité dans le cas où l'on lance un dé à 6 faces non truqué. Ici l'univers $\Omega$ contient 6 éléments ($\Omega=\{1;2;3;4;5;6\}$). Donc la probabilité de chaque événement élémentaire est :
 	\begin{equation*}
-		\dfrac{1}{32}
+		\dfrac{1}{6}
 	\end{equation*}
 \end{myex}
 
@@ -114,20 +116,80 @@
 \end{mybilan}
 
 \begin{myex}
-	Dans la situation où on tire une carte au hasard parmi 32. 
+	On lance un dé à 6 faces. 
 	\begin{itemize}
-		\item Soit $A$ l'événement <<tirer un c\oe ur>>. $A$ est constitué des 8 événements élémentaires qui correspondent aux 8 cartes de c\oe ur. On a donc :
+		\item Soit $A$ l'événement <<obtenir un nombre pair>>. $A$ est constitué de 3 événements élémentaires, $A={2;4;6}$ . On a donc :
 		\begin{eqnarray*}
-			P(A)&=&\dfrac{1}{32}+\dfrac{1}{32}+...+\dfrac{1}{32}\\
-			P(A)&=&\dfrac{8}{32}\\
-			P(A)&=&\dfrac{1}{4}
+			P(A)&=&\dfrac{1}{6}+\dfrac{1}{6}+\dfrac{1}{6}\\
+			P(A)&=&\dfrac{3}{6}\\
+			P(A)&=&\dfrac{1}{2}
 		\end{eqnarray*}
 	
-		\item Soit $B$ l'événement <<tirer un as>>, $B$ est constitué des 4 événements élémentaires qui correspondent aux 4 as du jeu. On a donc : 
+		\item Soit $B$ l'événement <<obtenir un nombre supérieur à 5>>, $B$ est constitué des 2 événements élémentaires, $B=\{5; 6\}$. On a donc : 
 		\begin{eqnarray*}
-			P(B)&=&\dfrac{4}{32}\\
-			P(B)&=&\dfrac{1}{8}
+			P(B)&=&\dfrac{2}{6}\\
+			P(B)&=&\dfrac{1}{3}
 		\end{eqnarray*}
+	\end{itemize}
+\end{myex}
+
+\subsection{Propriétés}
+
+%\subsubsection{Unions et intersection d'événements}
+
+\begin{mydef}
+	Soient $A$ et $B$ deux événements : 
+	\begin{itemize}
+		
+		\item l'événement $\bar{A}$ est \kw{l'événement contraire} de l'événement $A$, il est constitué de tous les éléments de $\Omega$ qui ne sont \kw{pas inclus dans $A$}.
+		
+		\item l'événement \kw{$A\cap B$} ($A$ inter $B$), est l'événement constitué de tous les événements élémentaires de $\Omega$ qui sont \kw{inclus à la fois dans $A$ et dans $B$}.
+		
+		\item l'événement \kw{$A\cup B$} ($A$ union $B$), est l'événement constitué de tous les événements élémentaires de $\Omega$ qui sont \kw{inclus dans $A$ ou dans $B$}.
+		
+		\item $A$ et $B$ sont \kw{disjoints ou incompatibles} si et seulement si \kw{$A \cap B = \emptyset$}
+	\end{itemize} 
+\end{mydef}
+
+\begin{myexs}
+	On lance un dé à 6 faces. Soient les événements $A$ et $B$ définis ci-dessus, et l'événement C <<obtenir 3>> on a:
+	\begin{itemize}
+		\item L'événement $\bar{A}$ est <<ne pas obtenir un nombre pair>>, $\bar{A}=\{1;3;5\}$.
+		\item L'événement $\bar{C}$ est <<ne pas obtenir un nombre pair>>, $\bar{C}=\{1;2;4;5;6\}$.
+		\item L'événement $A\cap B$ est <<obtenir un nombre pair et supérieur ou égal à 5 >> , $A\cap B = \{6\}$, $A$ et $B$ ne sont pas disjoints.
+		\item L'événement $A\cup B$ est <<obtenir un nombre pair ou supérieur ou égal à 5 >> , $A\cap B = \{2;4;5;6\}$.
+		\item $A \cap C = \emptyset$, donc $A$ et $C$ sont disjoints.
+	\end{itemize}
+	
+\end{myexs}
+
+\begin{mybilan}
+	Soient $A$ et $B$ deux événements : 
+	\begin{itemize}
+		\item $\bar{A} \cup A = \Omega$, donc $P(\bar{A} \cup A)=1$.
+		\item $P(\bar{A}) = 1 - P(A)$.
+		\item Si les événements $A$ et $B$ sont disjoints : $P(A \cup B) = P(A) + P(B)$.
+		\item Cas général, pour tous événements $A$ et $B$, \\ $P(A \cup B) = P(A) + P(B) - P(A \cap B)$.
+	\end{itemize}
+\end{mybilan}
+
+\begin{myex}
+	On lance un dé à 6 faces, soient les événements $A$, $B$ et $C$ définis ci-dessus.
+	\begin{itemize}
+		\item $C$ est un événement élémentaire, $P(C)=\dfrac{1}{6}$, donc
+		\begin{equation*}
+			P(\bar{C})= 1- P(C) = 1 - \dfrac{1}{6} = \dfrac{5}{6}
+		\end{equation*}
+	
+		\item $A$ et $C$ sont disjoints donc :
+			\begin{equation*}
+				P(A \cup C) = P(A) + P(C) = \dfrac{1}{2} + \dfrac{1}{6} = \dfrac{4}{6} = \dfrac{2}{3}
+			\end{equation*}
+		
+		\item $A$ et $B$ ne sont pas disjoints donc :
+		\begin{equation*}
+			P(A \cup B) = P(A) + P(B) - P(A \cap B) = \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{6} = \dfrac{5}{6}  - \dfrac{1}{6} = \dfrac{4}{6} = \dfrac{2}{3}
+		\end{equation*}
 	\end{itemize}
 \end{myex}
 \end{document}
