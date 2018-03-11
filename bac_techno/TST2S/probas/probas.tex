@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+\date{}
+\title{}
+
+
+\begin{document}
+	%\maketitle
+	\chap[num=4, color=red]{Probabilités}{}
+	
+	\section{Vocabulaire}
+	
+
+	\section{Calculs de probabilités}
+\newpage
+
+\section{Probabilités conditionnelles et arbre pondéré}	
+
+
+
+\subsection{Probabilités conditionnelles}
+
+\begin{mybilan}
+	\begin{itemize}
+		\item \kw{$P_B(A)$} est la \kw{probabilité de A sachant que B} est réalisé.
+		\begin{equation*}
+			P_B(A)=\dfrac{P(A \cap B)}{P(B)}
+		\end{equation*}
+		\item Pour tous événements $A$ et $B$ de probabilités non nulles, 
+		\begin{equation*}
+			P(A\cap B)= P_A(B) \times P(A) = P_B(A) \times P(B)
+		\end{equation*}
+	\end{itemize}
+\end{mybilan}
+
+\subsection{\'Evénements indépendants}
+
+\begin{mybilan}
+	Deux événements $A$ et $B$ sont \kw{indépendants} si et seulement si
+	\begin{equation*}
+		P(A \cap B) = P(A) \times P(B)
+	\end{equation*}
+
+	\begin{center}
+		ou
+	\end{center}
+	
+	\begin{equation*}
+		P_B(A) = P(A)
+	\end{equation*}
+\end{mybilan}
+
+\subsection{Utilisation d'un arbre de probabilité pondéré}	
+\begin{mymeth}
+	On peut représenter une situation de probabilité par un arbre et l'utiliser pour faire des calculs.\\
+	\begin{itemize}
+		\item La somme des probabilités pour les branches d'un même n\oe ud est égale à $1$.
+		\item Les branches de niveau 2 portent des probabilités conditionnelles.
+		\item Un chemin est une intersection d'événements.
+		\item La probabilité d'un chemin est le produit des probabilités portées par ses branches.
+		\item La probabilité d'un événement est la somme des probabilité des chemins qui y aboutissent.
+	\end{itemize}
+
+	
+\end{mymeth}
+	
+
+\input{tree}
+
+
+
+
+\end{document}
