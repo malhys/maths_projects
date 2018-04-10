@@ -1,0 +1,106 @@
+\section{Des paires de chaussures}
+
+Dans une grande surface, il y a en stock, 500 paires de chaussures de sport dont 375 ont été fabriquées à l'étranger, 1000 paires de bottes dont 75 \% ont ont été fabriquées à l'étranger et 2500 paires de chaussons dont 625 ont été fabriquées en France.
+
+
+\begin{questions}
+	\question[2] Compléter le tableau suivant.
+	
+	\input{tab}
+	
+	\begin{solution}
+		\input{tab2}
+	\end{solution}
+	\vspace*{0.2cm}
+	\question[5] On prélève un article au hasard parmi les articles de ce stock. Tous les articles ont la même probabilité d'être choisis. On considère les événements suivants :
+	
+	\begin{itemize}
+		\item $A$ : <<l'article prélevé a été fabriqué à l'étranger>>;
+		\item $B$ : <<l'article prélevé est une paire de bottes>>;
+		\item $C$ : <<l'article prélevé est une paire de chaussons>>.
+	\end{itemize}
+
+\emph{Dans cet exercice, sauf indication contraire, on demande les valeurs exactes des probabilités sous forme décimale.}
+
+	\begin{parts}
+		\part[1] Traduire par une phrase chacun des trois événements : $\bar{A}$, $A \cap B$ et $\bar{A} \cap C$.
+		\begin{solution}
+			Les événements demandés sont les suivants :\begin{itemize}
+				\item $\bar{A}$ : <<l'article prélevé n'a pas été fabriqué à l'étranger>>;
+				\item $A \cap B$ : <<l'article prélevé a été fabriqué à l'étranger et est une paire de bottes>>;
+				\item $\bar{A} \cap C$ : <<l'article prélevé n'a pas été fabriqué à l'étranger et est une paire de chaussons>>.
+			\end{itemize}
+		\end{solution}
+		
+		\part[1] Calculer les probabilités $P(A)$, $P(B)$ et $P(A \cap B)$. 
+		\begin{solution}
+			Calcul de $P(A)$ :
+			\begin{eqnarray*}
+				P(A) &=& \dfrac{\num{3000}}{\num{4000}}\\
+				P(A) &=& \num{0.75}
+			\end{eqnarray*}
+		
+			Calcul de $P(B)$ :
+			\begin{eqnarray*}
+				P(B) &=& \dfrac{\num{1000}}{\num{4000}}\\
+				P(B) &=& \num{0.25}
+			\end{eqnarray*}
+		
+			Calcul de $P(A \cap B)$ :
+			\begin{eqnarray*}
+				P(A) &=& \dfrac{\num{750}}{\num{4000}}\\
+				P(A) &=& \num{0.1875}
+			\end{eqnarray*}
+		
+			La probabilité de l'événement A est \num{0.75}, celle de B est \num{0.25} et celle de $A \cap B$ est \num{0.1875}.
+		\end{solution}
+		
+		\part[1] Calculer la probabilité que l'article prélevé ait été fabriqué à l'étranger ou que ce soit une paire de bottes.
+		\begin{solution}
+			Calcul de $P(A \cup B)$ :
+			\begin{eqnarray*}
+				P(A \cup B) &=& P(A) + P(B) - P(A \cap B)\\
+				P(A \cup B) &=& \num{0.75} + \num{0.25} - \num{0.1875} \\
+				P(A \cup B) &=& \num{0.8125}
+			\end{eqnarray*}	
+		
+			La probabilité qu'un article pris au hasard ait été fabriqué à l'étranger ou soit une paire de bottes est \num{0.8125}.
+		\end{solution}
+		
+		\part[1] Calculer les probabilités conditionnelles $P_B(A)$ et $P_C(A)$.
+		\begin{solution}
+			Calcul de $P_B(A)$ :
+			\begin{eqnarray*}
+				P_B(A) &=& \dfrac{\num{750}}{\num{1000}}\\
+				P_B(A) &=& \num{0.75}
+			\end{eqnarray*}	
+		
+			Calcul de $P_B(A)$ :
+			\begin{eqnarray*}
+				P_C(A) &=& \dfrac{\num{1875}}{\num{2500}}\\
+				P_C(A) &=& \num{0.75}
+			\end{eqnarray*}
+			
+			On a donc $P_B(A) = 0,75$ et $P_C(A)=0,75$.
+		\end{solution}
+		
+		\part[1] Calculer la probabilité que sachant qu'il provient de France, l'article prélevé soit une paire de chaussures de sport. 
+		\begin{solution}
+			Calcul de la probabilité qu'un article soit une paire de  chaussures de sport sachant qu'il provient de France :
+			
+			Soit $S$ l'événement : <<l'article prélevé est une paire de chaussures de sport>>.
+			
+			\begin{eqnarray*}
+				P_{\bar{A}}(S) &=& \dfrac{\num{125}}{\num{1000}}\\
+				P_B(A) &=& \num{0.125}
+			\end{eqnarray*}	
+			
+			La probabilité que sachant qu'il provient de France, l'article prélevé soit une paire de chaussures de sport est \num{0.125}.
+		\end{solution}
+	\end{parts}
+
+	\question[1] Les événements $A$ et $B$ sont-ils indépendants ?
+	\begin{solution}
+		On a $P(A) = P_B{A}$ donc les événements $A$ et $B$ sont indépendants.
+	\end{solution}
+\end{questions}
