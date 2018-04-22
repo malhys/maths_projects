@@ -4,7 +4,7 @@
 \usepackage[in, plain]{fullpage}
 \usepackage{array}
 \usepackage{../../../pas-math}
-\usepackage{../../../moncours}
+\usepackage{../../moncours}
 
 \usepackage{multicol}
 \usepackage{caption}
@@ -119,10 +119,15 @@
 		On a donc :
 		
 		\begin{center}
+%			\begin{tikzpicture}[scale=0.8]
+%				\tkzTabInit{$x$/1.5,$f'(x)$/1.5,$f(x)$/4}{$-2$, $1$, $2$}
+%				\tkzTabLine { ,+ ,z , -, }
+%				\tkzTabVar{-/$-28$,+/$-1$,-/$-4$}
+%			\end{tikzpicture}
 			\begin{tikzpicture}[scale=0.8]
-				\tkzTabInit{$x$/1.5,$f'(x)$/1.5,$f(x)$/4}{$-2$, $1$, $2$}
-				\tkzTabLine { ,+ ,z , -, }
-				\tkzTabVar{-/$-28$,+/$-1$,-/$-4$}
+				\tkzTabInit{$x$/1.5, $f(x)$/4}{$-10$, $0$, $4$, $9$, $20$}
+				%\tkzTabLine { ,+ ,z , -, }
+				\tkzTabVar{+/$10$,-/$-2$,+/$3$,-/$-1$,+/$0$}
 			\end{tikzpicture}
 		\end{center}
 		
