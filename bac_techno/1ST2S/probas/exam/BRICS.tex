@@ -6,12 +6,32 @@ Lors de cette enquête, 65 \% des familles déclarent posséder un téléviseur 
 
 \begin{questions}
 	\question[1] Justifier que \num{1200} familles de l'échantillon ne possèdent ni voiture, ni téléviseur.
+	\begin{solution}
+		\begin{equation*}
+			\dfrac{40}{100} \times \num{5000} = \num{2000}			
+		\end{equation*}
+	
+	\num{2000} personnes ne possèdent pas de voiture.
+	
+	
+		\begin{equation*}
+			\dfrac{60}{100} \times \num{2000} = \num{1200}
+		\end{equation*}
+	
+	Donc \num{1200} personnes ne possèdent ni voiture, ni télévision.
+	\end{solution}
 	
 	\question[3] Compléter le tableau suivant :
 	
 		\begin{center}
 			\input{tab}
 		\end{center}
+	
+		\begin{solution}
+			\begin{center}
+				\input{tab2}
+			\end{center}
+		\end{solution}
 	
 	\question[3] On choisit une famille au hasard parmi cet échantillon. 
 	On pourra noter :
@@ -24,10 +44,42 @@ Lors de cette enquête, 65 \% des familles déclarent posséder un téléviseur 
 
 	\begin{parts}
 		\part[1] Déterminer la probabilité que la famille choisie possède une voiture.
+		\begin{solution}
+			\begin{equation*}
+				P(V) = \dfrac{3000}{5000}  = \dfrac{3}{5} = \num{0.6}
+			\end{equation*}
+		
+		La probabilité que la famille choisie possède une voiture est \num{0.6}.
+		\end{solution}
 		\part[1] Déterminer la probabilité que la famille choisie possède une voiture et un téléviseur.
+		\begin{solution}
+			\begin{equation*}
+				P(V \cap T) = \dfrac{2450}{5000}  = \dfrac{49}{100} = \num{0.49}
+			\end{equation*}
+			
+			La probabilité que la famille choisie possède une voiture et un téléviseur est \num{0.49}.
+		\end{solution}
 		\part[1] Déterminer la probabilité que la famille choisie possède une voiture ou un téléviseur.
+		\begin{solution}
+			\begin{eqnarray*}
+				P(V \cup T) &=&  P(V)  + P(T) - P(V \cap T) \\
+				P(V \cup T) &=& \dfrac{3250}{5000} + \dfrac{3000}{5000} - \dfrac{2450}{5000} \\
+				P(V \cup T) &=& \dfrac{3800}{5000} \\
+				P(V \cup T) &=& \dfrac{19}{25} \\
+				P(V \cup T) &=& \num{0.76}
+			\end{eqnarray*}
+			
+			La probabilité que la famille choisie possède une voiture ou un téléviseur est \num{0.76}.
+		\end{solution}
 	\end{parts}
 
 	\question[2] On choisit une famille au hasard parmi celles qui ne possèdent pas de voiture. Déterminer la probabilité que la famille choisie n'ait pas de télévision.
+	\begin{solution}
+		\begin{equation*}
+			\dfrac{1200}{2000} = \dfrac{3}{5} = \num{0.6}
+		\end{equation*}
+	
+	La probabilité qu'une famille choisie au hasard parmi celles qui ne possèdent pas de voiture, n'ait pas de télévision est \num{0.6}.
+	\end{solution}
 	
 \end{questions}
