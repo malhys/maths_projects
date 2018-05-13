@@ -26,13 +26,15 @@
 %\rfoot{Page \thepage}
 \begin{document}
 	%\maketitle
-	\chap[num=2, color=red]{Fonctions de référence}{Olivier FINOT, \today }
+	\chap[num=5, color=red]{Fonctions et représentations graphiques}{Olivier FINOT, \today }
 	
 	\section{Rappels}
 	
 	%\subsection{Définitions}
 	
-	\begin{mydefs}
+	\subsection{Notion de fonction}
+	
+	\begin{mydef}
 		
 		Définir une fonction $f$ sur un intervalle $\intervFO{a}{b}$, c'est fournir une \kw{relation} qui à chaque valeur $x$ de l'intervalle $\intervFO{a}{b}$ associe un nombre appelé \kw{image} et noté $f(x)$.
 		On dit que $x$ a pour \kw{antécédent}  le nombre $x$.
@@ -55,202 +57,235 @@
 		
 		%
 		
+	\end{mydef}
+	
+	\begin{center}
+		 \includegraphics[scale=0.5]{./img/voc}
+	\end{center}
+	
+	
+	\subsection{Variations d'une fonction}
+	
+	\begin{mydefs}
+		
+		\begin{itemize}
+			\item Si une fonction $f$ est \kw{croissante} sur un intervalle $I$ alors les images sont rangées dans le même ordre que leur antécédent ; c'est à dire que \kw{$f(x)$ augmente quand $x$ augmente}.
+			\item Si une fonction $f$ est \kw{décroissante} sur un intervalle $I$ alors les images sont rangées dans l'ordre inverse de leur antécédent ; c'est à dire que \kw{$f(x)$ diminue quand $x$ augmente}.
+		\end{itemize}
+		
+		
+		%Si $f(x)$ augmente quand $x$ augmente, alors $f$ est \kw{croissante}.
+		%Si $f(x)$ diminue quand $x$ augmente, alors $f$ est \kw{décroissante}.
 	\end{mydefs}
 	
-	\input{ex1}
+	\newpage 
 	
-	%\newpage
+	\section{Fonctions linéaires, fonctions affines}
 	
-	\section{Variations et parité d'une fonction}
-	
-	\subsection{Fonction croissante}
+	\subsection{Définition}
 	
 	\begin{mydef}
-		Si une fonction $f$ est \kw{croissante} sur un intervalle $I$ alors les images sont rangées dans le même ordre que leur antécédent ; c'est à dire que \kw{$f(x)$ augmente quand $x$ augmente}.
 		
-		%Si $f(x)$ augmente quand $x$ augmente, alors $f$ est \kw{croissante}.
-		%Si $f(x)$ diminue quand $x$ augmente, alors $f$ est \kw{décroissante}.
-	\end{mydef}
-	
-	\input{./croiss}
-	
-	
-	\subsection{Fonction décroissante}
-	
-	\begin{mydef}
-		Si une fonction $f$ est \kw{décroissante} sur un intervalle $I$ alors les images sont rangées dans l'ordre inverse de leur antécédent ; c'est à dire que \kw{$f(x)$ diminue quand $x$ augmente}.
+		$a$ et $b$ sont des nombres quelconques ; la fonction qui à tout nombre $x$, associe le nombre \kw{$ax+b$}, est une \kw{fonction affine}.\\
 		
-		%Si $f(x)$ augmente quand $x$ augmente, alors $f$ est \kw{croissante}.
-		%Si $f(x)$ diminue quand $x$ augmente, alors $f$ est \kw{décroissante}.
-	\end{mydef}
-	
-	\input{./decroiss}
-	
-	
-	\subsection{Fonction paire}
-	
-	\begin{mydef}
-		Si une fonction $f$ est \kw{paire} sur un intervalle I, alors pour tout $x$ de I \kw{$f(-x) = f(x)$} . 
-	\end{mydef}
-	
-	\input{./paire}
-	
-	\subsection{Fonction impaire}
-	
-	\begin{mydef}
-		Si une fonction $f$ est \kw{impaire} sur un intervalle I, alors pour tout $x$ de I on a \kw{$f(-x) = -f(x)$} . 
-	\end{mydef}
-	
-	\input{./impaire}
-	
-	%\newpage
-	
-	\section{Fonctions de référence}
-	
-	\subsection{Fonction carré}
-	
-	\begin{mydef}
-		La \kw{fonction carré} est définie par $x \mapsto x^2$.
-	\end{mydef}
-	
-	\begin{myprops}
-		La fonction carré est :
+		
+		Cas particuliers :
 		\begin{itemize}
-			\item définie sur $\intervOO{- \infty }{+ \infty}$.
-			\item décroissante sur $\intervOF{- \infty}{0}$ et croissante sur $\intervFO{0}{+ \infty}$.
-			\item paire.
-			%			\item Sa représentation graphique est une \kw{parabole}.
+			\item Si \kw{$b = 0$}, la fonction est \kw{linéaire}.
+			\item Si \kw{$a=0$}, la fonction est \kw{constante}.
+		\end{itemize}
+	\end{mydef}
+	
+	\begin{myexs}
+		On considère les fonctions $f,g,h$ et $i$ :
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item $f(x)=2x$
+				\item $g(x)=-x+2$
+				\item $h(x)=3x-4$
+				\item $i(x)=5$
+			\end{itemize}
+		\end{multicols}
+		
+		\begin{itemize}
+			\item $f$ est une fonction \kw{linéaire (On a $a=2$ et $b=0$)}.
+			\item $g$ est une fonction \kw{affine (On a $a=-1$ et $b=2$)}.
+			\item $h$ est une fonction \kw{affine (On a $a=3$ et $b=-4$)}.
+			\item $i$ est une fonction \kw{constante (On a $a=0$ et $b=5$)}.
+		\end{itemize}
+	\end{myexs}
+	
+	\subsection{Représentation graphique}
+
+	\begin{myprops}
+		\begin{itemize}
+			\item La \kw{représentation graphique} d'une fonction affine $f(x)=ax+b$ et \kw{une droite}. On dit que $y=ax+b$ est l'équation de la droite.
+			\kw{a} est le \kw{coefficient directeur} (ou la pente) de la droite.
+			\kw{b} est l'\kw{ordonnée à l'origine}.
+			\item La droite passe par le point de coordonnées $(0;b)$, si la fonction est linéaire elle passe par l'origine du repère.
 		\end{itemize}
 		
 	\end{myprops}
 	
+	\begin{myex}
+		\begin{multicols}{2}
+			\vspace*{1.5cm}
+			On considère la fonction affine $f(x)=2x+4$. Elle ne passe pas par l'origine du repère, elle n'est pas linéaire. Elle passe par le point de coordonnées $(0;4)$.
+			
+			\includegraphics[scale=0.5]{img/ex1}
+		\end{multicols}
+	\end{myex}
+
+	\subsection{Variations}
+	
+	\begin{myprops}
+		\begin{itemize}
+			\item Si \kw{$a > 0$}, alors la fonction $f$ est \kw{strictement croissante}.
+			\item Si \kw{$a < 0$}, alors la fonction $f$ est \kw{strictement décroissante}.
+		\end{itemize}
+	\end{myprops}
+
+	\begin{multicols}{2}
+		\begin{center}
+			$a>0$
+			
+			\vspace*{0.5cm}
+			
+			\begin{variations}
+				x & \mI & & \dfrac{-b}{a} & & \pI \\
+				\filet
+				f(x) & \ga - & \z & \dr+ \\				
+			\end{variations}
+			
+			\vspace*{1cm}
+			
+			
+			\begin{variations}
+				x & \mI & &  & & \pI \\
+				\filet
+				\m{f(x)} & \h\ &  \c & \h\ \\				
+			\end{variations}
+		\end{center}
+	
+		\begin{center}
+			$a<0$
+			
+			\vspace*{0.5cm}
+			
+			\begin{variations}
+				x & \mI & & \dfrac{-b}{a} & & \pI \\
+				\filet
+				f(x) & \ga + & \z & \dr- \\				
+			\end{variations}
+			
+			\vspace*{1cm}
+			
+			
+			\begin{variations}
+				x & \mI & &  & & \pI \\
+				\filet
+				\m{f(x)} & \h\ &  \d & \h\ \\				
+			\end{variations}
+		\end{center}
+	\end{multicols}
+
+
+	\subsection{Détermination d'une équation de droite}
+	
+	\begin{mybilan}
+		
+		On détermine l'équation ($y=ax+b$) d'une droite à partir de deux points de cette droite $A(x_A; y_A)$ et $B(x_B; y_B)$.
+		
+		Le coefficient directeur $a$, est obtenu par le calcul suivant :
+		
+		\begin{align*}
+			a = \dfrac{y_B - x_A}{x_B - x_A}
+		\end{align*}
+		
+		
+		L'ordonnée à l'origine $b$ est obtenue en remplaçant $x$ et $y$ dans l'équation par les coordonnées d'un des points.
+		
+	\end{mybilan}
+
+	\begin{myex}
+		La droite $\Delta$ passe par les points de coordonnées $(2;5)$ et $(4;9)$, on a :
+		
+		\begin{align*}
+		a &= \frac{9-5}{4-2} \\
+		a &= \frac{4}{2} \\
+		a &= 2
+		\end{align*}
+		
+		Donc l'équation de la droite $\Delta$ est de la forme $y=2x+b$. Pour trouver $b$ on remplace $x$ et $y$ par les coordonnées de $A$, on a :
+		
+		\begin{align*}
+		y &= 2x+b \\
+		5 &= 2 \times 2 + b  \\
+		5 &= 4 + b\\
+		1 &= b
+		\end{align*}
+		
+		Donc $\Delta$ est la droite d'équation $y=2x+1$.
+	\end{myex}
+\section{Fonction carré}
+	
+	\begin{mybilan}
+		La \kw{fonction carré} est définie par \kw{$x \mapsto x^2$}.
+		
+		Elle est :
+		\begin{itemize}
+			\item définie sur $\intervOO{- \infty }{+ \infty}$.
+			\item décroissante sur $\intervOF{- \infty}{0}$ et croissante sur $\intervFO{0}{+ \infty}$.
+			%			\item Sa représentation graphique est une \kw{parabole}.
+		\end{itemize}
+	\end{mybilan}
+	
 	
 	\input{./carre}
 	
-	\subsection{Fonction inverse}
+	\section{Fonction inverse}
 	
-	\begin{mydef}
-		La \kw{fonction inverse} est définie par $x \mapsto \dfrac{1}{x}$.			
-	\end{mydef}
-	
-	\begin{myprops}
-		La fonction inverse est :
+	\begin{mybilan}
+		La \kw{fonction inverse} est définie par \kw{$x \mapsto \dfrac{1}{x}$}.			
+		
+		Elle est :
 		\begin{itemize}
 			\item définie sur $\intervOO{-\infty}{0} \cup \intervOO{0}{+\infty}$.
 			\item décroissante sur $\intervOO{- \infty}{0}$ et sur $\intervOO{0}{+ \infty}$. 
 			%			\item Sa représentation graphique est une \kw{hyperbole}.
 		\end{itemize}
-	\end{myprops}
+	\end{mybilan}
+	
+	
+	%\newpage
 	
 	\input{./inverse}
-	\subsection{Fonction racine}
 	
-	\begin{mydef}
-		La \kw{fonction racine carrée} est définie par $x \mapsto \sqrt{x}$.			
-	\end{mydef}
+	\section{Fonction cube}
 	
-	\begin{myprops}
+	
+	\begin{mybilan}
+		La \kw{fonction cube} est définie par \kw{$x \mapsto x^3$}.		
 		
-		Elle est définie et croissante sur $\intervFO{0}{+\infty}$.
-		
-		
-	\end{myprops}
+		Elle est définie et croissante sur l'intervalle $\intervOO{- \infty }{+ \infty}$.	
+	\end{mybilan}
 	
-	\input{racine}
-	\subsection{Fonction cube}
-	
-	
-	\begin{mydef}
-		La \kw{fonction cube} est définie par $x \mapsto x^3$.			
-	\end{mydef}
-	
-	\begin{myprops}
-		Elle est définie et croissante sur l'intervalle $\intervOO{- \infty }{+ \infty}$.
-		
-		
-	\end{myprops}
 	
 	\input{cube}
 	
-	\section{Opérations avec les fonctions}
 	
-	\subsection{Somme d'une fonction et d'un nombre}
+	\section{Fonction racine}
 	
-	\begin{myprop}
-		Lorsque l'on \kw{ajoute une constante $k$ à  une fonction $f$}, on obtient une nouvelle fonction notée $f$+$k$ qui a \kw{le même sens de variation que $f$}.
-	\end{myprop}
-	
-	\begin{myex}
-		\begin{multicols}{2}
-			\vspace*{1cm}
-			
-			Soit la fonction $f$, telle que $f(x) = x^2$.
-			
-			$f$ est décroissante sur l'intervalle $\intervOF{-\infty}{0} $ et croissante sur $\intervFO{0}{+\infty}$.
-			
-			Donc la fonction $f+k(x) = x^2 + 2 $ est décroissante sur l'intervalle $\intervOF{-\infty}{0} $ et croissante sur $\intervFO{0}{+\infty}$).
-			
-			\includegraphics[scale=0.6]{./img/k+f}
-		\end{multicols}
-	\end{myex}
-	
-	\subsection{Somme de deux fonctions}
-	
-	\begin{myprop}
-		Si on \kw{ajoute deux fonctions $f$ et $g$} qui possèdent le \kw{même sens de variation}, on obtient alors une fonction $f$+$g$ qui a \kw{le même sens de variation que $f$ ou $g$}. 
-	\end{myprop}
-	
-	\begin{myex}
-		\begin{multicols}{2}
-			\vspace*{20mm}
-			
-			Soient les fonctions $f$ et $g$, telles que $f(x) = x^2$ et $g(x)=2x+1$.
-			
-			$f$ et $g$ sont croissantes sur l'intervalle $\intervFO{0}{+\infty}$.
-			
-			Donc la fonction $f+g(x) = x^2 + 2x + 1$ est croissante sur $\intervFO{0}{+\infty}$.
-			
-			\includegraphics[scale=0.6]{./img/f+g}
-		\end{multicols}
-	\end{myex}
-	
-	\subsection{Produit d'une fonction et d'un nombre}
-	
-	\begin{myprops}
-		\begin{itemize}
-			\item Lorsque l'on \kw{multiplie une fonction $f$ par une constante  positive $k$}, on obtient alors une fonction $kf$ qui a \kw{le même sens de variation que $f$}.
-			\item Lorsque l'on \kw{multiplie une fonction $f$ par une constante négative $k$}, on obtient alors une fonction $kf$ qui \kw{varie en sens contraire de $f$}.
-		\end{itemize}
-	\end{myprops}
-	
-	\begin{myex}
-		%\begin{multicols}{2}
-		%	\vspace*{15mm}
+	\begin{mybilan}
+		La \kw{fonction racine carrée} est définie par \kw{$x \mapsto \sqrt{x}$}.			
 		
-		Soit la fonction $f$, telle que $f(x) = x^2$.
-		
-		$f$ est décroissante sur l'intervalle $\intervOF{-\infty}{0} $ et croissante sur $\intervFO{0}{+\infty}$.
-		
-		Donc la fonction $kf(x) = 0,5 \times x^2$ est décroissante sur l'intervalle $\intervOF{-\infty}{0} $ et croissante sur $\intervFO{0}{+\infty}$.
-		
-		\begin{center}
-			\includegraphics[scale=0.6]{./img/kf1}			
-		\end{center}
-		
-		%\end{multicols}
-	\end{myex}
+		Elle est définie et croissante sur $\intervFO{0}{+\infty}$.
+	\end{mybilan}
 	
-	\begin{myex}	
-		
-		\begin{multicols}{2}
-			\vspace*{15mm}
-			
-			Soit la fonction $f$, telle que $f(x) = x^2$.
-			$f$ est décroissante sur l'intervalle $\intervOF{-\infty}{0} $ et croissante sur $\intervFO{0}{+\infty}$ .
-			Donc la fonction $kf(x) = -2 \times x^2$ est croissante sur l'intervalle $\intervOF{-\infty}{0} $ et décroissante sur $\intervFO{0}{+\infty}$.
-			
-			\includegraphics[scale=0.65]{./img/kf2}
-		\end{multicols}
-	\end{myex}
+	
+	\input{racine}
+	
+	
+	
 	
 \end{document}
