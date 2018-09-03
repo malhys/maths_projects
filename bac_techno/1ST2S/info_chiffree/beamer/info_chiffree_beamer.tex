@@ -1,11 +1,15 @@
 \documentclass[xcolor={dvipsnames}]{beamer}
 %\usepackage[utf8]{inputenc}
 %\usetheme{Madrid}
-\usetheme{Boadilla}
-\usecolortheme{beaver}
+\usetheme{Malmoe}
+%\usecolortheme{beaver}
+\usecolortheme{rose}
 
 \input{../../../../utils_maths_beamer}
 
+\makeatletter
+\def\insertsectionheadnumber{\@Roman\c@section}
+\makeatother
 
 %\usepackage{../../../../pas-math}
 %\usepackage{../../../moncours_beamer}
@@ -20,23 +24,23 @@
 \author{O. FINOT}\institute{Lycée S$^t$ Vincent}
 
 
-\AtBeginSection[]
-{
-	\begin{frame}
-		\frametitle{}
-		\tableofcontents[currentsection, hideallsubsections]
-	\end{frame} 
-
-}
-
-
-\AtBeginSubsection[]
-{
-	\begin{frame}
-		\frametitle{Sommaire}
-		\tableofcontents[currentsection, currentsubsection]
-	\end{frame} 
-}
+%\AtBeginSection[]
+%{
+%	\begin{frame}
+%		\frametitle{}
+%		\tableofcontents[currentsection, hideallsubsections]
+%	\end{frame} 
+%
+%}
+%
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
 
 \begin{document}
 
@@ -64,7 +68,22 @@
 \section{Effectifs et proportions (Activité : TP 1 page 8)}
 
 
+
 \subsection{Expression d'une proportion à l'aide d'un pourcentage}
+
+
+\begin{frame}
+\
+
+\begin{Large}
+	\textcolor{Red}{\underline{I. Effectifs et proportions (Activité : TP 1 page 8)}}
+\end{Large}\pause
+\
+
+\vspace*{1cm}
+
+\textcolor{Green}{\underline{1) Expression d'une proportion à l'aide d'un pourcentage}}
+\end{frame}
 
 \begin{frame}{}
 
@@ -86,7 +105,7 @@
 			\begin{eqnarray*}
 				p = \dfrac{n_A}{n_E} \; \left(\dfrac{Effectif de A}{Effectif de E}\right)
 			\end{eqnarray*}
-		\end{alertblock}
+		\end{alertblock}\pause
 	
 		\vspace*{0.2cm}
 		
@@ -131,7 +150,7 @@
 \begin{frame}{}
 
 \begin{enumerate}%[label=\arabic*.]
-	\setcounter{enumi}{3}
+	\setcounter{enumi}{2}
 	\item Pourcentage de "porteurs de casque" parmi les "pratiquants de roller" :\pause
 	
 	\begin{eqnarray*}
@@ -144,6 +163,156 @@
 	
 \end{enumerate}
 
+\end{frame}
+
+
+\subsection{Comparaison de deux pourcentages, pourcentages de pourcentages}
+
+\begin{frame}
+\
+
+%\begin{Large}
+%	\textcolor{Red}{\underline{I. Effectifs et proportions (Activité : TP 1 page 8)}}
+%\end{Large}\pause
+%\
+%
+%\vspace*{1cm}
+
+\textcolor{Green}{\underline{2) Comparaison de deux pourcentages, pourcentages de pourcentages}}
+\end{frame}
+
+
+
+\begin{frame}{}
+
+\begin{enumerate}%[label=\arabic*.]
+	\item 
+	\begin{enumerate} [a]
+		\item \begin{equation*}
+		\dfrac{73}{149} \approx \num{0.4899},\; soit\; \num{48.99}\; \%.
+		\end{equation*}
+		Il y a \num{48.99} \% d'hommes parmi les victimes d'accidents de roller de "35 ans et plus".\pause
+		
+		\item \begin{equation*}
+		\dfrac{343}{2075} \approx \num{0.1653},\; soit\; \num{16.53}\; \%.
+		\end{equation*}
+		\num{16.53} \% des victimes d'accidents de roller ont "9 ans et moins".\pause
+		
+		\item \begin{equation*}
+		\dfrac{312}{745} \approx \num{0.4188},\; soit\; \num{41.88}\; \%.
+		\end{equation*}
+		Il y a \num{41.88} \% de "10 à 14 ans" parmi l'ensemble des femmes victimes d'un accident de roller.\pause
+		
+		\item \begin{equation*}
+		\dfrac{1330}{2075} \approx \num{0.6410},\; soit\; \num{64.10}\; \%.
+		\end{equation*}
+		\num{64.10} \% des accidents de roller concernent des hommes.
+	\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}{}
+
+\begin{enumerate}%[label=\arabic*.]
+	\setcounter{enumi}{1}
+	\item \begin{enumerate}[a]
+		\item \begin{equation*}
+		\dfrac{174}{1330} \approx \num{0.1308},\; soit \; \num{13.08}\; \%.
+		\end{equation*}
+		\num{13.08} \% des hommes victimes d'accidents de roller ont "de 20 à 34 ans".\pause
+		
+		\item \begin{equation*}
+		\dfrac{127}{745} \approx \num{0.1705},\; soit \; \num{17.05}\; \%.
+		\end{equation*}
+		\num{17.05} \% des femmes victimes d'accidents de la route ont "de 20 à 34 ans".\pause
+		
+		\item Dans les effectifs, il y a plus d'hommes que de femmes de 20 à 34 ans, mais en pourcentage il y a plus de femmes. Il y a moins de femmes pratiquantes du roller que d'hommes mais en proportion elles ont plus d'accidents.
+	\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{}
+
+\begin{enumerate}%[label=\arabic*.]
+	\setcounter{enumi}{2}
+	\item \begin{enumerate}[a]
+		\item Proportion $p_1$ de femmes parmi les accidentés de "15 à 19 ans" :
+		\begin{equation*}
+		p_1=\dfrac{47}{276}\approx \num{0.1703}, \; soit \; \num{17.03}\; \%.
+		\end{equation*}\pause
+		
+		\item Proportion $p_2$ des "15 à 19 ans" parmi les accidentés :
+		\begin{equation*}
+		p_2=\dfrac{276}{2075} \approx \num{0.1330}, \; soit \; \num{13.30}\; \%.
+		\end{equation*}\pause
+		
+		\item Proportion $p_3$ des femmes de "15 à 19 ans" parmi les accidentés :
+		\begin{equation*}
+		p_3 = \dfrac{47}{2075} \approx \num{0.0227}, \; soit \; \num{2.27} \; \%.
+		\end{equation*}\pause
+		
+	
+	
+	
+	\end{enumerate}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{}
+		\begin{block}{Remarque :}
+		
+		\begin{equation*}
+		\dfrac{47}{276}  \times \dfrac{276}{2075} = \dfrac{47}{2075}, donc \; p_1 \times p_2 = p_3.
+		\end{equation*}
+		
+		
+		On peut faire : \num{17.03} \% de \num{13.30} \%
+		\begin{equation*}
+		\dfrac{\num{17.03}}{100} \times \dfrac{\num{13.30}}{100} = \num{0.022649}, \; soit \; environ \; \num{2.26}\; \%.
+		\end{equation*}	
+	\end{block}
+\end{frame}
+
+\subsection{Additionner et comparer des pourcentages}
+
+\begin{frame}
+\
+
+%\begin{Large}
+%	\textcolor{Red}{\underline{I. Effectifs et proportions (Activité : TP 1 page 8)}}
+%\end{Large}\pause
+%\
+%
+%\vspace*{1cm}
+
+\textcolor{Green}{\underline{3) Additionner et comparer des pourcentages}}
+\end{frame}
+
+\begin{frame}{}
+\begin{enumerate}
+	\item  Pourcentage d'enfants en surpoids dans les zones rurales :\pause
+	\begin{equation*}
+	\num{100} - \num{87.2} = \num{12.8} \quad soit \; \num{12.8} \%.
+	\end{equation*}\pause
+	
+	 
+	
+	\item  Pourcentage d'enfants obèses :\pause
+	\begin{equation*}
+	\num{12.8} - \num{9.2} = \num{3.6} \quad soit \; \num{3.6} \%.
+	\end{equation*}\pause
+	
+	\item \begin{enumerate}[a]
+		\item Dans l'agglomération parisienne, il y a \num{5}\% d'enfants obèses et \num{16}\% en surpoids; la proportion d'enfants obèses parmi ceux en surpoids est donc égale à $\dfrac{5}{16}=\num{0.301} \%,$ soit environ un peu plus de 3 enfants souffrant d'obésité pour 10 en surpoids. L'affirmation est donc juste.\pause
+		
+		\item Les effectifs pour les différents types d'agglomération ne sont pas connus. On ne peut donc rien affirmer concernant le nombre d'enfants en surpoids.
+	\end{enumerate}
+	
+	
+\end{enumerate}
 \end{frame}
 
 %\begin{align}
