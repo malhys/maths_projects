@@ -1,6 +1,6 @@
 \documentclass[a4paper,11pt]{exam}
-%\printanswers % pour imprimer les réponses (corrigé)
-\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
 \addpoints % Pour compter les points
 % \noaddpoints % pour ne pas compter les points
 %\qformat{\textbf{\thequestion ) } }
@@ -96,7 +96,8 @@ On a récemment découvert que les acides gras oméga-3, présents dans des pois
 	\end{solution}
 \end{questions}
 
-\newpage
+
+%\newpage
 
 \section{Efficacité d'un médicament}
 
@@ -158,6 +159,7 @@ A l'issue de l'expérimentation :
 	\end{parts}
 \end{questions}
 
+
 \section{Cultures marines}
 
 Une ferme aquacole de Vendée décide de cultiver des micro-algues sur de l'eau de forage.
@@ -168,18 +170,60 @@ Elle fait appel à une entreprise A pour creuser un puits. Le coût prévu pour 
 	\item 200 € par mètre creusé.	
 \end{itemize}
 
-On note $u_0$, le montant forfaitaire, $u_1$ le coût du forage à 1 mètre, $u_2$ le coût du forage à 2 mètres..., $u_n$ le coût du forage à $n$ mètres.
+Le montant forfaitaire est noté $u_0$ (forage à 0 mètres), $u_1$ est le coût du forage à 1 mètre, $u_2$ le coût du forage à 2 mètres..., $u_n$ le coût du forage à $n$ mètres.
 \begin{questions}
 	\question Calculer $u_1$, $u_2$ et $u_3$.
-	%\question 	Donner la nature de la suite $(u_n)$, préciser sa raison.
+
+	\begin{solution}
+		\begin{itemize}
+			\item $u_1$ correspond à un forage à 1 mètre de profondeur donc $u_1 = 800 + 200 = 1000$.
+			\item Pour $u_2$ on ajoute 1 mètre et donc 200 €, d'où : $u_2 = u_1 + 200 = 1200$.
+			
+			\item Même chose pour $u_3$ ; $u_3 = u_2 + 200 = 1400$.
+		\end{itemize}
+	\end{solution}
+	%\question Donner la nature de la suite $(u_n)$, préciser sa raison.
 	\question
 		\begin{parts}
-			\part Comment calculer le coût du forage en fonction de la profondeur ? 
+			\part Comment calculer le montant du forage en fonction de sa profondeur $n$.
+			\begin{solution}
+				Pour calculer le montant du forage on prend le montant forfaitaire et on lui ajoute $n$ fois 200 €.
+			\end{solution}
+
 			\part Exprimer $u_n$ en fonction de $n$.
+			\begin{solution}
+				On a donc :
+					\begin{eqnarray*}
+						u_n &=& u_0 + n \times 200 \\
+						u_n &=& 800 + n \times 200
+					\end{eqnarray*} 
+			\end{solution}
 			\part Calculer $u_{13}$.
+			\begin{solution}
+				
+				\begin{eqnarray*}
+					u_{13} &=& u_0 + 13 \times 200 \\
+					u_{13} &=& 800 + 13 \times 200 \\
+					u_{13} &=& 800 + 2600 \\
+					u_{13} &=& 3400
+				\end{eqnarray*}
+			\end{solution}
 		\end{parts}
 	
-	\question La profondeur prévue pour le forage est 12 mètres. Une autre entreprise, l'entreprise B propose de forer à 12 mètres pour un coût global de \num{3500} €. PArmi les deux entreprises, laquelle est la plus avantageuse ?
+	\question La profondeur prévue pour le forage est 12 mètres. Une autre entreprise, l'entreprise B propose de forer à 12 mètres pour un coût global de \num{3500} €. Parmi les deux entreprises, laquelle est la plus avantageuse ?
+		\begin{solution}
+			Je calcule le coût d'un forage à 12 mètres avec l'entreprise A :
+			
+			\begin{eqnarray*}
+				u_{12} &=& u_0 + 12 \times 200 \\
+				u_{12} &=& 800 + 12 \times 200 \\
+				u_{12} &=& 800 + 2400 \\
+				u_{12} &=& 3200 
+			\end{eqnarray*}
+		
+		3500 > 3200, donc pour un forage à 12 mètres de profondeur, l'entreprise A est la plus avantageuse.
+		\end{solution}
+	
 \end{questions}
 	\label{LastPage}
 	

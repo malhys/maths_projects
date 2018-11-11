@@ -13,12 +13,56 @@ Le tableau suivant indique les variations quotidiennes du CAC 40 dans la semaine
 Donner tous les résultats demandés avec deux décimales.
 
 \begin{questions}
-	\question[1\half] Vérifier que le CAC 40 a perdu \num{22.16} \% cette semaine.
+
+	\question Vérifier que le CAC 40 a perdu \num{22.16} \% cette semaine.
+		\begin{solution}
+			Calcul des coefficient multiplicateurs correspondants évolutions quotidiennes :
+			\begin{itemize}
+				\item Baisse de $\num{9.04}$ \% : $c_1 = 1 - \frac{\num{9.04}}{100} = \num{0.9096 } $ 
+				\item Hausse de $\num{0.55}$ \% : $c_2 = 1 + \frac{\num{0.55}}{100} = \num{1.0055 }$ 
+				\item Baisse de $\num{6.31}$ \% : $c_3 = 1 - \frac{\num{6.31}}{100} = \num{0.9369 }$ 
+				\item Baisse de $\num{1.55}$ \% : $c_4 = 1 - \frac{\num{1.55}}{100} = \num{0.9845 }$ 
+				\item Baisse de $\num{7.73}$ \% : $c_5 = 1 - \frac{\num{9.04}}{100} = \num{0.9227 }$ 
+			\end{itemize}
+		
 	
-	\question[1\half] Quel pourcentage de hausse doit subir le CAC 40 pour retrouver son niveau d'avant cette semaine-là ?
+			Calcul du taux d'évolution global :
+			$ \num{0.9096 } \times \num{1.0055 } \times \num{0.9369 } \times \num{0.9845 } \times \num{0.9227 } \approx \num{0.7784}$ \\
+			
+			$ \num{0.7784} - 1 = - \num{0.2216}$
+			
+			Soit une baisse globale de \num{22.16} \%.
+		\end{solution}
 	
-	\question[1\half] Avant cette semaine de baisse, le CAC 40 était à \num{4080.75} points. \`A combien a-t-il clôturé le vendredi 10 octobre ?
+	\question Quel pourcentage de hausse doit subir le CAC 40 pour retrouver son niveau d'avant cette semaine-là ?
+		\begin{solution}
+			Calcul de l'évolution réciproque à une baisse de \num{22.16} \% :
+			
+			$\dfrac{1}{\num{0.7784}} = \num{1.2847}$\\
+			
+			$ \num{1.2847} - 1 \approx \num{0.2847}$
+			
+			Pour retrouver son niveau d'avant cette semaine là, le CAC 40 devra subir une hausse de \num{28.470} \%.
+		\end{solution}
+	
+	\question Avant cette semaine de baisse, le CAC 40 était à \num{4080.75} points. \`A combien a-t-il clôturé le vendredi 10 octobre ?
+		\begin{solution}
+			
+			Calcul e la valeur du CAC 40 au moment de sa clôture, le vendredi 10 octobre : 
+			$\num{4080.75} \times \num{0.7784} = \num{3176.4558}$
+			
+			Le vendredi 10 octobre le CAC 40 a clôturé à  \num{3176.46} points.
+		\end{solution}
 	
 	\question[1\half] Lundi 13 octobre 2008, le CAC 40 est passé de \num{3176.49} à \num{3531.50} points, signant ainsi la plus forte hausse de son histoire. 
 	Calculer le pourcentage de hausse correspondant.  
+		\begin{solution}
+			
+			Calcul de l'évolution subie par le CAC 4 le lundi 13 octobre 2008 :
+			\begin{equation*}
+				\frac{\num{3531.50} - \num{3176.49}}{\num{3176.49}} = \num{0.1118}
+			\end{equation*}
+			
+			En passant de \num{3176.49} à \num{3531.50} points la CAC 40 a augmenté de \num{11.18} \%. 
+		\end{solution}
 \end{questions} 
