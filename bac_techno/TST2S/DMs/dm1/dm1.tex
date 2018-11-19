@@ -1,0 +1,115 @@
+\documentclass[a4paper,11pt]{exam}
+%\printanswers % pour imprimer les réponses (corrigé)
+\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+\qformat{\textbf{\thequestion )}} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+\usepackage{fullpage}
+
+
+
+\input{../../../../monexam}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../../utils_maths}
+
+
+%\usepackage{fullpage}
+\author{\ }
+\date{A rendre pour le 12 Novembre 2018}
+\title{$T^{le}$ $ST_2S$ : DM num\'ero 1}
+
+
+\begin{document}
+%	\usepackage{fancyhdr}
+%	
+%	\pagestyle{fancy}
+%	\fancyhf{}
+	%\rhead{Share\LaTeX}
+
+	\maketitle
+
+\input{redressement}
+
+
+\section{Efficacité d'un médicament}
+
+120 personnes atteintes d'une maladie ont accepté de tester l'efficacité d'un nouveau médicament. 
+
+Pendant un mois 80 personnes parmi elles ont pris le médicament, les autres ont prit le placebo.
+
+A l'issue de l'expérimentation :
+\begin{itemize}
+	\item parmi les personnes ayant pris le médicament, 75\% ont vu leur santé s'améliorer;
+	\item parmi les personnes ayant prit le placebo, seulement 5 personnes ont vu leur santé s'améliorer.
+\end{itemize} 
+\begin{center}
+	
+	{\small \begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+			\hline
+			& Ont vu leur santé s'améliorer & N'ont pas vu leur santé s'améliorer &  Total  \\
+			\hline
+			Ont pris le médicament &  &  &    \\
+			\hline
+			Ont prit le placebo &  &  &   \\
+			\hline
+			Total &  &  & 120   \\
+			\hline
+	\end{tabular}}
+\end{center}
+
+
+\begin{questions}
+	\question Compléter le tableau.
+	
+	\begin{solution}
+		{\small \begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+				\hline
+				& Ont vu leur santé s'améliorer & N'ont pas vu leur santé s'améliorer &  Total  \\
+				\hline
+				Ont pris le médicament &  60 & 20 & 80   \\
+				\hline
+				Ont prit le placebo & 5 & 35 &  40 \\
+				\hline
+				Total &  65 & 55 & 120   \\
+				\hline
+		\end{tabular}}
+		
+	\end{solution}
+	\question \begin{parts}
+		\part Calculer le pourcentage de personnes qui ont vu leu santé s'améliorer (arrondir à \num{0.01}\% près).
+		\begin{solution}
+			$ \dfrac{65}{120} \approx \num{0.5417} $ Soit \num{54.17} \%.
+		\end{solution}
+		\part Parmi les personnes qui n'ont pas prit le médicament, calculer le pourcentage de celles qui ont vu leur santé s'améliorer.
+		\begin{solution}
+			$ \dfrac{60}{80} = \num{0.75} $ Soit \num{75} \%.
+		\end{solution}
+		\part Parmi les personnes qui ont vu leur santé s'améliorer, calculer le pourcentage de celles qui ont prit le médicament (arrondir à \num{0.1}\% près).
+		\begin{solution}
+			$ \dfrac{60}{65} \approx \num{0.923} $ Soit \num{92.3} \%.
+		\end{solution}
+	\end{parts}
+\end{questions}
+
+\input{cac}
+
+\input{peinture}
+
+
+	\label{LastPage}
+	
+
+\end{document}
