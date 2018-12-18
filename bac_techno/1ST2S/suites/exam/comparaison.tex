@@ -1,0 +1,80 @@
+\section{Comparaison de deux suites (6 points)}
+
+Les parents de Paul et Carine ont hérité d'une somme de \num{5000} € qu'ils offrent en deux parts égales à leurs enfants : chacun reçoit \num{2500} €.
+
+Paul place la totalité de sa part sur un livret d'épargne aux taux de 2 \% par an à intérêts composés.
+
+Carine place \num{1200} € sur un livret d'épargne à 4 \% à intérêts composés et garde le reste chez elle, dans sa tirelire.
+
+On suppose que les deux enfants ne font plus désormais ni retrait ni versement.
+
+\textit{Les résulats seront donnés à l'euro près}
+
+\begin{questions}
+	\question[2] 
+	On note $S_n$ le capital de Paul au bout de $n$ années.
+	\begin{parts}
+		\part[1]  Calculer $S_1$, $S_2$, $S_3$.
+			\begin{solution}
+				\begin{itemize}
+					\item $S_1 = S_0 \times \num{1.02}  = 2550 $ 
+					\item $S_2 = 2601$ 
+					\item $S_3 = 2653$
+				\end{itemize}
+				
+			\end{solution}
+		
+		\part[1] $(S_n)$ est une suite géométrique, exprimer $S_n$ en fonction de $n$.
+		\begin{solution}
+			$S_n = 2500 \times \num{1.02}^{n}$
+		\end{solution}
+		
+	\end{parts}
+	
+	\question[2] On note $T_n$, le capital total (livret et tirelire) de Carine au bout de $n$ années.
+	\begin{parts}
+		\part[1] Calculer $T_1$, $T_2$, $T_3$.
+		\begin{itemize}
+			\item $T_1 = 1200 \times \num{1.04} + 1300 = 1243 + 1300 = 2543 $ 
+			\item $S_2 = 1243 \times \num{1.04} + 1300 = 1298 + 1300 = 2598 $ 
+			\item $S_3 = 1298 \times \num{1.04} + 1300 = 1350 + 1300 = 2650 $ 
+		\end{itemize}
+		\part[1] Exprimer $T_n$ en fonction de $n$
+		\begin{solution}
+			$S_n = 1200 \times \num{1.04}^{n} + 1300$
+		\end{solution}
+	\end{parts}
+	
+	\question[1] Compléter le tableau suivant :
+	
+	\begin{center}
+		
+		\begin{tabular}{|@{$\quad $}c@{$\quad $}| @{$\qquad $}c@{$\qquad $} | @{$\qquad $}c@{$\qquad $} | @{$\qquad $}c@{$\qquad $} | @{$\qquad $}c@{$\qquad $} |@{$\qquad $}c@{$\qquad $} |@{$\qquad $}c@{$\qquad $} |@{$\qquad $}c@{$\qquad $}|@{$\qquad $}c@{$\qquad $}|}
+			\hline
+			$n$                           & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline
+			$S_n$ &   &   &   &   &   &   &   &   \\ \hline
+			$T_n$ &   &   &   &   &   &   &   &   \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\begin{solution}
+		\begin{small}
+			
+		\begin{center}
+			
+			\begin{tabular}{|@{$\quad $}c@{$\quad $}| @{\ }c@{\ } | @{\ }c@{\ } | @{\ }c@{\ } | @{\ }c@{\ } |@{\ }c@{\ } |@{\ }c@{\ } |@{\ }c@{\ }|@{\ }c@{\ }|}
+				\hline
+				$n$                           & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline
+				$S_n$ & 2550  & 2601  & 2653  & 2706  & 2760  & 2815  & 2872  & 2929  \\ \hline
+				$T_n$ &  2548 &  2598 &  2650 &  2703 &  2759 &  2818 &  2879 &  2942 \\ \hline
+			\end{tabular}
+		\end{center}
+		\end{small}
+	\end{solution}
+	
+	\question[1] En déduire, en fonction du nombre d'années, qui de Paul ou de Carine, fait le meilleur placement.
+	\begin{solution}
+		Jusqu'à 6 ans, PAul à fait le meilleur placement, àrès 6 ans, c'est Carine.
+	\end{solution}
+	
+\end{questions}
