@@ -1,0 +1,91 @@
+\section{Scolarisation (8 points)}
+
+Un pays en voie de développement comptait, en l'an 2000, trois millions d'enfants d'age compris entre six et onze ans. Seuls \num{700000} d'entre eux étaient scolarisés.
+
+Dans tout cet exercice on comparera la <<population d'âge scolaire>>, c'est-à-dire le nombre des enfants compris entre six et onze ans, et la <<population scolarisée>>, c'est-à-dire le nombre des enfants d'âge scolaire qui sont inscrits à l'école.
+
+La population d'âge scolaire de ce pays augmente de 2 \% par an et la population scolarisée augmente de \num{150000} par an.
+
+\begin{questions}
+	\question[2] Compléter le tableau suivant :
+	
+	\begin{center}
+		\begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+			\hline
+			\textbf{Année} & \textbf{Population d'âge scolaire} & \textbf{Population scolarisée} \\ \hline
+			\num{2000}     & \num{3000000}                      & \num{700000}                   \\ \hline
+			\num{2001}     &                                    &                                \\ \hline
+			\num{2002}     &                                    &                                \\ \hline
+			\num{2003}     &                                    &                                \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\begin{solution}
+		\begin{center}
+			\begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+				\hline
+				\textbf{Année} & \textbf{Population d'âge scolaire} & \textbf{Population scolarisée} \\ \hline
+				\num{2000}     & \num{3000000}                      & \num{700000}                   \\ \hline
+				\num{2001}     &  \num{3060000}                     &  \num{850000}                    \\ \hline
+				\num{2002}     &  \num{3121200}                      &  \num{1000000}                  \\ \hline
+				\num{2003}     & \num{3183624}                      &   \num{1150000}               \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{solution}
+
+%	\question Quelle est la proportion de la population scolarisée dans la population d'âge scolaire en 2000 ? en 2003 ?
+	
+	\question $n$ est un entier positif ou nul. On note $u_n$ la population d'âge scolaire de ce pays en l'an $2000 + n$ et $v_n$ la population scolarisée la même année.
+	
+		\begin{parts}
+			\part[1] Quelles sont les valeurs de $u_0$ et $v_0$ ?
+			\begin{solution}
+				On a $u_0 = \num{3000000}$ et $v_0 = \num{700000}$.
+			\end{solution}
+			
+			\part[1\half] Montrer que que la suite $(u_n)$ est géométrique, exprimer $u_n$ \\en fonction de $n$. 
+			
+			\begin{solution}
+				Chaque année, la population d'âge scolaire augmente de 2 \%, elle est donc multipliée par \num{1.02} ($1 + \frac{2}{100}$).
+				J'en déduis que $(v_n)$ est une suite géométrique de raison \num{1.02}. 
+				
+				On a donc :				
+				\begin{eqnarray*}
+					u_n &=& u_0 \times q^n \\
+					u_n &=& \num{3000000} \times \num{1.02}^n
+				\end{eqnarray*}
+			\end{solution}
+			
+			%\part[1] Exprimer $u_{n+1}$ en fonction de $u_n$, puis $u_n$ en fonction de $n$.
+			
+			\part[1\half] Montrer que que la suite $(v_n)$ est arithmétique, exprimer $v_n$ \\en fonction de $n$. 
+			
+			\begin{solution}
+				Chaque année, la population scolarisée augmente de \num{150000}.
+				J'en déduis que $(u_n)$ est une suite arithmétique de raison \num{150000}. 
+				
+				On a donc :				
+				\begin{eqnarray*}
+					v_n &=& v_0 + n \times r \\
+					u_n &=& \num{700000} + n \times \num{150000}
+				\end{eqnarray*}
+			\end{solution}
+			
+			%\part[1] Exprimer $v_{n+1}$ en fonction de $v_n$, puis $v_n$ en fonction de $n$.
+			
+			%\part Calculer une valeur approchée du pourcentage  de la population scolarisée dans la population d'âge scolaire en 2005.
+		\end{parts}
+	
+	\question[2] \`A l'aide de la calculatrice, déterminer en quelle année on peut espérer que pour la première fois, plus de la moitié de la population d'âge scolaire sera scolarisée.
+	
+	\begin{solution}
+		On a :
+		$\dfrac{v_6}{u_6} = \dfrac{\num{3378487}}{1600000} \approx \num{0.473}$\\
+		
+		et :\\
+		$\dfrac{v_7}{u_7} = \dfrac{\num{3446057}}{1750000} \approx \num{0.507}$
+		
+		C'est donc à partir de l'année 2007 que la moitié de la population d'âge scolaire sera scolarisée.
+	\end{solution}
+\end{questions}
+
