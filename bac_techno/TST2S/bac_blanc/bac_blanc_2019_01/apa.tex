@@ -1,0 +1,75 @@
+\section{(8 points)}\label{ex:apa}
+
+L'Allocation Personnalisée à l'Autonomie en établissement (APA en établissement) est une allocation destinée aux personnes âgées de plus de 60 ans en perte d'autonomie et résidant dans un établissement de santé.
+
+
+Dans cet exercice, on modélise de deux façons différentes l'évolution du montant de l'APA en établissement dans un département français.
+
+\subsection{}
+
+Le tableau suivant donne les montants en euro de l'APA en établissement de 2007 à 2015 pour le département considéré :
+
+\begin{table}[h!]
+	{\small \begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+	\hline
+	Année                   & 2007        & 2008        & 2009        & 2010        & 2011        & 2012        & 2013        & 2014        & 2015        \\ \hline
+	Rang de l'année ($x_i$) & 1           & 2           & 3           & 4           & 5           & 6           & 7           & 8           & 9           \\ \hline
+	Montant, en euro de     &             &             &             &             &             &             &             &             &             \\ 
+	l'APA en établissement  & \num{13504} & \num{14443} & \num{14914} & \num{15351} & \num{15751} & \num{16144} & \num{16744} & \num{17190} & \num{18070} \\ 
+	($y_i$)                 &             &             &             &             &             &             &             &             &             \\ \hline
+\end{tabular}}
+
+\end{table}
+En annexe \ref{sec:nuage}, à rendre avec la copie, on a représenté, dans un repère orthogonal, le nuage de points de coordonnées $(x_i ; y_i)$ associé à cette série statistique.
+
+\begin{questions}
+	
+	\question
+	\begin{parts}
+		\part Déterminer les coordonnées du point moyen $G$ de ce nuage de points. Arrondir l'ordonnée à l'unité.
+		
+		\part Placer le point $G$ dans le repère précédent.
+	\end{parts}
+
+	\question ON admet que la droite $D$ d'équation $y=\num{516}x + \num{13210} $ réalise un bon ajustement affine du nuage de points jusqu'en 2020.
+	
+		\begin{parts}
+			\part Tracer la droite $D$ dans le repère précédent. Donner les coordonnées des points choisis pour la tracer.
+			
+			\part \`A l'aide de cet ajustement, donner une estimation du montant de l'APA en établissement dans ce département pour l'année 2018.
+		\end{parts}
+\end{questions}
+
+\newpage
+\subsection{}
+
+On a recopié le tableau précédent dans une feuille de calcul d'un tableur.
+Les cellules de la ligne 4 sont au format pourcentage.
+
+\begin{center}
+	\includegraphics[scale=0.4]{img/tab_apa}
+\end{center}
+
+
+\begin{questions}
+	\question 
+		\begin{parts}
+			\part Calculer le taux d'évolution de montant de l'APA en établissement dans ce département entre 2014 et 2015. Arrondir le résultat à \num{0.1} \%.
+			
+			\part Quelle formule doit-on entrer dans la case $C4$ pour obtenir, par recopié vers la droite, les taux d'évolution en pourcentage du montant de l'APA en établissement dans ce département, entre deux années consécutives ?
+		\end{parts}
+	
+	
+	\question On suppose maintenant que le montant de l'APA en établissement dans ce département augmente de \num{5.1} \% par an après 2015. On décide de modéliser ce montant par une suite numérique $(u_n)$.
+		
+	Pour tout entier naturel $n$; $u_n$ désigne le montant de l'APA en établissement dans ce département, en euro, pour l'année $(2015 + n)$. Ainsi $u_0 = \num{18070}$.
+		\begin{parts}
+			\part Calculer $u_1$. Arrondir le résultat à l'unité. Interpréter la valeur de $u_1$ dans le contexte de l'exercice.
+				
+			\part Donner, sans justification, la nature de la suite $(u_n)$ et sa raison.
+				
+			\part Exprimer, pour tout entier naturel n, $u_n$ en fonction de $n$.
+		\end{parts}
+	
+	\question Parmi les deux modèles (l'ajustement affine de la partie A et la suite $(u_n)$ de la partie B), quel est celui qui prévoit le plus haut montant de l'APA en établissement pour l'année 2018 ?
+\end{questions}
