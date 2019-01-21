@@ -1,0 +1,124 @@
+\section{Entrainement à vélo (8 points)}
+
+Aline et Blandine décident de reprendre l'entrainement à vélo, chaque samedi pendant 15 semaines.
+
+Chacune a établi son programme d'entrainement. Elles parcourent 20 km la première semaine et souhaitent effectuer une sortie ensemble la quinzième semaine.
+
+
+\begin{questions}
+	\question Programme d'entrainement d'Aline
+	
+		Après la première semaine, Aline décide  d'augmenter chaque semaine la distance parcourue de 7 km.
+		
+		On note $u_n$ la distance parcourue la n-ième semaine. Ainsi $u_1 = 20$ et $u_{15}=118$.
+		\begin{parts}
+			\part[1] Montrer que la suite $(u_n)$ correspondante est une suite arithmétique de terme initial $u_1=20$ dont on précisera la raison.
+			\begin{solution}
+				La distance parcourue augmente chaque semaine de 7 km, c'est donc une suite arithmétique de terme initial $u_1=20$ et de raison $r=7$.
+			\end{solution}
+			
+			\part[1] Exprimer $u_n$ en fonction de $n$.
+			\begin{solution}
+				On a :
+				\begin{eqnarray}
+					u_n &=& u_1 + (n-1) \times r \\
+					u_n &=& 20 + (n-1) \times 7 
+				\end{eqnarray}
+			\end{solution}
+			
+			\part[1] Calculer la distance parcourue par Aline le samedi de la dixième semaine.
+			\begin{solution}
+				La distance parcourue la dixième semaine correspond à $u_{10}.$ 
+				
+				\begin{eqnarray}
+					u_{10} &=& 20 + 9 \times 7 \\
+					u_{10} &=& 83.
+				\end{eqnarray}	
+				
+				Aline parcourt 80 km la dixième semaine.
+			\end{solution}
+			
+			\part[1] Calculer la distance totale parcourue par Aline au cours de ses entrainements, quinzième semaine inclue.
+			
+			\begin{solution}
+				\begin{eqnarray*}
+					S_{15} &=& \dfrac{15 \times (u_1 + u_15)}{2} \\
+					S_{15} &=& \dfrac{15 \times (20 + 118)}{2} \\
+					S_{15} &=& \num{1035}
+				\end{eqnarray*}
+			
+			Au total, Aline a parcouru \num{1035} km au cours de ses entrainements.
+			\end{solution}
+		\end{parts}
+	
+		\question Programme d'entrainement de Blandine
+		
+		Chaque semaine, Blandine augmente de \num{13.5} \% la distance parcourue, de telle sorte que la distance parcourue la quinzième semaine soit aussi de 118 km, à l'unité près.
+		
+		On note $v_n$ la distance parcourue la n-ième semaine. Ainsi $v_1 = 20$ et $v_{15}=118$.
+		\begin{parts}
+			\part[1] Montrer que la suite $(v_n)$ correspondante est une suite géométrique et déterminer sa raison.
+			\begin{solution}
+				La distance parcourue augmente chaque semaine de \num{13.5} \%, elle est donc multipliée par \num{1.135} ($1+\frac{\num{13.5}}{100}$).
+				J'en déduis que c'est une suite géométrique de premier terme $v_1 = 20$, et de raison $q=\num{1.135}$.
+			\end{solution}
+			
+			\part[1] Exprimer $v_n$ en fonction de $n$.
+			\begin{solution}
+				
+				On a :				
+				\begin{eqnarray}
+					v_{n} &=& v_1 \times q^(n-1) \\
+					v_{n} &=& 20 \times \num{1.135}^(n-1).
+				\end{eqnarray}	
+				
+				
+			\end{solution}
+			
+			\part[1] Calculer la distance parcourue par Blandine le samedi de la dixième semaine.
+			\begin{solution}
+				La distance parcourue la dixième semaine correspond à $v_{10}.$ 
+				
+				\begin{eqnarray}
+					v_{10} &=& 20 \times \num{1.135}^9 \\
+					v_{10} &\approx& \num{62.52}
+				\end{eqnarray}	
+				
+				Blandine parcourt 63 km la dixième semaine.
+			\end{solution}
+			
+			\part[1] Calculer la distance totale parcourue par Blandine au cours de ses entrainements, quinzième semaine inclue.
+			\begin{solution}
+				\begin{eqnarray*}
+					S_{15} &=&  u_1 \times \dfrac{1 - \num{1.135}^15}{1-\num{1.135}} \\
+					S_{15} &=& 20 \times \dfrac{1 - \num{1.135}^15}{1-\num{1.135}} \\
+					S_{15} &\approx& \num{841.82}
+				\end{eqnarray*}
+				
+				Au total, Blandine a parcouru \num{842} km au cours de ses entrainements.
+			\end{solution}
+		\end{parts}
+\end{questions}
+
+\vspace*{3cm}
+
+
+\fbox{%
+	
+	
+	\begin{minipage}{0.9\textwidth}
+		\textbf{\underline{Formulaire :}}\\
+		Somme des $n$ premiers termes d'une suite arithmétique :
+		
+		\begin{equation*}
+			S_n = \dfrac{n \times (u_1 + u_n)}{2}
+		\end{equation*}
+		
+		
+		Somme des $n$ premiers termes d'une suite géométrique :
+		
+		\begin{equation*}
+		S_n = u_1 \times \dfrac{1 - q^n}{1-q}
+		\end{equation*}
+	\end{minipage}%
+}
