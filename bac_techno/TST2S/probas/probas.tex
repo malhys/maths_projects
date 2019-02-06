@@ -23,11 +23,76 @@
 	%\maketitle
 	\chap[num=4, color=red]{Probabilités}{}
 	
-	\section{Vocabulaire}
+	\input{./obj}
 	
+	
+	\section{Vocabulaire}
+		
+		
+		
+		\begin{mybilan}
+			
+		
+			\begin{itemize}
+				\item Dans une \kw{expérience aléatoire}, l'\kw{univers $\Omega$} est l'ensemble des événements possibles.
+				
+				\item Un \kw{événement} est une partie de l'univers.
+				
+				\item Un événement qui possède un seul élément est un \kw{événement élémentaire}.
+				
+				\item Deux événements $A$ et $B$ sont \kw{disjoints ou incompatibles} si et seulement si \kw{$\mathbf{A \cap B = \emptyset}$}.
+				
+				\item L'\kw{événement contraire} d'un événement $A$ est l'\kw{événement $\bar{A}$} constitué des éléments de $\Omega$ qui ne sont pas dans $A$.
+				
+			\end{itemize}
+		\end{mybilan}	
+		
 
 	\section{Calculs de probabilités}
-\newpage
+
+\subsection{Defintion}
+
+\begin{mydef}
+	\begin{itemize}
+		\item La \kw{probabilité} d'un événement $A$, notée $P(A)$ est la somme des probabilités des événements élémentaires qui le composent.
+		\item Pour tout événement $A$, \kw{$0\leq P(A) \leq 1$}
+		%\item Si $A$ est un événement \kw{certain}, alors \kw{$P(A)=1$}.
+		%\item Si $A$ est un événement \kw{impossible}, alors \kw{$P(A)=0$}.
+	\end{itemize}
+	
+\end{mydef}
+
+
+\subsection{\'Equiprobailité}
+
+
+\begin{mybilan}
+	
+	\begin{itemize}
+		\item Il y a \kw{équiprobabilté} dans le cas où tous les évévnements élémentaires ont la même probabilité.
+		Dans ce cas, la probabilité d'un événement élémentaire est :
+		\begin{equation*}
+		\dfrac{1}{nombre\; d'éléments\; de\; \Omega}
+		\end{equation*}
+		
+		
+		\item Dans une situation d'équiprobabilité, la probabilité d'un événement $A$ est :
+		\begin{equation*}
+		P(A)=\dfrac{nombre\;d'\;éléments\;de\;A}{nombre\; d'éléments\; de\; \Omega}=\dfrac{nombre\; de\; cas\;favorbales}{nombre\; de\; cas\;possibles}
+		\end{equation*}
+		
+		
+		\item Pour tout événement $A$, \kw{$P(\bar{A}) =  1- P(A)$}.
+		\item Pour tous événements $A$ et $B$, \kw{$P(A \cup B) = P(A) + P(B) - P(A \cap B)$}.
+		\item Pour tous événements $A$ et $B$ \kw{disjoints}, \kw{$P(A \cup B) = P(A) + P(B)$}.
+	\end{itemize}
+	
+	
+	
+	
+	
+	
+\end{mybilan}
 
 \section{Probabilités conditionnelles et arbre pondéré}	
 
