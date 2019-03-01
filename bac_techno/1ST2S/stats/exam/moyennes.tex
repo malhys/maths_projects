@@ -13,10 +13,26 @@ La moyenne trimestrielle de la classe s'obtient à partie des notes moyennes de 
 
 \begin{questions}
 	\question[2] Déterminer la médiane $Me$, le premier quartile $Q_1$ et le troisième quartile $Q_3$ de cette série statistique de moyennes trimestrielles.
+	\begin{solution}
+		Il y a 24 valeurs dans la série, donc la médiane sera entre la 12$^e$ et la 13$^e$, le premier quartile la $6^e$ ($24 \times \num{0.25} = 6$) et le troisième quartile la $18^e$ ($24 \times \num{0.75} = 18$). On a donc :
+		
+		\begin{itemize}
+			\item $Q_1 $ = 10 ;
+			\item $Me$ = \num{11.5};
+			\item $Q_3$ = 13.
+		\end{itemize} 
+	\end{solution}
 	
 	\question[1] Représenter le diagramme en boite correspondant en faisant apparaître les valeurs extrêmes.
 	
 	\question[1] Calculer la moyenne trimestrielle de la classe Jaune.
+	\begin{solution}
+		\begin{equation*}
+			\bar{x} = \dfrac{3 + 4 + 5 + 2 \times 7 + 5 \times 10 + 2 \times 11 + 5 \times 12 + 3 \times 13 + 14 + 15 + 16 + 18 }{24} = \dfrac{260}{24} = \num{10.83}
+		\end{equation*}
+		
+		La moyenne trimestrielle de la classe est \num{10.83}.
+	\end{solution}
 \end{questions}
 
 \subsection{}
@@ -38,7 +54,16 @@ Les indicateurs de la classe Rouge permettant de de résumer la série statistiq
 	
 	\begin{parts}
 		\part[2] 50\% des élèves de la classe Rouge ont une note comprise entre 10 et 12.
+		\begin{solution}
+			Faux, 10 est la médiane et 12 le troisième quartile donc 25 \% des élèves de la classe ont une note comprise entre 10 et 12.
+		\end{solution}
 		\part[2] 75\% des élèves de la classe Rouge ont une note inférieure ou égale à 12.
+		\begin{solution}
+			Vrai, 12 est le troisième quartile.
+		\end{solution}
 		\part[2] Au moins 50\% des élèves de la classe Rouge ont une note inférieure ou égale à la note médiane de la série Jaune.
+		\begin{solution}
+			Vrai, a médiane de la classe rouge est inférieure à celle de la classe jaune.
+		\end{solution}
 	\end{parts}
 \end{questions}
