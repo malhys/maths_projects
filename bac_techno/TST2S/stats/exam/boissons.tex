@@ -21,20 +21,88 @@ Les résultats sont donnés dans le tableau suivant :
 			\part[2] Représenter le nuage de points de la série statistique (Axes orthogonaux ; unités : 1 cm pour 1°C en abscisse, en commençant à l'abscisse 17 ; 1 cm pour 10 boissons en ordonnée).
 			
 			\part[1] Indiquer pourquoi un ajustement affine est envisageable.
+			\begin{solution}
+				Un ajustement affine est envisageable car le nuage de point est allongé.
+			\end{solution}
 		\end{parts}
 	
 	\question[2] La droite $\Delta$ passe par les points du nuage de coordonnées $(20\; ; \;44)$ et $(30\; ; \;148)$, correspondant aux $2^e$ et $6^e$ jours. Donner son équation, et la tracer sur le graphique.
+	\begin{solution}
+		La droite $\Delta$ passe par les points $A(20\; ; \;44)$ et $B(30\; ; \;148)$.
+		
+		Calcul du coefficient directeur de la droite :
+		
+		\begin{eqnarray*}
+			a &=& \frac{Y_B - Y_A}{X_B-X_A} \\
+			a &=& \frac{148 - 44}{30 - 20} \\
+			a &=& \frac{104}{10} \\
+			a &=& \num{10.4}
+		\end{eqnarray*}
+		
+		Donc la droite $\Delta$ a pour équation $y= \num{10.4} x + b$, calcul de l'ordonnée à l'origine, je remplace $x$ et $y$ par les coordonnées du point A :
+		
+		\begin{eqnarray*}
+			y &=& \num{10.4} x + b \\
+			44 &=& \num{10.4} \times 20 + b \\
+			44 &=& 208 + b \\
+			44 - 208 &=& b \\
+			-164 &=& b
+ 		\end{eqnarray*}
+ 	
+ 		L'équation de la droite $\Delta$ est $y=\num{10.4} x - 164$.
+	\end{solution}
 	
-	\question On choisit la droite d'équation $y=\num{10.4} x - 164$ comme droite d'ajustement du nuage de points. 
+	
+	\question On choisit la droite d'équation  comme droite d'ajustement du nuage de points. 
 	
 	Estimer par le calcul en utilisant l'équation de cette droite :
 	
 		\begin{parts}
 			\part[1\half] le nombre de boissons vendues pour une température de supérieure de 5°C à celle du $6^e$ jour;
+			\begin{solution}
+				Le $6^e$ jour la température était de 30°C, je recherche le nombre de boissons vendues pour une température de 35°C :
+				
+				\begin{eqnarray*}
+					y &=& \num{10.4} x - 164 \\
+					y &=& \num{10.4} \times 35 - 164\\
+					y &=& 364 - 164 \\
+					y &=& 200
+				\end{eqnarray*}
+			
+				Pour une température de 35°C, il vendrait 200 boissons.
+			\end{solution}
 			
 			\part[1] le nombre de boissons que vendrait  M. Ka pour une température de 25 °C;
 			
+			\begin{solution}
+				Je recherche le nombre de boissons vendues pour une température de 25°C :
+				
+				\begin{eqnarray*}
+					y &=& \num{10.4} x - 164 \\
+					y &=& \num{10.4} \times 25 - 164\\
+					y &=& 260 - 164 \\
+					y &=& 96
+				\end{eqnarray*}
+				
+				Pour une température de 25°C, il vendrait 96 boissons.
+			\end{solution}
+			
 			\part[1\half] à partir de quelle température M. Ka vendrait au moins 160 boissons.
+			
+			\begin{solution}
+				Je recherche la température correspondant à la vente de 160 boissons :
+				
+				\begin{eqnarray*}
+					y &=& \num{10.4} x - 164 \\
+					160 &=& \num{10.4} x - 164\\
+					160 + 164 &=& \num{10.4} x \\
+					324 &=& \num{10.4} x \\
+					\frac{324}{\num{10.4}} &=& x \\
+					\num{31.2} &\approx& x 
+				\end{eqnarray*}
+				
+				Pour vendre au moins 160 boissons, il faudra que la température atteigne les 32°C.
+			\end{solution}
 		\end{parts}
 	
 	\question[2] Contrôler graphiquement les résultats de la question précédente en faisant apparaitre les tracés utiles.
@@ -42,8 +110,23 @@ Les résultats sont donnés dans le tableau suivant :
 	\question En fait, le $7^e$ jour, la température a augmenté de $20 \%$ par rapport au $6^e$ jour.
 		\begin{parts}
 			\part[1] Calculer la température du $7^e$ jour.
+			\begin{solution}
+				Le coefficient multiplicateur correspondant à une hausse de 20 \% est \num{1.2}.  Donc la température le  $7^e$ jour est de 36°C ($30 \times \num{1.2} = 36$).
+			\end{solution}
 			
 			\part[1] En déduire une estimation du nombre de boissons vendues le $7^e$ jour à l'aide de l'équation de la droite d'ajustement.
+			\begin{solution}
+				Je recherche le nombre de boissons vendues pour une température de 36°C :
+				
+				\begin{eqnarray*}
+					y &=& \num{10.4} x - 164 \\
+					y &=& \num{10.4} \times 36 - 164\\
+					y &=& \num{374.4} - 164 \\
+					y &=& \num{210.4}
+				\end{eqnarray*}
+				
+				Pour une température de 36°C, il vendrait 210 boissons.
+			\end{solution}
 		\end{parts}
 		
 \end{questions}

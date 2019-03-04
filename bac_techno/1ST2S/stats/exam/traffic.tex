@@ -20,8 +20,32 @@ Un automobiliste est souvent confronté aux embouteillages de l'heure de pointe.
 
 \begin{questions}
 	\question[2] Calculer la moyenne et l'écart type de la série (arrondis à $10^{-1}$).
+	\begin{solution}
+		En rentrant les valeurs dans la calculatrice, on obtient $\bar{x} = \num{26.6}$, et $\sigma = \num{6.6}$.
+	\end{solution}
 	
 	\question[2] L'automobiliste considère qu'il doit prévoir pour son trajet la durée moyenne plus une marge de deux fois l'écart type : <<ainsi, dit-il, je serai à l'heure au travail, au moins dans 95 \% des cas>>.
 	
 	Vérifier ses prévisions. (On arrondira à la minute la durée à prévoir pour son trajet.)
+	
+	\begin{solution}
+		\begin{equation*}
+			\bar{x} + 2 \times \sigma = \num{26.6} + 2 \times \num{6.6} = \num{39.8}
+		\end{equation*}
+		
+		Il prévoit donc un temps de trajet d'environ 40 minutes. 
+		Calcul du nombre de trajets inférieurs à 40 minutes :
+		
+		\begin{equation*}
+			10 + 17 +24 +7 + 4 = 62
+		\end{equation*}
+		
+		Calcul du nombre total de trajets :
+		
+		\begin{equation*}
+			10 + 17 +24 +7 + 4  + 2 + 1 = 65
+		\end{equation*}
+		
+		62 des 65 trajets se sont déroulés en moins de 40 minutes, soit \num{95.4} \% ($62 \div 65 \times 100$). Il a donc raison. 
+	\end{solution}
 \end{questions}
