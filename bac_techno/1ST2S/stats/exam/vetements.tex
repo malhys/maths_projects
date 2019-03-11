@@ -23,15 +23,49 @@ La taille des français étant en augmentation, un fabricant de vêtements déci
 
 \begin{questions}
 	\question[1] Calculer la moyenne $\bar{x}$ et l'écart-type $\sigma$ de cette série statistique.
+	\begin{solution}
+		\begin{eqnarray*}
+			\bar{x} &=& \frac{168 \times 5 + 170 \times 15 + 174 \times 25 + 178 \times 45 + 182 \times 60 + 186 \times 30 + 190 \times 20}{200}\\
+			\bar{x}&=& \num{180.2}
+		\end{eqnarray*}
+	
+		La moyenne de cette série est donc \num{180.2} et son écart type vaut \num{5.9}.
+	\end{solution}
 	
 	\question[1] Calculer la médiane et les quartiles $Q_1$ et $Q_3$ de cette série statistique
+	
+	\begin{solution}
+		Il y a 200 valeurs, donc la médiane est entre la $100^e$ et la $101^e$ valeur. Le premier quartile est la $50^e$ valeur et le troisième quartile la $150^e$. On a :
+		
+		\begin{itemize}
+			\item $Q_1$ = 178;
+			\item $Me$ = 182 ;
+			\item $Q_3$ = 182.
+		\end{itemize}
+	\end{solution}
 	
 	\question[2] 
 	
 		\begin{parts}
 			\part[1] Déterminer le nombre de personnes ayant une taille comprise entre $\bar{x} - 2\sigma$ et $\bar{x} + 2\sigma$.
 			
+			\begin{solution}
+				\begin{eqnarray*}
+					\bar{x} - 2\sigma &=& \num{180.2} - 2 \times \num{5.9} = \num{168.4} \\
+					\bar{x} + 2\sigma &=& \num{180.2} + 2 \times \num{5.9} = \num{195} \\
+				\end{eqnarray*}
+			
+				La taille maximale relevée est 190 cm et seules 5 personnes sur les 200 font moins de \num{168.4} cm. Donc 195 personnes ont une taille comprise entre ces deux valeurs.
+			\end{solution}
+			
 			\part[1] Calculer le pourcentage. correspondant.
+				\begin{solution}
+					\begin{equation*}
+						\frac{195 \times 100}{200} = \num{97.5} 
+					\end{equation*}
+					
+					\num{97.5} \% des personnes ont une taille comprise entre $\bar{x} - 2\sigma$ et $\bar{x} + 2\sigma$.
+				\end{solution}
 		\end{parts} 
 		
 \end{questions}
