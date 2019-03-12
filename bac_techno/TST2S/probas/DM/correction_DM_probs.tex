@@ -34,6 +34,8 @@
 
 \begin{document}
 	
+\maketitle
+	
 \section{87 page 174}
 
 \begin{questions}
@@ -45,7 +47,7 @@
 	
 	Donc 6 \% des visites concernent des filles de 0 à 12 ans.
 	
-	\question 
+	\question \ \\
 	
 	\begin{tabular}{|l|c|c|c|}
 		\hline
@@ -100,6 +102,7 @@
 			La probabilité de l'événement $C$ est \num{0,67}.
 		\end{parts}
 	
+	\newpage
 	\question
 	
 	\begin{parts}
@@ -119,15 +122,16 @@
 			P_B(\bar{A}) &=& \num{0.43}
 		\end{eqnarray*}
 	\end{multicols}
-	\vspace*{-0.5cm}				
-	Les probabilités conditionnelles des événements $P_A(B)$ et $P_B(\bar{A})$ valent respectivement \num{0.29} et \num{0.43}.	
+%	\vspace*{-0.5cm}				
+	Les probabilités conditionnelles $P_A(B)$ et $P_B(\bar{A})$ valent respectivement \num{0.29} et \num{0.43}.	
 	
 	\part Il y a \num{20000} cas de patients entre 0 et 44 ans (\num{5500} + \num{4500} + \num{10000}) et \num{10000} hommes de 0 à 44 ans (\num{2500} + \num{2500} + \num{5000}).
 	
-	La probabilité qu'un patient soit un homme sachant qu'il est âgé de 0 à 44 ans est \num{0.5} ($\frac{\num{10000}}{\num{20000}}$)
+	La probabilité qu'un patient soit un homme sachant qu'il est âgé de 0 à 44 ans est \num{0.5} ($\num{10000} \div \num{20000}$)
 \end{parts} 
 \end{questions}
 
+\newpage
 \section{89 page 175}
 
 \begin{questions}
@@ -145,7 +149,7 @@
 	
 	\num{3776} personnes bénéficient de l'APA à domicile.
 	
-	\question 
+	\question \ \\
 	\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
 		\hline
 		Tranches d'âge          & $[60 , 75[$ & $[75, 85[$ & $[85, 95[$ & $[95, 100[$ & Total \\ \hline
@@ -169,7 +173,7 @@
 		
 		\num{743} personnes âgées de 75  à 85 ans bénéficient de l'APA en établissement.
 		
-		\part 
+		\part \ \\
 		
 		\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
 			\hline
@@ -194,17 +198,67 @@
 	
 	\begin{parts}
 		\part 
-		\begin{eqnarray*}
-			P(E) &=& \frac{Nb \; de \; 85-95 ans}{Total} \\
-			P(E) &=& \frac{2299}{5900} \\
-			P(E) &=& \num{0.39}
-		\end{eqnarray*}
+		%\begin{multicols}{2}
+			\begin{eqnarray*}
+				P(E) &=& \frac{Nb \; de \; 85-95\; ans}{nb\; total \; de \; personnes} \\
+				P(E) &=& \frac{2299}{5900} \\
+				P(E) &=& \num{0.39}\\
+			\end{eqnarray*}
+		
+			\begin{eqnarray*}
+				P(F) &=& \frac{Nb \; de \; personnes\; à\; domicile}{nb\; total \; de \; personnes} \\
+				P(F) &=& \frac{3776}{5900} \\
+				P(F) &=& \num{0.64}\\
+			\end{eqnarray*}
+		%\end{multicols}
 	
-		\begin{eqnarray*}
-			P(F) &=& \frac{Nb \; de \; personnes\; à\; domicile}{Total} \\
-			P(F) &=& \frac{3776}{5900} \\
-			P(F) &=& \num{0.64}
-		\end{eqnarray*}
+		Les probabilités des événements $E$ et $F$ sont respectivement \num{0.39} et \num{0.64}.
+		
+		\part On a :
+		
+		\begin{itemize}
+			\item $E \cup F$ : "La personne choisie est dans la tranche d'âge $[85; 95[$ ou bénéficie de l'APA à domicile".
+			
+			\item $E \cap F$ : "La personne choisie est dans la tranche d'âge $[85; 95[$ et bénéficie de l'APA à domicile".
+		\end{itemize}
+	
+		\part 
+		
+			\begin{eqnarray*}
+				P(E \cap F) &=& \frac{Nb \; de \; personnes \; de \; [85 ; 95[ \; à\; domicile}{nb\; total \; de \; personnes} \\
+				P(E \cap F) &=& \frac{1322}{5900} \\
+				P(E \cap F) &=& \num{0.22}\\
+			\end{eqnarray*}
+		
+			La probabilité de l'événement $E \cap F$ est \num{0.22}.
+			
+			On a donc :
+			
+			\begin{eqnarray*}
+				P(E \cup F) &=& P(E) + P(F) - P(E \cap F)\\
+				P(E \cup F) &=& \num{0.39} + \num{0.64} - \num{0.22} \\
+				P(E \cup F) &=& \num{0.81}\\
+			\end{eqnarray*}
+		
+			La probabilité de l'événement $E \cup F$ est \num{0.81}.	
+			
+		\part 
+			
+
+				\begin{eqnarray*}
+					P_F(E) &=& \frac{P(E \cap F)}{P(F)} \\
+					P_F(E) &=& \frac{\num{0.22}}{\num{0.64}} \\
+					P_F(E) &=& \num{0.34}
+				\end{eqnarray*}
+			
+				\begin{eqnarray*}
+					P_E(F) &=& \frac{P(E \cap F)}{P(F)} \\
+					P_E(F) &=& \frac{\num{0.22}}{\num{0.39}} \\
+					P_E(F) &=& \num{0.56}
+				\end{eqnarray*}
+
+			
+		Les probabilités conditionnelles $P_F(E)$ et $P_E(F)$ valent respectivement \num{0.34} et \num{0.56}.		
 	\end{parts}
 \end{questions}
 
