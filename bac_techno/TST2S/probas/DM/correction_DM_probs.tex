@@ -1,0 +1,212 @@
+\documentclass[a4paper,11pt]{exam}
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+%\addpoints % Pour compter les points
+ \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+%\qformat{\textbf{\thequestion )} \textit{(\thepoints)} \\  } % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+
+
+\input{../../../../monexam}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../../utils_maths}
+
+\usepackage{tabu}
+
+%\usepackage{fullpage}
+\author{\ }
+\date{13 Mars 2019}
+\title{$T^{le}$ $ST_2S$ : Correction DM probabilités}
+
+
+\begin{document}
+	
+\section{87 page 174}
+
+\begin{questions}
+	\question Parmi les \num{50000} visites de l'étude, \num{3000} concernent des filles de 0 à 12 ans.
+	
+	\begin{equation*}
+		\frac{\num{3000} \times 100}{\num{50000}} = 6
+	\end{equation*}
+	
+	Donc 6 \% des visites concernent des filles de 0 à 12 ans.
+	
+	\question 
+	
+	\begin{tabular}{|l|c|c|c|}
+		\hline
+		& Femmes      & Hommes      & Total       \\ \hline
+		0-12 ans       & \num{3000}  & \num{2500}  & \num{5500}  \\ \hline
+		13-24 ans      & \num{2000}  & \num{2500}  & \num{4500}  \\ \hline
+		25 - 44 ans    & \num{5000}  & \num{5000}  & \num{10000} \\ \hline
+		45 - 69 ans    & \num{9500}  & \num{6500}  & \num{16000} \\ \hline
+		70 ans ou plus & \num{8000}  & \num{6000}  & \num{14000} \\ \hline
+		Total          & \num{27500} & \num{22500} & \num{50000} \\ \hline
+	\end{tabular}
+
+	\question
+		\begin{parts}
+			\part 
+			
+			\begin{multicols}{2}
+				\begin{eqnarray*}
+					P(A) &=& \frac{nb\; de\; femmes}{nb\; de \; consultations} \\
+					P(A) &=& \frac{\num{27500}}{\num{50000}}\\
+					P(A) &=& \num{0.55}\\				
+				\end{eqnarray*}
+				
+				%\vspace*{-1cm}
+				\begin{eqnarray*}
+					P(B) &=& \frac{nb\; de\; 70\; ans\; ou\; plus}{nb\; de \; consultations} \\
+					P(B) &=& \frac{\num{14000}}{\num{50000}}\\
+					P(B) &=& \num{0.28}\\					
+				\end{eqnarray*}
+				
+			\end{multicols}
+			\vspace*{-0.5cm}				
+			Les probabilités des événements $A$ et $B$ sont respectivement \num{0.55} et \num{0.28}.
+			
+			\part On a $A \cap B$ : "Le patient choisi est une femme et est âgé de 70 ans ou plus".
+			
+			\begin{eqnarray*}
+				P(A \cap B) &=& \frac{Femmes\; de\; plus\; de\; 70\; ans}{nb\; de \; consultations} \\
+				P(A \cap B) &=& \frac{\num{8000}}{\num{50000}}\\
+				P(A \cap B) &=& \num{0.16}
+			\end{eqnarray*}
+			
+			\part L'événement $C$ correspond à l'union des événements $A$ et $B$. On a donc :
+			
+				\begin{eqnarray*}
+					P(C) &=& P(A \cup B) \\
+					P(C) &=& P(A) + P(B) - P(A \cap B)\\
+					P(C) &=& \num{0,55} + \num{0,28} - \num{0,16} \\
+					P(C) &=& \num{0,67} 
+				\end{eqnarray*}
+			
+			La probabilité de l'événement $C$ est \num{0,67}.
+		\end{parts}
+	
+	\question
+	
+	\begin{parts}
+	
+	\part
+	
+	\begin{multicols}{2}
+		\begin{eqnarray*}
+			P_A(B) &=& \frac{P(A \cap B)}{P(A)}\\
+			P_A(B) &=& \frac{\num{0.16}}{\num{0.55}}\\
+			P_A(B) &=& \num{0.29}
+		\end{eqnarray*}
+		
+		\begin{eqnarray*}
+			P_B(\bar{A}) &=& \frac{nb\; d'\;hommes\;de\;plus\;de\;70\;ans}{nbde\;plus\;de\;70\;ans}\\
+			P_B(\bar{A}) &=& \frac{\num{6000}}{\num{14000}}\\
+			P_B(\bar{A}) &=& \num{0.43}
+		\end{eqnarray*}
+	\end{multicols}
+	\vspace*{-0.5cm}				
+	Les probabilités conditionnelles des événements $P_A(B)$ et $P_B(\bar{A})$ valent respectivement \num{0.29} et \num{0.43}.	
+	
+	\part Il y a \num{20000} cas de patients entre 0 et 44 ans (\num{5500} + \num{4500} + \num{10000}) et \num{10000} hommes de 0 à 44 ans (\num{2500} + \num{2500} + \num{5000}).
+	
+	La probabilité qu'un patient soit un homme sachant qu'il est âgé de 0 à 44 ans est \num{0.5} ($\frac{\num{10000}}{\num{20000}}$)
+\end{parts} 
+\end{questions}
+
+\section{89 page 175}
+
+\begin{questions}
+	
+	\question 
+	\begin{equation*}
+		\num{5900} \times\num{0.36} = \num{2124}
+	\end{equation*}
+	
+	\num{2124} personnes bénéficient de l'APA en établissement.
+	
+	\begin{equation*}
+		\num{5900} - \num{2124} = \num{3776}
+	\end{equation*}
+	
+	\num{3776} personnes bénéficient de l'APA à domicile.
+	
+	\question 
+	\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+		\hline
+		Tranches d'âge          & $[60 , 75[$ & $[75, 85[$ & $[85, 95[$ & $[95, 100[$ & Total \\ \hline
+		Domicile (en \%)        & 17         & 44         & 35         & 4           & 100   \\ \hline
+		\'Etablissement (en \%) & 12         & 35         & 46         & 7           & 100   \\ \hline
+	\end{tabular}
+	
+	\question 
+	\begin{parts}
+		\part 
+		\begin{equation*}
+			\num{0.44} \times \num{3776} = \num{1161}
+		\end{equation*}
+		
+		\num{1161} personnes âgées de 75  à 85 ans bénéficient de l'APA à domicile.
+		
+		\part 
+		\begin{equation*}
+		\num{0.35} \times \num{2124} = \num{743}
+		\end{equation*}
+		
+		\num{743} personnes âgées de 75  à 85 ans bénéficient de l'APA en établissement.
+		
+		\part 
+		
+		\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+			\hline
+			Tranches d'âge  & $[60 , 75[$ & $[75, 85[$ & $[85, 95[$ & $[95, 100[$ & Total \\ \hline
+			Domicile        & 642         & 1161       & 1322       & 151         & 3776  \\ \hline
+			\'Etablissement & 255         & 743        & 977        & 149         & 2124  \\ \hline
+			Total           & 897         & 2404       & 2299       & 300         & 5900  \\ \hline
+		\end{tabular}
+	\end{parts}
+
+	\question 
+	
+	Calcul de la proportion de bénéficiaires de l'APA de 60 à 75 ans :
+	
+	\begin{equation*}
+		\frac{897}{5900} \approx \num{0.152} \; soit \; \num{15.2} \%.
+	\end{equation*} 
+	
+	Il y a environ \num{84.8} \% (\num{100} - \num{15.2}) de personnes de plus de 75 ans parmi les bénéficiaires de l'APA. L'affirmation 1 est donc vraie car on dépasse les 50 \% mais on reste en dessous des 85 \%, l'affirmation 2 est fausse.
+	
+	\question 
+	
+	\begin{parts}
+		\part 
+		\begin{eqnarray*}
+			P(E) &=& \frac{Nb \; de \; 85-95 ans}{Total} \\
+			P(E) &=& \frac{2299}{5900} \\
+			P(E) &=& \num{0.39}
+		\end{eqnarray*}
+	
+		\begin{eqnarray*}
+			P(F) &=& \frac{Nb \; de \; personnes\; à\; domicile}{Total} \\
+			P(F) &=& \frac{3776}{5900} \\
+			P(F) &=& \num{0.64}
+		\end{eqnarray*}
+	\end{parts}
+\end{questions}
+
+\label{LastPage}
+\end{document}
