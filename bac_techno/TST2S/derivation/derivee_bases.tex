@@ -1,14 +1,14 @@
 \newcommand{\drv}[1]{
 
 \begin{center}
-\begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+\begin{tabular}{|@{\ }c@{\ }|@{\ \ \ \ \ \ }c@{\ \ \ \ \ \ }|@{\ }c@{\ }|}
 	\hline
 	\textbf{Fonction} & \textbf{D\'eriv\'ee} & \textbf{Pour tout $x$ appartenant à}\\
 	\hline
 	\hline
 %	$f(x)$  & \ifTrue{#1}{$f'(x)$}\\
 %	\hline
-	$f(x)=k \; (k \in \reels)$  & \ifTrue{#1}{$f'(x) = 0$ } & \ifTrue{#1}{\ifTrue{#1}{] $-\infty$ ; $+\infty$[}}\\
+	$f(x)=k \;$  & \ifTrue{#1}{$f'(x) = 0$ } & \ifTrue{#1}{\ifTrue{#1}{] $-\infty$ ; $+\infty$[}}\\
 	\hline
 	$f(x)=x$  & \ifTrue{#1}{$f'(x) = 1$ } & \ifTrue{#1}{] $-\infty$ ; $+\infty$[}\\
 	\hline
@@ -20,9 +20,9 @@
 	\hline
 	$f(x)= x^3 $ & \ifTrue{#1}{$f'(x)= 3x^{2}$} & \ifTrue{#1}{] $-\infty$ ; $+\infty$[}\\
 	\hline
-	$f(x)=\frac{1}{x} (x \neq 0)$ & \ifTrue{#1}{$f'(x)= -\frac{1}{x^2}$} & \ifTrue{#1}{] $-\infty$ ; 0[ ou ]0 ; $+\infty$[}\\
+	$f(x)=\frac{1}{x} $ & \ifTrue{#1}{$f'(x)= -\frac{1}{x^2}$} & \ifTrue{#1}{] $-\infty$ ; 0[ ou ]0 ; $+\infty$[}\\
 	\hline
-	$f(x)=\sqrt{x} (x > 0) $ & \ifTrue{#1}{$f'(x)= \frac{1}{2\sqrt{x}} $} & \ifTrue{#1}{] 0 ; $+\infty$]}\\
+	$f(x)=\sqrt{x} $ & \ifTrue{#1}{$f'(x)= \frac{1}{2\sqrt{x}} $} & \ifTrue{#1}{] 0 ; $+\infty$]}\\
 	\hline
 	%$f(x)=  u(x) + v(x) $ & \ifTrue{#1}{$f'(x)= u'(x) + v'(x)$} & \\
 	%\hline
