@@ -26,6 +26,12 @@ Ces fiches indiquent que :
 		\input{tab_fum}
 	\end{center}
 
+	\begin{solution}
+		\begin{center}
+			\input{tab_fum2}
+		\end{center}
+	\end{solution}
+
 	\question On prélève au hasard une fiche de renseignement d'un enfant. ON admet que chacun des choix est équiprobable. On considère les événements suivants :
 	
 	\begin{itemize}
@@ -38,10 +44,52 @@ Ces fiches indiquent que :
 	
 	\begin{parts}
 		\part[1\half] Calculer la probabilité des événements $T$ et $F$.
+		
+		\begin{solution}
+			\begin{eqnarray*}
+				P(T) &=& \frac{349}{1500} \approx \num{0.233} \\
+				P(F) &=& \frac{240}{1500} = \num{0.16} \\
+			\end{eqnarray*}
+		\end{solution}
+	
 		\part[1\half] Définir par une phrase l'événement $T \cap F$ puis calculer sa probabilité.
+		\begin{solution}
+			L'événement $T \cap F$ est <<La fiche indique que l'élève présente des troubles asthmatiformes et sa mère a fumé pendant la grossesse. Sa probabilité est \num{0.082} ($\frac{123}{1500}$).
+			 
+		\end{solution}
+		
 		\part[1] Calculer la probabilité que l'enfant ait des troubles asthmatiques ou que sa mère soit fumeuse.
+		\begin{solution}
+			\begin{eqnarray*}
+				P(T \cup F) &=& P(T) + P(F) - P(T \cap F) \\
+				P(T \cup F) &=& \num{0.233} + \num{0.16} - \num{0.082} \\
+				P(T \cup F) &=& \num{0.311}
+			\end{eqnarray*}
+		
+			La probabilité que l'enfant ait des troubles asthmatiques ou que sa mère soit fumeuse est \num{0.311}.
+		\end{solution}
+		
 		\part[1] Calculer la probabilité que l'enfant soit asthmatique sachant que sa mère est fumeuse.
+		\begin{solution}
+			\begin{eqnarray*}
+				P_F(A) &=& \frac{54}{240} \\
+				P_F(A) &=& \num{0.225}\\
+			\end{eqnarray*}
+		
+		La probabilité que l'enfant soit asthmatique sachant que sa mère est fumeuse est \num{0.225}.
+		\end{solution}
 	\end{parts}
 
 	\question[1] On prélève au hasard une fiche parmi celles indiquant que la mère a fumé pendant la grossesse. Calculer la probabilité que l'enfant n'ait aucun trouble. 
+	
+	\begin{solution}
+		Soit $N$ l'événement : <<La fiche tirée indique que l'élève ne présente aucun trouble>>.
+		
+		\begin{eqnarray*}
+			P_F(N) &=& \frac{63}{240} \\
+			P_F(N) &\approx&  \num{0.263}\\
+		\end{eqnarray*}
+	
+	La probabilité que l'enfant n'ait aucun trouble sachant que sa mère a fumé pendant la grossesse est \num{0.263}.
+	\end{solution}
 \end{questions}

@@ -4,13 +4,38 @@ On tire au hasard une carte dans un jeu de trente-deux. Les trente-deux événem
 
 \begin{questions}
 	\question[1] Donner deux événements incompatibles.
+	\begin{solution}
+		Les événements <<la carte tirée est un c\oe ur>> et <<la carte tirée est un pique>> sont incompatibles.
+	\end{solution}
 	
 	\question Les événements $A$ et $B$ sont-ils indépendants ?
 	
 		\begin{parts}
 			\part[2] $A$ : <<la carte tirée est une dame >>; $B$ : <<la carte tirée est noire>>.
 			
+			\begin{solution}
+				\begin{eqnarray}
+					P(A) &=& \dfrac{4}{32} = \dfrac{1}{8} \\
+					P(B) &=& \dfrac{1}{2}\\
+					P(A \cap B) &= & \dfrac{2}{32} = \dfrac{1}{16}\\
+					P(A) \times P(B) &=& \dfrac{1 \times 1}{8 \times 2} = \dfrac{1}{16}
+				\end{eqnarray}
+				
+				On a $P(A\cap B)  = P(A) \times P(B)$, donc les événements $A$ et $B$ sont indépendants.
+			\end{solution}
+			
 			\part[2] $A$ : <<la carte tirée est une dame >>; $B$ : <<la carte tirée est une figure>>.
+			
+			\begin{solution}
+				\begin{eqnarray}
+				P(A) &=& \dfrac{4}{32} = \dfrac{1}{8} \\
+				P(B) &=& \dfrac{16}{32} = \dfrac{1}{2}\\
+				P(A \cap B) &= & \dfrac{4}{32} = \dfrac{1}{8}\\
+				P(A) \times P(B) &=& \dfrac{1 \times 1}{8 \times 8} = \dfrac{1}{64}
+				\end{eqnarray}
+				
+				On a $P(A\cap B)  \neq P(A) \times P(B)$, donc les événements $A$ et $B$ ne sont pas indépendants.
+			\end{solution}
 		\end{parts}
 \end{questions} 
 
