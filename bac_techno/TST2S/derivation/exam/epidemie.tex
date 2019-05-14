@@ -1,0 +1,50 @@
+\section{\'Etude d'une épidémie}\label{ex:epidemie}
+
+Pendant une épidémie observée sur une période de onze jours, un institut de veille sanitaire a modélisé le nombre de personnes malades. La durée, écoulée à partir du début de la période et exprimée en jours, est notée $t$. Le nombre de cas, en fonction de la durée $t$ est est donné en milliers par la fonction $f$ de la variable réelle $t$ définie et dérivable sur l'intervalle $\[0; 11\]$, dont la représentation graphique $C_f$ est donnée en annexe.
+
+Cette annexe sur laquelle le candidat pourra faire figurer des traits de constructions utiles au raisonnement, est à rendre avec la copie.
+
+\subsection{\'Etude graphique}\label{sec:A}
+
+\emph{Pour cette partie, on se réfèrera à la courbe représentative $C_f$ de la fonction f.}
+
+\begin{questions}
+	\question On considère que la situation est grave lorsque le nombre de cas est d'au moins \num{150000} malades. Pendant combien de jours complets cela arrive-t-il ?
+	
+	\question La droite $(OA)$ est la tangente à la courbe $C_f$ au point d'abscisse 0, où A est le point de coordonnées $(0;\num{112.5})$. Déterminer $f'(0)$ où $f'$ représente ta fonction dérivée de la fonction $f$.\label{q:drv}
+	
+	\question Le nombre $f'(t)$ représente la vitesse d'évolution de la maladie, $t$ jours après l'apparition des premier cas.
+		\begin{parts}
+			\part Déterminer graphiquement le nombre maximal de malades sur la période de 11 jours observés et le moment où il est atteint. Que peut-on dire alors de la vitesse d'évolution de la maladie ?
+			
+			\part Déterminer graphiquement à quel moment de l'épidémie la maladie progresse le plus.
+		\end{parts}
+\end{questions}
+
+
+\subsection{\'Etude théorique}
+
+La fonction $f$ de la partie \ref{sec:A} est définie par :
+
+	\begin{equation*}
+		f(t) = -t^3 + \frac{21}{2} t^2 + \frac{45}{4}t
+	\end{equation*}
+	
+\begin{questions}
+	\question recopier et compléter, à l'aide de la calculatrice, le tableau suivant :
+	
+	\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+		\hline
+		$t$    & 0 & 1 & 2 & 3 & 4 & 5 & 6           & 7 & 8 & 9 & 10 & 11 \\ \hline
+		$f(t)$ &   &   &   &   &   &   & \num{229.5} &   &   &   &    &    \\ \hline
+	\end{tabular}
+
+	\question Calculer $f'(t)$ et vérifier que, pour tout $t$ de l'intervalle $\[0; 11\]$ :
+		\begin{equation*}
+			f'(t) = -3 \(t + \frac{1}{2} \) \(t - \frac{15}{2} \)
+		\end{equation*}
+		
+	\question \'Etudier le signe de $f'(t)$ sur l'intervalle $\[0; 11\]$. Cette réponse est-elle cohérente avec la courbe $C_f$ ? Expliquer. 
+	
+	\question Retrouver la résultat de la question \ref{q:drv} de la partie \ref{sec:A}.
+\end{questions}
