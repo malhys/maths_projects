@@ -1,0 +1,1213 @@
+\documentclass[12pt,a4paper,openany]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+\usepackage[titre,fancyhdr,minitoc]{teach}
+\usepackage{dirtree}
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{multirow}
+\usepackage{listingsutf8}
+	\lstset{%
+		inputencoding=utf8,
+		language=[LaTeX]Tex,%
+		upquote=true,
+        commentstyle=\color{gray},
+		columns=fullflexible,%
+		keywordstyle=\color{red},%
+		basicstyle=\ttfamily,%
+		morekeywords={dominitoc,minitoc,redefinecolor,redefinetitle,devoir,titredevoir, tableofcompetences,competence,breakdemo,breakex},%
+		texcsstyle=*\color{blue},%
+		moretexcs={tableofcontents,chapter,blacksquare,fcolorbox},%
+		frame=single,%
+		backgroundcolor=\color{gray!25},%
+		breaklines=true,%
+		literate=
+    		{é}{{\'e}}{1}%
+    		{è}{{\`e}}{1}%
+    		{à}{{\`a}}{1}%
+    		{â}{{\^a}}{1}%%%
+    		{ç}{{\c{c}}}{1}%
+    		{œ}{{\oe}}{1}%
+    		{ù}{{\`u}}{1}%
+    		{É}{{\'E}}{1}%
+    		{È}{{\`E}}{1}%
+    		{À}{{\`A}}{1}%
+    		{Ç}{{\c{C}}}{1}%
+    		{Œ}{{\OE}}{1}%
+    		{Ê}{{\^E}}{1}%
+    		{ê}{{\^e}}{1}%
+    		{î}{{\^i}}{1}%
+    		{ï}{{\"i}}{1}%%%
+    		{ô}{{\^o}}{1}%
+    		{û}{{\^u}}{1}}
+\author{Stéphane Pasquet}
+\title{teach.sty V1.4}
+\begin{document}
+\frontmatter
+\dominitoc
+
+\maketitle
+
+
+
+\chapter*{Avant-propos}
+
+Il y a des jours comme ça où je m'ennuie à mourir... Et dans ce cas, je ne peux pas m'empêcher de réfléchir à ce que je pourrais créer. Je n'espère pas révolutionner le monde avec ce que je fais, mais ça m'occupe.
+
+\medskip
+
+C'est ainsi que j'ai un jour parcouru toutes mes extensions \LaTeX{} et je me suis aperçu que \texttt{pas-cours} était (trop ?) colorée et qu'un.e. enseignant.e. n'avait pas besoin d'autant de couleurs s'il.elle. souhaitait imprimer les cours créés par ses soins. Je me suis aussi dit que les enseignant.e.s n'avaient pas toujours le temps de se pencher sur les différents styles possibles et qu'il était intéressant de leur proposer quelque chose de plus sobre que \texttt{pas-cours}.
+
+Ainsi est née l'idée de \texttt{teach.sty}.
+
+\medskip
+
+L'objectif ici est de proposer des environnements sobres afin de pouvoir imprimer les cours pour les élèves (ou pas... c'est selon ce que le prof veut après tout !)
+
+\medskip
+
+Cette extension se veut évolutive en fonction des demandes des enseignante.s. Aussi, si vous avez envie de voir une fonctionnalité apparaître dans cette extension, prenez contact avec moi via mon site \texttt{http://www.mathweb.fr} (rubrique \og contact \fg), car il se peut que vous ayez une idée, une envie, qui aiderait pas mal d'autres personnes !
+
+\bigskip
+
+J'espère que cette extension vous sera utile, et n'hésitez pas non plus à me rapporter les éventuels bugs.
+
+\vspace*{1cm}
+
+Stéphane Pasquet
+
+\tableofcontents
+
+\mainmatter
+\chapter{Généralités}
+
+\section{Que fait l'extension \textit{teach.sty} ?}
+
+Cette extension a été créée dans le but de facilité la rédaction des cours des enseignant.e.s.
+
+Il y a quelques années, j'ai créé l'extension \textit{pas-cours.sty}, principalement basée sur \texttt{TiKZ}, mais cette extension offre des environnements plutôt chargés en couleurs. Pour avoir des cours plus sobres, que l'on peut par exemple imprimer, j'ai repensé le tout.
+
+\section{Installation}
+
+Télécharger le fichier \texttt{teach.zip} sur votre ordinateur ou tablette, puis décompressez-le de sorte à avoir tous les fichiers dans un répertoire que vous mettrez dans l'arborescence \LaTeX.
+
+\medskip
+
+Par exemple, sous windows, cela pourra donner :
+
+\medskip
+
+\dirtree{%
+.1 C.
+.2 texmf.
+.3 doc.
+.4 teach.
+.5 teach.doc.
+.3 tex.
+.4 latex.
+.5 teach.
+.6 attention\_img.png.
+.6 couverture.png.
+.6 memento.png.
+.6 teach.sty.
+.6 trait.png.
+}
+
+\section{Compilation}
+
+On peut compiler le document faisant appel à \texttt{teach.sty} par PdfLaTeX uniquement.
+
+\section{Extensions chargées}
+
+\subsection{Par défaut}
+
+L'extension \texttt{teach.sty} charge automatiquement les extensions suivantes :
+\begin{enumerate}
+\item titlesec
+\item graphicx
+\item xcolor (avec l'option \textit{table})
+\item cellspace
+\item ifthen
+\item enumitem
+\item geometry
+\end{enumerate}
+
+\subsection{Optionellement}
+
+Si l'extension est appelée avec l'option \textit{fancyhdr}, l'extension \texttt{fancyhdr} sera chargée.
+
+Si l'extension est appelée avec l'option \textit{minitoc}, l'extension \texttt{minitoc} sera chargée.
+
+Si l'extension est appelée avec l'option \textit{titre}, l'extension \texttt{eso-pic} sera chargée.
+
+\section{Les options}
+
+Lors de l'appel à l'extension, 3 options sont possibles :
+
+\begin{enumerate}
+\item \textit{minitoc} : dans ce cas, une table des matières par chapitre est ajoutée. Mais pour cela, il faut respecter les règles de \texttt{minitoc.sty}, à savoir utiliser une syntaxe comme la suivante :
+
+\begin{lstlisting}
+\documentclass[12pt,a4paper]{book}
+\usepackage[minitoc]{teach}
+\begin{document}
+\dominitoc % <-- Ne pas oublier cette ligne !
+...
+\tableofcontents
+...
+\chapter{Titre du chapitre}
+...
+\end{document}
+\end{lstlisting}
+
+
+\item \textit{fancyhdr} : dans ce cas, les en-têtes seront supprimés et les pieds de page seront identiques, à savoir contiendront le numéro de page centré. Ces redéfinitions ont été faites à l'aide de \texttt{fancyhdr.sty}.
+
+\pagebreak
+
+\item \textit{euclide} : dans ce cas, plutôt qu'en nuances de gris, les titres et environnements contiendront de la couleur. Les couleurs sont prédéfinies, mais si elles ne vous conviennent pas, il est toujours possible de les changer (si vous souhaitez changer toutes les couleurs, inutile d'informer cette option; la redéfinition des couleurs peut se faire indépendamment de l'appel de celle-ci).
+
+\item \textit{titre} : dans ce cas, la page de garde sera plus sophistique que la page par défaut (elle sera comme celle de cette documentation).
+
+À noter que l'image de fond s'appelle \og couverture.png \fg{} ; ainsi, si vous souhaitez la changer, il vous suffit d'enregistrer votre propre image dans le répertoire courant de votre fichier source \texttt{.tex}. 
+
+De plus, les traits en dégradé se nomment \og trait.png \fg{} ; ainsi, si vous souhaitez mettre une couverture claire, il vous faudra redéfinir  (avec Gimp par exemple) cette image en remplaçant le blanc par la couleur de votre choix.
+
+\medskip
+
+Si cette définition de page de garde ne vous plaît pas, vous pouvez la personnaliser en redéfinissant la commande \textbackslash maketitle (je vous conseille de recherche sur Internet les différentes façons si vous ne savez pas le faire, mais je peux aussi vous encourager de vous orienter vers le package \texttt{titlepage}).
+\end{enumerate}
+
+\section{Avec quelle classe fonctionne cette extension ?}
+
+Vous devez faire appel à la classe \texttt{book} ou \texttt{report}, ou toute classe définissant les commandes \texttt{chapter}, \texttt{section}, etc.
+
+\section{Les Warnings}
+
+Quand vous compilez avec cette extension, il n'est pas anormal de voir beaucoup de \og Warnings \fg{} dans le fichier log. 
+
+Ce n'est pas grave du tout : \LaTeX2e{} est très capricieux et ne supporte pas que certaines dimensions soient supérieures à celles qu'il attend.
+
+Je me suis plus penché sur le rendu du PDF que sur ces Warnings donc pas d'inquiétude (sauf si bous êtes un puriste, auquel cas... passez votre chemin ! Cette extension n'est pas faites pour vous... sans risque de crise cardiaque soudaine !)
+
+%------------------------------ CHAPITRE 2 -----------------------------------
+
+\chapter{Les environnements}
+
+\newpage
+
+\section{Théorème}
+
+\begin{lstlisting}
+\begin{thm}[<option : titre>]
+<Contenu>
+\end{thm}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{thm}[de Pythagore]
+Soit $ABC$ un triangle rectangle en $A$.
+
+Alors,
+\[ BC^2=AB^2+AC^2.\]
+\end{thm}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{thm}[de Pythagore]
+Soit $ABC$ un triangle rectangle en $A$.
+
+Alors,
+\[ BC^2=AB^2+AC^2.\]
+\end{thm}
+\end{minipage}
+
+
+\section{Corollaire}
+
+\begin{lstlisting}
+\begin{cor}[<option : titre>]
+<Contenu>
+\end{cor}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{cor}[exemple]
+Exemple de corollaire.
+\end{cor}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{cor}[exemple]
+Exemple de corollaire.
+\end{cor}
+\end{minipage}
+
+\section{Lemme}
+
+\begin{lstlisting}
+\begin{lemme}[<option : titre>]
+<Contenu>
+\end{lemme}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{lemme}[de Cesàro]
+Soit $(a_n)_{n>0}$ une suite de nombres réels ou complexes. Si elle converge vers un nombre $\ell$ alors la suite $(c_n)_{n>0}$ définie par $c_n=\displaystyle\frac{1}{n}\sum_{k=1}^n a_k$ converge vers $\ell$.
+\end{lemme}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{lemme}[de Cesàro]
+Soit $(a_n)_{n>0}$ une suite de nombres réels ou complexes. Si elle converge vers un nombre $\ell$ alors la suite $(c_n)_{n>0}$ définie par $c_n=\displaystyle\frac{1}{n}\sum_{k=1}^n a_k$ converge vers $\ell$.
+\end{lemme}
+\end{minipage}
+
+\newpage
+
+\section{Propriété}
+
+\begin{lstlisting}
+\begin{prop}[<option : titre>]
+<Contenu>
+\end{prop}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{prop}[inégalité triangulaire]
+Soit $ABC$ un triangle quelconque.
+
+Alors,
+\[ BC \leqslant AB+AC.\]
+\end{prop}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{prop}[inégalité triangulaire]
+Soit $ABC$ un triangle quelconque.
+
+Alors,
+\[ BC \leqslant AB+AC.\]
+\end{prop}
+\end{minipage}
+
+
+\section{Définition \& définitions}
+
+\subsection{Une seule définition}
+
+\begin{lstlisting}
+\begin{defn}[<option : titre>]
+<Contenu>
+\end{defn}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{defn}
+Soit une matrice carrée $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$.
+
+On appelle \textit{déterminant} de $A$ le nombre :
+\[\det A=ad-bc.\]
+\end{defn}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{defn}
+Soit une matrice carrée $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$.
+
+On appelle \textit{déterminant} de $A$ le nombre :
+\[\det A=ad-bc.\]
+\end{defn}
+\end{minipage}
+
+
+Le fonctionnement de cet environnement change par rapport aux autres. En effet, vous pouvez constater sur l'exemple ci-dessous que le mot \og Définition \fg{} est abrégé; ceci est dû au fait que la hauteur de l'environnement est inférieur à la longueur du titre.
+
+Dans le cas où ce n'est pas le cas, le titre sera mis en entier, comme l'illustre l'exemple suivant :
+
+\medskip
+
+\begin{defn}[un exemple]
+\lipsum[1]
+\end{defn}
+
+\newpage
+
+\subsection{Plusieurs définitions}
+
+\begin{lstlisting}
+\begin{defns}[<option : titre>]
+<Contenu>
+\end{defns}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{defns}
+\begin{itemize}
+\item Un triangle rectangle est un triangle dont deux côtés sont perpendiculaires.
+\item Un triangle isocèle est un triangle dont deux côtés seulement sont égaux.
+\item Un triangle équilatéral est un triangle dont les trois côtés sont égaux.
+\end{itemize}
+\end{defns}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{defns}
+\begin{defitemize}
+\item Un triangle rectangle est un triangle dont deux côtés sont perpendiculaires.
+\item Un triangle isocèle est un triangle dont deux côtés seulement sont égaux.
+\item Un triangle équilatéral est un triangle dont les trois côtés sont égaux.
+\end{defitemize}
+\end{defns}
+\end{minipage}
+
+Dans cet environnement, les listes \og enumerate \fg{} et \og itemize \fg{} ont été redéfinies. Vous pouvez les appeler avec les environnements :
+
+\medskip
+
+\begin{minipage}{0.45\linewidth}
+\begin{lstlisting}
+\begin{defitemize}
+\item ...
+\item ...
+\end{defitemize}
+
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+\begin{lstlisting}
+\begin{defenumerate}
+\item ...
+\item ...
+\end{defenumerate}
+\end{lstlisting}
+\end{minipage}
+
+\medskip
+
+ce qui donne :
+
+\medskip
+
+\begin{minipage}{0.45\linewidth}
+\begin{defitemize}
+\item ...
+\item ...
+\end{defitemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+\begin{defenumerate}
+\item ...
+\item ...
+\end{defenumerate}
+\end{minipage}
+
+\section{Démonstrations}
+
+\subsection{L'environnement \og demo \fg{} }
+
+\begin{lstlisting}
+\begin{demo}[<argument optionnel>]
+<Contenu>
+\end{demo}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{demo}[Fermat]
+Cette démonstration est trop longue pour être affichée ici.\hfill$\blacksquare$
+\end{demo}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{demo}[Fermat]
+Cette démonstration est trop longue pour être affichée ici.\hfill$\blacksquare$
+\end{demo}
+\end{minipage}
+
+\medskip
+
+\paragraph*{N.B.} Notez ici que le petit carré noir n'apparaît pas automatiquement. Certain.e.s enseignant.e.s n'aiment pas ce symbole et je n'ai pas souhaité l'imposer. Il faudra donc l'ajouter manuellement si vous souhaitez le faire apparaître.
+
+\subsection{Scinder l'environnement : \textbackslash breakdemo}
+
+L'environnement ne peut malheureusement pas se couper automatiquement en bas de page. Il faut donc le faire manuellement avec la commande \texttt{\textbackslash breakdemo}.
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{demo}
+Cette démonstration est trop longue pour être affichée sur une page.
+\breakdemo
+Cependant, elle tient sur deux.
+\end{demo}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{demo}
+Cette démonstration est trop longue pour être affichée sur une page.
+\breakdemo
+Cependant, elle tient sur deux.
+\end{demo}
+\end{minipage}
+
+\subsection{L'environnement \og demo* \fg{} }
+
+Cet environnement est une alternative à l'environnement \og demo \fg{} qui nécessite de le couper manuellement.
+
+L'environnement \og demo* \fg{} se coupe automatiquement (il est basé sur le package \texttt{mdframed}). 
+
+La contrepartie est que le titre n'est pas légèrement décalé, contrairement à l'environnement \og demo \fg. 
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{demo*}[titre]
+Cette démonstration est trop longue pour être affichée sur une page.
+\end{demo*}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{demo*}[titre]
+Cette démonstration est trop longue pour être affichée sur une page.
+\end{demo*}
+\end{minipage}
+
+Si vous souhaitez inclure une marge, utilisez la macro suivante :
+
+\begin{lstlisting}
+\makeatletter
+\mdfdefinestyle{demo}{leftmargin=1em,innermargin=1em,linewidth=0pt,backgroundcolor=\teach@demo@body@bgcolor,skipabove=0.5pt,skipbelow=1em}
+\makeatother
+\end{lstlisting}
+
+Vous pouvez d'ailleurs inclure toutes les options permises par le package \texttt{mdframed}.
+
+L'inconvénient (à mes yeux) est que la marge incluse se retrouve à droite (et non à gauche) sur les pages paires (si l'option \og openany \fg{} n'est pas appelée lors du chargement de la classe \textit{book}) ou à gauche (dans le cas contraire, comme pour ce document), comme l'illustrent les exemples suivants.
+
+\medskip
+
+L'environnement débute en page paire (avec l'option \texttt{openany} pour la classe \textit{book}) :
+
+\medskip
+
+
+\makeatletter
+\mdfdefinestyle{demo}{rightmargin=1em,leftmargin=1em,innermargin=1em,linewidth=0pt,backgroundcolor=\teach@demo@body@bgcolor,skipabove=0.5pt,skipbelow=1em}
+\makeatother
+
+
+\begin{demo*}
+\lipsum
+
+\lipsum
+\end{demo*}
+
+Et quand il commence en page impaire, la marge est présente :
+
+\medskip
+
+\begin{demo*}
+\lipsum[1]
+\end{demo*}
+
+\paragraph*{Conclusion :} l'environnement \og demo* \fg{} est idéal si vous avez de longues démonstrations et que vous n'attachez pas d'importance à la marge de gauche (donc si cela ne vous gêne pas d'avoir le titre au même niveau horizontal que le corps de la démonstration).
+
+\medskip
+
+Il me semble que l'environnement \og demo \fg, bien que contraignant à cause de la \og coupure manuelle \fg, est plus esthétique, mais étant conscient que le côté \og pratique \fg{} est privilégié chez certaines personnes, j'ai voulu laisser le choix aux utilisateurs.
+
+\section{Exemple \& exemples}
+
+\subsection{Un seul exemple}
+
+\begin{lstlisting}
+\begin{exemple}[<option : titre>]
+<Contenu>
+\end{exemple}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{exemple}
+Ceci est un petit exemple.
+\end{exemple}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{exemple}
+Ceci est un petit exemple.
+\end{exemple}
+\end{minipage}
+
+\newpage
+
+\subsection{Plusieurs exemples}
+
+\begin{lstlisting}
+\begin{exemples}[<option : titre>]
+<Contenu>
+\end{exemples}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{exemples}
+\item Ceci est un premier exemple.
+\item Ceci est un second exemple.
+\end{exemples}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{exemples}
+\item Ceci est un premier exemple.
+\item Ceci est un second exemple.
+\end{exemples}
+\end{minipage}
+
+\paragraph*{N.B.} Remarquez que le compteur est le même pour les deux environnements.
+
+Notez aussi que lorsqu'il y a plusieurs exemples, un environnement \texttt{eunmerate} est automatiquement créé, ce qui permet d'écrire directement les items.
+
+\subsection{Couper un environnement : \textbackslash breakex}
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{exemple}[essai]
+Première phrase.
+\breakex
+Seconde phrase.
+\end{exemple}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{exemple}[essai]
+Première phrase.
+\breakex
+Seconde phrase.
+\end{exemple}
+\end{minipage}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{exemples}[essai]
+\item Première phrase.
+\breakex[2]
+\item Seconde phrase.
+\end{exemples}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{exemples}[essai]
+\item Première phrase.
+\breakex[2]
+\item Seconde phrase.
+\end{exemples}
+\end{minipage}
+
+\paragraph*{N.B.} Je n'ai pas réussi à incrémenter le numéros des items... Il faut donc mettre manuellement le numéro de l'item qui suit. Si quelqu'un a une idée pour améliorer tout ça, qu'il ou elle n'hésite pas à m'envoyer un message.
+
+\newpage
+
+
+\section{Remarque \& remarques}
+
+\subsection{Une seule remarque}
+
+\begin{lstlisting}
+\begin{rem}[<option : titre>]
+<Contenu>
+\end{rem}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{rem}
+Ceci est une petite remarque.
+\end{rem}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{rem}
+Ceci est une petite remarque.
+\end{rem}
+\end{minipage}
+
+
+\subsection{Plusieurs remarques}
+
+\begin{lstlisting}
+\begin{rems}[<option : titre>]
+<Contenu>
+\end{rems}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{rems}
+\item Ceci est une première remarques.
+\item Ceci est une seconde remarques.
+\end{rems}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{rems}
+\item Ceci est une première remarques.
+\item Ceci est une seconde remarques.
+\end{rems}
+\end{minipage}
+
+\paragraph*{N.B.} Remarquez que lorsqu'il y a plusieurs remarques, un environnement \texttt{itemize} est automatiquement créé, ce qui permet d'écrire directement les items.
+
+
+\section{Exercices}
+
+\subsection{Exercices non corrigés}
+
+\begin{lstlisting}
+\begin{exo}[<option : titre>]
+<Contenu>
+\end{exo}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{exo}[Théorème de Varignon]
+Soit $ABCD$ un quadrilatère quelconque. Soient alors $I$, $J$, $K$ et $L$ les milieux de ses côtés.
+
+Montrer que $IJKL$ est un parallélogramme.
+\end{exo}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{exo}[Théorème de Varignon]
+Soit $ABCD$ un quadrilatère quelconque. Soient alors $I$, $J$, $K$ et $L$ les milieux de ses côtés.
+
+Montrer que $IJKL$ est un parallélogramme.
+\end{exo}
+\end{minipage}
+
+\subsection{Exercices corrigés}
+
+\begin{lstlisting}
+\begin{exocor}[<texte optionnel>]
+<Contenu>
+\end{exocor}
+...
+\begin{corrige}
+<Corrigé>
+\end{corrige}
+\end{lstlisting}
+
+Pour les exercices corrigés, je vous conseille la syntaxe suivante :
+
+\medskip
+
+\begin{lstlisting}
+\section{Exercices}
+
+\begin{exocor}
+...
+\end{exocor}
+
+\begin{exocor}
+...
+\end{exocor}
+
+\section{Corrigés}
+
+\begin{corrige}
+<Corrigé>
+\end{corrige}
+
+\begin{corrige}
+<Corrigé>
+\end{corrige}
+\end{lstlisting}
+
+\section{Memento (à retenir)}
+
+\begin{lstlisting}
+\begin{memento}[<option : titre>]
+<Contenu>
+\end{memento}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{memento}
+Le carré du sinus d'un nombre n'est pas égal au sinus du carré du nombre.
+\end{memento}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{memento}
+Le carré du sinus d'un nombre n'est pas égal au sinus du carré du nombre.
+\end{memento}
+\end{minipage}
+
+\newpage
+
+\section{Attention}
+
+\begin{lstlisting}
+\begin{attention}[<option : titre>]
+<Contenu>
+\end{attention}
+\end{lstlisting}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{attention}
+Le carré du sinus d'un nombre n'est pas égal au sinus du carré du nombre.
+\end{attention}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{attention}
+Le carré du sinus d'un nombre n'est pas égal au sinus du carré du nombre.
+\end{attention}
+\end{minipage}
+
+
+\section{Versions étoilées : pas de numérotation}
+
+Tous les environnements numérotés (thm, lemme, prop, exemple, exemples, defn et exo) ont leur équivalent en version étoilée, où la numérotation est supprimée, comme le montre l'exemple ci-dessous.
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+\begin{lstlisting}
+\begin{thm*}
+Essai.
+\end{thm*}
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\begin{thm*}
+Essai.
+\end{thm*}
+\end{minipage}
+
+
+\section{Changer les titres}
+
+\begin{lstlisting}
+\redefinetitle{<nom de l'environnement>}{<nouveau titre>}
+\end{lstlisting}
+Le \og nom de l'environnement \fg{} ets à choisir parmi :
+
+\begin{itemize}
+\item thm : pour redéfinir le titre des théorèmes
+\item cor : pour redéfinir le titre des corollaires
+\item lemme : pour redéfinir le titre des lemmes
+\item prop : pour redéfinir le titre des propriétés
+\item defn : pour redéfinir le titre de \og définition \fg{} (au singulier)
+\item defns : pour redéfinir le titre de \og définitions \fg{} (au pluriel)
+\item dem : pour redéfinir le titre des démonstrations
+\item exemple : pour redéfinir le titre de \og exemple \fg{} (au singulier)
+\item exemples : pour redéfinir le titre de \og exemples \fg{} (au pluriel) 
+\item rem : pour redéfinir le titre de \og remarque \fg{} (au singulier)
+\item rems : pour redéfinir le titre de \og remarques \fg{} (au pluriel)
+\item exo : pour redéfinir le titre des exercices
+\item memento : pour redéfinir le titre des \og À retenir \fg{} 
+\item attention : pour redéfinir le titre des \og Attention \fg{} 
+\end{itemize}
+
+%--------------------------- CHAPITRE 3 ------------------------------------
+
+\chapter{Changer les couleurs}
+
+\section{Thème prédéfini}
+
+Par défaut, tout est en nuances de gris.
+
+\medskip
+
+Cependant, quand vous appelez l'extension avec l'option \textit{euclide} :
+
+\begin{lstlisting}
+\usepackage[euclide]{teach}
+\end{lstlisting}
+
+les couleurs changent.
+
+\section{Personnaliser les couleurs}
+
+Chaque couleur est définie avec une macro interne de la forme :
+
+\begin{lstlisting}
+\newcommand{\teach@arg1@arg2@arg3}{couleur}
+\end{lstlisting}
+
+Si les couleurs du thème \textit{euclide} ne vous conviennent pas, vous pouvez toujours changer les couleurs (sans faire appel à \textit{euclide}).
+
+Pour cela, vous pouvez utiliser la commande :
+
+\medskip
+
+\begin{lstlisting}
+\redefinecolor{arg1}{arg2}{arg3}{couleur}
+\end{lstlisting}
+
+\newpage
+
+\subsection{Liste des arguments \og arg1 \fg, \og arg2 \fg{} et \og arg3 \fg}
+
+Le tableau ci-dessous donne toutes les combinaisons utilisées par l'extension \texttt{teach.sty} :
+
+\medskip
+
+\begin{center}
+\begin{tabular}{|*4{Sc|}}
+\hline\rowcolor{gray!20}
+\textbf{Arg1} & \textbf{Arg2} & \textbf{Arg3} & \textbf{Correspondance}\\
+\hline
+chapter & \multirow{2}{*}{global} &  \multirow{2}{*}{color} & Titres de chapitres\\
+\cline{1-1}\cline{4-4}
+minitoc &  &  & Couleur des plans de chapitre\\
+\hline
+section & \multirow{3}{*}{title} &  \multirow{3}{*}{txtcolor} & Titres de section\\
+\cline{1-1}\cline{4-4}
+subsection & & & Titres de subsection\\
+\cline{1-1}\cline{4-4}
+subsubsection & & & Titres de subsubsection\\
+\hline
+\multirow{5}{*}{defn} & \multirow{2}{*}{title} & bgcolor & Fond des titres des définitions\\
+\cline{3-4}
+ &  & txtcolor & Texte des titres des définitions\\
+ \cline{2-4}
+ & body & txtcolor & Texte du corps des définitions\\
+ \cline{2-4}
+ & \multirow{2}{*}{item} & \multirow{2}{*}{txtcolor} & Numéro des questions\\[-4pt]
+ & & & dans l'environnement \og defenumerate \fg{} \\
+\hline
+\multirow{3}{*}{thm} & \multirow{2}{*}{title} & bgcolor & Fond des titres des théorèmes\\
+\cline{3-4}
+ &  & txtcolor & Texte des titres des théorèmes\\
+ \cline{2-4}
+ & body & txtcolor & Texte du corps des théorèmes\\
+\hline
+\multirow{4}{*}{demo} & \multirow{2}{*}{title} & bgcolor & Fond des titres des démonstrations\\
+\cline{3-4}
+ &  & txtcolor & Texte des titres des démonstrations\\
+ \cline{2-4}
+ &  \multirow{2}{*}{body} & txtcolor & Texte du corps des démonstrations\\
+ \cline{3-4}
+  &   & bgcolor & Fond du corps des démonstrations\\
+\hline
+\multirow{3}{*}{prop} & \multirow{2}{*}{title} & bgcolor & Fond des titres des propriétés\\
+\cline{3-4}
+ &  & txtcolor & Texte des titres des propriétés\\
+ \cline{2-4}
+ & body & txtcolor & Texte du corps des propriétés\\
+\hline
+\multirow{3}{*}{lemme} & \multirow{2}{*}{title} & bgcolor & Fond des titres des lemmes\\
+\cline{3-4}
+ &  & txtcolor & Texte des titres des lemmes\\
+ \cline{2-4}
+ & body & txtcolor & Texte du corps des lemmes\\
+\hline
+\multirow{3}{*}{cor} & \multirow{2}{*}{title} & bgcolor & Fond des titres des corollaires\\
+\cline{3-4}
+ &  & txtcolor & Texte des titres des corollaires\\
+ \cline{2-4}
+ & body & txtcolor & Texte du corps des corollaires\\
+\hline
+\multirow{3}{*}{exemple} & \multirow{2}{*}{title} & bgcolor & Fond des titres des exemples\\
+\cline{3-4}
+ &  & txtcolor & Texte des titres des exemples\\
+ \cline{2-4}
+ & body & txtcolor & Texte du corps des exemples\\
+\hline
+\multirow{3}{*}{exo} & title & \multirow{2}{*}{txtcolor} & Titre des exercices\\
+\cline{2-2}\cline{4-4}
+ & body &  & Texte du corps des exercices\\
+ \cline{2-4}
+ & rule & color & Trait vertical à gauche du texte\\
+\hline
+\multirow{2}{*}{rem} & title & \multirow{2}{*}{txtcolor} & Titre des remarques\\
+\cline{2-2}\cline{4-4}
+ & body &  & Texte du corps des remarques\\
+\hline
+memento & title & txtcolor & Titre des \og À retenir \fg{} \\
+\hline
+attention & title & txtcolor & Titre des \og Attention \fg{} \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\begin{attention}
+Pour les environnements \og À retenir \fg{} et \og Attention \fg, il y a des pictogrammes (au format PNG). Donc si vous souhaitez changer la couleur du titre (et donc du trait vertical), peut-être qu'il vous faudra changer manuellement la couleur de ces images.
+
+Elles sont stockées dans le répertoire où est \texttt{teach.sty}, sous les noms \og attention\_img.png \fg{} et \og memento.png \fg{} et leurs dimensions sont $100\times100$ pixels.
+\end{attention}
+
+
+\subsection{Un exemple}
+
+Je vais ici redéfinir les couleurs de l'environnement \og prop \fg{}  :
+
+\begin{lstlisting}
+\redefinecolor{prop}{title}{bgcolor}{cyan}
+\redefinecolor{prop}{body}{txtcolor}{cyan!50!black}
+\begin{prop}
+Essai.
+\end{prop}
+\end{lstlisting}
+
+\redefinecolor{prop}{title}{bgcolor}{cyan}
+\redefinecolor{prop}{body}{txtcolor}{cyan!50!black}
+\begin{prop}
+Essai.
+\end{prop}
+
+
+\subsection{Les pictogrammes des environnements \og attention \fg{} et \og memento \fg{} }
+
+Si vous souhaitez changer ces images, vous pouvez les remplacer par une image de mêmes dimensions enregistrée dans le répertoire courant de votre fichiers sources.
+
+Vous pouvez donc créer vous-même deux images nommées \og attention\_img.png \fg{}  et \og memento.png \fg, de dimensions $100\times100$ pixels, que vous sauvegardez là où vous avez enregistré votre fichier \texttt{.tex} source.
+
+\subsection{Une astuce}
+
+Si vous souhaitez mettre tout un environnement dans une boîte colorée, utilisez par exemple l'astuce suivante :
+
+\begin{lstlisting}
+\newsavebox{\maboiteattention}
+\newenvironment{monattention}{
+\begin{lrbox}{\maboiteattention}
+\begin{minipage}{\dimexpr\linewidth-1mm}
+\begin{attention}}{
+\end{attention}
+\end{minipage}
+\end{lrbox}
+\fcolorbox{red!20}{red!20}{\usebox{\maboiteattention}}}
+\begin{monattention}
+Ceci est une boîte personnalisée.
+\end{monattention}
+\end{lstlisting}
+
+Ce dernier code donne : 
+
+\medskip
+
+\newsavebox{\maboiteattention}
+\newenvironment{monattention}
+{
+\begin{lrbox}{\maboiteattention}
+\begin{minipage}{\dimexpr\linewidth-1mm}
+\begin{attention}
+}
+{
+\end{attention}
+\end{minipage}
+\end{lrbox}
+\fcolorbox{red!20}{red!20}{\usebox{\maboiteattention}}
+}
+\begin{monattention}
+Ceci est une boîte personnalisée.
+\end{monattention}
+
+%----------------------------------------------------------------------------------------
+
+\chapter{Les devoirs}
+
+Le package \texttt{teach.sty} permet aussi de rédiger des devoirs.
+
+Cette section est sans doute à compléter en fonctions des divers besoins que vous me rapporterez.
+
+\section{Préambule}
+
+Comme l'extension a besoin de la classe \textit{book}, il faut avoir un préambule comme celui-ci :
+
+\medskip
+
+\begin{lstlisting}
+\documentclass[french]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage[T1]{fontenc}
+\usepackage{teach}
+\usepackage{nopageno} % permet d'éliminer le numéro de page si besoin
+\begin{document}
+...
+\end{document}
+\end{lstlisting}
+
+\section{Déclaration du devoir}
+
+\subsection{L'environnement \og devoir \fg{}}
+
+\begin{lstlisting}
+\begin{devoir}{<numéro du devoir>}{<date>}{<durée>}
+...
+\end{devoir}
+\end{lstlisting}
+
+Cette syntaxe permet d'écrire le titre et de construire automatiquement la table des compétences en fin de devoir.
+
+\subsection{La commande \textbackslash titredevoir\{num\}\{date\}\{durée\}}
+
+Au début de l'appel de cet environnement, la commande :
+
+\begin{lstlisting}
+\titredevoir{<num>}{<date>}{<durée>}
+\end{lstlisting}
+
+est appelée (qui affiche le titre).
+
+Cette commande peut être appelée en dehors de l'environnement \og devoir \fg.
+
+\subsection{La commande \textbackslash tableofcompetences}
+
+En fin d'environnement, la commande :
+
+\begin{lstlisting}
+\tableofcompetences
+\end{lstlisting}
+
+est appelée : elle affiche donc la table des compétences si des compétences ont été informées auparavant.
+
+Cette commande peut être appelée même en dehors de l'environnement \og devoir \fg.
+
+\section{Les exercices}
+
+Actuellement, l'environnement \og exo \fg{} dont on a parlé précédemment reste valide. 
+
+\begin{lstlisting}
+\begin{exo}[<titre ou barème éventuel>]
+...
+\end{exo}
+\end{lstlisting}
+
+\section{Compétences}
+
+Afin de faciliter le travail des enseignants, la commande :
+
+\begin{lstlisting}
+\competence{libellé}{barème}
+\end{lstlisting}
+
+est disponible. Elle n'affiche rien mais stocke les informations pour les afficher en fin de devoir (voir exemple page suivante).
+
+\newpage
+
+\section{Exemple}
+
+\begin{lstlisting}
+\begin{devoir}{1}{\today}{1 heure}
+\begin{exo}[3 points]
+L'unité est le centimètre.
+\begin{enumerate}
+\item Soit $ABC$ un triangle tel que $AB = 3$, $AC=4$ et $BC=5$.
+
+$ABC$ est-il un triangle rectangle ? Justifiez votre réponse.
+\competence{Utiliser la réciproque du théorème de Pythagore}{0,75}
+\competence{Calculer les carrés des longueurs d'un triangle}{0,25}
+
+\item Soit $EFG$ un triangle rectangle en $F$ tel que $EF=7$ et $FG=5$.
+
+Donnez une valeur approchée au dixième de $EG$.
+\competence{Utiliser le théorème de Pythagore}{0,75}
+\competence{Donner la valeur approchée d'une racine carrée}{0,25}
+
+\item Soit le triangle $IJK$ tel que $IJ=8$, $JK=7$ et $KI=9$.
+
+Le triangle $IJK$ est-il un triangle rectangle ? Justifiez.
+\competence{Utiliser la contraposée du théorème de Pythagore}{0,75}
+\competence{Savoir rédiger la contraposée du théorème de Pythagore}{0,25}
+\end{enumerate}
+\end{exo}
+\end{devoir}
+\end{lstlisting}
+
+\enlargethispage*{2em}
+\begin{devoir}{1}{\today}{1 heure}
+\begin{exo}[3 points]
+L'unité est le centimètre.
+\begin{enumerate}
+\item Soit $ABC$ un triangle tel que $AB = 3$, $AC=4$ et $BC=5$.
+
+$ABC$ est-il un triangle rectangle ? Justifiez votre réponse.
+\competence{Utiliser la réciproque du théorème de Pythagore}{0,75}
+\competence{Calculer les carrés des longueurs d'un triangle}{0,25}
+
+\item Soit $EFG$ un triangle rectangle en $F$ tel que $EF=7$ et $FG=5$.
+
+Donnez une valeur approchée au dixième de $EG$.
+\competence{Utiliser le théorème de Pythagore}{0,75}
+\competence{Donner la valeur approchée d'une racine carrée}{0,25}
+
+\item Soit le triangle $IJK$ tel que $IJ=8$, $JK=7$ et $KI=9$.
+
+Le triangle $IJK$ est-il un triangle rectangle ? Justifiez.
+\competence{Utiliser la contraposée du théorème de Pythagore}{0,75}
+\competence{Savoir rédiger la contraposée du théorème de Pythagore}{0,25}
+\end{enumerate}
+\end{exo}
+\end{devoir}
+\end{document}

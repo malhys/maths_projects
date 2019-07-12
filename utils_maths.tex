@@ -38,6 +38,7 @@
 
 \usepackage{titlesec}
 \usepackage[titletoc,toc,title]{appendix}
+\usepackage{float}
 
 %-------------------------------------------------------------------------------
 
@@ -175,5 +176,11 @@
 \newcommand{\mykw}[1]{\textcolor{red}{\underline{\textbf{#1}}}}
 
 %Exercices
-\newcommand{\exo}[2]{exercice #1 page #2}
-\newcommand{\Exo}[2]{Exercice #1 page #2}
+%\newcommand{\exo}[2]{exercice #1 page #2}
+%\newcommand{\Exo}[2]{Exercice #1 page #2}
+
+
+
+\floatstyle{ruled}
+\newfloat{act}{!ht}{lex}
+\floatname{act}{Activité}
