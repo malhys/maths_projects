@@ -1,0 +1,259 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+\lhead{CH1 : Enchainement d'opérations}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+\chap[num=1, color=red]{Enchainement d'opérations}{Olivier FINOT, \today }
+
+\input{./obj}
+
+\section{Priorités des opérations}
+
+\begin{myact}{1 Découvrir les priorités des opérations}
+
+	Activité 1 page 38
+\end{myact}
+
+\begin{myactrep}{1 Découvrir les priorités des opérations}
+	
+	\begin{enumerate}
+		\item Tom a fait les calculs dans l'ordre ($8 + 2 = 10$, $10 \times 3 = 30$), et Alice a commencé par la multiplication ($2 \times 3 = 6$, $8 + 6 = 14$).
+		
+		\item Une calculatrice scientifique donne le résultat 14, c'est donc Alice qui a raison.
+		
+		\item On a :
+		
+		\begin{multicols}{4}
+			\begin{itemize}
+				\item $A = 22 $;
+				\item $B = 13 $;
+				\item $C = 22 $;
+				\item $D = 22 $;
+				\item $E = 25 $;
+				\item $F = 14 $;
+				\item $G = 20 $;
+				\item $H = 9 $;
+				\item $I = 12 $;
+				\item $J = 21 $;
+				\item $K = 136 $;
+				\item $L = 4 $.
+			\end{itemize}
+		\end{multicols}
+	
+		\item 
+		
+		\item Pour calculer une expression qui contient plusieurs opérations, on calcule les multiplications et les divisions avant les additions et les soustractions.
+	\end{enumerate}
+\end{myactrep}
+
+\begin{myprops}
+	\begin{itemize}
+		
+		\item Dans une expression numérique sans parenthèses, on effectue :
+			\begin{enumerate}
+				\item D'abord les multiplications et les divisions, de gauche à droite;
+				\item Puis les additions et les soustractions, également de gauche à droite.
+			\end{enumerate}		
+		
+		\item On dit que la multiplication et la division sont \kw{prioritaires} sur l'addition et la soustraction. 
+		
+		\item Dans une expression sans parenthèses qui contient uniquement des additions ou uniquement des multiplications, on effectue les calculs dans l'ordre que l'on veut. L'addition et la multiplication sont \kw{commutatives}.
+		
+	\end{itemize}
+\end{myprops}
+
+\begin{myexs}
+	\begin{itemize}
+		\item Je calcule l'expression $A= 20 - 2 \times 3 + 12 \div 6$
+		
+		\vspace*{-0.5cm}
+		
+		\begin{eqnarray*}
+		 A &=& 20 - 2 \times 3 + 12 \div 6 \\
+		 A &=& 20 - 6 + 12 \div 6 \text{ (je commence par la multiplication) }\\
+		 A &=& 20 - 6 + 2 \text{ (ensuite la division)} \\
+		 A &=& 14 + 2 \text{ (puis le reste des opérations de gauche à droite)}\\
+		 A &=& 16
+		\end{eqnarray*}
+	
+		\item Je calcule l'expression $B= 12 + 3 +8$ de trois façons différentes :
+		
+		\vspace*{-0.5cm}
+		\begin{multicols}{3}
+			\begin{eqnarray*}
+				B &=& \kw{12 + 3} + 8 \\
+				B &=& 15 + 8 \\
+				B &=& 23
+			\end{eqnarray*}
+		
+			\begin{eqnarray*}
+				B &=& 12 + \kw{3 + 8} \\
+				B &=& 12 + 11 \\
+				B &=& 23
+			\end{eqnarray*}
+		
+			\begin{eqnarray*}
+				B &=& \kw{12 + 8} + 3 \\
+				B &=& 20 + 3 \\
+				B &=& 23
+			\end{eqnarray*}
+		\end{multicols}
+	
+	\end{itemize}
+\end{myexs}
+
+\begin{myexos}
+	\begin{itemize}
+		\item \exo{1}{42} : Calcul mental
+		\item Exercices 2 - 5 page 42 : Calcul d'expressions diverses
+		\item Exercices 9-10 page 43 : Expressions à compléter
+		\item \Exo{11}{43} : traduire un problème en expression et la calculer
+		\item \exo{12}{43} : première approche calcul littéral
+		\item \exo{15}{43} : problème
+	\end{itemize}
+\end{myexos}
+
+
+\section{Calculer une expression}
+
+
+\begin{myact}{Expression avec des parenthèses}
+	(Activité au tableau)
+	
+	\begin{enumerate}
+		\item Calculer les expression suivantes sans calculatrice
+		
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item $(10 - 2)  \times 2$
+				\item $ 10 - (2 \times 2 )$
+				\item $ (3 -2) \times (3 + 2)$
+				\item $ 3 - 2 \times (3 + 2)$
+			\end{itemize}
+		\end{multicols}
+	
+		\item En utilisant uniquement 4 fois le chiffre 4 des opérations $(+, -, \times , \div)$ et des parenthèses :
+			\begin{enumerate}
+				\item trouver 0;
+				\item trouver tous les nombres entiers de 0 à 9 inclus;
+				\item obtenir 0 du plus grand nombre de façons possibles;
+				\item trouver le plus possible de nombres entiers inférieurs à 100.
+			\end{enumerate}
+	\end{enumerate}
+\end{myact}
+
+%\begin{myactrep}
+%	\begin{enumerate}
+%		\item 
+%			\begin{enumerate}
+%				\item On a $4 + 4 + 4 - 4 = 8$.
+%				
+%				\item 
+%			\end{enumerate}
+%	\end{enumerate}
+%\end{myactrep}
+
+\begin{myprop}
+	\begin{itemize}
+		\item Dans une expression numérique qui contient des parenthèses, on calcule :
+		\begin{enumerate}
+			\item d'abord les calculs entre parenthèses;
+			\item puis on calcule l'expression sans parenthèses obtenue
+		\end{enumerate}
+	
+		\item Si l'expression contient des parenthèses imbriquées, on commence par celles qui sont le plus à l'intérieur.
+	\end{itemize}
+	
+	
+\end{myprop}
+
+\begin{myex}
+	Je calcule l'expression $C = (3 \times (7 - 3))  + 1$ :
+	
+	\vspace*{-0.5cm}
+	
+	\begin{eqnarray*}
+		C & = & (3 \times (7-3))  + 1 \text{ (on commence par la parenthèse intérieure)} \\
+		C & = & (3 \times 4)+ 1 \text{ (puis l'autre)} \\
+		C & = & 12  + 1 \text{ (enfin on calcule le reste de l'expression)}\\
+		C & = & 13
+	\end{eqnarray*}
+\end{myex}
+
+\begin{myexos}
+	\begin{itemize}
+		\item \Exo{16}{44} : Calcul mental
+		\item Exercices 17, 19 page 44 : Calcul d'expressions diverses
+		\item \Exo{16}{44} : Placer des parenthèses pour obtenir le bon résultat  
+		\item \Exo{18}{44} : faire le lien entre plusieurs écritures d'une même expression 
+		\item \Exo{21}{45} : passer d'une situation à une expression numérique
+		\item \Exo{23}{45} : Le compte est bon
+		\item \Exo{26}{45} : problème
+		\item \Exo{27}{45} : problème
+	\end{itemize}
+\end{myexos}
+
+\section{Vocabulaire}
+
+\begin{mydefs}
+	\begin{itemize}
+		\item Le résultat d'une \kw{addition} est une \kw{somme}, les nombres utilisés sont des \kw{termes}.
+		
+		\item Une \kw{différence} est le résultat de la \kw{soustraction} de deux \kw{termes}.
+		
+		\item Un \kw{produit} est le résultat de la \kw{multiplication} de deux \kw{facteurs}.
+		
+		\item Le résultat d'une \kw{division} est un \kw{quotient}.
+	\end{itemize}
+	
+\end{mydefs}
+	
+\begin{myexs}
+	\begin{itemize}
+		\item L'expression $5 + 3 \times 4$ est une somme, car la dernière opération effectuées est une addition.
+		
+		\item L'expression $(2 + 3 ) \times 4$ est un produit, car la dernière opération effectuées est une multiplication.
+		
+		\item $ 3 \times (4 + 1)$ est le produit de 3 par la somme de 4 et 1.
+		
+		\item $ 3 \times 4 + 1$ est la somme du produit de 1 par 3 et  4.
+		
+		\item $\dfrac{19 - 3}{2 \times 4}$ est le quotient de la différence entre  19 et 3 par le produit de 2 par 4.
+	\end{itemize}
+\end{myexs}
+
+\begin{myexos}
+	\begin{itemize}
+		\item Exercices 28-30 page 46 : identifier un type d'expression.
+		\item \Exo{31}{46} : Description d'une expression.
+		\item \Exo{32}{46} : Lien entre description et expression.
+		\item \Exo{33}{46} : Donner l'expression décrite.
+		\item Exercices 34 - 35 page 47 : Arbre à calcul <-> expression
+		\item \Exo{36}{47} : Vrai ou faux
+		\item \Exo{37}{47} : traduire la description d'un calcul en expression (Intéressant pour faire le lien avec algo).
+	\end{itemize}
+\end{myexos}
+\end{document}
