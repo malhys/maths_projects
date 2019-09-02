@@ -1,0 +1,173 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{Malmoe}
+%\usecolortheme{beaver}
+\usecolortheme{rose}
+
+\input{../../../../utils_maths_beamer}
+
+
+%\usepackage{../../../../pas-math}
+%\usepackage{../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+\newcommand{\myitem}{\item[\textbullet]}
+
+\graphicspath{{../img/}}
+
+\title{Chapitre 1 : Enchainement d'opérations}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+%
+%\AtBeginSection[]
+%{
+%	\begin{frame}
+%		\frametitle{}
+%		\tableofcontents[currentsection, hideallsubsections]
+%	\end{frame} 
+%
+%}
+%
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+	
+
+
+
+\section{Priorités des opérations}
+
+
+
+
+\begin{frame}{}
+
+	\begin{block}{Activité 1 Découvrir les priorités des opérations (1 p 38)}
+		\begin{enumerate}\pause
+			\item Tom a fait les calculs dans l'ordre ($8 + 2 = 10$, $10 \times 3 = 30$), et Alice a commencé par la multiplication ($2 \times 3 = 6$, $8 + 6 = 14$).\pause
+			
+			\item Une calculatrice scientifique donne le résultat 14, c'est donc Alice qui a raison.\pause
+			
+			\item On a :\pause
+			\begin{columns}
+				\begin{column}{0.25\textwidth}
+					\begin{itemize}
+						\myitem $A = 22 $;\pause
+						\myitem $B = 13 $;\pause
+						\myitem $C = 22 $;\pause
+					\end{itemize}
+				\end{column}
+				\begin{column}{0.25\textwidth}
+					\begin{itemize}
+						\myitem $D = 22 $;\pause
+						\myitem $E = 25 $;\pause
+						\myitem $F = 14 $;\pause
+					\end{itemize}
+				\end{column}
+				\begin{column}{0.25\textwidth}
+					\begin{itemize}
+						\myitem $G = 20 $;\pause
+						\myitem $H = 9 $;\pause
+						\myitem $I = 12 $;\pause
+					\end{itemize}
+				\end{column}
+				\begin{column}{0.25\textwidth}
+					\begin{itemize}
+						\myitem $J = 21 $;\pause
+						\myitem $K = 136 $;\pause
+						\myitem $L = 4 $.
+					\end{itemize}
+				\end{column}
+			\end{columns}
+			
+			\item Pour calculer une expression qui contient plusieurs opérations, on calcule les multiplications et les divisions avant les additions et les soustractions.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{}
+	\begin{alertblock}{Propriétés}
+		\begin{itemize}\pause
+			
+			\myitem Dans une expression numérique sans parenthèses, on effectue :
+			\begin{enumerate}
+				\item D'abord les multiplications et les divisions, de gauche à droite;
+				\item Puis les additions et les soustractions, également de gauche à droite.
+			\end{enumerate}\pause
+			
+			\myitem On dit que la multiplication et la division sont \kword{prioritaires} sur l'addition et la soustraction. \pause
+			
+			\myitem Dans une expression sans parenthèses qui contient uniquement des additions ou uniquement des multiplications, on effectue les calculs dans l'ordre que l'on veut. L'addition et la multiplication sont \kword{commutatives}.\pause
+			
+		\end{itemize}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\begin{exampleblock}{Exemples}
+		\begin{itemize}
+			\myitem Je calcule l'expression $A= 20 - 2 \times 3 + 12 \div 6$
+			
+			\vspace*{-0.5cm}
+			
+			\begin{eqnarray*}
+				A &=& 20 - 2 \times 3 + 12 \div 6 \\
+				A &=& 20 - 6 + 12 \div 6 \text{ (je commence par la multiplication) }\\
+				A &=& 20 - 6 + 2 \text{ (ensuite la division)} \\
+				A &=& 14 + 2 \text{ (puis le reste des opérations de gauche à droite)}\\
+				A &=& 16
+			\end{eqnarray*}
+			
+			\myitem Je calcule l'expression $B= 12 + 3 +8$ de trois façons différentes :
+			
+			\vspace*{-0.5cm}
+			\begin{columns}
+				\begin{column}{0.33\textwidth}
+					\begin{eqnarray*}
+						B &=& \underline{12 + 3} + 8 \\
+						B &=& 15 + 8 \\
+						B &=& 23
+					\end{eqnarray*}
+				\end{column}
+				
+				\begin{column}{0.33\textwidth}
+					\begin{eqnarray*}
+						B &=& 12 + \underline{3 + 8} \\
+						B &=& 12 + 11 \\
+						B &=& 23
+					\end{eqnarray*}
+				\end{column}
+				
+				
+				\begin{column}{0.33\textwidth}
+					\begin{eqnarray*}
+						B &=& \underline{12 + 8} + 3 \\
+						B &=& 20 + 3 \\
+						B &=& 23
+					\end{eqnarray*}	
+				\end{column}
+				
+			\end{columns}
+			
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+\end{document}
