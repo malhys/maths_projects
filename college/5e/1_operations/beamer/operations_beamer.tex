@@ -1,15 +1,15 @@
 \documentclass[xcolor={dvipsnames}]{beamer}
 %\usepackage[utf8]{inputenc}
-%\usetheme{Madrid}
-\usetheme{Malmoe}
-%\usecolortheme{beaver}
-\usecolortheme{rose}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+\usecolortheme{beaver}
+%\usecolortheme{rose}
 
 \input{../../../../utils_maths_beamer}
 
 
-%\usepackage{../../../../pas-math}
-%\usepackage{../../../moncours_beamer}
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
 
 \usepackage{amssymb,amsmath}
 
@@ -22,14 +22,14 @@
 %\author{O. FINOT}\institute{Collège S$^t$ Bernard}
 
 %
-%\AtBeginSection[]
-%{
-%	\begin{frame}
-%		\frametitle{}
-%		\tableofcontents[currentsection, hideallsubsections]
-%	\end{frame} 
-%
-%}
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
 %
 %
 %\AtBeginSubsection[]
@@ -124,19 +124,19 @@
 \begin{frame}
 	\begin{exampleblock}{Exemples}
 		\begin{itemize}
-			\myitem Je calcule l'expression $A= 20 - 2 \times 3 + 12 \div 6$
+			\myitem Je calcule l'expression $A= 20 - 2 \times 3 + 12 \div 6$ :\pause
 			
 			\vspace*{-0.5cm}
 			
 			\begin{eqnarray*}
-				A &=& 20 - 2 \times 3 + 12 \div 6 \\
-				A &=& 20 - 6 + 12 \div 6 \text{ (je commence par la multiplication) }\\
-				A &=& 20 - 6 + 2 \text{ (ensuite la division)} \\
-				A &=& 14 + 2 \text{ (puis le reste des opérations de gauche à droite)}\\
-				A &=& 16
+				A &=& 20 - 2 \times 3 + 12 \div 6 \\ \pause
+				A &=& 20 - 6 + 12 \div 6 \text{ (je commence par la multiplication) }\\ \pause
+				A &=& 20 - 6 + 2 \text{ (ensuite la division)} \\ \pause
+				A &=& 14 + 2 \text{ (puis le reste des opérations de gauche à droite)}\\ \pause
+				A &=& 16 \pause
 			\end{eqnarray*}
 			
-			\myitem Je calcule l'expression $B= 12 + 3 +8$ de trois façons différentes :
+			\myitem Je calcule l'expression $B= 12 + 3 +8$ de trois façons différentes : \pause
 			
 			\vspace*{-0.5cm}
 			\begin{columns}
@@ -146,7 +146,7 @@
 						B &=& 15 + 8 \\
 						B &=& 23
 					\end{eqnarray*}
-				\end{column}
+				\end{column}\pause
 				
 				\begin{column}{0.33\textwidth}
 					\begin{eqnarray*}
@@ -154,7 +154,7 @@
 						B &=& 12 + 11 \\
 						B &=& 23
 					\end{eqnarray*}
-				\end{column}
+				\end{column}\pause
 				
 				
 				\begin{column}{0.33\textwidth}
@@ -170,4 +170,6 @@
 		\end{itemize}
 	\end{exampleblock}
 \end{frame}
+
+\section{Calculer une expression}
 \end{document}
