@@ -1,0 +1,9 @@
+Questions évalutaion disgnostique :
+
+1) exemple droite
+2) notation droite
+3) exemple médiatrice (vs bissectrice, médiane)
+4) Notaion distances égales
+5) Symétrique d'un point en dehors de l'axe
+6) Symetrique d'un point sur l'axe
+7) Axe de symétrie d'une figure

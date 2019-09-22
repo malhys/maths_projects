@@ -1,0 +1,188 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+\graphicspath{{./img/}}
+
+\lhead{Seq 2: Symétries}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+
+
+
+\chap[num=2, color=red]{Symétries}{Olivier FINOT, \today }
+
+\input{./obj}
+
+\section{Symétrie axiale}
+
+
+\begin{mydef}
+	Deux figures sont \kw{symétriques par rapport à une droite $(d)$} si elles se superposent quand on plie le long de cette droite. 
+	La droite $(d)$ est appelée \kw{axe de symétrie}.
+%	\begin{itemize}
+%		
+%		\item
+%		
+%	\end{itemize}
+\end{mydef}
+
+
+
+
+\begin{myex}
+	\begin{center}
+		\includegraphics[scale=.8]{fig1}
+	\end{center}	
+\end{myex}
+
+\begin{multicols}{2}
+	
+	\begin{center}
+		\includegraphics*[scale=0.25]{def}
+	\end{center}
+	
+	\begin{myprops}
+		Soit $(d)$ une droite :
+		\begin{itemize}
+			\item Si un point $A$ n'appartient pas à la droite $(d)$, alors son symétrique par rapport à la droite $(d)$ est le point $A'$ tel que \kw{$(d)$ est la médiatrice du segment $[AA']$}.
+			\item Si un point $B$ appartient à la droite $(d)$, alors son symétrique par rapport à la droite $(d)$ est lui même.
+		\end{itemize}
+	\end{myprops}
+	
+	
+\end{multicols}
+
+
+
+\section{Symétrie centrale}
+
+
+
+
+\begin{mydef}
+
+	Deux figures sont \kw{symétriques par rapport à un point $O$} si elles se superposent lorsqu'on effectue un demi-tour autour du point $O$. Le point $O$ est appelé \kw{centre de symétrie}.
+	
+\end{mydef}
+
+\begin{myex}
+	\begin{center}
+		\includegraphics[scale=.75]{fig2}
+	\end{center}
+\end{myex}
+
+
+\section{Propriétés de la symétrie}
+
+\begin{myprops}
+	\begin{itemize}
+		\item Le symétrique d'une droite par rapport à une droite ou un point est une autre droite. La symétrie \kw{conserve l'alignement}.
+		\item Si deux droites sont \kw{symétriques par rapport à un point} alors elles sont \kw{parallèles}.
+	\end{itemize}
+\end{myprops}
+
+\begin{myexs}
+	\begin{multicols}{2}
+		\begin{center}
+			\includegraphics[scale=0.1]{sym_droites1}
+		\end{center}
+
+		\begin{itemize}
+			\item Les points $A$, $B$ et $C$ sont alignés, donc $A'$, $B'$ et $C'$ leur symétriques par rapport à la droite $(e)$ sont aussi alignés.
+		\end{itemize}	
+		
+		\begin{center}
+			\includegraphics[scale=0.2]{sym_droites2}
+		\end{center}
+	
+		\begin{itemize}
+			\item Les points $A$, $B$ et $C$ sont alignés, donc $A'$, $B'$ et $C'$ leur symétriques par rapport à la droite $(e)$ sont aussi alignés.
+			\item La droite $(AB)$ est parallèle à la droite $(A'B')$.
+		\end{itemize}
+	\end{multicols}
+\end{myexs}
+
+\begin{myprop}
+	Le symétrique d'un segment par rapport à une droite ou un point est un segment de \kw{même longueur}. 
+\end{myprop}
+
+\begin{myex}
+	\begin{center}
+		\includegraphics[scale=0.2]{sym_seg}
+	\end{center}
+
+Le segment $[A'B']$ est le symétrique du segment $[AB]$ par rapport à la droite $(d)$ et $[A'_1B'_1]$ le symétrique de $[AB]$ par rapport au point $O$. 
+Ils ont tous la même longueur
+
+	
+\end{myex}
+
+\begin{myprop}
+	Le symétrique d'une figure par rapport à une droite ou un point est une figure de même forme. La symétrie \kw{conserve les angles, les périmètres et les aires}.
+\end{myprop}
+
+\begin{myex}
+	\begin{center}
+		\includegraphics[scale=0.2]{sym_figures}
+	\end{center}
+	
+	La figure $F2$ est le symétrique de $F1$ par rapport à la droite $(d)$; $F3$ est le symétrique de $F1$ par rapport au point O.
+	Elles ont le même périmètre, la même aire et leurs angles ont la même mesure.
+\end{myex}
+
+
+
+
+\section{Identifier un axe ou un centre de symétrie}
+
+	\begin{mydef}
+		Si une figure et son symétrique par rapport à une droite $(d)$ sont confondus, alors $(d)$ est une axe de symétrie de la figure.
+	\end{mydef}
+
+	\begin{myexs}
+		\begin{center}
+			\includegraphics[scale=0.7]{axes}
+		\end{center}
+	\end{myexs}
+
+	\begin{mydef}
+		Si une figure et son symétrique par rapport à un point $O$ sont confondus, alors $O$ est un centre de symétrie de la figure.
+	\end{mydef}
+
+	\begin{myexs}
+		\begin{center}
+			\includegraphics[scale=0.6]{centres}
+		\end{center}
+	\end{myexs}
+
+
+	\begin{myapp}
+		Dire si les panneaux suivants ont un axe et / ou un centre de symétrie.
+		
+		\begin{center}
+			\includegraphics[scale=0.43]{app}
+		\end{center}
+	\end{myapp}
+\end{document}
