@@ -1,9 +1,32 @@
 Questions évalutaion disgnostique :
 
-1) exemple droite
-2) notation droite
-3) exemple médiatrice (vs bissectrice, médiane)
-4) Notaion distances égales
-5) Symétrique d'un point en dehors de l'axe
-6) Symetrique d'un point sur l'axe
-7) Axe de symétrie d'une figure
+1) notation droite
+2) exemple médiatrice (vs bissectrice, médiane)
+3) Symétrique d'un point en dehors de l'axe
+4) Symetrique d'un point sur l'axe
+5) Axe de symétrie d'une figure
+
+
+1) Parmi ces notations, laquelle correspond à la droite qui passe par deux points A et B :
+- (AB)  -[AB] -{AB} -(AB] -[AB)
+
+Sur la figure ci-dessus 
+2) Que dire de la droite d) par rapport au segment [AB] :
+- ils sont perpendiculaires - ils sont parallèles  -elle sont confondues -elles sont séacantes
+
+3) Que dire de I par rapport au segment [AB] :
+-c'est le milieu -c'est le centre de grapvité -c'est un point quelconque -c'est l'orthocentre
+
+4) Comment s'appelle la droite (d) ?
+- la médiatrice de [AB] -la médiane de [AB] -la bissectrice de [AB] -la hauteur de [AB]
+
+
+3) Sur la figure ci dessus quel est la symétrique du point C par rapport à la droite tracée :
+- A -C -D -F
+
+4) Sur la même figure quel est le symétrique du pont E par rapport à la droite tracée :
+- A -C -D -F
+
+5) Parmi les cinq couples ci dessus lequel ou lesquels présente(nt) des figures symétriques par rapport à une droite
+
+-1 -2 -3 -4 -5
