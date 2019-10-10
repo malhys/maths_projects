@@ -1,10 +1,10 @@
 \documentclass[a4paper,11pt]{exam}
 %\printanswers % pour imprimer les réponses (corrigé)
-\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+ \noprintanswers % Pour ne pas imprimer les réponses (énoncé)
 \addpoints % Pour compter les points
 % \noaddpoints % pour ne pas compter les points
 %\qformat{\textbf{\thequestion ) } }
-%\qformat{\textbf{\thequestion )} (\thepoints) \\} % Pour définir le style des questions (facultatif)
+\qformat{\textbf{Question\ \thequestion}\quad(\thepoints)\hfill} % Pour définir le style des questions (facultatif)
 \usepackage{color} % définit une nouvelle couleur
 \shadedsolutions % définit le style des réponses
 % \framedsolutions % définit le style des réponses
@@ -14,7 +14,7 @@
 
 
 
-\input{../../../../monexam}
+\input{../../../../moninterro}
 
 
 %\usepackage{../../pas-math}
@@ -27,8 +27,8 @@
 
 %\usepackage{fullpage}
 \author{\ }
-\date{8 Octobre 2019}
-\title{$6^e C$ : DS num\'ero 1}
+\date{09 Octobre 2019}
+\title{Interrogation num\'ero 3}
 
 
 \begin{document}
@@ -38,11 +38,8 @@
 %	\fancyhf{}
 	%\rhead{Share\LaTeX}
 
-	\maketitle
-	
-\begin{center}
-	\textbf{Calculatrice interdite, le soin et la qualité de la rédaction seront pris en compte}
-\end{center}
+\maketitle
+
 
 \begin{small}
 	\begin{center}
@@ -50,40 +47,30 @@
 			\hline
 			\textbf{Compétence} & \textbf{MI} & \textbf{MF} & \textbf{MS} & \textbf{TBM} \\
 			\hline
-			\textbf{Représenter} (Différentes écritures d'un même nombre : fractions/décimaux. ) &  \ \ & \ \ & \ \ & \ \  \\
+			\textbf{Modéliser} (Comprendre et utiliser une simulation numérique ou géométrique. )&  \ \ & \ \ & \ \ & \ \  \\
 			\hline	
-			\textbf{Modéliser} (Résolution de problèmes de la vie courante.) & \ \ & \ \ &  \ \  & \ \ \\
-			\hline
 			%			 \textbf{Communiquer} (Expliquer sa démarche, son raisonnement ) &  \ \ & \ \ & \ \ & \ \  \\
 			%			\hline
 		\end{tabular}
 	\end{center}
-\end{small}	
-
-	
-	
-	
-
-%\newpage
-
-\input{./nombre}
-
-\input{./cadenas}
-
-\input{./ecrire}
-
-\input{./classement}
+\end{small}
 
 
+\section{(6 points)}
 
-\input{./verre}
+Tracer le symétrique de la figure par rapport à la droite $(d')$ et au point $O$.
 
-%\input{./droites}
+\begin{center}
+	\includegraphics[scale=0.65]{img/fig2}
+\end{center}
 
-\input{./daltons}
+\newpage 
+\section{(4 points)}
+
+Tracer le symétrique de la figure par rapport au point O.
+
+\begin{center}
+	\includegraphics[scale=0.85, angle=-90]{img/fig1}
+\end{center}
 \label{LastPage}
-
-%\section{Consommation électrique}
-%
-%Une consommation d'électricité se mesure en 
 \end{document}
