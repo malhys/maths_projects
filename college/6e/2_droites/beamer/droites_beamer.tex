@@ -1,0 +1,124 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+\usecolortheme{beaver}
+%\usecolortheme{rose}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+\newcommand{\myitem}{\item[\textbullet]}
+
+\graphicspath{{../img/}}
+
+\title{Séquence 2 : Droites, segments et codage}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+%
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+%
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+
+
+\section{Droites}
+
+
+
+
+\begin{frame}{}
+
+	\begin{mydef}
+		Une \kword{droite} est un objet géométrique formé de \kword{points alignés}. Une droite est illimitée des deux cotés.\pause
+	\end{mydef}
+	
+	\begin{myprops}
+		\begin{itemize}
+			\item Une droite qui passe par deux points $A$ et $B$, se note $(AB)$ ou $(BA)$;
+			\item Si un point $C$ appartient à la droite $(AB)$, on note $C \in (AB)$.
+			\item Si il n'appartient pas à la droite $(AB)$, on note $C \notin (AB)$.\pause
+		\end{itemize}
+	\end{myprops}
+	
+	\begin{myex}
+		Les points $M$, $R$ et $A$ sont alignés.
+		\begin{center}
+			\includegraphics[scale=0.15]{../img/droite1}
+		\end{center}
+		
+		\begin{itemize}
+			\item La droite $(d)$ passant par les points $M$ et $R$ se note 
+			\item Le point A appartient à la droite $(MR)$, on note :
+			\item Le point S n'appartient pas à la droite $(MR)$, on note :
+		\end{itemize}
+	\end{myex}
+\end{frame}
+
+\begin{frame}
+	\begin{mydef}
+		Une \kword{demi-droite} est une portion de droite limitée d'un seul côté par un point, son \kword{origine}.\pause
+	\end{mydef}
+	
+	\begin{myprop}
+		La demi-droite d'origine $A$ et passant par $B$ se note $[AB)$.\pause
+	\end{myprop}
+	
+	\begin{myex}
+		\begin{center}
+			\includegraphics[scale=0.55]{../img/demi-droite}
+		\end{center}
+		
+		La demi droite 
+	\end{myex}
+\end{frame}
+
+\begin{frame}
+	\begin{mydef}
+		Un \kword{segment} est une portion de droite limitée par deux points : ses \kword{extrémités}.
+	\end{mydef}
+	
+	
+	\begin{myprop}
+		Le segment d'extrémités $A$ et $B$ se note $[AB]$ ou $[BA]$.
+	\end{myprop}
+	
+	\begin{myex}
+		\begin{center}
+			\includegraphics[scale=0.55]{../img/segment}
+		\end{center}
+		
+		Le segment 
+	\end{myex}
+\end{frame}
+
+\end{document}
