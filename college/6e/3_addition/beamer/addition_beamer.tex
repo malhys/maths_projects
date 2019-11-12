@@ -1,0 +1,138 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+\usecolortheme{beaver}
+%\usecolortheme{rose}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+\newcommand{\myitem}{\item[\textbullet]}
+
+\graphicspath{{../img/}}
+
+\title[3 : Addition, soustraction, multiplication]{Séquence 3 : Addition, soustraction, multiplication}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+%
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+%
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+	
+
+\begin{frame}
+	\begin{block}{Objectifs}
+		\begin{itemize}
+			\item Savoir additionner, soustraire et multiplier des nombres;
+			\item Connaitre les propriétés de l’addition, la soustraction et la multiplication;
+			\item Calculer astucieusement;
+			\item Vérifier si un résultat semble correct avec un ordre de grandeur.
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\begin{block}{Compétences travaillées}
+		\begin{itemize}
+			\item \kw{Calculer (Ca1)} : Calculer avec des nombres décimaux et des fractions simples de manière exacte ou approchée, en utilisant des stratégies ou des techniques appropriées (mentalement, en ligne, ou en posant les opérations); 
+			\item \kw{Calculer (Ca2)} : Contrôler la vraisemblance de ses résultats ; 
+			%\item \kw{Calculer (Ca3)} :	Utiliser une calculatrice pour trouver ou vérifier un résultat		
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+
+\section{Additionner et soustraire}
+
+
+
+
+\begin{frame}
+	\begin{mydef}
+		
+		Le résultat d'une addition est une \kword{somme},\pause les nombres utilisés sont des \kword{termes}.\pause
+	\end{mydef}
+	
+	\begin{myex}
+		\begin{center}
+			\includegraphics<3>[scale=0.9]{somme2}
+			\includegraphics<4>[scale=0.9]{somme}
+		\end{center}
+	\end{myex}
+	
+\end{frame}
+
+\begin{frame}
+	\begin{mydef}
+		Une \kword{différence} est le résultat de la soustraction de deux \kword{termes}.\pause
+	\end{mydef}
+	
+	\begin{myex}
+		\begin{center}
+			\includegraphics<2>[scale=0.9]{difference2}
+			\includegraphics<3>[scale=0.9]{difference}
+		\end{center}
+	\end{myex}
+	
+\end{frame}
+
+\begin{frame}
+		\begin{myprop}
+		Dans une addition, \kword{l'ordre des termes n'a pas d'importance}.\pause
+	\end{myprop}
+	
+	\begin{myex}
+		\begin{itemize}
+			\item $12 + 5 + 8 = $ \pause $ 12 + 8 + 5  = $ \pause $ 25$\pause
+			\item $\num{3.5} + 5 + \num{6.5} + 2 = $ \pause $ \num{3.5} + \num{6.5} + 5 + 2 = $ \pause $ 17$
+		\end{itemize}
+	\end{myex}
+\end{frame}
+
+\begin{frame}
+	\begin{mymeth}
+		Pour avoir rapidement une idée du résultat attendu d'une addition ou d'une soustraction, on peut utiliser un \kword{ordre de grandeur}.\pause		
+	\end{mymeth}
+	
+	\begin{myex}
+		Je veux calculer la somme \num{48.7} + \num{97.584} : \pause
+		\begin{enumerate}
+			\item \num{48.7} est proche de \pause 50 \pause et \num{97.584} de \pause 100 \pause
+			\item 50 + 100 =  \pause 150 \pause
+			\item Donc cette somme est de l'ordre de 150 (ou voisine de 150).
+		\end{enumerate}
+	\end{myex}
+\end{frame}
+\end{document}
