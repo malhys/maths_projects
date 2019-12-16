@@ -1,0 +1,240 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+\usecolortheme{beaver}
+%\usecolortheme{rose}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+\newcommand{\myitem}{\item[\textbullet]}
+
+\graphicspath{{../img/}}
+
+\title{Séquence 2 : Droites, segments et codage}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+%
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+%
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+\begin{frame}{}
+	\input{../obj}
+\end{frame}
+
+\section{Droites}
+
+
+
+
+\begin{frame}{}
+
+	\begin{mydef}
+		Une \kword{droite} est un objet géométrique formé de \kword{points alignés}. Une droite est illimitée des deux cotés.\pause
+	\end{mydef}
+	
+	\begin{myprops}
+		\begin{itemize}
+			\item Une droite qui passe par deux points $A$ et $B$, se note $(AB)$ ou $(BA)$;
+			\item Si un point $C$ appartient à la droite $(AB)$, on note $C \in (AB)$.
+			\item Si il n'appartient pas à la droite $(AB)$, on note $C \notin (AB)$.\pause
+		\end{itemize}
+	\end{myprops}
+	
+	\begin{myex}
+		Les points $M$, $R$ et $A$ sont alignés.
+		\begin{center}
+			\includegraphics[scale=0.15]{../img/droite1}
+		\end{center}
+		
+		\begin{itemize}
+			\item La droite $(d)$ passant par les points $M$ et $R$ se note 
+			\item Le point A appartient à la droite $(MR)$, on note :
+			\item Le point S n'appartient pas à la droite $(MR)$, on note :
+		\end{itemize}
+	\end{myex}
+\end{frame}
+
+\begin{frame}
+	\begin{mydef}
+		Une \kword{demi-droite} est une portion de droite limitée d'un seul côté par un point, son \kword{origine}.\pause
+	\end{mydef}
+	
+	\begin{myprop}
+		La demi-droite d'origine $A$ et passant par $B$ se note $[AB)$.\pause
+	\end{myprop}
+	
+	\begin{myex}
+		\begin{center}
+			\includegraphics[scale=0.55]{../img/demi-droite}
+		\end{center}
+		
+		La demi droite 
+	\end{myex}
+\end{frame}
+
+\begin{frame}
+	\begin{mydef}
+		Un \kword{segment} est une portion de droite limitée par deux points : ses \kword{extrémités}.
+	\end{mydef}
+	
+	
+	\begin{myprop}
+		Le segment d'extrémités $A$ et $B$ se note $[AB]$ ou $[BA]$.
+	\end{myprop}
+	
+	\begin{myex}
+		\begin{center}
+			\includegraphics[scale=0.55]{../img/segment}
+		\end{center}
+		
+		Le segment 
+	\end{myex}
+\end{frame}
+
+\section{Longueurs et codages}
+
+
+\begin{frame}
+	\begin{mydef}
+		La mesure (distance entre ses deux extrémités) d'un segment est sa \kword{longueur}.
+	\end{mydef}
+	
+	\begin{myprop}
+		La longueur d'un segment $[AB]$, se note $AB$ ou $BA$. 
+	\end{myprop}
+	
+	\begin{myex}
+		
+		\begin{center}
+			\includegraphics[scale=0.6]{../img/lgr}
+		\end{center}
+		
+		La longueur du segment $[AB]$ est de \num{3.5} cm, on note
+	\end{myex}
+\end{frame}
+
+
+\begin{frame}
+	\begin{mydef}
+		Le \kword{milieu} d'un segment est le point qui appartient au segment \kword{et} qui est à égale distance de ses extrémités.
+	\end{mydef}
+	
+	\begin{myrem}
+		Des segments de même longueur sont codés de façon identique.
+	\end{myrem}
+	
+	\begin{myex}
+		\begin{center}
+			\includegraphics[scale=0.2]{../img/milieu}
+		\end{center}
+		
+		On a : $M \in [AB]$ et $AM = MB$, donc le point $M$ est le milieu du segment $[AB]$. On a ainsi $AM = AB \div 2$. 
+	\end{myex}
+\end{frame}
+
+\section{Sécantes, perpendiculaires et parallèles}
+
+\begin{frame}
+	\begin{mydef}
+		Deux droites sont \kw{sécantes} si elles n'ont qu'un seul point commun : leur \kw{point d'intersection}.
+	\end{mydef}
+
+
+	\begin{myex}
+		
+			Les droites $(d)$ et $(d')$ sont sécantes en \hspace*{1cm} qui est leur \hspace*{5cm}. \\
+			
+			\begin{center}
+				\includegraphics[scale=0.5]{../img/sec}
+			\end{center}
+		
+		
+	\end{myex}
+\end{frame}
+
+\begin{frame}
+	\begin{mydef}
+		Deux droites sont \kw{perpendiculaires} si elles se coupent en formant \kw{quatre angles droits}. Si deux droites $(d_1)$ et $(d_2)$ sont deux droites perpendiculaires, on note $(d_1) \bot (d_2)$.
+	\end{mydef}
+	
+	\begin{myex}
+		%\begin{multicols}{2}
+			Les droites $(d)$ et $(d')$ sont \hspace*{4cm} en $H$. $H$ est le \hspace*{8cm} à $(d')$.
+			
+			\begin{center}
+				\includegraphics[scale=0.6]{../img/perp}
+			\end{center}
+		%\end{multicols}
+		
+	\end{myex}
+\end{frame}
+
+\begin{frame}
+	\begin{mydef}
+		Deux droites qui ne sont pas sécantes sont \kw{parallèles}. Si deux droites $(d_3)$ et $(d_4)$ sont parallèles, on note $(d_1) // (d_2)$.
+	\end{mydef}
+	
+	\begin{myex}
+		
+			Les droites $(d)$ et $(d')$ sont \hspace*{5cm}. Même en les prolongeant à l'infini, elles ne se rencontreront jamais.
+			
+			\begin{center}
+				\includegraphics[scale=0.8]{../img/para1}
+			\end{center}
+		
+		
+	\end{myex}
+\end{frame}
+
+
+\begin{frame}
+	\begin{myprop}
+		\kw{Si} deux droites sont perpendiculaires à une même troisième droite, \kw{alors} ces deux droites sont parallèles.
+	\end{myprop}
+	
+	
+	\begin{myex}
+		%\begin{multicols}{2}
+			\kw{On sait que} $(d_1)$ et $(d_2)$ sont toutes deux perpendiculaires à $(D)$.\\
+			\kw{Donc} $(d_1)$ et $(d_2)$ sont parallèles.
+			
+			\begin{center}
+				\includegraphics[scale=0.6]{../img/para2}
+			\end{center}
+		%\end{multicols}
+		
+	\end{myex}
+\end{frame}
+\end{document}
