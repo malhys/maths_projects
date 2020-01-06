@@ -1,0 +1,112 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+\usecolortheme{beaver}
+%\usecolortheme{rose}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+\newcommand{\myitem}{\item[\textbullet]}
+
+\graphicspath{{../img/}}
+
+\title{Séquence 4 : Géométrie du triangle}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+%
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+%
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+	
+\begin{frame}
+	\input{../obj}
+\end{frame}
+
+\section{Inégalité triangulaire}
+
+
+\begin{frame}
+	\begin{myprop}
+		
+			Dans un triangle la longueur d'un coté est inférieure à la somme des longueurs des deux autres côtés.\pause
+			
+
+		
+	\end{myprop}
+	
+	\begin{block}{Méthode}
+		Pour vérifier qu'un \kword{triangle est constructible}, \pause on vérifie que la longueur du plus grand côté  est inférieure à la somme des deux autres.
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\begin{myexs}
+		
+		\begin{itemize}
+			\item Dans le triangle ABC ci-contre on a $AB < AC + CB.$
+				\begin{center}
+					\includegraphics[scale=0.25]{triangle1}\pause
+					
+					%\includegraphics[scale=0.2]{triangle2}
+				\end{center}
+			
+			\item 	Un triangle de cotés 8 cm, 5 cm et 6 cm est constructible (8 < 11).
+		\end{itemize}
+		
+		
+		
+	\end{myexs}
+\end{frame}
+
+\begin{frame}
+	\begin{myexs}
+		
+		\begin{itemize}
+			\item Le triangle $DEF$, tel que $DE = 7$ cm, $DF = 3$ cm et $FE = 4$ cm est plat, les points sont alignés ($4 + 3 = 7$).
+			\begin{center}
+				%\includegraphics[scale=0.25]{triangle1}\pause
+				
+				\includegraphics[scale=0.2]{triangle2}\pause
+			\end{center}
+			
+			\item 	Un triangle de coté 10 cm, 4 cm et 5 cm n'est pas constructible ($10 > 4 + 5$).
+		\end{itemize}
+		
+		
+		
+	\end{myexs}
+\end{frame}
+\end{document}
