@@ -173,7 +173,7 @@
 
 
 \newenvironment{mymethname}[1]{
-	\begin{pasbox}[style=meth ,degrade, name=#1, color=Blue]
+	\begin{pasbox}[style=meth ,degrade, color=Blue, title=Méthode : #1]
 	}{
 \end{pasbox}
 }
@@ -257,6 +257,11 @@
 \end{pasbox}
 }
 
+\newenvironment{mypb}{
+	\begin{pasbox}[title=Problème, style=rem ,degrade, color=NavyBlue, pluriel]
+	}{
+	\end{pasbox}
+}
 
 
 \newenvironment{mybilan}{	
@@ -272,7 +277,11 @@
 }
 
 
-
+%\newenvironment{mywarning}{
+%		\begin{pasbox}[title=Attention, style=defi ,degrade, color=Red]	
+%		}{
+%		\end{pasbox}
+%}
 %-------------------------------------------------------
 % Organigrammes
 %-------------------------------------------------------
