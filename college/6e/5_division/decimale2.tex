@@ -1,0 +1,106 @@
+\begin{mydef}
+	Effectuer la division décimale d'un nombre décimal par un nombre entier, c'est chercher le \hspace*{4cm}, tel que : 
+	
+	\begin{equation*}
+%	quotient \; \times \; diviseur = \; dividende
+	\end{equation*}
+\end{mydef}
+
+\subsection{Division décimale de deux entiers}
+
+\begin{mymeth}
+	On commence comme une division euclidienne. Quand il n'y a plus de chiffre à abaisser, pn ajoute une virgule au quotient et on abaisse des zéros jusqu'à ce que le reste soit égal à zéro (ou qu'on obtienne la valeur approchée demandée).
+\end{mymeth}
+
+\begin{myexs}
+	\begin{multicols}{2}
+		\begin{center}
+					$\begin{array}{rc|c}
+					294 \quad & & 35 \\
+					\cline{3-3}
+					 &  \\
+					 & & \\
+					 & & \\
+					\end{array}$
+			%\opidiv{731}{34}
+		\end{center}
+		
+		
+		\begin{center}
+			$\begin{array}{rc|c}
+			732 \quad & & 5 \\
+			\cline{3-3}
+			&  \\
+			& & \\
+			& & \\
+			\end{array}$
+			
+		\end{center}
+		
+	\end{multicols}
+\end{myexs}
+
+
+\subsection{Division décimale d'un nombre décimal par un entier}
+
+	\begin{mymeth}
+		On commence comme pour le cas précédent, mais on met une virgule au quotient dès qu'on arrive à la virgule du diviseur.
+	\end{mymeth}
+
+	\begin{myexs}
+		\begin{multicols}{2}
+			\begin{center}
+				$\begin{array}{rc|c}
+				\num{456.5} \quad & & 25 \\
+				\cline{3-3}
+				&  \\
+				& & \\
+				& & \\
+				\end{array}$
+				%\opidiv{731}{34}
+			\end{center}
+			
+			
+			\begin{center}
+				$\begin{array}{rc|c}
+				\num{102.4} \quad & & 20 \\
+				\cline{3-3}
+				&  \\
+				& & \\
+				& & \\
+				\end{array}$
+				
+			\end{center}
+			
+		\end{multicols}
+	\end{myexs}
+\subsection{Division décimale de deux nombres décimaux}
+
+\begin{myprop}
+	On ne change pas le quotient de deux nombres décimaux quand on multiplie chacun d'eux par un même nombre (10, 100, ...) pour obtenir un diviseur entier.
+\end{myprop}
+
+\begin{myex}
+	Diviser \num{67.85} par \num{2.3}. \\
+	
+	Le diviseur est égal à \num{2.3}, pour qu'il soit entier on le multiplie par 10 : 
+	
+		\begin{equation*}
+			\num{2.3} \times 10 = 23
+		\end{equation*}
+		
+	et on multiplie le dividende par 10, pour ne pas changer la valeur du quotient :
+	
+		\begin{equation*}
+			\num{67.85} \times 10 = \num{678.5}
+		\end{equation*}
+		
+		
+		$\begin{array}{rc|c}
+		\num{678.5} \quad & & 23 \\
+		\cline{3-3}
+		&  \\
+		& & \\
+		& & \\
+		\end{array}$
+\end{myex}
