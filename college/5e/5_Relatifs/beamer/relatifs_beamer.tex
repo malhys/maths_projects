@@ -33,13 +33,13 @@
 }
 %
 %
-%\AtBeginSubsection[]
-%{
-%	\begin{frame}
-%		\frametitle{Sommaire}
-%		\tableofcontents[currentsection, currentsubsection]
-%	\end{frame} 
-%}
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
+	\end{frame} 
+}
 
 \begin{document}
 
@@ -131,6 +131,7 @@
 
 \section{Addition et soustraction de deux nombres relatifs}
 
+\subsection{Soustraire deux nombres relatifs}
 
 \begin{frame}
 	\begin{myprop}
@@ -218,8 +219,76 @@
 		\begin{itemize}
 			\item (- \num{4.6}) a la plus grande distance à zéro, leur somme est négative; \pause
 			\item on soustrait les distances à zéro \pause \\ $\num{4.6} - \num{3.7} = \num{0.9}$ \pause
-			\item[$\Rightarrow$] (-\num{4.6}) + (-\num{3.7}) = \pause (-\num{8.3})
+			\item[$\Rightarrow$] (-\num{4.6}) + (-\num{3.7}) = \pause (-\num{0.9})
 		\end{itemize}
 	\end{myex}
 \end{frame}
+
+
+\begin{frame}
+	\begin{myprop}
+		La \kword{somme de deux nombres opposés} est égale à 0.
+		
+	\end{myprop}
+	
+	\begin{myexs}
+		
+		
+			\begin{equation*}
+			(+ 25) + (-25) = 0
+			\end{equation*}
+			
+			\begin{equation*}
+			(- \num{4.2}) + (+ \num{4.2}) = 0
+			\end{equation*}
+		
+		
+		
+	\end{myexs}
+\end{frame}
+
+
+
+
+\subsection{Soustraire deux nombres relatifs}
+
+
+\begin{frame}
+	\begin{myprop}
+		Pour soustraire un nombre relatif, on \pause \kword{ajoute son opposé}.\pause
+	\end{myprop}
+	
+	\begin{myex}
+		
+		On veut calculer $A = (-\num{5}) - (+2)$ : \pause
+		
+		Pour soustraire $(+2)$, \pause on ajoute son opposé : $(-2)$ : \pause
+		\begin{eqnarray*}
+			A &=& (-5) - (+2) \\ \pause
+			A &=& (-5) + (-2) \\ \pause
+			A &=& (- 7) \pause
+		\end{eqnarray*} 
+	\end{myex}	
+\end{frame}
+	
+
+\begin{frame}
+	\begin{myprop}
+		Pour soustraire un nombre relatif, on \kword{ajoute son opposé}.
+	\end{myprop}
+	
+	\begin{myex}
+		
+		On veut calculer $B = (+\num{3}) - (-\num{6.2})$ :\pause
+		
+		Pour soustraire $(-\num{6.2})$,  \pause on ajoute son opposé : $(+\num{6.2})$ : \pause
+		\begin{eqnarray*}
+			B &=& (+\num{3}) - (-\num{6.2}) \\ \pause
+			B &=& (+\num{3}) + (+\num{6.2}) \\ \pause
+			B &=& (+ \num{9.2})
+		\end{eqnarray*} 
+	\end{myex}	
+\end{frame}
+	
+	
 \end{document}
