@@ -1,0 +1,437 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+%\usetheme{Malmoe}
+%\usecolortheme{beaver}
+\usecolortheme{seahorse}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+\newcommand{\myitem}{\item[\textbullet]}
+
+\graphicspath{{../img/}}
+
+\title{Séquence 8 : Expressions littérales}
+\subtitle{Correction des exercices semaine du 18/05}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+%
+%\AtBeginSection[]
+%{
+%	\begin{frame}
+%		\frametitle{}
+%		\tableofcontents[currentsection, hideallsubsections]
+%	\end{frame} 
+%
+%}
+%
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+%\begin{frame}
+%  \titlepage 
+%\end{frame}
+
+
+	
+
+\begin{frame}
+	\frametitle{Exercice 25 page 105}
+	
+	\begin{block}{Aridité d'une région}
+		\begin{equation*}
+			{\LARGE I = \dfrac{P}{T + 10}\pause}
+		\end{equation*}
+		
+		\begin{itemize}
+			\item $I$ : indice d'aridité \pause
+			\item $P$ : précipitations en mm \pause
+			\item $T$ : température moyenne.
+		\end{itemize}
+	\end{block}
+	
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Exercice 25 page 105}
+	\framesubtitle{Aridité de la Bretagne}
+	
+	\begin{block}{Calcul de l'indice d'aridité}
+		\begin{eqnarray*}
+			I_{Bretagne} &=& \dfrac{P}{T + 10} \\ \pause
+			I_{Bretagne} &=& \dfrac{\num{1130}}{14 + 10} \\ \pause
+			I_{Bretagne} &=& \dfrac{\num{1130}}{24} \\ \pause
+			%I_{Bretagne} &=& \dfrac{\num{565}}{12} \\ \pause
+			I_{Bretagne} &\approx& \num{47} \pause			
+		\end{eqnarray*}
+		
+		
+	\end{block}
+	
+	\begin{alertblock}{Conclusion}
+		$I_{Bretagne} \ge 30$, donc la Bretagne est une région humide.
+	\end{alertblock}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Exercice 25 page 105}
+	\framesubtitle{Aridité de la Corse}
+	
+	\begin{block}{Calcul de l'indice d'aridité}
+		\begin{eqnarray*}
+			I_{Corse} &=& \dfrac{P}{T + 10} \\ \pause
+			I_{Corse} &=& \dfrac{\num{659}}{20 + 10} \\ \pause
+			I_{Corse} &=& \dfrac{\num{659}}{30} \\ \pause
+			%I_{Bretagne} &=& \dfrac{\num{565}}{12} \\ \pause
+			I_{Corse} &\approx& \num{22} \pause			
+		\end{eqnarray*}
+		
+		
+	\end{block}
+	
+	\begin{alertblock}{Conclusion}
+		$20 \le I_{Corse} < 30$, donc la Corse est une région demi-humide.
+	\end{alertblock}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Exercice 25 page 105}
+	\framesubtitle{Aridité de Bardenas}
+	
+	\begin{block}{Calcul de l'indice d'aridité}
+		\begin{eqnarray*}
+			I_{Bardenas} &=& \dfrac{P}{T + 10} \\ \pause
+			I_{Bardenas} &=& \dfrac{\num{410}}{15 + 10} \\ \pause
+			I_{Bardenas} &=& \dfrac{\num{410}}{25} \\ \pause
+			%I_{Bretagne} &=& \dfrac{\num{565}}{12} \\ \pause
+			I_{Bardenas} &=& \num{16.4} \pause			
+		\end{eqnarray*}
+		
+		
+	\end{block}
+	
+	\begin{alertblock}{Conclusion}
+		$10 \le I_{Bardenas} < 20$, donc la région de Bardenas est demi-aride.
+	\end{alertblock}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Exercice 35 page 107}
+	\framesubtitle{Programme de calcul}
+	
+	\begin{block}{\'Eric}
+		\begin{enumerate}
+			\item on choisit un nombre \pause : $N$ \pause
+			\item on le multiplie par 8 \pause : $8 \times N$ \pause
+			\item on soustrait 15 \pause : $8 \times N - 15$ \pause
+			\item[$\Rightarrow$] $8N - 15$ \pause
+		\end{enumerate}
+	\end{block}
+	
+	\begin{block}{\'Angélique}
+		\begin{enumerate}
+			\item on choisit un nombre \pause : $N$ \pause
+			\item on le multiplie par 4 \pause : $4 \times N$ \pause
+			\item on ajoute 6 \pause : $4 \times N - 6$ \pause
+			\item[$\Rightarrow$] $4N + 6$ 
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Exercice 35 page 107}
+	\framesubtitle{Vérification de l'égalité}
+	
+	\begin{block}{$N = 0$}
+		
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					8N - 15 &=& \pause 8 \times 0 - 15 \\ \pause
+					8N - 15 &=& 0 - 15 \\ \pause
+					8N - 15 &=& -15 \pause
+				\end{eqnarray*}
+			\end{column}
+		
+		
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					4N + 6 &=& \pause 4 \times 0 + 6 \\ \pause
+					4N + 6 &=& 0 + 6 \\ \pause
+					4N + 6 &=& 6 \pause
+				\end{eqnarray*}
+			\end{column}
+		\end{columns}
+		
+	\end{block}
+
+	\begin{alertblock}{Conclusion}
+		L'égalité est fausse.
+	\end{alertblock}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Exercice 35 page 107}
+	\framesubtitle{Trouver le nombre choisi}
+	
+	\begin{block}{$N = 4$}
+		
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					8N - 15 &=&  8 \times 4 - 15 \\ 
+					8N - 15 &=& 32 - 15 \\ 
+					8N - 15 &=& 17 
+				\end{eqnarray*}
+			\end{column}
+			
+			
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					4N + 6 &=&  4 \times 4 + 6 \\ 
+					4N + 6 &=& 16 + 6 \\ 
+					4N + 6 &=& 22 \pause
+				\end{eqnarray*}
+			\end{column}
+		\end{columns}
+		
+	\end{block}
+
+
+	\begin{block}{$N = 5$}
+		
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					8N - 15 &=&  8 \times 5 - 15 \\ 
+					8N - 15 &=& 40 - 15 \\ 
+					8N - 15 &=& 25 
+				\end{eqnarray*}
+			\end{column}
+			
+			
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					4N + 6 &=&  4 \times 5 + 6 \\ 
+					4N + 6 &=& 20 + 6 \\ 
+					4N + 6 &=& 26 
+				\end{eqnarray*}
+			\end{column}
+		\end{columns}
+		
+	\end{block}
+
+\end{frame}
+\begin{frame}
+	\frametitle{Exercice 35 page 107}
+	\framesubtitle{Trouver le nombre choisi}
+	
+	\begin{block}{$N = 6$}
+		
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					8N - 15 &=&  8 \times 6 - 15 \\ 
+					8N - 15 &=& 48 - 15 \\ 
+					8N - 15 &=& 33 
+				\end{eqnarray*}
+			\end{column}
+			
+			
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					4N + 6 &=&  4 \times 6 + 6 \\ 
+					4N + 6 &=& 24 + 6 \\ 
+					4N + 6 &=& 30 \pause
+				\end{eqnarray*}
+			\end{column}
+		\end{columns}
+		
+	\end{block}
+
+
+	\begin{block}{$N = 7$}
+		
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					8N - 15 &=&  8 \times 7 - 15 \\ 
+					8N - 15 &=& 56 - 15 \\ 
+					8N - 15 &=& 41 
+				\end{eqnarray*}
+			\end{column}
+			
+			
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					4N + 6 &=&  4 \times 7 + 6 \\ 
+					4N + 6 &=& 28 + 6 \\ 
+					4N + 6 &=& 34 
+				\end{eqnarray*}
+			\end{column}
+		\end{columns}
+		
+	\end{block}
+
+
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Exercice 35 page 107}
+	\framesubtitle{Trouver le nombre choisi}
+	
+	
+	\begin{block}{$N = 5$}
+		
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					8N - 15 &=&  8 \times 5 - 15 \\ 
+					8N - 15 &=& 40 - 15 \\ 
+					8N - 15 &=& 25 
+				\end{eqnarray*}
+			\end{column}
+			
+			
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					4N + 6 &=&  4 \times 5 + 6 \\ 
+					4N + 6 &=& 20 + 6 \\ 
+					4N + 6 &=& 26 
+				\end{eqnarray*}
+			\end{column}
+		\end{columns}
+		
+	\end{block}
+	
+	\begin{block}{$N = 6$}
+		
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					8N - 15 &=&  8 \times 6 - 15 \\ 
+					8N - 15 &=& 48 - 15 \\ 
+					8N - 15 &=& 33 
+				\end{eqnarray*}
+			\end{column}
+			
+			
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					4N + 6 &=&  4 \times 6 + 6 \\ 
+					4N + 6 &=& 24 + 6 \\ 
+					4N + 6 &=& 30 
+				\end{eqnarray*}
+			\end{column}
+		\end{columns}
+		
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Exercice 35 page 107}
+	%\framesubtitle{Trouver le nombre choisi}
+	
+	\begin{block}{$N = \num{5.5}$}
+		
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					8N - 15 &=&  8 \times \num{5.5} - 15 \\ 
+					8N - 15 &=& 44 - 15 \\ 
+					8N - 15 &=& 29 \pause
+				\end{eqnarray*}
+			\end{column}
+			
+			
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					4N + 6 &=&  4 \times \num{5.5}6 + 6 \\ 
+					4N + 6 &=& 22 + 6 \\ 
+					4N + 6 &=& 28 \pause
+				\end{eqnarray*}
+			\end{column}
+		\end{columns}
+		
+	\end{block}
+	
+	
+	\begin{block}{$N = \num{5.25}$}
+		
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					8N - 15 &=&  8 \times \num{5.25} - 15 \\ 
+					8N - 15 &=& 42 - 15 \\ 
+					8N - 15 &=& 27 \pause
+				\end{eqnarray*}
+			\end{column}
+			
+			
+			\begin{column}{0.5\textwidth}
+				\begin{eqnarray*}
+					4N + 6 &=&  4 \times \num{5.25} + 6 \\ 
+					4N + 6 &=& 21 + 6 \\ 
+					4N + 6 &=& 27 \pause 
+				\end{eqnarray*}
+			\end{column}
+		\end{columns}
+		
+	\end{block}
+	
+	\begin{alertblock}{Conclusion}
+		Ils ont choisi le nombre \num{5.25}.
+	\end{alertblock}
+	
+\end{frame}
+
+\begin{frame}
+\frametitle{Exercice 35 page 107}
+\framesubtitle{Résolution d'équation}
+
+	Je cherche la valeur de $N$ telle que les deux expressions soient égales. \pause
+	
+	\begin{eqnarray*}
+		8N - 15 &=& 4N + 6 \\ \pause %& On pose l'équation \pause 
+		8N - 15 + 15 &=& 4N + 6 + 15 \\ \pause %& 
+		8N + 0 &=& 4N + 21 \\ \pause %& 
+		8N - 4N &=& 4N + 21 -4N \\ \pause %& 
+		8N - 4N &=& 4N -4N + 21 \\ \pause %& 
+		4N &=& 0N + 21 \\ \pause %& 
+		4N &=& 21 \\ \pause %& 
+		N &=& \frac{21}{4} \\ \pause %& 
+		N &=& \num{5.25}
+	\end{eqnarray*}
+	
+\end{frame}
+\end{document}

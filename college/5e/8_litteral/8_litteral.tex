@@ -1,0 +1,262 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+\graphicspath{{./img/}}
+
+\lhead{Seq 3: Fractions}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+
+
+
+\chap[num=8, color=red]{Expressions littérales}{}
+
+\input{./obj}
+
+\section{Expression littérale}
+
+
+\begin{mydef}
+	Une \kw{expression littérale} est une expression numérique qui \kw{contient une où plusieurs lettres}. Ces lettres désignent des nombres, ce sont des \kw{inconnues}.
+\end{mydef}
+
+\begin{myexs}
+	Les formules de calcul de périmètres et d'aires sont des exemples d'expressions littérales :
+	\begin{itemize}
+		\item Aire d'un rectangle : $2 \times (L + l)$;
+		\item périmètre d'un cercle : $2 \times r \times \pi$ (ici $\pi$ n'est pas une inconnue qui désigne un nombre, c'est un nombre).
+	\end{itemize}
+\end{myexs}
+
+\section{Simplifications d'écritures}
+
+\subsection{Symbole de multiplication}
+\begin{mymeth}
+	Par convention, on simplifie l'écriture d'une expression littérale en supprimant au maximum les symboles <<$\times$>> :
+	\begin{itemize}
+		\item $3 \times a $ s'écrit $3a$;
+		\item $a \times b $ s'écrit $ab$;
+		\item $4 \times (a - 2)$ s'écrit $4 \times (a - 2)$ (se lit 4 \textit{facteur} de a moins 2)
+		\item $15 + 4 \times a$ s'écrit $15 + 4a$
+	\end{itemize}
+\end{mymeth}
+
+\begin{mywarning}
+	
+	\begin{itemize}
+		\item $2 \times 3$ ne s'écrit pas $23$;
+		\item On écrit $2a$, on n'écrit pas $a2$;
+		\item[$\rightarrow$] \kw{Le nombre s'écrit toujours devant la lettre.} 
+	\end{itemize}
+\end{mywarning}
+
+
+\subsection{Nombres au carré et au cube}
+
+\begin{mymeth}
+	
+	\begin{itemize}
+		\item $3 \times 3$ s'écrit $3^2$;
+		\item $6 \times 6$ s'écrit $6^2$;
+		\item $5 \times 5 \times 5$ s'écrit $5^3$;
+	\end{itemize}
+	
+	\vspace*{0.25cm}
+	
+	\begin{itemize}
+		
+		\item $x \times x$ s'écrit $x^2$ (et se lit << $x$ au carré>>);
+		\item $x \times x \times x$ s'écrit $x^3$ (et se lit << $x$ au cube>>).
+	\end{itemize}
+\end{mymeth}
+
+\begin{myexs}
+	\begin{eqnarray*}
+		a \times 4 \times 2 \times a &=& 4 \times 2 \times  a \times a \\
+		a \times 4 \times 2 \times a &=& 8a^2
+	\end{eqnarray*}
+	
+	\begin{eqnarray*}
+		a \times 2 \times 3 \times a \times b &=& 2 \times 3 \times a \times a \times b\\
+		a \times 2 \times 3 \times a \times b &=& 6a^2b
+	\end{eqnarray*}
+	
+	
+	\begin{eqnarray*}
+		a \times 2 \times a \times (7 - 1) &=& 2 \times (7 - 1) \times a \times a\\
+		a \times 2 \times a \times (7 - 1) &=& 12a^2
+	\end{eqnarray*}
+
+
+	\begin{eqnarray*}
+		a \times 2 \times (2 + b + 3) \times a &=& 2 \times a \times a \times (2 + 3 + b)\\
+		a \times 2 \times (2 + b + 3) \times a &=& 2a(5+b)
+	\end{eqnarray*}
+\end{myexs}
+
+\section{Valeur d'une expression littérale}
+
+	\begin{mydef}
+		\kw{Calculer la valeur} d'une expression littérale c'est assigner une valeur à chaque lettre pour pouvoir effectuer les calculs.
+	\end{mydef}
+
+	\begin{myrems}
+		\begin{itemize}
+			\item Lorsque qu'une même lettre est présente plusieurs fois dans la même expression, elle désigne toujours le même nombre.
+			\item Quand on veut calculer une expression littérale, il est indispensable d'écrire les symboles de multiplications sous entendues. Quand on multiplie deux nombres, le symbole <<$\times$>> doit être présent.
+		\end{itemize}
+	\end{myrems}
+
+
+	\begin{myex}
+		Calculer la valeur de $5x^2 + 3(x-1)+4y^3 $, avec $x=4$ et $y=10$ :
+		
+		\begin{align*}
+			A &= 5 \times x \times x + 3 \times (x - 1) + 4 \times y \times y \times y \\ %& \text{On ajoute des '$\times$' sous entendus}\\
+			A &= 5 \times 4 \times 4 + 3 \times (4 - 1) + 4 \times 10 \times 10 \times 10 \\% & \text{On remplace les <<$x$>> par 4 et les <<$y$>> par 10}\\
+			A &= 80 + 3 \times 3 + \num{4000} \\ %& \text{On effectue les calculs}\\
+			A &= 80 + 9 + \num{4000} \\
+			A &= \num{4089}
+		\end{align*}
+	\end{myex}
+
+\section{Vérifier une égalité}
+
+\begin{mydef}
+	Une \kw{égalité} est composée de deux membres séparés par le symbole $=$.
+	Une égalité est \kw{vraie} lorsque ses deux membres ont la même valeur.
+\end{mydef}
+
+
+\begin{myexs}
+	\begin{enumerate}
+		\item $4 \times 10 = 100 - 60$ est une \kw{égalité vraie} car $4 \times 10 = 40 $ et $100 - 60 = 40$.
+		
+		
+		\item $4 \times 10 = 40 + 3$ est une \kw{égalité fausse} car $4 \times 10 = 40 $ et $40 + 3 = 43$.
+	\end{enumerate}
+\end{myexs}
+
+\begin{myprops}
+	\begin{itemize}
+		\item Une égalité d'expressions littérales est vraie si elle est \kw{vraie pour toutes les valeurs attribuées aux lettres}.
+		
+		\item Il suffit de trouver un \kw{contre-exemple} pour montrer que deux expressions ne sont \kw{pas égales}.	
+	\end{itemize}	
+\end{myprops}
+
+
+\begin{mymeth}
+	Pour Vérifier que deux expressions littérales sont égales :
+	
+	\begin{enumerate}
+		\item On choisit une valeur à attribuer à chaque inconnue.
+		\item On calcule les valeurs des deux expressions.
+		\item Si \kw{les valeurs sont différentes}, alors on a terminé : \kw{l'égalité est fausse}.
+		\item Si les valeurs sont les mêmes, on simplifie les deux expressions.
+		\item Si les deux expressions simplifiées sont les mêmes, alors \kw{l'égalité est vraie}.
+	\end{enumerate} 
+\end{mymeth}
+
+\begin{myex}
+	
+		On veut vérifier l'égalité : $2 + 3x = 5x$ :
+			\begin{enumerate}
+				\item Je choisis $x=0$.
+				\item 
+				
+					\begin{multicols}{2}
+						\begin{align*}
+							2 + 3x &= 2 + 3 \times x \\
+							2 + 3x &= 2 + 3 \times 0 \\
+							2 + 3x &= 2 + 0 \\
+							2 + 3x &= 2
+						\end{align*}
+						
+						
+						\begin{align*}
+							5x &= 5 \times x \\
+							5x &= 5 \times 0 \\
+							5x &= 0 \\							
+						\end{align*}
+					\end{multicols}
+				
+				\item Les valeurs sont différentes donc \kw{l'égalité est fausse}.
+			\end{enumerate}
+	
+\end{myex}
+
+
+\begin{myex}
+	
+	On veut vérifier l'égalité : $2 + 4x + 3 = \num{1.5} \times x \times 2 + x + 5$ :
+	\begin{enumerate}
+		\item Je choisis $x=0$.
+		\item 
+		
+		\begin{multicols}{2}
+			\begin{align*}
+			A &= 2 + 4x + 3  \\
+			A &= 2 + 4 \times x + 3  \\
+			A  &= 2 + 4 \times 0 + 3  \\
+			A  &= 2 + 0 + 3  \\
+			A  &= 5
+			\end{align*}
+			
+			
+			\begin{align*}
+			B &= \num{1.5} \times x \times 2 + x + 5 \\
+			B &= \num{1.5} \times 0 \times 2 + 0 + 5 \\
+			B &= 0 + 0 + 5 \\
+			B &= 5 \\							
+			\end{align*}
+		\end{multicols}
+		
+		\item Les valeurs sont égales, donc \kw{l'égalité est vraie pour $x=0$}.
+		
+		\item \begin{multicols}{2}
+			\begin{align*}
+				A &= 2 + 4x + 3  \\
+				A &= 2 + 3 + 4x  \\
+				A  &= 5 + 4x  \\
+				A  &= 4x + 5  \\	
+			\end{align*}
+			
+			
+			\begin{align*}
+				B &= \num{1.5} \times x \times 2 + x + 5 \\
+				B &= \num{1.5} \times 2 \times x + x + 5 \\
+				B &= 3x + x + 5 \\
+				B &= (x + x + x) + x + 5 \\						
+				B &= 4x + 5 
+			\end{align*}
+		\end{multicols}
+	
+		\item Les deux expressions simplifiées sont les mêmes, donc \kw{l'égalité est vraie (pour tout $x$)}.
+	\end{enumerate}
+	
+\end{myex}
+\end{document}
+
