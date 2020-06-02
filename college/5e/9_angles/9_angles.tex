@@ -1,0 +1,127 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+\usepackage{../../../pas-math}
+\usepackage{../../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\makeatletter
+%\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
+%\makeatother
+
+
+%\author{Olivier FINOT}
+\date{}
+\title{}
+
+\graphicspath{{./img/}}
+
+\lhead{Seq 3: Fractions}
+\rhead{O. FINOT}
+%
+%\rfoot{Page \thepage}
+\begin{document}
+%\maketitle
+
+
+
+
+\chap[num=8, color=red]{Angles et parallélisme}{}
+
+\input{./obj}
+
+
+\section{Angles opposés par le sommet}
+
+
+\begin{mydef}
+	Deux angles ayant le même sommet et sont dans le prolongement l'un de l'autre, alors ils sont \kw{opposés par le sommet}
+\end{mydef}
+
+\begin{myprop}
+	Deux angles opposés par le sommet ont la \kw{même mesure}.
+\end{myprop}
+
+
+\begin{myex}
+	
+	\begin{multicols}{2}
+		les droites $(AB)$ et $(CD)$ sécantes en $O$ forment deux paires d'angles opposés par le sommet.
+		
+		On a :
+		\begin{itemize}
+			\item $\widehat{AOC} = \widehat{BOD}$
+			\item $\widehat{AOD} = \widehat{BOC}$
+		\end{itemize}	
+	
+		\includegraphics[scale=0.15]{opposes}
+	\end{multicols}
+	
+\end{myex}
+\section{Angles alternes-internes}
+
+
+\begin{mydef}
+	
+	
+		Soit deux droites $(d_1)$ et $(d_2)$, une troisième droite $(s)$, les coupe en $A$ et $B$.
+		Dans angles formés par ces 3 droites sont alternes-internes si et seulement si :
+		
+		\begin{multicols}{2}
+		\begin{itemize}
+			\item ils ont pour sommet $A$ et $B$;
+			\item ils sont de part et d'autre de la droite $(s)$;
+			\item ils sont entre les droites $(d_1)$ et $(d_2)$.
+		\end{itemize}
+	
+	
+		\begin{center}
+			\includegraphics[scale=0.13]{alt_int}
+		\end{center}
+	\end{multicols}
+
+\end{mydef}
+
+
+\begin{myprop}
+	Si deux droites coupées par une sécante sont \kw{parallèles}, alors les angles alternes-internes sont \kw{égaux}.
+\end{myprop}
+
+\begin{myex}
+	
+	
+	\begin{multicols}{2}
+		Les droites $(AE)$ et $(BC)$ sont parallèles et les angles $\widehat{EAB}$ et $\widehat{ABC}$ sont alternes-internes. \\
+		
+		Donc les angles $\widehat{EAB}$ et $\widehat{ABC}$ ont la même mesure.
+		
+		\begin{center}
+			\includegraphics[scale=0.15]{alt_int2}
+		\end{center}
+	\end{multicols}
+\end{myex}
+
+
+\begin{myprop}
+	Si deux angles alternes-internes sont \kw{égaux}, alors les droites coupées par la sécante sont \kw{parallèles}.
+\end{myprop}
+
+\begin{myex}
+	\begin{multicols}{2}
+		
+		Les angles $\widehat{AEC}$ et $\widehat{BCE}$ sont alternes-internes et de même mesure. \\
+		
+		Donc les droites $(AE)$ et $(BC)$ sont parallèles.
+		
+		\begin{center}
+			\includegraphics[scale=0.15]{alt_int3}
+		\end{center}
+	\end{multicols}
+\end{myex}
+\end{document}
+
