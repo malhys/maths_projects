@@ -1,0 +1,411 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{CambridgeUS}
+
+\input{../../utils_maths_beamer}
+
+
+\usepackage{../../pas-math}
+\usepackage{../../moncours_beamer}
+
+
+\graphicspath{{./img/}}
+
+\title{Introduction à la cryptographie}
+%\author{O. FINOT}\institute{Lycée S$^t$ Vincent de Paul}
+
+
+%\AtBeginSection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, hideallsubsections]
+%	\end{frame} 
+%}
+%
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection, ]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+%
+%\begin{frame}
+%  \titlepage 
+%\end{frame}
+
+
+\begin{frame}{Defi}
+	\begin{block}{Décoder le message suivant}
+		{\Large Cjfoupu mft wbdbmdft qmvt rvf rvfmrvft ifvsft b ufojs bwbou mb mjcfsbujpo.}\pause
+	\end{block}
+
+	\begin{block}{Décoder le message suivant}
+		{\Large Bientôt les vacances plus que quelques heures à tenir avant la libération.}
+	\end{block}	
+
+\end{frame}
+
+%\section{Introduction}
+
+\begin{frame}
+\frametitle{Introduction}	
+	
+	\begin{block}{Historique}
+		\begin{itemize}
+			\item Utilisé depuis toujours
+			\item Cacher, dissimuler des informations essentielles / confidentielles%\pause
+			\item[$\Rightarrow$] Cryptologie
+		\end{itemize}%	\pause
+	\end{block}
+	
+	\begin{block}{Aujourd'hui : Sur internet}
+		\begin{itemize}
+			\item Informations confidentielles
+			\item Impôts
+			\item Paiements en ligne%\pause
+			\item[$\Rightarrow$] Données ne doivent pas circuler "en clair"
+		\end{itemize}
+	\end{block}
+	
+\end{frame}
+
+%\begin{frame}
+%	\frametitle{Sommaire}
+%	\tableofcontents[hideallsubsections]
+%\end{frame} 
+%
+%\section{Vocabulaire}
+%
+%\begin{frame}
+%\frametitle{Définitions I}
+%
+%
+%	\begin{alertblock}{Cryptologie}
+%		\begin{itemize}
+%			\item Science des messages secrets
+%			\item Cryptographie vs. Cryptanalyse
+%		\end{itemize}
+%	\end{alertblock}\pause
+%	
+%	\begin{block}{Cryptographie}
+%		"Art" de transformer un message pour le rendre illisible
+%	\end{block}\pause
+%	
+%	\begin{block}{Cryptanalyse}
+%		"Art" de rendre un message transformé lisible
+%	\end{block}
+%\end{frame}
+%
+%\begin{frame}
+%\frametitle{Définitions II}	
+%
+%	\begin{block}{Chiffrer}
+%		Transformer un message
+%	\end{block}\pause
+%	
+%	\begin{block}{Déchiffrer}
+%		Rendre un message lisible en connaissant la clé
+%	\end{block}
+%	
+%	
+%	\begin{block}{Décrypter}
+%		Rendre un message lisible en "cassant" le code
+%	\end{block}
+%
+%\end{frame}
+%\section{Chiffrements par substitution monoalphabétique}
+%
+%\subsection{Principe}
+
+\begin{frame}
+\frametitle{Principe des chiffrements par substitution}
+
+\begin{itemize}
+	\item Chaque lettre remplacée par une autre
+	\item Toujours la même lettre d'arrivée pour une lettre donnée
+\end{itemize}
+
+\begin{center}
+	\includegraphics[scale=0.6]{gaston}
+\end{center}
+\end{frame}
+
+
+%\subsection{Exemples}
+
+
+\begin{frame}
+	\frametitle{Chiffre de César}
+	\framesubtitle{Présentation}
+	
+	\begin{block}{Historique}
+		\begin{itemize}
+			\item Utilisé par César 
+			\item Transmission des ordres à ses généraux 
+		\end{itemize}
+	\end{block}
+	
+	\begin{block}{Principe}
+		\begin{itemize}
+			\item Choix d'une distance (26 possibilités)
+			\item Remplacement d'une lettre par celle qui se trouve à la distance choisie   
+		\end{itemize}
+		
+		\begin{center}
+			\includegraphics[scale=0.2]{cesar}			
+		\end{center}
+		
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Chiffre de césar}
+	\framesubtitle{Exemple avec une distance de 3}
+	
+	
+	\begin{center}
+		\includegraphics[scale=0.2]{cesar}			
+	\end{center}
+	
+	\begin{itemize}
+		\item ALEA JACTA EST\pause
+		\item[$\Rightarrow$] DOHD MDFWD HVW
+	\end{itemize}
+	
+	
+\end{frame}
+
+
+%\begin{frame}
+%	\frametitle{Substitution "aléatoire"}
+%	
+%	\begin{block}{Principe}
+%		\begin{itemize}
+%			\item Choix d'une lettre de remplacement pour chaque lettre d'origine
+%		\end{itemize}
+%	\end{block}
+%	
+%	\begin{exampleblock}{Exemple de substitution}
+%		
+%		\begin{center}
+%			%\includegraphics[scale=0.62]{subst}\pause
+%		\end{center}
+%		\begin{itemize}
+%			\item SUBSTITUTION\pause
+%			\item[$\Rightarrow$] MRXMNCNRNCDA
+%		\end{itemize}
+%		
+%		
+%	\end{exampleblock}
+%	
+%	
+%\end{frame}
+
+
+
+
+
+
+
+
+
+
+%\subsection{Bilan}
+
+\begin{frame}
+\frametitle{Décryptage}
+
+\begin{block}{Analyse fréquentielle}
+	\begin{itemize}
+		\item Repérer les lettres qui apparaissent le plus
+		\item En français : E
+	\end{itemize}
+\end{block}
+
+\begin{center}
+	\includegraphics[scale=0.6]{freq}\footnote{Source wikipédia}
+\end{center}	
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Avantages / Inconvénients}
+
+\begin{exampleblock}{Avantages}
+	\begin{itemize}
+		\item Nombre important de combinaisons
+		\item Faciles à comprendre
+		\item Faciles à utiliser
+	\end{itemize}
+\end{exampleblock}
+
+\begin{alertblock}{Incovénients}
+	\begin{itemize}
+		\item Faciles à casser
+	\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Chiffre de César}	
+	
+	
+	\begin{block}{Déchiffrer}
+		PDLWU HFRUE HDXVX UXQDU EUHSH UFKHW HQDLW HQVRQ EHFXQ IURPD JHPDL WUHUH QDUGS DUORG HXUDO OHFKH OXLWL QWSHX SUHVF HODQJ DJHHW ERQMR XUPRQ VLHXU GXFRU EHDXT XHYRX VHWHV MROLT XHYRX VPHVH PEOHC EHDX
+	\end{block}
+\end{frame}
+%\subsection{Exercices}
+
+\begin{frame}
+	\frametitle{Substitution monoalphabétique}	
+	
+	En utilisant la substitution suivante :
+	\begin{center}
+		\includegraphics[scale=0.5]{subst}
+	\end{center}
+	
+	\begin{block}{Chiffrer}
+		La Cigale ayant chanté tout l'été
+		Se trouva fort dépourvue
+		Quand la bise fut venue
+	\end{block}
+	
+	\begin{block}{Déchiffrer}
+		RA GYNCN QDMYWR U'W MRZZCN GDRQ ZWCQY ZQYUCQ I'KYQXY KWRNY YN NDRN IY GQY YN IYM HDRV MWRIYM LRC EKWANYAN WRMMC.
+	\end{block}
+\end{frame}
+
+
+
+\section{Chiffrements par clé}
+
+\subsection{Chiffrements symétriques}
+
+\begin{frame}
+\frametitle{Principe du chiffrement symétrique}
+
+\begin{itemize}
+	\item Une clé pour chiffrer un message
+	\item La même pour décrypter
+\end{itemize}
+
+\begin{center}
+	\includegraphics[scale=0.5]{sym}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Chiffre de Vigénère}
+
+\begin{block}{Principe}
+	\begin{itemize}
+		\item Choix d'une clé
+		\item Correspondance entre le texte en clair et la clé
+	\end{itemize}
+	
+	\begin{center}
+		\includegraphics[scale=0.07]{vigenere}
+	\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bilan}
+	
+	\begin{exampleblock}{Avantage}
+		\begin{itemize}
+			\item Très sûr (si clé assez longue)			
+		\end{itemize}
+	\end{exampleblock}
+	
+	\begin{alertblock}{Inconvénient}
+		\begin{itemize}
+			\item \'Echange de la clé
+		\end{itemize}
+	\end{alertblock}
+	
+\end{frame}
+
+\subsection{Chiffrements Asymétriques}
+
+\begin{frame}
+	\frametitle{Principe du chiffrement asymétrique}
+	
+	\begin{block}{Principe}
+	
+		\begin{itemize}
+			\item 2 clés
+			\item 1 clé publique distribuée à tout le monde
+			\item 1 clé privée gardée pour soi
+		\end{itemize}
+	\end{block}
+	
+	\begin{center}
+		\includegraphics[scale=0.6]{asym}
+	\end{center}	
+	
+\end{frame}
+
+\begin{frame}
+\frametitle{Signature numérique}
+
+Un chiffrement asymétrique peut aussi être utiliser pour signer numériquement un document.
+
+\begin{center}
+	\includegraphics[scale=0.5]{sign}
+\end{center}
+\end{frame}
+
+\subsection{Exercices}
+
+\begin{frame}
+\frametitle{Vigénère}
+
+\begin{block}{Chiffrer en utilisant la clé : MUSIQUE}
+	j'adore ecouter la radio toute la journee
+\end{block}
+
+\begin{block}{Décrypter en utilisant la clé : SECRET}
+	UIELZ JYJIO IEXBF XTSUY BLPCR FXBGR FITPX MRGGC ILWTT IJIGL IIIEI KSPGQ VRMKS WWCEY GVOIU YGESV SLHNF IRLIE LW
+\end{block}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}
+\frametitle{Conclusion}
+
+\begin{itemize}
+	\item Présentation de notions de cryptographie
+	\item Chiffrements par substitution
+	\item Chiffrement par clé
+	\item Meilleure compréhension
+\end{itemize}
+\end{frame}
+
+%\begin{columns}[c]
+%	\begin{column}{6cm}
+%		\begin{itemize}
+%			\item $f(x)=2x$
+%			\item $g(x)=-x+2$
+%		\end{itemize}
+%	\end{column}
+%	\begin{column}{6cm}
+%		\begin{itemize}
+%			\item $h(x)=3x-4$
+%			\item $i(x)=5$
+%		\end{itemize}
+%	\end{column}				
+%\end{columns}
+
+
+
+\end{document}
