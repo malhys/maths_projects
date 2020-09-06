@@ -91,6 +91,12 @@
 
 %\newcommand{\kword}[1]{\textcolor{red}{\underline{#1}}}
 
+\newtoggle{eleve}
+\newtoggle{dys}
+
+\togglefalse{eleve}
+\togglefalse{dys}
+
 %---------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------
 
@@ -171,7 +177,7 @@
 
 % Singulier
 \newenvironment{mydef}{	
-	\begin{tcolorbox}[enhanced, title={\large D\' efinitions}, colback=red!10, colbacktitle=red!70!black, attach boxed title to top left]
+	\begin{tcolorbox}[enhanced, title={\large D\' efinition}, colback=red!10, colbacktitle=red!70!black, attach boxed title to top left]
 	}{
 	\end{tcolorbox}
 }
@@ -206,17 +212,26 @@
 
 %------------------------------------------------------
 % Exemples
-\newenvironment{myex}{
-	\begin{tcolorbox}[enhanced, title={\large Exemple}, colback=green!5, colbacktitle=green!55!black, attach boxed title to top left]
-	}{
-	\end{tcolorbox}
-}
+%\newenvironment{myex}{
+%	\begin{tcolorbox}[enhanced, title={\large Exemple}, colback=green!5, colbacktitle=green!55!black, attach boxed title to top left]
+%	}{
+%	\end{tcolorbox}
+%}
 %
 
+%\newenvironment{myexs}{
+%	\begin{tcolorbox}[enhanced, title={\large Exemples}, colback=green!5, colbacktitle=green!55!black, attach boxed title to top left]
+%	}{
+%	\end{tcolorbox}
+%}
+
+\newenvironment{myex}{
+		\subsection*{\underline{Exemple :}}
+	}
+
+
 \newenvironment{myexs}{
-	\begin{tcolorbox}[enhanced, title={\large Exemples}, colback=green!5, colbacktitle=green!55!black, attach boxed title to top left]
-	}{
-	\end{tcolorbox}
+	\subsection*{\underline{Exemples :}}
 }
 
 %------------------------------------------------------
@@ -250,19 +265,27 @@
 
 %------------------------------------------------------
 % Méthode
+%\newenvironment{mymeth}{
+%	\begin{tcolorbox}[enhanced, title={\large M\' ethode}, colback=blue!5, colbacktitle=blue!45!black, attach boxed title to top left]
+%	}{
+%	\end{tcolorbox}
+%}
+%
+%
+%\newenvironment{mymethname}[1]{
+%	\begin{tcolorbox}[enhanced, title={\large M\' ethode : #1}, colback=blue!5, colbacktitle=blue!45!black, attach boxed title to top left]
+%	}{
+%	\end{tcolorbox}
+%}
+
 \newenvironment{mymeth}{
-	\begin{tcolorbox}[enhanced, title={\large M\' ethode}, colback=blue!5, colbacktitle=blue!45!black, attach boxed title to top left]
-	}{
-	\end{tcolorbox}
+	\subsection*{\textcolor{blue}{\underline{Méthode :}}}
 }
 
 
 \newenvironment{mymethname}[1]{
-	\begin{tcolorbox}[enhanced, title={\large M\' ethode : #1}, colback=blue!5, colbacktitle=blue!45!black, attach boxed title to top left]
-	}{
-	\end{tcolorbox}
+	\subsection*{\textcolor{blue}{\underline{Méthode #1 :}}}	
 }
-
 %------------------------------------------------------
 % 
 %------------------------------------------------------
@@ -474,6 +497,14 @@
 %\newcommand{\Exo}[2]{Exercice #1 page #2}
 
 
+
+
+\newcommand\ligne[2][5pt]{%
+	\ifnum#2>0
+	\hrule\vspace{#1}%
+	\edef\next{\noexpand\ligne[#1]{\number\numexpr#2-1}}%
+	\expandafter\next
+	\fi}
 
 \floatstyle{ruled}
 \newfloat{act}{!ht}{lex}
