@@ -1,140 +1,191 @@
 \documentclass[12pt,a4paper]{article}
 
-\usepackage[in, plain]{fullpage}
+%\usepackage[in, plain]{fullpage}
 \usepackage{array}
-\usepackage{../../../pas-math}
-\usepackage{../../../moncours}
+%\usepackage{../../../pas-math}
+\usepackage{../../../moncours2}
 
 
 %\usepackage{pas-cours}
-\input{../../../utils_maths}
+%\input{../../../utils_maths}
 
 
 %\makeatletter
 %\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.1cm}}
 %\makeatother
 
+%\toggletrue{eleve}
+%\toggletrue{dys}
 
-%\author{Olivier FINOT}
 \date{}
-\title{}
+\title{\textcircled{{\normalsize{1}}}Calculs et priorités}
 
-\lhead{CH1 : Enchainement d'opérations}
-\rhead{O. FINOT}
-%
+\renewcommand{\labelitemi}{∙}
 %\rfoot{Page \thepage}
-\begin{document}
-%\maketitle
 
-\chap[num=1, color=red]{Enchainement d'opérations}{Olivier FINOT, \today }
+\begin{document}
+\maketitle
+
+\setenumerate[1]{label=\textbf{\arabic*)}}
+
+%\chap[num=1, color=red]{Enchainement d'opérations}{Olivier FINOT, \today }
 
 \input{./obj}
 
 \section{Priorités des opérations}
 
-\begin{myact}{1 Découvrir les priorités des opérations}
+%\begin{myact}{1 Découvrir les priorités des opérations}
+%
+%	Activité 1 page 38
+%\end{myact}
+%
+%\begin{myactrep}{1 Découvrir les priorités des opérations}
+%	
+%	\begin{enumerate}
+%		\item Tom a fait les calculs dans l'ordre ($8 + 2 = 10$, $10 \times 3 = 30$), et Alice a commencé par la multiplication ($2 \times 3 = 6$, $8 + 6 = 14$).
+%		
+%		\item Une calculatrice scientifique donne le résultat 14, c'est donc Alice qui a raison.
+%		
+%		\item On a :
+%		
+%		\begin{multicols}{4}
+%			\begin{itemize}
+%				\item $A = 22 $;
+%				\item $B = 13 $;
+%				\item $C = 22 $;
+%				\item $D = 22 $;
+%				\item $E = 25 $;
+%				\item $F = 14 $;
+%				\item $G = 20 $;
+%				\item $H = 9 $;
+%				\item $I = 12 $;
+%				\item $J = 21 $;
+%				\item $K = 136 $;
+%				\item $L = 4 $.
+%			\end{itemize}
+%		\end{multicols}
+%	
+%		\item 
+%		
+%		\item Pour calculer une expression qui contient plusieurs opérations, on calcule les multiplications et les divisions avant les additions et les soustractions.
+%	\end{enumerate}
+%\end{myactrep}
 
-	Activité 1 page 38
-\end{myact}
+\begin{myprop}
+	Dans une suite d'additions ou de multiplications, l'ordre des calculs n'a pas d'importance.		
+\end{myprop}
 
-\begin{myactrep}{1 Découvrir les priorités des opérations}
-	
-	\begin{enumerate}
-		\item Tom a fait les calculs dans l'ordre ($8 + 2 = 10$, $10 \times 3 = 30$), et Alice a commencé par la multiplication ($2 \times 3 = 6$, $8 + 6 = 14$).
-		
-		\item Une calculatrice scientifique donne le résultat 14, c'est donc Alice qui a raison.
-		
-		\item On a :
-		
-		\begin{multicols}{4}
-			\begin{itemize}
-				\item $A = 22 $;
-				\item $B = 13 $;
-				\item $C = 22 $;
-				\item $D = 22 $;
-				\item $E = 25 $;
-				\item $F = 14 $;
-				\item $G = 20 $;
-				\item $H = 9 $;
-				\item $I = 12 $;
-				\item $J = 21 $;
-				\item $K = 136 $;
-				\item $L = 4 $.
-			\end{itemize}
-		\end{multicols}
-	
-		\item 
-		
-		\item Pour calculer une expression qui contient plusieurs opérations, on calcule les multiplications et les divisions avant les additions et les soustractions.
-	\end{enumerate}
-\end{myactrep}
-
-\begin{myprops}
-	\begin{itemize}
-		
-		\item Dans une expression numérique sans parenthèses, on effectue :
-			\begin{enumerate}
-				\item D'abord les multiplications et les divisions, de gauche à droite;
-				\item Puis les additions et les soustractions, également de gauche à droite.
-			\end{enumerate}		
-		
-		\item On dit que la multiplication et la division sont \kw{prioritaires} sur l'addition et la soustraction. 
-		
-		\item Dans une expression sans parenthèses qui contient uniquement des additions ou uniquement des multiplications, on effectue les calculs dans l'ordre que l'on veut. L'addition et la multiplication sont \kw{commutatives}.
-		
-	\end{itemize}
-\end{myprops}
 
 \begin{myexs}
-	\begin{itemize}
-		\item Je calcule l'expression $A= 20 - 2 \times 3 + 12 \div 6$
-		
-		\vspace*{-0.5cm}
-		
-		\begin{eqnarray*}
-		 A &=& 20 - 2 \times 3 + 12 \div 6 \\
-		 A &=& 20 - 6 + 12 \div 6 \text{ (je commence par la multiplication) }\\
-		 A &=& 20 - 6 + 2 \text{ (ensuite la division)} \\
-		 A &=& 14 + 2 \text{ (puis le reste des opérations de gauche à droite)}\\
-		 A &=& 16
-		\end{eqnarray*}
+	Calculer $2 + \num{3.4} + 8 + \num{6.6} + 5$ et $\num{2.5} \times 5 \times 2$.\\
 	
-		\item Je calcule l'expression $B= 12 + 3 +8$ de trois façons différentes :
+	\iftoggle{eleve}{%
 		
-		\vspace*{-0.5cm}
-		\begin{multicols}{3}
-			\begin{eqnarray*}
-				B &=& \kw{12 + 3} + 8 \\
-				B &=& 15 + 8 \\
-				B &=& 23
-			\end{eqnarray*}
+			\vspace*{2cm}
 		
-			\begin{eqnarray*}
-				B &=& 12 + \kw{3 + 8} \\
-				B &=& 12 + 11 \\
-				B &=& 23
-			\end{eqnarray*}
+	}{%
+		\begin{itemize}[label=\textbullet]
+			\item $2 + \num{3.4} + 8 + \num{6.6} + 5 = 2 + 8 + \num{3.4} + \num{6.6} + 5 = 25$ \\
+			
+			
+			\item $\num{2.5} \times 5 \times 2 = 5 \times \num{2.5}  \times 2 = 25$ 
+		\end{itemize}
 		
-			\begin{eqnarray*}
-				B &=& \kw{12 + 8} + 3 \\
-				B &=& 20 + 3 \\
-				B &=& 23
-			\end{eqnarray*}
-		\end{multicols}
+		
+		
+		
+	}
 	
-	\end{itemize}
 \end{myexs}
 
-\begin{myexos}
-	\begin{itemize}
-		\item \exo{1}{42} : Calcul mental
-		\item Exercices 2 - 5 page 42 : Calcul d'expressions diverses
-		\item Exercices 9-10 page 43 : Expressions à compléter
-		\item \Exo{11}{43} : traduire un problème en expression et la calculer
-		\item \exo{12}{43} : première approche calcul littéral
-		\item \exo{15}{43} : problème
-	\end{itemize}
-\end{myexos}
+\begin{myprop}
+	Dans une suite de calculs qui contient uniquement des additions et des soustractions on effectue les calculs dans l'ordre d'écriture (de gauche à droite).
+\end{myprop}
+
+
+
+\begin{myexs}
+	Calculer $2 + 8 - 3 + 7 - 5$ et $\num{2.5} \times 10 \div 5 \times 2$.\\
+	
+	\iftoggle{eleve}{%
+		
+		\vspace*{2cm}
+		
+	}{%
+		\begin{itemize}[label=\textbullet]
+			 \item $2 + 8 - 3 + 7 - 5 = 10 - 3 + 7 - 5 = 7 + 7 - 5 = 14 - 5 = 9$ \\
+			
+			
+			 \item $ \num{2.5} \times 10 \div 5 \times 2 = 25 \div 5 \times 2 = 5 \times 2 = 10 $
+		\end{itemize}
+		
+		
+		
+		
+	}
+
+\end{myexs}
+
+
+
+\begin{myprop}
+	Dans une suite de calculs sans parenthèses on effectue les multiplications et les divisions avant les additions et les soustractions
+\end{myprop}
+
+\begin{myexs}
+	Calculer $4 + 5 \times 3$ et $3 + 8 \div 2 - 2 \times 2$.\\
+	
+	\iftoggle{eleve}{%
+		
+		\vspace*{2cm}
+		
+	}{%
+		\begin{itemize}[label=\textbullet]
+			\item $4 + 5 \times 3 = 4 + 15 = 19$ \\
+			
+			
+			\item $ 3 + 8 \div 2 - 2 \times 2 = 3 + 4 - 4 = 3 $
+		\end{itemize}
+		
+		
+		
+		
+	}
+\end{myexs}
+
+
+
+\begin{myprop}
+	Dans une suite de calculs on effectue d'abord les calculs entre parenthèses. On commence toujours par les parenthèses les plus à l'intérieur.
+\end{myprop}
+
+\begin{myexs}
+	Calculer $(4 + 5) \times 3$ et $(3 + 8 \div (6 - 2)) \times 2$.\\
+	
+	\iftoggle{eleve}{%
+		
+		\vspace*{2cm}
+		
+	}{%
+		\begin{itemize}[label=\textbullet]
+			\item $(4 + 5) \times 3 = 9 \times 3 = 27$ \\
+			
+			
+			\item $ (3 + 8 \div (6 - 2)) \times 2 = (3 + 8 \div 4) \times 2 = (3 + 2) \times 2 = 5 \times 2 = 10$
+		\end{itemize}	
+		
+	}
+\end{myexs}
+%\begin{myexos}
+%	\begin{itemize}
+%		\item \exo{1}{42} : Calcul mental
+%		\item Exercices 2 - 5 page 42 : Calcul d'expressions diverses
+%		\item Exercices 9-10 page 43 : Expressions à compléter
+%		\item \Exo{11}{43} : traduire un problème en expression et la calculer
+%		\item \exo{12}{43} : première approche calcul littéral
+%		\item \exo{15}{43} : problème
+%	\end{itemize}
+%\end{myexos}
 
 
 \section{Calculer une expression}
@@ -203,18 +254,18 @@
 	\end{eqnarray*}
 \end{myex}
 
-\begin{myexos}
-	\begin{itemize}
-		\item \Exo{16}{44} : Calcul mental
-		\item Exercices 17, 19 page 44 : Calcul d'expressions diverses
-		\item \Exo{16}{44} : Placer des parenthèses pour obtenir le bon résultat  
-		\item \Exo{18}{44} : faire le lien entre plusieurs écritures d'une même expression 
-		\item \Exo{21}{45} : passer d'une situation à une expression numérique
-		\item \Exo{23}{45} : Le compte est bon
-		\item \Exo{26}{45} : problème
-		\item \Exo{27}{45} : problème
-	\end{itemize}
-\end{myexos}
+%\begin{myexos}
+%	\begin{itemize}
+%		\item \Exo{16}{44} : Calcul mental
+%		\item Exercices 17, 19 page 44 : Calcul d'expressions diverses
+%		\item \Exo{16}{44} : Placer des parenthèses pour obtenir le bon résultat  
+%		\item \Exo{18}{44} : faire le lien entre plusieurs écritures d'une même expression 
+%		\item \Exo{21}{45} : passer d'une situation à une expression numérique
+%		\item \Exo{23}{45} : Le compte est bon
+%		\item \Exo{26}{45} : problème
+%		\item \Exo{27}{45} : problème
+%	\end{itemize}
+%\end{myexos}
 
 \section{Vocabulaire}
 
@@ -279,15 +330,15 @@
 	\end{itemize}
 \end{myexs}
 
-\begin{myexos}
-	\begin{itemize}
-		\item Exercices 28-30 page 46 : identifier un type d'expression.
-		\item \Exo{31}{46} : Description d'une expression.
-		\item \Exo{32}{46} : Lien entre description et expression.
-		\item \Exo{33}{46} : Donner l'expression décrite.
-		\item Exercices 34 - 35 page 47 : Arbre à calcul <-> expression
-		\item \Exo{36}{47} : Vrai ou faux
-		\item \Exo{37}{47} : traduire la description d'un calcul en expression (Intéressant pour faire le lien avec algo).
-	\end{itemize}
-\end{myexos}
+%\begin{myexos}
+%	\begin{itemize}
+%		\item Exercices 28-30 page 46 : identifier un type d'expression.
+%		\item \Exo{31}{46} : Description d'une expression.
+%		\item \Exo{32}{46} : Lien entre description et expression.
+%		\item \Exo{33}{46} : Donner l'expression décrite.
+%		\item Exercices 34 - 35 page 47 : Arbre à calcul <-> expression
+%		\item \Exo{36}{47} : Vrai ou faux
+%		\item \Exo{37}{47} : traduire la description d'un calcul en expression (Intéressant pour faire le lien avec algo).
+%	\end{itemize}
+%\end{myexos}
 \end{document}
