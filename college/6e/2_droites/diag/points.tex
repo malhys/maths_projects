@@ -1,0 +1,24 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-13.36,-9.32) rectangle (17.28,9.96);
+\begin{scriptsize}
+\draw [fill=ududff] (-9.42,-3.56) circle (2.5pt);
+\draw[color=ududff] (-9.18,-2.91) node {$A$};
+\draw [fill=ududff] (7.62,5.48) circle (2.5pt);
+\draw[color=ududff] (7.86,6.13) node {$B$};
+\draw [fill=ududff] (-7.44,6.74) circle (2.5pt);
+\draw[color=ududff] (-7.2,7.39) node {$C$};
+\draw [fill=ududff] (4.5,-2.34) circle (2.5pt);
+\draw[color=ududff] (4.74,-1.69) node {$D$};
+\draw [fill=ududff] (9.84,-7.34) circle (2.5pt);
+\draw[color=ududff] (10.08,-6.69) node {$E$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}
