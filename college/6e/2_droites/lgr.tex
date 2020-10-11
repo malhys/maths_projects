@@ -1,10 +1,19 @@
-\begin{mydef}
-	La mesure (distance entre ses deux extrémités) d'un segment est sa \kw{longueur}.
-\end{mydef}
-
-\begin{myprop}
+\begin{mydefs}
+	\iftoggle{eleve}{%
+		La mesure \hrulefill
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		La longueur \hrulefill
+		
+	}{%
+	La mesure d'un segment (distance entre ses deux extrémités) est sa \kw{longueur}.
+	
 	La longueur d'un segment $[AB]$, se note $AB$ ou $BA$. 
-\end{myprop}
+}
+\end{mydefs}
+
 
 \begin{myex}
 	\vspace*{-0.5cm}
@@ -12,21 +21,52 @@
 		\includegraphics[scale=0.8]{img/lgr}
 	\end{center}
 	\vspace*{-0.5cm}
-	La longueur du segment $[AB]$ est de \num{3.5} cm, on note
+	
+	\iftoggle{eleve}{%
+		La longueur \hrulefill
+		\vspace*{0.2cm}
+		\hrulefill 
+}{%
+	La longueur du segment $[AB]$ est de \num{3.5} cm, on note $AB=\num{3.5}$ cm.
+}	
+	
 \end{myex}
 
 \begin{mydef}
-	Le \kw{milieu} d'un segment est le point qui appartient au segment \kw{et} qui est à égale distance de ses extrémités.
+	\iftoggle{eleve}{%
+		Le \kw{milieu} d'un segment \hrulefill \\
+		\vspace*{0.2cm}
+		\hrulefill 
+	}{%
+		Le \kw{milieu} d'un segment est le point qui appartient au segment \kw{et} qui est à égale distance de ses extrémités.
+	}
+	
 \end{mydef}
 
 \begin{myrem}
-	Des segments de même longueur sont codés de façon identique.
+	\iftoggle{eleve}{%
+		Des segments de \hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	}{%
+		Des segments de même longueur sont codés de façon identique.
+	}
+	
 \end{myrem}
 
 \begin{myex}
+	
 	\begin{center}
-		\includegraphics[scale=0.25]{img/milieu}
+		\includegraphics[scale=0.35]{img/milieu}
 	\end{center}
+	\iftoggle{eleve}{%
+		On a : $M \in [AB]$ \hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	}{%
+		On a : $M \in [AB]$ et $AM = MB$, donc le point $M$ est le milieu du segment $[AB]$. On a ainsi $AM = AB \div 2$. 
+	}
 
-	On a : $M \in [AB]$ et $AM = MB$, donc le point $M$ est le milieu du segment $[AB]$. On a ainsi $AM = AB \div 2$. 
 \end{myex}
