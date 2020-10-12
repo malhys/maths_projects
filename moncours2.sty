@@ -248,7 +248,15 @@
 	\end{tcolorbox}
 }
 
+\newenvironment{myremarque}{
+	\subsection*{\textcolor{blue}{\underline{Remarque :}}}
+}
 
+\newenvironment{myremarques}{
+	\begin{tcolorbox}[enhanced, title={\large Remarques}, colback=blue!10, colbacktitle=blue!65!black, attach boxed title to top left]
+	}{
+	\end{tcolorbox}
+}
 %------------------------------------------------------
 %% Rappels
 %\newenvironment{myrap}{
