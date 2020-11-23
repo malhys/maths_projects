@@ -1,8 +1,26 @@
 \begin{myprops}
 	\begin{itemize}
-		\item Dans une expression sans parenthèses, la multiplication est \kw{prioritaire} sur l'addition et la soustraction.
-		
-		\item Dans une expression avec des parenthèses, on effectue d'abord les calculs \kw{entre parenthèses}.
+		\iftoggle{eleve}{%
+			\item Dans une expression \hrulefill
+			
+			\vspace*{0.2cm}
+			\hrulefill
+			
+			\vspace*{0.2cm}
+			\hrulefill
+			
+			\item Dans une expression \hrulefill
+			
+			\vspace*{0.2cm}
+			\hrulefill
+			
+			\vspace*{0.2cm}
+			\hrulefill
+		}{%
+			\item Dans une expression sans parenthèses, la multiplication est \kw{prioritaire} sur l'addition et la soustraction.
+			
+			\item Dans une expression avec des parenthèses, on effectue d'abord les calculs \kw{entre parenthèses}.\\
+		}
 	\end{itemize}
 \end{myprops}
 
@@ -11,6 +29,22 @@
 	Je calcule les expressions suivantes
 	
 	\begin{multicols}{2}
+		
+		\vspace*{-1cm}
+		
+		\iftoggle{eleve}{%
+			\begin{eqnarray*}
+				A &=& 2 + 3 \times 4 \\
+				A &=& \\
+				A &=& 
+			\end{eqnarray*}
+						
+			\begin{eqnarray*}
+				B &=& (2 + 3) \times 4 \\
+				B &=& \\
+				B &=& 
+			\end{eqnarray*}
+		}{%
 		\begin{eqnarray*}
 			A &=& 2 + 3 \times 4 \\
 			A &=& 2 + 12 \\
@@ -23,5 +57,6 @@
 			B &=& 5 \times 4 \\
 			B &=& 20
 		\end{eqnarray*}
+	}
 	\end{multicols}
 \end{myexs}

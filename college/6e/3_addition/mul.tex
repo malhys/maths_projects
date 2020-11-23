@@ -1,21 +1,48 @@
+
 \begin{mydef}
-			Un \kw{produit} est le résultat de la \kw{multiplication} de deux \kw{facteurs}.
+	\iftoggle{eleve}{%
+		Un \hrulefill
+		
+		\vspace*{0.2cm}
+		\hrulefill
+	}{
+		Un \kw{produit} est le résultat de la \kw{multiplication} de deux \kw{facteurs}.
+	}
 		
 \end{mydef}
 	
 \begin{myex}
 	\begin{center}
-		\includegraphics*[scale=0.7]{img/produit}
+		\iftoggle{eleve}{%
+			\includegraphics*[scale=0.7]{img/produit2}
+		}{%
+	
+			\includegraphics*[scale=0.7]{img/produit}
+		}
 	\end{center}
 \end{myex}
 
 \begin{myprop}
+	\iftoggle{eleve}{%
+		Dans une multiplication, \hrulefill
+		
+		\vspace*{0.2cm}
+		\hrulefill
+	}{%
 	Dans une multiplication, \kw{l'ordre des facteurs n'a pas d'importance}.
+	}
 \end{myprop}
 
 \begin{myex}
 	\begin{itemize}
-		\item $4 \times 2 \times 5 = 2 \times 5 \times 4 = 10 \times 4 = 40$
-		\item $\num{3.5} \times \num{2.5} \times 4 \times \num{2} = \num{3.5} \times \num{2} \times 4 \times \num{2.5} = 7 \times 10 = 70$
+		\iftoggle{eleve}{%
+			\item $4 \times 2 \times 5 = $ \hrulefill
+			
+			\vspace*{0.2cm}
+			\item $\num{3.5} \times \num{2.5} \times 4 \times \num{2} = $ \hrulefill
+		}{%
+			\item $4 \times 2 \times 5 = 2 \times 5 \times 4 = 10 \times 4 = 40$
+			\item $\num{3.5} \times \num{2.5} \times 4 \times \num{2} = \num{3.5}	 \times \num{2} \times 4 \times \num{2.5} = 7 \times 10 = 70$
+		}
 	\end{itemize}
 \end{myex}
