@@ -1,58 +1,159 @@
 \begin{mymeth}
-	Pour alléger l'écriture d'une expression qui contient des nombres relatifs on peut :
+	\iftoggle{eleve}{%
+		Pour \hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill
+		\begin{enumerate}
+			\item \hrulefill
+			\item \hrulefill
+			\item \hrulefill
+		\end{enumerate}
+	}{%
+		Pour alléger l'écriture d'une expression qui contient des nombres relatifs on peut :
 	\begin{enumerate}
 		\item \kw{Transformer les soustractions} en additions;
 		\item Supprimer les \kw{symboles d'addition} et les \kw{parenthèses};
 		\item Supprimer le \kw{signe du premier nombre} s'il est positif.
 	\end{enumerate}
+	}
 \end{mymeth}
 
 \begin{myexs}
 	
-	On veut simplifier et calculer les expressions suivantes :
-	\begin{eqnarray*}
-		A &=& (+6) - (+5) + (-2) - (-4) + (+2)\\
-		A &=& (+6) + (-5) + (-2) + (+4) + (+2)  \text{  \textit{(étape 1)}} \\
-		A &=& +6  -5  -2  +4  +2 \text{  \textit{(étape 2)}}\\
-		A &=& 6  -5  -2  +4  +2 \text{  \textit{(étape 3)}}\\
-		A &=& 6 + 4 + 2 - 5 - 2 \\
-		A &=& 12 - 7 \\
-		A &=& 5 \\
-	\end{eqnarray*}
-
-
-	\begin{eqnarray*}
-		B &=& (-4) + (-3) - (+8) - (-4) - (-7)\\
-		B &=& (-4) + (-3) + (-8) + (+4) + (+7) \text{  \textit{(étape 1)}}\\
-		B &=& -4  -3  -8  +4  +7 \text{  \textit{(étape 2)}}\\
-		B &=& -15 + 11 \\
-		B &=& -4 \\
-	\end{eqnarray*}
+	\iftoggle{eleve}{%
+		On veut simplifier et calculer les expressions suivantes :
+		\begin{eqnarray*}
+			A &=& (+6) - (+5) + (-2) - (-4) + (+2)\\
+			A &=& \hrulefill \\
+			A &=& \hrulefill \\
+			A &=& \hrulefill
+			%A &=& 6 + 4 + 2 - 5 - 2 \\
+			%A &=& 12 - 7 \\
+			%A &=& 5 \\
+		\end{eqnarray*}
+		
+		
+		\begin{eqnarray*}
+			B &=& (-4) + (-3) - (+8) - (-4) - (-7)\\
+			B &=& \\
+			B &=& 
+			%B &=& -15 + 11 \\
+			%B &=& -4 \\
+		\end{eqnarray*}
+	}{%
+	
+		On veut simplifier et calculer les expressions suivantes :
+		\begin{eqnarray*}
+			A &=& (+6) - (+5) + (-2) - (-4) + (+2)\\
+			A &=& (+6) + (-5) + (-2) + (+4) + (+2)  \text{  \textit{(étape 1)}} \\
+			A &=& +6  -5  -2  +4  +2 \text{  \textit{(étape 2)}}\\
+			A &=& 6  -5  -2  +4  +2 \text{  \textit{(étape 3)}}
+			%A &=& 6 + 4 + 2 - 5 - 2 \\
+			%A &=& 12 - 7 \\
+			%A &=& 5 \\
+		\end{eqnarray*}
+	
+	
+		\begin{eqnarray*}
+			B &=& (-4) + (-3) - (+8) - (-4) - (-7)\\
+			B &=& (-4) + (-3) + (-8) + (+4) + (+7) \text{  \textit{(étape 1)}}\\
+			B &=& -4  -3  -8  +4  +7 \text{  \textit{(étape 2)}}
+			%B &=& -15 + 11 \\
+			%B &=& -4 \\
+		\end{eqnarray*}
+	}
 \end{myexs}
 
-\newpage
 
 \begin{myrem}
-	Toute expression peut s'écrire sous la forme d'une suite d'additions, et l'ordre des termes d'une addition ne change pas le résultat. On peut donc utiliser cette propriété pour regrouper les termes d'une expression de manière à faciliter les calculs.
+	\iftoggle{eleve}{%
+		\hrulefill
+		
+		\vspace*{0.2cm}
+		\hrulefill
+		
+		\vspace*{0.2cm}
+		\hrulefill
+	}{%
+		Toute expression peut s'écrire sous la forme d'une suite d'additions. Pour faciliter le calcul on peut regrouper les termes astucieusement ou par signe.
+	}
+	
 \end{myrem}
 
 \begin{myexs}
 	\begin{multicols}{2}
+		\iftoggle{eleve}{%
+			\begin{eqnarray*}
+				%A &=& (+6) - (+5) + (-2) - (-4) + (+2)\\
+				%A &=& (+6) + (-5) + (-2) + (+4) + (+2)  \text{  \textit{(étape 1)}} \\
+				%A &=& +6  -5  -2  +4  +2 \text{  \textit{(étape 2)}}\\
+				A &=& 6  -5  -2  +4  +2 \\
+				A &=&  \\
+				A &=&  \\
+				A &=&  \\
+			\end{eqnarray*}
+			
+			
+			\begin{eqnarray*}
+				%B &=& (-4) + (-3) - (+8) - (-4) - (-7)\\
+				%B &=& (-4) + (-3) + (-8) + (+4) + (+7) \text{  \textit{(étape 1)}}\\
+				B &=& -4  -3  -8  +4  +7 \\
+				B &=& \\
+				B &=&  \\
+			\end{eqnarray*}
+			
+			\begin{eqnarray*}
+				C &=& - 7 + 4 - 8 + 7 - 4 \\
+				C &=&   \\
+				C &=&  \\
+				C &=& 
+			\end{eqnarray*}
+			
+			
+			\begin{eqnarray*}
+				D &=& -2 + 4 - 8 + 5 + 6 \\
+				D &=&  \\
+				D &=&  \\
+				D &=&  \\
+				D &=& 
+			\end{eqnarray*}
+		}{%
+			\begin{eqnarray*}
+				%A &=& (+6) - (+5) + (-2) - (-4) + (+2)\\
+				%A &=& (+6) + (-5) + (-2) + (+4) + (+2)  \text{  \textit{(étape 1)}} \\
+				%A &=& +6  -5  -2  +4  +2 \text{  \textit{(étape 2)}}\\
+				A &=& 6  -5  -2  +4  +2 \\
+				A &=& 6 + 4 + 2 - 5 - 2 \\
+				A &=& 12 - 7 \\
+				A &=& 5 \\
+			\end{eqnarray*}
+			
+			
+			\begin{eqnarray*}
+				%B &=& (-4) + (-3) - (+8) - (-4) - (-7)\\
+				%B &=& (-4) + (-3) + (-8) + (+4) + (+7) \text{  \textit{(étape 1)}}\\
+				B &=& -4  -3  -8  +4  +7 \\
+				B &=& -15 + 11 \\
+				B &=& -4 \\
+			\end{eqnarray*}
+			
+			\begin{eqnarray*}
+				C &=& - 7 + 4 - 8 + 7 - 4 \\
+				C &=& (- 7 + 7) + (4 - 4) - 8  \\
+				C &=& 0 + 0 - 8 \\
+				C &=& -8
+			\end{eqnarray*}
+			
+			
+			\begin{eqnarray*}
+				D &=& -2 + 4 - 8 + 5 + 6 \\
+				D &=& (- 2 - 8) + (4 + 6) + 5 \\
+				D &=& -10 + 10 + 5 \\
+				D &=& 0 + 5 \\
+				D &=& 5
+			\end{eqnarray*}
+		}
 		
-	\begin{eqnarray*}
-		C &=& - 7 + 4 - 8 + 7 - 4 \\
-		C &=& (- 7 + 7) + (4 - 4) - 8  \\
-		C &=& 0 + 0 - 8 \\
-		C &=& -8
-	\end{eqnarray*}
-
-
-	\begin{eqnarray*}
-		D &=& -2 + 4 - 8 + 5 + 6 \\
-		D &=& (- 2 - 8) + (4 + 6) + 5 \\
-		D &=& -10 + 10 + 5 \\
-		D &=& 0 + 5 \\
-		D &=& 5
-	\end{eqnarray*}
 	\end{multicols}
 \end{myexs}
