@@ -1,10 +1,10 @@
 \documentclass[a4paper,11pt]{exam}
-%\printanswers % pour imprimer les réponses (corrigé)
-\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
 \addpoints % Pour compter les points
 % \noaddpoints % pour ne pas compter les points
 %\qformat{\textbf{\thequestion ) } }
-%\qformat{\textbf{\thequestion )} (\thepoints) \\ } % Pour définir le style des questions (facultatif)
+%\qformat{\textbf{\thequestion )} (\thepoints) \\} % Pour définir le style des questions (facultatif)
 \usepackage{color} % définit une nouvelle couleur
 \shadedsolutions % définit le style des réponses
 % \framedsolutions % définit le style des réponses
@@ -27,9 +27,10 @@
 
 %\usepackage{fullpage}
 \author{\ }
-\date{13 Janvier 2021}
-\title{$6^e 2$ : DS num\'ero 3}
+\date{14 Janvier 2021}
+\title{$5^e 1$ : DS num\'ero 3}
 
+\graphicspath{{./img.}}
 
 \begin{document}
 %	\usepackage{fancyhdr}
@@ -39,10 +40,10 @@
 	%\rhead{Share\LaTeX}
 
 	\maketitle
-	
-\begin{center}
-	\textbf{Calculatrice interdite}
-\end{center}
+%	
+%\begin{center}
+%	\textbf{Calculatrice interdite, toutes les fractions réponse doivent être simplifiées}
+%\end{center}
 
 \begin{small}
 	\begin{center}
@@ -50,12 +51,14 @@
 			\hline
 			\textbf{Compétence} & \textbf{MI} & \textbf{MF} & \textbf{MS} & \textbf{TBM} \\
 			\hline
-			\textbf{Calculer} (Mon résultat semble correct) &  \ \ & \ \ & \ \ & \ \  \\
+			\textbf{Représenter} (J'utilise des nombres relatifs ) &  \ \ & \ \ & \ \ & \ \  \\
 			\hline
-			\textbf{Calculer} (Je calcule des sommes, différences ou produits de nombres décimaux)&  \ \ & \ \ & \ \ & \ \  \\
+			\textbf{Représenter} (Je me repère dans le plan ) &  \ \ & \ \ & \ \ & \ \  \\
+			\hline
+			\textbf{Calculer} (Je calcule avec des nombres relatifs)&  \ \ & \ \ & \ \ & \ \  \\
 			\hline	
-%			\textbf{Raisonne} (résoudre des problèmes impliquant des grandeurs variées) & \ \ & \ \ &  \ \  & \ \ \\
-%			\hline
+			\textbf{Raisonner} (Je résous un problème) & \ \ & \ \ &  \ \  & \ \ \\
+			\hline
 %			 
 %			\hline
 		\end{tabular}
@@ -64,23 +67,17 @@
 
 	
 	
-%\input{./hc}	
+\input{reperage}
 
-\input{./marche}
-\input{./og}
-\input{./bateau}
-
-\input{./voc}
+\input{thermometre}
 
 \newpage
 
-\input{./tab}
+\input{calcul}
 
-%\newpage
+\input{trail}
 
-\input{./lettre}
-
-
+\input{debat}
 
 
 \label{LastPage}
