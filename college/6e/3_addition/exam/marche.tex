@@ -5,5 +5,43 @@ Il paie avec 3 billets de 10 €. La caissière lui rend \num{5.25} €.
 
 \begin{questions}
 	\question Quel calcul sur une ligne permet de connaître le prix du rôti ?
+	\begin{solution}
+		Calcul du prix des poires :
+		
+		\opmul[style=text]{3.4}{1.70}
+		
+		Il paye \num{5.78} € pour les poires.\\
+		
+		Calcul du prix payé :
+		
+		\opmul[style=text]{30}{3}
+		
+		Il paye 30 €.\\
+		
+		Calcul du prix des courses :
+		\opsub[style=text]{30}{5.25}
+		
+		Le prix des courses s'élève à \num{24.75} €.\\
+		
+		L'expression permettant de calculer le prix du rôti est
+		
+		\begin{equation}
+			(10 \times 3 - \num{5.25}) - (\num{3.4} \times \num{1.70} + \num{2.35})
+		\end{equation}
+		
+	\end{solution}
 	\question Quel est le prix du rôti ?
+	\begin{solution}
+		Calcul du prix du rôti :
+		
+		
+		\begin{eqnarray*}
+			A &=& (10 \times 3 - \num{5.25}) - (\num{3.4} \times \num{1.70} + \num{2.35}) \\
+			A &=& (30 - \num{5.25}) - (\num{5.78} + \num{2.35}) \\
+			A &=& \num{24.75} - \num{8.13} \\
+			A &=& \num{16.62}
+		\end{eqnarray*}
+	
+		Le rôti coûte \num{16.62} €.
+	\end{solution}
 \end{questions}

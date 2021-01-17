@@ -2,12 +2,12 @@
 
 \usepackage[in, plain]{fullpage}
 \usepackage{array}
-\usepackage{../../../pas-math}
-\usepackage{../../../moncours}
+%\usepackage{../../../pas-math}
+\usepackage{../../../moncours2}
 
 
 %\usepackage{pas-cours}
-\input{../../../utils_maths}
+%\input{../../../utils_maths}
 
 
 %\makeatletter
@@ -15,23 +15,24 @@
 %\makeatother
 
 
-%\author{Olivier FINOT}
+%\toggletrue{eleve}
+%\toggletrue{dys}
+
 \date{}
-\title{}
+\title{\textcircled{{\normalsize{4}}}Géométrie du triangle}
 
 \graphicspath{{./img/}}
 
-\lhead{Seq 4: Triangle}
-\rhead{O. FINOT}
+\renewcommand{\labelitemi}{∙}
 %
 %\rfoot{Page \thepage}
 \begin{document}
-%\maketitle
+\maketitle
 
 
 
 
-\chap[num=4, color=red]{Géométrie du triangle}{\today }
+
 
 \input{./obj}
 
@@ -41,11 +42,12 @@
 \input{inegalite}
 
 
-\section{Droites remarquables}
-
-\input{droites}
+%\section{Droites remarquables}
+%
+%\input{droites}
 
 \section{Angles d'un triangle}
 
 \input{angles}
+
 \end{document}
