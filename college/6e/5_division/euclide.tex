@@ -1,75 +1,114 @@
 %\subsection{Definition}
 
 \begin{mydef}
-	Effectuer la \kw{division euclidienne} d’un nombre entier, appelé \kw{dividende}, par un nombre entier, différent de zéro, appelé \kw{diviseur}, c’est trouver deux autres nombres entiers, le \kw{quotient} et le \kw{reste}, tels que : 
 	
-	$diviseur \times quotient + reste = dividende$
+	\iftoggle{eleve}{%
+		Effectuer la \hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	}{%
+		Effectuer la \kw{division euclidienne} d’un nombre entier, appelé \kw{dividende}, par un nombre entier, différent de zéro, appelé \kw{diviseur}, c’est trouver deux autres nombres entiers, le \kw{quotient} et le \kw{reste}, tels que : 
+		
+		\begin{equation*}
+			diviseur \times quotient + reste = dividende	
+		\end{equation*}
+	}
+	
+
 	
 \end{mydef}
 
 
-\begin{center}
-	$\begin{array}{c|c}
-		Dividende & Diviseur \\
-		\cline{2-2}
-				& Quotient \\
-		Reste & \\
-	\end{array}$
-\end{center}
+\iftoggle{eleve}{%
+	\begin{center}
+		$\begin{array}{c|c}
+			 &  \hspace*{2cm} \\
+			\cline{2-2}
+			&  \\
+			 & \\
+		\end{array}$
+	\end{center}
+}{%
+	\begin{center}
+		$\begin{array}{c|c}
+			Dividende & Diviseur \\
+			\cline{2-2}
+			& Quotient \\
+			Reste & \\
+		\end{array}$
+	\end{center}
+}
 
-\begin{mywarning}
-	On ne peut pas diviser par 0.
-\end{mywarning}
+
+%\begin{mywarning}
+%	On ne peut pas diviser par 0.
+%\end{mywarning}
 
 %\subsection{Technique de division}
 
 %\begin{mymeth}
-\vspace*{-1cm}	
+%\vspace*{-1cm}	
 
-\begin{mymethname}{Technique de division}
-\begin{multicols}{2}
-	\begin{center}
-%		$\begin{array}{rc|c}
-%		731 & & 34 \\
-%		\cline{3-3}
-%		51& & 21 \\
-%		17 & & \\
-%		\end{array}$
-		\opidiv{731}{34}
-	\end{center}
-
-Conclusion : $34 \times 21 + 17 = 731$
-\end{multicols}
-
-
-Le diviseur 34 a deux chiffres, on commence la division avec les deux premiers chiffres du dividende $73 > 34 $; 
-combien de fois 34 dans 73 : 2 fois ; on soustrait $2 \times 34$ à 73.
-
-On abaisse le 1. 
-Combien de fois 34 dans 51 : 1 fois ; 
-on soustrait $1 \times 34$ à 51 ; $17 < 34$ ; on a fini.\\
-
-
-\textbf{\underline{Vérification:}}\\
-Il existe un moyen pour vérifier si une division euclidienne est juste. 
-Pour cela, on multiplie le quotient par le diviseur, puis on ajoute le reste. 
-Si le résultat obtenu est égal au dividende, la division est juste.
-\end{mymethname}
+%\begin{mymethname}{Technique de division}
+%\begin{multicols}{2}
+%	\begin{center}
+%%		$\begin{array}{rc|c}
+%%		731 & & 34 \\
+%%		\cline{3-3}
+%%		51& & 21 \\
+%%		17 & & \\
+%%		\end{array}$
+%		\opidiv{731}{34}
+%	\end{center}
+%
+%Conclusion : $34 \times 21 + 17 = 731$
+%\end{multicols}
+%
+%
+%Le diviseur 34 a deux chiffres, on commence la division avec les deux premiers chiffres du dividende $73 > 34 $; 
+%combien de fois 34 dans 73 : 2 fois ; on soustrait $2 \times 34$ à 73.
+%
+%On abaisse le 1. 
+%Combien de fois 34 dans 51 : 1 fois ; 
+%on soustrait $1 \times 34$ à 51 ; $17 < 34$ ; on a fini.\\
+%
+%
+%\textbf{\underline{Vérification:}}\\
+%Il existe un moyen pour vérifier si une division euclidienne est juste. 
+%Pour cela, on multiplie le quotient par le diviseur, puis on ajoute le reste. 
+%Si le résultat obtenu est égal au dividende, la division est juste.
+%\end{mymethname}
 
 
 \begin{myexs}
-	Poser et vérifier les divisions euclidiennes suivantes : $364 \div 21$ ; $653 \div 7$ et $73 \div 5$
+	Poser et vérifier les divisions euclidiennes suivantes :  $653 \div 7$ et $73 \div 5$
 	
 	\vspace*{4cm} 
 \end{myexs}
 
-\begin{mypb}
-	Dans une classe de 26 élèves, on forme des équipes de volley-ball (6 joueurs par équipe).
-	
-	\begin{enumerate}
-		\item Combien d’équipes forme-t-on ?
-		\item Combien y-a-t-il de remplaçants ?	
-	\end{enumerate}
-
-\vspace*{5cm} 	
-\end{mypb}
+%\begin{mypb}
+%	Dans une classe de 26 élèves, on forme des équipes de volley-ball (6 joueurs par équipe).
+%	
+%	\begin{enumerate}
+%		\item Combien d’équipes forme-t-on ?
+%		\item Combien y-a-t-il de remplaçants ?	
+%	\end{enumerate}
+%
+%\vspace*{5cm} 	
+%\end{mypb}

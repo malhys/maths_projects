@@ -1,0 +1,80 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+\usecolortheme{beaver}
+%\usecolortheme{rose}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+\newcommand{\myitem}{\item[\textbullet]}
+
+\graphicspath{{../img/}}
+
+\title{Séquence 5 : Division}
+\date{ }
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+%
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+%
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+\begin{frame}{}
+	\input{../obj2}
+\end{frame}
+
+\section{Division euclidienne}
+
+\begin{frame}
+	\begin{mydef}
+		Effectuer la \kword{division euclidienne} d’un nombre entier, appelé \pause  \kword{dividende}, par un nombre entier, différent de zéro, appelé \pause  \kword{diviseur}, c’est trouver deux autres nombres entiers, le \pause \kword{quotient} et le \kword{reste}, tels que : \pause
+		
+		\begin{equation*}
+			diviseur \times quotient + reste = dividende \pause	
+		\end{equation*}
+	\end{mydef}
+
+	\begin{center}
+		$\begin{array}{c|c}
+			Dividende & Diviseur \\
+			\cline{2-2}
+			& Quotient \\
+			Reste & \\
+		\end{array}$
+	\end{center}
+
+\end{frame}
+
+
+\end{document}
