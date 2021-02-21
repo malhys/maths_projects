@@ -33,13 +33,13 @@
 }
 %
 %
-%\AtBeginSubsection[]
-%{
-%	\begin{frame}
-%		\frametitle{Sommaire}
-%		\tableofcontents[currentsection, currentsubsection]
-%	\end{frame} 
-%}
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
+	\end{frame} 
+}
 
 \begin{document}
 
@@ -95,6 +95,78 @@
 		\end{array}$
 	\end{center}
 	
+\end{frame}
+
+\section{Multiples et diviseurs}
+
+\subsection{Définition}
+
+\begin{frame}
+	\begin{mydefs}
+	
+			Quand le reste de la division euclidienne du nombre $a$ par le nombre $b$, différent de zéro, est égal à zéro, on dit que : \pause
+			
+			\begin{itemize}
+				\item $a$ est \pause \kword{divisible} par $b$; \pause
+				\item $a$ est \pause un \kword{multiple} de $b$; \pause
+				\item $b$ est \pause un \kword{diviseur} de $a$. \pause
+			\end{itemize}
+		
+	\end{mydefs}
+
+\begin{myex}
+	
+	\begin{center}
+		\includegraphics[scale=0.3]{../img/div} \pause
+	\end{center}
+	
+	
+	936 est divisible par 24 ; 936 est un multiple de 24 ; 24 est un diviseur de 936.\pause
+\end{myex}
+
+\begin{myexo}
+	\begin{itemize}
+		\item Citer 3 multiples de 24 :
+		\item Citer tous les diviseurs de 16 :
+	\end{itemize}
+\end{myexo}
+
+\end{frame}
+
+\subsection{Critères de divisibilité}
+
+\begin{frame}
+	\begin{myprops}
+		
+		
+			\begin{itemize}
+				\item Un nombre entier est divisible par 2 si \pause \kword{il est pair} (son chiffre des unités est , 2, 4, 6 ou 8); \pause
+				\item Un nombre entier est divisible par 5 si \pause son \kword{chiffre des unités est 0 ou 5}; \pause
+				\item Un nombre entier est divisible par 10 si \pause son \kword{chiffre des unités est 0};	\pause
+				
+				\item Un nombre entier est divisible par 3 \pause si \kword{la somme de ses chiffres est divisible par 3}; \pause
+				\item Un nombre entier est divisible par 9 si \pause \kword{la somme de ses chiffres est divisible par 9}; \pause
+				
+				\item Un nombre entier est divisible par 4 si \pause \kword{le nombre formé par ses chiffres des dizaines et ses unités} 
+				
+				\kword{ est divisible par 4}.
+			\end{itemize}
+		
+	\end{myprops}
+\end{frame}
+
+\begin{frame}
+	\begin{myexs}
+		
+			\begin{itemize}
+				\item $1250$ est divisible par : \pause 2; 5 et 10. \pause 
+				\item $726$ est divisible par : \pause 2 et 3. \pause
+				\item $1024$ est divisible par : \pause 2 et 4.\pause
+				\item $342$ est divisible par : \pause 2; 3 et 9.
+				
+			\end{itemize}
+	
+	\end{myexs}
 \end{frame}
 
 \end{document}
