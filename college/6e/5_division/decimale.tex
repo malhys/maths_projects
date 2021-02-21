@@ -1,15 +1,42 @@
 \begin{mydef}
-	Effectuer la division décimale d'un nombre décimal par un nombre entier, c'est chercher le \kw{quotient}, tel que : 
+	\iftoggle{eleve}{%
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	}{%
+		Effectuer la division décimale d'un nombre décimal par un nombre entier, c'est chercher le \kw{quotient}, tel que : 
+		
+		\begin{equation*}
+			quotient \; \times \; diviseur = \; dividende
+		\end{equation*}
+	}
 	
-	\begin{equation*}
-	quotient \; \times \; diviseur = \; dividende
-	\end{equation*}
 \end{mydef}
 
 \subsection{Division décimale de deux entiers}
 
 \begin{mymeth}
-	On commence comme une division euclidienne. Quand il n'y a plus de chiffre à abaisser, pn ajoute une virgule au quotient et on abaisse des zéros jusqu'à ce que le reste soit égal à zéro (ou qu'on obtienne la valeur approchée demandée).
+	\iftoggle{eleve}{%
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	}{%
+		On commence comme une division entière. Quand il n'y a plus de chiffre à abaisser, on ajoute une virgule au quotient et on abaisse des zéros jusqu'à ce que le reste soit égal à zéro (ou qu'on obtienne la valeur approchée voulue).
+	}
+	
 \end{mymeth}
 
 \begin{myexs}
@@ -44,7 +71,19 @@
 \subsection{Division décimale d'un nombre décimal par un entier}
 
 	\begin{mymeth}
-		On commence comme pour le cas précédent, mais on met une virgule au quotient dès qu'on arrive à la virgule du diviseur.
+		\iftoggle{eleve}{%
+			\vspace*{0.2cm}
+			\hrulefill 
+			
+			\vspace*{0.2cm}
+			\hrulefill 
+			
+			\vspace*{0.2cm}
+			\hrulefill 
+		}{%
+			On commence comme pour le cas précédent, mais on met une virgule au quotient dès qu'on arrive à la virgule du diviseur.
+		}
+		
 	\end{mymeth}
 
 	\begin{myexs}
@@ -77,30 +116,67 @@
 \subsection{Division décimale de deux nombres décimaux}
 
 \begin{myprop}
-	On ne change pas le quotient de deux nombres décimaux quand on multiplie chacun d'eux par un même nombre (10, 100, ...) pour obtenir un diviseur entier.
+	\iftoggle{eleve}{%
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+%		
+%		\vspace*{0.2cm}
+%		\hrulefill 
+	}{%
+		On ne change pas le quotient de deux nombres  quand on multiplie chacun d'eux par un même nombre (10, 100, ...).
+	}
+	
 \end{myprop}
 
 \begin{myex}
-	Diviser \num{67.85} par \num{2.3}. \\
+	On veut diviser \num{67.85} par \num{2.3}. \\
 	
-	Le diviseur est égal à \num{2.3}, pour qu'il soit entier on le multiplie par 10 : 
-	
+	\iftoggle{eleve}{%
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.5cm}
+		\hrulefill 
+				
+		\vspace*{0.5cm}
+		\hrulefill 
+		
+		\vspace*{0.5cm}
+		\hrulefill 
+		
+		\vspace*{0.7cm}
+		
+		$\begin{array}{rc|c}
+			\hspace*{3cm} \quad & & \hspace*{1cm} \\
+			\cline{3-3}
+			&  \\
+			& & \\
+			& & \\
+		\end{array}$
+	}{%
+		Le diviseur est \num{2.3}, pour qu'il soit entier on le multiplie par 10 : 
+		
 		\begin{equation*}
 			\num{2.3} \times 10 = 23
 		\end{equation*}
 		
-	et on multiplie le dividende par 10, pour ne pas changer la valeur du quotient :
-	
+		et on multiplie le dividende par 10, pour ne pas changer la valeur du quotient :
+		
 		\begin{equation*}
 			\num{67.85} \times 10 = \num{678.5}
 		\end{equation*}
 		
 		
 		$\begin{array}{rc|c}
-		\num{678.5} \quad & & 23 \\
-		\cline{3-3}
-		&  \\
-		& & \\
-		& & \\
+			\num{678.5} \quad & & 23 \\
+			\cline{3-3}
+			&  \\
+			& & \\
+			& & \\
 		\end{array}$
+	}
+	
 \end{myex}
