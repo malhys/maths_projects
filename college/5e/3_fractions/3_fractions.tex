@@ -1,13 +1,14 @@
 \documentclass[12pt,a4paper]{article}
 
+
 \usepackage[in, plain]{fullpage}
 \usepackage{array}
-\usepackage{../../../pas-math}
-\usepackage{../../../moncours}
+%\usepackage{../../../pas-math}
+\usepackage{../../../moncours2}
 
 
 %\usepackage{pas-cours}
-\input{../../../utils_maths}
+%\input{../../../utils_maths}
 
 
 %\makeatletter
@@ -15,43 +16,46 @@
 %\makeatother
 
 
-%\author{Olivier FINOT}
+%\toggletrue{eleve}
+%\toggletrue{dys}
+
 \date{}
-\title{}
+\title{\textcircled{{\normalsize{5}}}Fractions}
 
 \graphicspath{{./img/}}
 
-\lhead{Seq 3: Fractions}
-\rhead{O. FINOT}
+\renewcommand{\labelitemi}{∙}
 %
 %\rfoot{Page \thepage}
 \begin{document}
-%\maketitle
+	\maketitle
 
 
 
 
-\chap[num=3, color=red]{Fractions}{\today }
+
 
 \input{./obj}
+
+\vspace{-0.5cm}
 
 \section{Quotients et fractions}
 
 \input{./def}
 
-\section{Divisibilité et nombres premiers}
+%\section{Divisibilité et nombres premiers}
+%
+%\input{./div}
 
-\input{./div}
+%\section{Fractions égales et simplification}
+%
+%\input{./egales}
+%
+%\section{\'Egalité des produits en croix}
+%
+%\input{./croix}
+%
+%\section{Addition et soustraction de fractions}
 
-\section{Fractions égales et simplification}
-
-\input{./egales}
-
-\section{\'Egalité des produits en croix}
-
-\input{./croix}
-
-\section{Addition et soustraction de fractions}
-
-\input{./add}
+%\input{./add}
 \end{document}
