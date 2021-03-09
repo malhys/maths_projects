@@ -1,13 +1,14 @@
 \documentclass[12pt,a4paper]{article}
 
+
 \usepackage[in, plain]{fullpage}
 \usepackage{array}
-\usepackage{../../../pas-math}
-\usepackage{../../../moncours}
+%\usepackage{../../../pas-math}
+\usepackage{../../../moncours2}
 
 
 %\usepackage{pas-cours}
-\input{../../../utils_maths}
+%\input{../../../utils_maths}
 
 
 %\makeatletter
@@ -15,139 +16,70 @@
 %\makeatother
 
 
-%\author{Olivier FINOT}
+\toggletrue{eleve}
+%\toggletrue{dys}
+
 \date{}
-\title{}
+\title{\textcircled{{\normalsize{6}}}Symétrie axiale}
 
 \graphicspath{{./img/}}
 
-\lhead{Seq 2: Symétries}
-\rhead{O. FINOT}
+\renewcommand{\labelitemi}{∙}
 %
 %\rfoot{Page \thepage}
 \begin{document}
-%\maketitle
+	\maketitle
+	
+	
+	
 
-
-
-
-\chap[num=9, color=red]{Symétrie axiale}{\today }
 
 \input{./obj}
 
-\section{Médiatrice}
 
 
-\begin{mydef}
-	La médiatrice d'un segment est la droite \kw{perpendiculaire à ce segment} et qui \kw{passe par son milieu}.
-\end{mydef}
-
-
-\begin{myex}
-	La droite $(d)$ est la médiatrice du segment $[AB]$.
+%\section{Symétrique  d'un point par rapport à une droite}
 	
-	\begin{center}
-		\includegraphics[scale=0.15]{med1}
-	\end{center}
-\end{myex}
 
-\begin{myprops}
-	\begin{itemize}
-		\item \textbf{Si} un point appartient à la médiatrice d'un segment, \textbf{alors} ce point est à la même distance des extrémités de ce segment.
-		\item \textbf{Si} un point est à la même distance des extrémités d'un segment, \textbf{alors} il appartient à la médiatrice de ce segment.
-	\end{itemize}
-\end{myprops}
-
-
-\begin{myexs}
-	\begin{multicols}{2}
-		
-		\begin{enumerate}
-			
-		
-		\item  Le point $D$ appartient à la médiatrice $(d)$ du segment $[AB]$, donc $AD=BD$.
-		
-		\vspace*{0.5cm}
-		\begin{center}
-			\includegraphics[scale=0.15]{med2}
-		\end{center}
-	
-		
-		\item On a $EG=GF$, $EH=HF$ et $EI=IF$, donc les points $G$, $H$ et $I$ appartiennent tous à la médiatrice du segment $[EF]$.
-		
-		\begin{center}
-			\includegraphics[scale=0.13]{med3}
-		\end{center}
-	
-	\end{enumerate}
-	\end{multicols}
-
-
-	
-\end{myexs}
-
-\begin{mymeth}
-Pour tracer la médiatrice d'un segment $[AB]$ au compas et à la règle non graduée :
-
-\begin{enumerate}
-	\item choisir un écartement plus grand que la moitié du segment;
-	\item placer la pointe du compas en $A$ et tracer un arc de cercle;\label{step1}
-	\item en gardent le même écartement, placer la pointe du compas en $B$;
-	\item tracer un arc de cercle qui coupe le premier;
-	\item placer le point $I$ à l'intersection;\label{step2}
-	\item refaire les étapes \ref{step1} à \ref{step2} avec un autre écartement en nommant le point $J$;
-	\item tracer la droite $(IJ)$ médiatrice du segment $[AB]$.
-	
-\end{enumerate}
-\end{mymeth}
-
-\newpage
-\section{Symétrique  d'un point par rapport à une droite}
-	
-	\begin{myprop}
-		Si le point $B$ est le symétrique du point $A$ par rapport à une droite $(d)$, alors la droite $(d)$ est la médiatrice du segment $[AB]$.
-	\end{myprop}
-
-	\begin{mymeth}
-		Pour tracer le symétrique d'un point $A$ par rapport à une droite $(d)$ :
-		
-		
-		\begin{enumerate}
-		%	\begin{multicols}{3}
-				
-			
-			\item  On fixe un écartement de notre compas suffisamment grand. On pique en A et on trace deux arcs de cercle qui coupe la droite $(d)$ en deux endroits.
-			
-			\begin{center}
-				\includegraphics[scale=0.2]{meth1}
-			\end{center}
-		
-		
-			\item Toujours avec le même écartement. On pique au niveau de la première intersection et on créé un arc de cercle de l'autre côté de la droite $(d)$.
-			
-			\begin{center}
-				\includegraphics[scale=0.2]{meth2}
-			\end{center}
-			\item Toujours avec le même écartement. On pique au niveau de la 2$^e$ intersection et on créé un arc de cercle de l'autre côté de la droite $(d)$ qui va couper le dernier arc de cercle tracé, le point d'intersection est le symétrie de $A$.
-			
-			\begin{center}
-				\includegraphics[scale=0.2]{meth3}
-			\end{center}
-			
-		%	\end{multicols}
-		\end{enumerate}
-	\end{mymeth}
 	
 \section{Symétrique  d'une figure par rapport à une droite}
 
 	\begin{mydef}
-		Deux figures $F_1$ et $F_2$ sont symétriques par rapport à la droite $(d)$ si \kw{par pliage le long de la droite $(d)$ les figures se superposent}.
+		
+		\iftoggle{eleve}{%
+			\vspace*{0.2cm}
+			\hrulefill
+			
+			\vspace*{0.2cm}
+			\hrulefill
+			
+			\vspace*{0.2cm}
+			\hrulefill
+		}{%
+			Deux figures sont symétriques par rapport à une droite si elles se superposent \kw{par pliage le long de la droite}.
+		}
 		
 		
+		
+		
+	\end{mydef}
+
+	\begin{myexs}
 		\begin{center}
 			\includegraphics[scale=0.35]{def}
 		\end{center}
-	\end{mydef}
+	
+		\iftoggle{eleve}{%
+			\vspace*{0.2cm}
+			\hrulefill
+			
+			\vspace*{0.2cm}
+			\hrulefill
+		}{%
+			La figure $F_2$ est la symétrique de $F_1$ par rapport à la droite $(d)$.
+		}
+		
+	\end{myexs}
 
 \section{Propriétés de la symétrie}
 
@@ -181,4 +113,9 @@ Pour tracer la médiatrice d'un segment $[AB]$ au compas et à la règle non gra
 			\end{center}
 		\end{itemize}
 	\end{myexs}
+
+\section{Médiatrice}
+
+
+\input{./mediatrice}
 \end{document}
