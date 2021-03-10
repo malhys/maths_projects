@@ -1,11 +1,13 @@
 \documentclass[a4paper,11pt]{exam}
-\usepackage{helvet}
-\printanswers % pour imprimer les réponses (corrigé)
-%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+
+%\usepackage{helvet}
+
+%\printanswers % pour imprimer les réponses (corrigé)
+\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
 \addpoints % Pour compter les points
 % \noaddpoints % pour ne pas compter les points
-%\qformat{\textbf{\thequestion ) } }
-\qformat{\textbf{\thequestion )} (\thepoints) \\} % Pour définir le style des questions (facultatif)
+\qformat{\textbf{\thequestion ) } }
+%\qformat{\textbf{\thequestion )} (\thepoints) \\} % Pour définir le style des questions (facultatif)
 \usepackage{color} % définit une nouvelle couleur
 \shadedsolutions % définit le style des réponses
 % \framedsolutions % définit le style des réponses
@@ -28,8 +30,8 @@
 
 %\usepackage{fullpage}
 \author{\ }
-\date{12 Février 2020}
-\title{$5^e G$ : DS num\'ero 4}
+\date{3 mars 2021}
+\title{$5^e 1$ : DS num\'ero 4}
 
 
 \usepackage{setspace}
@@ -48,25 +50,27 @@
 
 	\maketitle
 	
-\begin{center}
-	\textbf{Calculatrice interdite}
-\end{center}
 
 %
 %{ (Ch2)} :   (sur une feuille de papier, avec des objets, à l’aide de logiciels), chercher des exemples ou des contre-exemples;
 %\item \kw{Raisonner (Ra3)} :   ;
 %\item \kw{Communiquer (Co2)} :  expliquer à l’oral ou à l’écrit sa démarche ou son raisonnement; 
+
+\vspace*{-0.5cm}
 \begin{small}
 	\begin{center}
 		\begin{tabular}{|@{\ }l@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
 			\hline
 			\textbf{Compétence} & \textbf{MI} & \textbf{MF} & \textbf{MS} & \textbf{TBM} \\
 			\hline
-			\textbf{Chercher} (observer, questionner, manipuler, expérimenter) &  \ \ & \ \ & \ \ & \ \  \\
+			\textbf{Représenter} (Je trace et j'utilise des polygones.
+			) &  \ \ & \ \ & \ \ & \ \  \\
 			\hline	
-			\textbf{Raisonner} (utiliser un raisonnement logique pour parvenir à une conclusion) & \ \ & \ \ &  \ \  & \ \ \\
+			\textbf{Raisonner} (J'utilise l'inégalité triangulaire, la somme des angles d'un triangle) & \ \ & \ \ &  \ \  & \ \ \\
 			\hline
-			\textbf{Communiquer} (Expliquer sa démarche, son raisonnement ) &  \ \ & \ \ & \ \ & \ \  \\
+			\textbf{Raisonner} (Je résous un problème.) & \ \ & \ \ &  \ \  & \ \ \\
+			\hline
+			\textbf{Communiquer} (J'explique ce que je fais. ) &  \ \ & \ \ & \ \ & \ \  \\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -74,20 +78,24 @@
 
 	
 	
-\input{./france}	
+%\input{./france}	
+%
+%
+%
+%
+%\input{./construction}
 
-
-
-
-\input{./construction}
+\input{./trace}
 
 \input{./angle}
 
 \input{./argument}
 
-\newpage
+%\newpage
 
-\input{./cercle}
+%\input{./cercle}
+
+\input{./bonus}
 \label{LastPage}
 
 \end{document}
