@@ -1,0 +1,127 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+%\usepackage{../../../pas-math}
+\usepackage{../../../moncours2}
+
+
+
+
+\date{}
+\title{\textcircled{{\normalsize{7}}} Fractions}
+
+\graphicspath{{./img/}}
+
+
+%\toggletrue{eleve}
+%\toggletrue{dys}
+
+%\rfoot{Page \thepage}
+\begin{document}
+	
+	\maketitle
+
+
+
+%\chap[num=3, color=red]{Fractions}{\today }
+
+\input{./obj}
+
+\section{Fraction et partage}
+
+
+\begin{mydef}
+	Lorsqu'on partage une unité en \kw{parts égales}, chaque part est une fraction de l'unité.
+\end{mydef}
+
+\begin{myex}
+	
+	La bande rouge ci-dessous représente l'unité.
+	
+	\begin{itemize}
+		\item Elle est partagée en cinq parts de même dimensions.
+		
+		\begin{center}
+			\includegraphics[scale=0.42]{partage_1}
+		\end{center}
+	
+		Chaque part représente un cinquième de la bande. On note $\dfrac{\textcolor{blue}{1}}{\textcolor{red}{5}}$.
+		
+		\item Si l'on colorie 3 parts, on colorie trois fois un cinquième, donc trois cinquièmes que l'on note $\dfrac{\textcolor{blue}{3}}{\textcolor{red}{5}}$. C'est une fraction.
+		
+		\begin{center}
+			
+			\begin{multicols}{2}
+				
+				\ \\
+					
+				\includegraphics[scale=0.42]{partage_2}
+				
+				
+				
+				\includegraphics[scale=0.72]{exemple1}
+			\end{multicols}
+			
+		\end{center}
+	\end{itemize}
+	
+\end{myex}
+
+\begin{mydef}
+	Une fraction s'écrit sous la forme suivante :
+	
+	\begin{center}
+		\includegraphics[scale=0.7]{definition}
+	\end{center}
+	
+	où \textcolor{blue}{a} et \textcolor{red}{b} désignent deux nombres entiers, \textcolor{red}{b} est différent de zéro.
+\end{mydef}
+
+\section{Quotient er écriture fractionnaire}
+
+	\begin{mydef}
+		Le quotient des nombres $a$ et $b$ ($b$ $\neq$ 0), peut s'écrire sous la forme $\dfrac{a}{b}$.
+	\end{mydef}
+
+	\begin{myexs}
+		\begin{itemize}
+			\item  Le quotient $12 \div 36$ pur s'écrire sous la forme de la fraction $\dfrac{12}{36}$.
+			
+			\item L'écriture fractionnaire $\dfrac{\num{8,2}}{2}$ correspond au quotient $\num{8,2} \div 2$
+		\end{itemize}
+	\end{myexs}
+
+	\begin{myprops}
+		
+		\begin{itemize}
+			\item Une fraction où le numérateur est inférieur au dénominateur est inférieure à 1. 
+			\item Une fraction où le numérateur est supérieure au dénominateur est supérieure à 1.
+		\end{itemize}
+	\end{myprops}
+
+	\begin{myexs}
+		\begin{itemize}
+			\item  $\dfrac{3}{4} < 1$ ($3 \div 4 = \num{0.75}$).
+			
+			\item $\dfrac{23}{5} > 1$ ($23 \div 5 = \num{4.6}$).
+		\end{itemize}
+	\end{myexs}
+%
+%\input{./def_v2}
+%
+%\newpage
+%\section{Divisibilité et nombres premiers}
+%
+%\input{./div_v2}
+%
+%\section{Fractions égales et simplification}
+
+%\setcounter{section}{3}
+
+%\section{\'Egalité des produits en croix}
+
+%\input{./croix_v2}
+
+
+\end{document}
