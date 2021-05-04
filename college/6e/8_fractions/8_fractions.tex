@@ -192,7 +192,7 @@
 \end{myprop}
 
 \begin{myex}
-	On veut encadrer $\dfrac{123}{7}$ par deux nombres entiers consécutifs. \\
+	On veut encadrer $\dfrac{123}{17}$ par deux nombres entiers consécutifs. \\
 	
 	
 	\iftoggle{eleve}{%
@@ -217,18 +217,72 @@
 \section{Fraction d'une quantité}
 
 \begin{myprop}
-	Prendre une fraction d'une quantité revient à multiplier cette quantité par la fraction.
+	
+	\iftoggle{eleve}{%
+		Pour \hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	}{%
+		Pour prendre une fraction d'une quantité on multiplie cette quantité par la fraction.
+	}
+	
 \end{myprop}
 
 \begin{myex}
 	Combien font $\dfrac{3}{4}$ de 20 € ?
 	
-	\begin{equation*}
-		20 \times \dfrac{3}{4} = 20 \times 3 \div 4 = 20 \times \num{0.75} = 15
-	\end{equation*}
+	
+	\iftoggle{eleve}{%
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.4cm}
+		\hrulefill 
+	}{%
+		\begin{equation*}
+			20 \times \dfrac{3}{4} = 20 \times 3 \div 4 = 20 \times \num{0.75} = 15
+		\end{equation*}
+	
+		Les trois quarts de 20 € font 15 €
+	}
+	
 
-	Les trois quarts de 20 € font 15 €
+	
 \end{myex}
+
+\vspace*{-0.2cm}
+
+\section{Comparaison de fractions}
+
+\iftoggle{eleve}{%
+	\begin{myprop}
+		Deux \hrulefill
+		
+		\vspace*{0.2cm}
+		\hrulefill
+	\end{myprop}
+	
+	\begin{myex}
+		On \hrulefill
+		
+		\vspace*{0.4cm}
+		\hrulefill
+	\end{myex}
+	
+}{%
+	\begin{myprop}
+		Deux fractions avec le même dénominateur sont rangées dans le \kw{même ordre que leur numérateurs}.
+	\end{myprop}
+	
+	\begin{myex}
+		On veut comparer $\dfrac{3}{4}$ et $\dfrac{1}{4}$ :
+		
+		$3 > 1$ donc $\dfrac{3}{4} > \dfrac{1}{4}$.
+	\end{myex}
+	
+}
 
 
 \section{Autres écritures d'une fraction}
@@ -236,38 +290,90 @@
 \subsection{Fractions égales}
 
 \begin{myprop}
-	Un quotient ne change pas quand on multiplie (ou divise) son numérateur et son dénominateur par un même nombre non nul.
+	
+	\iftoggle{eleve}{%
+		Un \hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	}{%
+		Un quotient ne change pas quand on multiplie (ou divise) son numérateur et son dénominateur par un même nombre non nul.
+	}
+	
 \end{myprop}
 
 
 \begin{myexs}
 	\begin{itemize}
-		\item $\dfrac{3}{4} = \dfrac{3 \times 3}{4 \times 3} = \dfrac{9}{12}$ 
-		\item $\dfrac{12}{80} = \dfrac{12 \div 4}{80 \div 4} = \dfrac{3}{20}$ , ici on  a simplifié par 4, la fraction $\dfrac{12}{80}$.
+		\iftoggle{eleve}{%
+			\item \vspace*{0.2cm}
+			\hrulefill
+			
+			\item \vspace*{0.2cm}
+			\hrulefill
+		}{%
+			\item $\dfrac{1}{2} = \dfrac{1 \times 2}{2 \times 2} = \dfrac{2}{4}$ 
+			\item $\dfrac{2}{6} = \dfrac{2 \div 2}{6 \div 2} = \dfrac{1}{3}$ , ici on  a simplifié par 2, la fraction $\dfrac{2}{6}$.
+		}
 	\end{itemize}
 \end{myexs}
 
 \subsection{Fractions décimales}
 
-\begin{mydef}
-	Une fraction décimale est une fraction dont le dénominateur est un multiple de 10.
-\end{mydef}
+\iftoggle{eleve}{%
+	\begin{mydef}
+		Une
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	\end{mydef}
+	
+	\begin{myprop}
+		Tout
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	\end{myprop}
+	
+	\begin{myexs}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item \ %$\dfrac{25}{10} = \num{2.5}$
+				\item \ %$\dfrac{25}{1000} = \num{0.025}$
+				\item \ %$\num{32.54} = \dfrac{3254}{100}$
+				\item \ %$\num{0.2} = \dfrac{2}{10}$
+				
+			\end{itemize}
+		\end{multicols}
+	\end{myexs}
+}{%
+	\begin{mydef}
+		Une fraction décimale est une fraction dont le dénominateur est un multiple de 10.
+	\end{mydef}
+	
+	\begin{myprop}
+		Tout nombre décimal peut s'écrire sous forme de fraction décimale
+	\end{myprop}
+	
+	\begin{myexs}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item $\dfrac{25}{10} = \num{2.5}$
+				\item $\dfrac{25}{1000} = \num{0.025}$
+				\item $\num{32.54} = \dfrac{3254}{100}$
+				\item $\num{0.2} = \dfrac{2}{10}$
+				
+			\end{itemize}
+		\end{multicols}
+	\end{myexs}
+}
 
-\begin{myprop}
-	Tout nombre décimal peut s'écrire sous forme de fraction décimale
-\end{myprop}
 
-\begin{myexs}
-	\begin{multicols}{2}
-		\begin{itemize}
-			\item $\dfrac{25}{10} = \num{2.5}$
-			\item $\dfrac{25}{1000} = \num{0.025}$
-			\item $\num{32.54} = \dfrac{3254}{100}$
-			\item $\num{0.2} = \dfrac{2}{10}$
-			
-		\end{itemize}
-	\end{multicols}
-\end{myexs}
 %
 %\input{./def_v2}
 %

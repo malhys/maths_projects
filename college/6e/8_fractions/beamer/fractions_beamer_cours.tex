@@ -1,0 +1,251 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+%\usetheme{Malmoe}
+%\usecolortheme{beaver}
+\usecolortheme{seahorse}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+\newcommand{\myitem}{\item[\textbullet]}
+
+\graphicspath{{../img/}}
+
+\title{Séquence 7 : Fractions}
+%\subtitle{Correction des exercices semaine du 05/04}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+%
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
+	\end{frame} 
+}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\section{Fraction et partage}
+	
+\section{Quotient et écriture fractionnaire}
+
+\section{Fractions et repérages}
+
+\begin{frame}
+	\begin{block}{Objectif}
+		\begin{itemize}
+			\item Je place une fraction sur une demi-droite graduée
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\subsection{Placer une fraction sur une demi-droite graduée}
+
+\begin{frame}
+	\begin{block}{Méthode}
+		Pour repérer la fraction $\dfrac{\textcolor{blue}{a}}{\textcolor{red}{b}}$, on partage l'unité en \textcolor{red}{b} segments de même longueur, puis on reporte \textcolor{blue}{a} fois cette longueur à partir de zéro.
+	\end{block} \pause
+
+	\begin{exampleblock}{Exemple}
+		On veut repérer la fraction $\dfrac{\textcolor{blue}{8}}{\textcolor{red}{5}}$ :
+		
+		\begin{itemize}
+			\item on partage l'unité en \textcolor{red}{5} segments de même longueur
+			\item on reporte \textcolor{blue}{8} fois cette longueur.
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\subsection{Encadrer une fraction}
+
+\begin{frame}
+	\begin{myprop}
+		On peut encadrer n'importe quelle fraction par deux nombres entiers consécutifs . %(qui se suivent).
+		
+		Si $a$ et $b$ sont deux nombres entiers ($b \neq 0$), on a :
+		
+		\begin{equation*}
+			\textcolor{red}{q} \leq \dfrac{a}{b} < \textcolor{red}{q}+1
+		\end{equation*}
+		
+		Où \textcolor{red}{q} est le quotient de la division euclidienne de $a$ par $b$.
+	\end{myprop}\pause
+
+	\begin{exampleblock}{Exemple}
+		On a $123 = 17 \times \textcolor{red}{7} + 4$. Donc 
+		
+		\begin{equation*}
+			\textcolor{red}{7} \leq \dfrac{123}{17} < 8.
+		\end{equation*}
+	\end{exampleblock}
+\end{frame}
+\section{Fraction d'une quantité}
+
+\begin{frame}
+	\begin{block}{Objectif}
+		Je prend une fraction d'une quantité.
+	\end{block}
+\end{frame}
+
+\begin{frame}	
+	\begin{myprop}
+		Pour prendre une fraction d'une quantité on multiplie cette quantité par la fraction.
+		
+	\end{myprop} \pause
+
+	\begin{exampleblock}{Exemple}
+		Combien font $\dfrac{3}{4}$ de 20 € ? \pause
+		
+		\begin{equation*}
+			20 \times \dfrac{3}{4} \pause = 20 \times 3 \div 4 =  20 \times \num{0.75} = \pause 15 
+		\end{equation*}\pause
+		
+		Les trois quarts de 20 € font 15 €.
+	\end{exampleblock}
+
+\end{frame}
+
+
+%\begin{frame}
+%	\frametitle{Exercice 5 }
+%
+%	
+%
+%	
+%	\begin{block}{{\centering Téléviseur $\frac{4}{3}$}}
+%		\pause
+%		\begin{eqnarray*}
+%			\dfrac{Longueur}{largeur} &= & \dfrac{4}{3} \\ \pause
+%			\dfrac{96}{?} &= & \dfrac{4}{3} \\ \pause
+%			\dfrac{24 \times 4}{?} &= & \dfrac{4}{3} \\ \pause
+%			\dfrac{24 \times 4}{24 \times 3} &= & \dfrac{4}{3} \\ \pause
+%			\dfrac{96}{72} &= & \dfrac{4}{3}  \pause
+%		\end{eqnarray*}
+%		
+%		Un téléviseur $\dfrac{4}{3}$ de 96 cm de longueur a une largeur de 72 cm. 
+%	\end{block}
+%
+%
+%	
+%\end{frame}
+%
+%
+%\begin{frame}
+%	\frametitle{Exercice 31 page 77}
+%
+%	
+%	
+%	\begin{block}{Téléviseur $\frac{16}{9}$}
+%		\pause
+%		\begin{eqnarray*}
+%			\dfrac{Longueur}{largeur} &= & \dfrac{16}{9} \\ \pause
+%			\dfrac{96}{?} &= & \dfrac{16}{9} \\ \pause
+%			\dfrac{6 \times 16}{?} &= & \dfrac{16}{9} \\ \pause
+%			\dfrac{6 \times 16}{6 \times 9} &= & \dfrac{16}{9} \\ \pause
+%			\dfrac{96}{54} &= & \dfrac{16}{9}  \pause
+%		\end{eqnarray*}
+%		
+%		Un téléviseur $\dfrac{16}{9}$ de 96 cm de longueur a une largeur de 54 cm. 
+%	\end{block}
+%	
+%	
+%\end{frame}
+%
+%\begin{frame}
+%	\frametitle{Exercice 51 page 79}
+%	Le parcours fait 45 km.
+%	
+%	\begin{block}{Coureur 1}
+%		\begin{eqnarray*}
+%			d_1 &=& \frac{3}{2} \; de \; 45 \; km \\ \pause
+%			d_1 &=& \frac{3}{2} \times 45 \\ \pause
+%			d_1 &=& \frac{3 \times 45}{2} \\ \pause
+%			d_1 &=& \frac{135}{2} \\ \pause
+%			d_1 &=& \num{67.5}  \pause
+%		\end{eqnarray*}
+%	
+%	Le premier coureur a terminé la course il a parcouru \num{67.5} km.
+%	\end{block}
+%\end{frame}
+%
+%\begin{frame}
+%	\frametitle{Exercice 51 page 79}
+%	Le parcours fait 45 km.
+%	
+%	\begin{block}{Coureur 2}
+%		\begin{eqnarray*}
+%			d_2 &=& \frac{4}{5} \; de \; 45 \; km \\ \pause
+%			d_2 &=& \frac{4}{5} \times 45 \\ \pause
+%			d_2 &=& \frac{4 \times 45}{5} \\ \pause
+%			d_2 &=& \frac{4 \times 9 \times 5}{5} \\ \pause
+%			d_2 &=& \num{36}  \pause
+%		\end{eqnarray*}
+%		
+%		Le deuxième coureur a parcouru \num{36} km.
+%	\end{block}
+%\end{frame}
+%
+%
+%\begin{frame}
+%	\frametitle{Exercice 51 page 79}
+%	Le parcours fait 45 km.
+%	
+%	\begin{block}{Coureur 3}
+%		\begin{eqnarray*}
+%			d_3 &=& \frac{7}{9} \; de \; 45 \; km \\ \pause
+%			d_3 &=& \frac{7}{9} \times 45 \\ \pause
+%			d_3 &=& \frac{7 \times 45}{9} \\ \pause
+%			d_3 &=& \frac{7 \times 5 \times 9}{9} \\ \pause
+%			d_3 &=& \num{35}  \pause
+%		\end{eqnarray*}
+%		
+%		Le troisième coureur a parcouru \num{35} km.
+%	\end{block}
+%\end{frame}
+%
+%
+%\begin{frame}
+%	\frametitle{Exercice 51 page 79}
+%		
+%	\begin{block}{Bilan}
+%		\begin{itemize}
+%			\item Le premier coureur a terminé la course il a parcouru \num{67.5} km.
+%			\item Le deuxième coureur a parcouru \num{36} km.
+%			\item Le troisième coureur a parcouru \num{35} km. \pause
+%		\end{itemize} 
+%		
+%		
+%
+%	\end{block}
+%	
+%	\vspace*{1cm}
+%	C'est donc le premier coureur qui est en tête de la course.
+%\end{frame}
+%
+
+\end{document}
