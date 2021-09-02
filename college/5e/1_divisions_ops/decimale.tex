@@ -1,0 +1,364 @@
+\begin{mydef}
+	\iftoggle{eleve}{%
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	}{%
+		Effectuer la division décimale d'un nombre décimal par un nombre entier, c'est chercher le \kw{quotient}, tel que : 
+		
+		\begin{equation*}
+			quotient \; \times \; diviseur = \; dividende
+		\end{equation*}
+	}
+	
+\end{mydef}
+
+\subsection{Division décimale de deux entiers}
+
+\begin{mymeth}
+	\iftoggle{eleve}{%
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+		
+		\vspace*{0.2cm}
+		\hrulefill 
+	}{%
+		On commence comme une division entière. Quand il n'y a plus de chiffre à abaisser, on ajoute une virgule au quotient et on abaisse des zéros jusqu'à ce que le reste soit égal à zéro (ou qu'on obtienne la valeur approchée voulue).
+	}
+	
+\end{mymeth}
+
+\begin{myexs}
+	\begin{multicols}{2}
+		\begin{center}
+					$\begin{array}{rc|c}
+					294 \quad & & 35 \\
+					\cline{3-3}
+					 &  \\
+					 & & \\
+					 & & \\
+					\end{array}$
+			%\opidiv{731}{34}
+		\end{center}
+		
+		
+		\begin{center}
+			$\begin{array}{rc|c}
+			732 \quad & & 5 \\
+			\cline{3-3}
+			&  \\
+			& & \\
+			& & \\
+			\end{array}$
+			
+		\end{center}
+		
+	\end{multicols}
+\end{myexs}
+
+
+\subsection{Division décimale d'un nombre décimal par un entier}
+
+	\begin{mymeth}
+		\iftoggle{eleve}{%
+			\vspace*{0.2cm}
+			\hrulefill 
+			
+			\vspace*{0.2cm}
+			\hrulefill 
+			
+			\vspace*{0.2cm}
+			\hrulefill 
+		}{%
+			On commence comme pour le cas précédent, mais on met une virgule au quotient dès qu'on arrive à la virgule du diviseur.
+		}
+		
+	\end{mymeth}
+
+	\begin{myexs}
+		\begin{multicols}{2}
+			\begin{center}
+				$\begin{array}{rc|c}
+				\num{456.5} \quad & & 25 \\
+				\cline{3-3}
+				&  \\
+				& & \\
+				& & \\
+				\end{array}$
+				%\opidiv{731}{34}
+			\end{center}
+			
+			
+			\begin{center}
+				$\begin{array}{rc|c}
+				\num{102.4} \quad & & 20 \\
+				\cline{3-3}
+				&  \\
+				& & \\
+				& & \\
+				\end{array}$
+				
+			\end{center}
+			
+		\end{multicols}
+	\end{myexs}
+%\subsection{Division décimale de deux nombres décimaux}
+%
+%\begin{myprop}
+%	\iftoggle{eleve}{%
+%		\vspace*{0.2cm}
+%		\hrulefill 
+%		
+%		\vspace*{0.2cm}
+%		\hrulefill 
+%%		
+%%		\vspace*{0.2cm}
+%%		\hrulefill 
+%	}{%
+%		On ne change pas le quotient de deux nombres  quand on multiplie chacun d'eux par un même nombre (10, 100, ...).
+%	}
+%	
+%\end{myprop}
+%
+%\begin{myex}
+%	On veut diviser \num{67.85} par \num{2.3}. \\
+%	
+%	\iftoggle{eleve}{%
+%		\vspace*{0.2cm}
+%		\hrulefill 
+%		
+%		\vspace*{0.5cm}
+%		\hrulefill 
+%				
+%		\vspace*{0.5cm}
+%		\hrulefill 
+%		
+%		\vspace*{0.5cm}
+%		\hrulefill 
+%		
+%		\vspace*{0.7cm}
+%		
+%		$\begin{array}{rc|c}
+%			\hspace*{3cm} \quad & & \hspace*{1cm} \\
+%			\cline{3-3}
+%			&  \\
+%			& & \\
+%			& & \\
+%		\end{array}$
+%	}{%
+%		Le diviseur est \num{2.3}, pour qu'il soit entier on le multiplie par 10 : 
+%		
+%		\begin{equation*}
+%			\num{2.3} \times 10 = 23
+%		\end{equation*}
+%		
+%		et on multiplie le dividende par 10, pour ne pas changer la valeur du quotient :
+%		
+%		\begin{equation*}
+%			\num{67.85} \times 10 = \num{678.5}
+%		\end{equation*}
+%		
+%		
+%		$\begin{array}{rc|c}
+%			\num{678.5} \quad & & 23 \\
+%			\cline{3-3}
+%			&  \\
+%			& & \\
+%			& & \\
+%		\end{array}$
+%	}
+%	
+%\end{myex}
+
+%\subsection{Valeur approchée}
+%
+%\begin{mydefs}
+%	
+%	\iftoggle{eleve}{%
+%		\begin{itemize}
+%			\item Une \hrulefill 
+%			
+%			\vspace*{0.2cm}
+%			\hrulefill 
+%			
+%			\vspace*{0.2cm}
+%			\hrulefill 
+%			
+%			\item La \hrulefill
+%			
+%			\vspace*{0.2cm}
+%			\hrulefill 
+%			
+%			\vspace*{0.2cm}
+%			\hrulefill 
+%			
+%			\vspace*{0.2cm}
+%			\hrulefill 
+%			
+%			\item La \hrulefill
+%			
+%			\vspace*{0.2cm}
+%			\hrulefill 
+%			
+%			\vspace*{0.2cm}
+%			\hrulefill 
+%			
+%			\vspace*{0.2cm}
+%			\hrulefill
+%		\end{itemize}
+%	}{%
+%		\begin{itemize}
+%			\item Une valeur approchée d'un nombre est un nombre proche de la valeur exacte de ce nombre.
+%			
+%			\item La valeur approchée \kw{par défaut} d'un nombre a un rang donné est le nombre du rang voulu \kw{immédiatement inférieur} au nombre de départ.
+%			
+%			\item La valeur approchée \kw{par excès} d'un nombre a un rang donné est le nombre du rang voulu \kw{immédiatement supérieur} au nombre de départ.
+%		\end{itemize}
+%	}
+%	
+%	  
+%\end{mydefs}
+%
+%\begin{myexs}
+%	\begin{itemize}
+%		\item $\num{42} < \num{42.758} < \num{43}$ :
+%		
+%		
+%		\iftoggle{eleve}{%
+%			\vspace*{0.2cm}
+%			\hrulefill 
+%			
+%			\vspace*{0.2cm}
+%			\hrulefill
+%		}{%
+%			\num{42} est la valeur approchée par défaut à l'unité près de \num{42.758}. \num{43} est la valeur approchée par excès à l'unité près.
+%		}
+%		
+%		
+%		
+%		\vspace*{0.5cm}
+%		
+%		\item $\num{185.2} < \num{185.254} < \num{185.3}$ :
+%		
+%		\iftoggle{eleve}{%
+%			\vspace*{0.2cm}
+%			\hrulefill 
+%			
+%			\vspace*{0.2cm}
+%			\hrulefill
+%		}{%
+%			\num{185.2} est la valeur approchée par défaut au dixième près de \num{185.254}. \num{185.2} est la valeur approchée par excès au dixième près.
+%		}
+%	\end{itemize}
+%\end{myexs}
+%
+%\iftoggle{eleve}{%
+%	\newpage
+%}
+%
+%\subsection{Diviser un nombre par 10 ; 100 ... ou \num{0.1} ; \num{0.01} ...}
+%
+%\begin{mymeth}
+%	\iftoggle{eleve}{%
+%		\vspace*{0.2cm}
+%		\hrulefill 
+%		
+%		\vspace*{0.2cm}
+%		\hrulefill
+%	}{%
+%		Pour diviser un nombre par 10 ; 100 ou 1000 on décale la virgule vers la gauche  de 1 ; 2 ou 3 rangs. 
+%	}
+%	
+%	
+%\end{mymeth}
+%
+%\begin{myexs}
+%	
+%	\vspace*{-1.2cm}
+%	\begin{multicols}{3}
+%		
+%		\iftoggle{eleve}{%
+%			\begin{equation*}
+%				150 \div 10 = 
+%			\end{equation*}
+%			
+%			\begin{equation*}
+%				\num{254.2} \div 100 =
+%			\end{equation*}
+%			
+%			\begin{equation*}
+%				\num{78} \div 1000 = 
+%			\end{equation*}
+%		}{%
+%			\begin{equation*}
+%				150 \div 10 = 15
+%			\end{equation*}
+%			
+%			\begin{equation*}
+%				\num{254.2} \div 100 = \num{2.542}
+%			\end{equation*}
+%			
+%			\begin{equation*}
+%				\num{78} \div 1000 = \num{0.078}
+%			\end{equation*}
+%		}
+%		
+%	\end{multicols}
+%\end{myexs}
+%
+%\begin{mymeth}
+%	\iftoggle{eleve}{%
+%		\vspace*{0.2cm}
+%		\hrulefill 
+%		
+%		\vspace*{0.2cm}
+%		\hrulefill
+%	}{%
+%		Pour diviser un nombre par \num{0.1} ; \num{0.01} ou \num{0.001} on le multiplie par 10 ; 100 ou 1000. 
+%	}
+%	
+%\end{mymeth}
+%
+%\begin{myexs}
+%	\vspace*{-1.2cm}
+%	\begin{multicols}{3}
+%		
+%		\iftoggle{eleve}{%
+%			\begin{equation*}
+%				\num{1.85} \div \num{0.1} = 
+%			\end{equation*}
+%			
+%			\begin{equation*}
+%				\num{254.2} \div \num{0.01} = 
+%			\end{equation*}
+%			
+%			\begin{equation*}
+%				\num{7} \div \num{0.001} = 
+%			\end{equation*}
+%		}{%
+%			\begin{equation*}
+%				\num{1.85} \div \num{0.1} = \num{18.5}
+%			\end{equation*}
+%			
+%			\begin{equation*}
+%				\num{254.2} \div \num{0.01} = \num{25420}
+%			\end{equation*}
+%			
+%			\begin{equation*}
+%				\num{7} \div \num{0.001} = \num{7000}
+%			\end{equation*}
+%		}
+%		
+%	\end{multicols}
+%\end{myexs}
