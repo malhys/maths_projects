@@ -1,0 +1,496 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+\usecolortheme{beaver}
+%\usecolortheme{rose}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+\newcommand{\myitem}{\item[\textbullet]}
+
+\graphicspath{{../img/}}
+
+\title{Séquence 3 : Nombres relatifs}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+\date{18 Novembre 2020}
+
+%
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+%
+%
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
+	\end{frame} 
+}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+	
+
+\begin{frame}
+	\begin{block}{Objectifs}
+		\begin{itemize}
+			
+		\item Savoir ce qu’est un nombre relatif et connaître le vocabulaire associé.
+		\item Savoir comparer des nombres relatifs.
+		\item Savoir additionner et soustraire des nombres relatifs.
+		\item Savoir sur repérer sur un axe ou dans le le plan.
+			
+			\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\begin{block}{Compétences travaillées}
+		\begin{itemize}
+			\item \kword{Représenter}% (Re2)} :  produire et utiliser plusieurs représentations d’un nombre;
+			\item \kword{Calculer}% (Ca1)} :  calculer avec des nombres rationnels, de manière exacte ou approchée en combinant astucieusement le calcul mental, le calcul posé et le calcul instrumenté ;
+			\item \kword{Raisonner}% (Ra1)} :  résoudre des problèmes impliquant des grandeurs variées : mobiliser les connaissances nécessaires, analyser et exploiter ses erreurs, mettre à l’essai plusieurs solutions.		
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+
+\section{Définitions}
+
+
+
+
+\begin{frame}
+	\begin{mydefs}
+		\begin{itemize}
+			\item Un nombre supérieur à 0 est \pause un \kword{nombre positif},\pause un nombre inférieur à 0 est un \kword{nombre négatif}.
+			
+			\begin{center}
+				\includegraphics[scale=0.5]{relatifs}\pause
+			\end{center}
+			
+			\item Les nombres positifs et négatifs forment l'ensembles des \kword{nombres relatifs}.\pause
+			
+			\item Un nombre relatif est composé d'\kword{un signe} (+ ou -) et d'une \kword{distance à zéro}.\pause
+			
+			\item Deux \kword{nombres opposés} ont la \kword{même distance à zéro} et des \kword{signes différents}. 
+			
+			
+		\end{itemize}
+	\end{mydefs}
+	
+\end{frame}
+
+
+\begin{frame}
+	\begin{myexs}
+		\begin{itemize}
+			\item $+7$ est un nombre \pause positif, sa distance à zéro est \pause $7$; 
+			\begin{center}
+				\includegraphics[scale=0.6]{ex1}\pause
+			\end{center}
+			\item $\num{-4}$ est un nombre \pause négatif, sa distance à zéro est \pause $\num{4}$;
+			\begin{center}
+				\includegraphics[scale=0.6]{ex2}\pause
+			\end{center}
+			
+			\item $0$ est \pause à la fois un nombre positif et négatif.%, sa distance à zéro est 0.
+			\item $-10$ et $+10$ sont \pause des nombres opposés.
+			\begin{center}
+				\includegraphics[scale=0.5]{opposes}
+			\end{center}
+		\end{itemize}
+	\end{myexs}
+\end{frame}
+
+\section{Des nombres pour se repérer et à comparer}
+
+\subsection{Repérage}
+\begin{frame}
+	\begin{mydef}
+		
+			Sur une droite graduée, \pause chaque point est repéré par un nombre relatif, \pause son \kword{abscisse}.
+	\end{mydef}
+
+	\begin{myex}
+		\begin{center}
+			\includegraphics[scale=0.35]{droite2}		
+		\end{center}
+		
+		
+			\begin{itemize}
+					\item L'abscisse du point A est \pause +3; \pause 
+					\item L'abscisse du point B est \pause +5; \pause
+					\item L'abscisse du point C est \pause -2; \pause
+					\item L'abscisse du point D est \pause -4; \pause
+					\item L'abscisse du point E est \pause \num{-5.5}; \pause
+					\item L'abscisse du point O est \pause 0;
+				
+			\end{itemize}
+		
+	\end{myex}
+\end{frame}
+
+\begin{frame}
+	\begin{mydefs}
+		\begin{itemize}
+				\item Un repère orthogonal est formé par \pause deux droites graduées perpendiculaires \pause et de même origine. La droite \pause  horizontale est l'\kword{axe des abscisses}, \pause la verticale est l'\kword{axe des ordonnées}.\pause 
+				
+				\item Un point du plan est repéré par deux nombres relatifs, \pause ses \kword{coordonnées}. \pause  Le premier nombre est son \kword{abscisse} \pause , le second son \kword{ordonnée}. On \pause note ces coordonnées $(abscisse \: ; \: ordonnée)$.
+			
+		\end{itemize}
+	\end{mydefs}
+\end{frame}
+
+\begin{frame}
+	\begin{myex}
+		\begin{center}
+			\includegraphics[scale=0.4]{repere}
+		\end{center}
+		
+		
+		\begin{itemize}
+			\item L'abscisse du point $A$ est \pause +3, son ordonnée est \pause +2, ses coordonnées sont \pause $(+3; +2)$. \pause
+				
+			\item L'abscisse du point $B$ est \pause +1, son ordonnée est \pause -2, ses coordonnées sont \pause  $(+1; -2)$.
+		
+		\end{itemize}
+	\end{myex}
+\end{frame}
+
+\subsection{Comparaison}
+
+
+
+
+\begin{frame}
+	\begin{myprops}
+		Pour comparer deux nombres relatifs :
+		\begin{itemize}
+			\item Si les deux \kword{nombres sont positifs}, le \pause plus grand est celui qui a \pause la \kword{plus grande distance à zéro};\pause 
+			\item Si les deux nombres sont de \kword{signes différents}, \pause le plus grand est \pause le \kword{nombre positif};
+			\item Si les deux \kword{nombres sont négatifs}, \pause le plus grand est celui qui a \pause la \kword{plus petite distance à zéro};
+			
+		\end{itemize}
+	\end{myprops}
+
+
+	\begin{myexs}
+		\begin{center}
+			\includegraphics[scale=0.3]{droite2}		
+		\end{center}
+		
+
+		
+			\begin{columns}
+				\begin{column}{0.5\textwidth}
+					\begin{itemize}
+						\item +5 \hspace*{0.5cm} +3 \pause (car 5 > 3) \pause 
+						\item +5 \hspace*{0.5cm} +1 \pause  (car 5 > 1) \pause 
+						\item +1 \hspace*{0.5cm} \num{-2} \pause (car +1 est positif) \pause 
+					\end{itemize}
+				\end{column}
+			
+				\begin{column}{0.5\textwidth}
+					\begin{itemize}
+						\item +5 \hspace*{0.5cm} \num{-4} \pause  (car +5 est positif) \pause 
+						\item \num{-4} \hspace*{0.5cm} \num{-5.5} \pause  (car 4 < \num{5.5}) \pause 
+						\item \num{-2} \hspace*{0.5cm} \num{-5.5} \pause  (car 2 < \num{5.5})
+					\end{itemize}					
+				\end{column}
+				
+			\end{columns}
+		
+
+	\end{myexs}
+
+\end{frame}
+
+\section{Addition et soustraction de deux nombres relatifs}
+
+\subsection{Additionner deux nombres relatifs}
+
+\begin{frame}
+	\begin{myprop}
+		Si deux nombres relatifs ont \kword{le même signe}, alors leur somme a :\pause
+		\begin{itemize}
+			\item \kword{le même signe};\pause
+			\item pour distance à zéro, \pause \kword{la somme} de leurs distances à zéro.\pause
+		\end{itemize}
+	\end{myprop}
+
+
+	\begin{myex}
+		On veut calculer (+\num{2.4}) + (+\num{5.2}) : \pause
+		
+		Les deux nombres sont positifs :
+		\begin{itemize}
+			\item leur somme est positive;
+			\item on ajoute les distances à zéro \\ $\num{2.4} + \num{5.2} = \num{7.6}$ 
+			\item[$\Rightarrow$] (+\num{2.4}) + (+\num{5.2}) = (+\num{7.6})
+		\end{itemize}
+	\end{myex}
+\end{frame}
+
+
+\begin{frame}
+	\begin{myprop}
+		Si deux nombres relatifs ont \kword{le même signe}, alors leur somme a :
+		\begin{itemize}
+			\item \kword{le même signe};
+			\item pour distance à zéro,  \kword{la somme} de leurs distances à zéro. 
+		\end{itemize}
+	\end{myprop}
+	
+	
+	\begin{myex}
+		On veut calculer (-\num{4.6}) + (-\num{3.7}) :
+		
+		Les deux nombres sont négatifs :\pause
+		\begin{itemize}
+			\item leur somme est négative;\pause
+			\item on ajoute les distances à zéro \\ $\num{4.6} + \num{3.7} = \num{8.3}$ \pause
+			\item[$\Rightarrow$] (-\num{4.6}) + (-\num{3.7}) = \pause (-\num{8.3})
+		\end{itemize}
+	\end{myex}
+\end{frame}
+
+
+\begin{frame}
+	\begin{myprop}
+		Si deux nombres relatifs ont \kword{des signes différents}, alors leur somme a :\pause
+		\begin{itemize}
+			\item le signe du nombre qui à \kword{la plus grande distance à zéro}; \pause
+			\item pour distance à zéro, \kword{la différence} de leurs distances à zéro. \pause
+		\end{itemize}
+	\end{myprop}
+
+
+	\begin{myex}
+		On veut calculer (-\num{2.4}) + (+\num{5.2}) : \pause
+		
+		Les deux nombres sont de signe différents : \pause
+		\begin{itemize}
+			\item (+ \num{5.2}) a la plus grande distance à zéro, \pause leur somme est positive; \pause
+			\item on soustrait les distances à zéro  \pause \\ $\num{5.2} - \num{2.4} = \num{2.8}$ \pause
+			\item[$\Rightarrow$] (-\num{2.4}) + (+\num{5.2}) = \pause (+\num{2.8})
+		\end{itemize}
+	\end{myex}
+\end{frame}
+
+
+\begin{frame}
+	\begin{myprop}
+		Si deux nombres relatifs ont \kword{des signes différents}, alors leur somme a :\pause
+		\begin{itemize}
+			\item le signe du nombre qui à \kword{la plus grande distance à zéro}; \pause
+			\item pour distance à zéro, \kword{la différence} de leurs distances à zéro. \pause
+		\end{itemize}
+	\end{myprop}
+	
+	
+	\begin{myex}
+		On veut calculer (-\num{4.6}) + (+\num{3.7}) : \pause
+		
+		Les deux nombres sont de signe différents : \pause
+		\begin{itemize}
+			\item (- \num{4.6}) a la plus grande distance à zéro, leur somme est négative; \pause
+			\item on soustrait les distances à zéro \pause \\ $\num{4.6} - \num{3.7} = \num{0.9}$ \pause
+			\item[$\Rightarrow$] (-\num{4.6}) + (-\num{3.7}) = \pause (-\num{0.9})
+		\end{itemize}
+	\end{myex}
+\end{frame}
+
+
+\begin{frame}
+	\begin{myprop}
+		La \kword{somme de deux nombres opposés} est égale à 0.
+		
+	\end{myprop}
+	
+	\begin{myexs}
+		
+		
+			\begin{equation*}
+			(+ 25) + (-25) = 0
+			\end{equation*}
+			
+			\begin{equation*}
+			(- \num{4.2}) + (+ \num{4.2}) = 0
+			\end{equation*}
+		
+		
+		
+	\end{myexs}
+\end{frame}
+
+
+
+
+\subsection{Soustraire deux nombres relatifs}
+
+
+\begin{frame}
+	\begin{myprop}
+		Pour soustraire un nombre relatif, on \pause \kword{ajoute son opposé}.\pause
+	\end{myprop}
+	
+	\begin{myex}
+		
+		On veut calculer $A = (-\num{5}) - (+2)$ : \pause
+		
+		Pour soustraire $(+2)$, \pause on ajoute son opposé : $(-2)$ : \pause
+		\begin{eqnarray*}
+			A &=& (-5) - (+2) \\ \pause
+			A &=& (-5) + (-2) \\ \pause
+			A &=& (- 7) \pause
+		\end{eqnarray*} 
+	\end{myex}	
+\end{frame}
+	
+
+\begin{frame}
+	\begin{myprop}
+		Pour soustraire un nombre relatif, on \kword{ajoute son opposé}.
+	\end{myprop}
+	
+	\begin{myex}
+		
+		On veut calculer $B = (+\num{3}) - (-\num{6.2})$ :\pause
+		
+		Pour soustraire $(-\num{6.2})$,  \pause on ajoute son opposé : $(+\num{6.2})$ : \pause
+		\begin{eqnarray*}
+			B &=& (+\num{3}) - (-\num{6.2}) \\ \pause
+			B &=& (+\num{3}) + (+\num{6.2}) \\ \pause
+			B &=& (+ \num{9.2})
+		\end{eqnarray*} 
+	\end{myex}	
+\end{frame}
+	
+\section{Simplifications d'écriture}
+
+\begin{frame}
+	\begin{block}{Méthode}
+			Pour alléger l'écriture d'une expression qui contient des nombres relatifs on peut :\pause
+		\begin{enumerate}
+			\item \kword{Transformer les soustractions} en additions; \pause
+			\item Supprimer les \kword{symboles d'addition} et les \kword{parenthèses}; \pause
+			\item Supprimer le \kword{signe du premier nombre} s'il est positif.
+		\end{enumerate}
+	\end{block}
+	
+	
+	\begin{exampleblock}{Exemples}
+		On veut simplifier et calculer les expressions suivantes :
+		\begin{eqnarray*}
+			A &=& (+6) - (+5) + (-2) - (-4) + (+2)\\ \pause
+			A &=& (+6) + (-5) + (-2) + (+4) + (+2)  \text{  \textit{(étape 1)}} \\ \pause
+			A &=& +6  -5  -2  +4  +2 \text{  \textit{(étape 2)}}\\ \pause
+			A &=& 6  -5  -2  +4  +2 \text{  \textit{(étape 3)}}
+		\end{eqnarray*}
+	\end{exampleblock}
+
+	
+	
+\end{frame}	
+
+
+\begin{frame}
+	\begin{block}{Méthode}
+		Pour alléger l'écriture d'une expression qui contient des nombres relatifs on peut :
+		\begin{enumerate}
+			\item \kword{Transformer les soustractions} en additions; 
+			\item Supprimer les \kword{symboles d'addition} et les \kword{parenthèses}; 
+			\item Supprimer le \kword{signe du premier nombre} s'il est positif.
+		\end{enumerate}
+	\end{block}
+	
+	
+	\begin{exampleblock}{Exemples}
+		On veut simplifier et calculer les expressions suivantes :
+		\begin{eqnarray*}
+			B &=& (-4) + (-3) - (+8) - (-4) - (-7)\\ \pause
+			B &=& (-4) + (-3) + (-8) + (+4) + (+7) \text{  \textit{(étape 1)}}\\ \pause
+			B &=& -4  -3  -8  +4  +7 \text{  \textit{(étape 2)}}
+		\end{eqnarray*}
+	\end{exampleblock}
+	
+\end{frame}	
+
+\begin{frame}
+	\begin{block}{Remarque}
+		Toute expression peut s'écrire sous la forme d'une suite d'additions. \pause Pour faciliter le calcul on peut regrouper les termes astucieusement ou par signe.\pause
+	\end{block}
+
+	\begin{exampleblock}{Exemples}
+		
+		\begin{eqnarray*}
+			%A &=& (+6) - (+5) + (-2) - (-4) + (+2)\\
+			%A &=& (+6) + (-5) + (-2) + (+4) + (+2)  \text{  \textit{(étape 1)}} \\
+			%A &=& +6  -5  -2  +4  +2 \text{  \textit{(étape 2)}}\\
+			A &=& 6  -5  -2  +4  +2 \\ \pause
+			A &=& 6 + 4 + 2 - 5 - 2 \\ \pause
+			A &=& 12 - 7 \\ \pause
+			A &=& 5 
+		\end{eqnarray*}
+	
+		\vspace*{-0.75cm}
+			
+		\begin{eqnarray*}
+			%B &=& (-4) + (-3) - (+8) - (-4) - (-7)\\
+			%B &=& (-4) + (-3) + (-8) + (+4) + (+7) \text{  \textit{(étape 1)}}\\
+			B &=& -4  -3  -8  +4  +7 \\ \pause
+			B &=& -15 + 11 \\ \pause
+			B &=& -4 
+		\end{eqnarray*}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\begin{block}{Remarque}
+		Toute expression peut s'écrire sous la forme d'une suite d'additions.  Pour faciliter le calcul on peut regrouper les termes astucieusement ou par signe.
+	\end{block}
+	
+	\begin{exampleblock}{Exemples}
+		
+		\begin{eqnarray*}
+			C &=& - 7 + 4 - 8 + 7 - 4 \\ \pause
+			C &=& (- 7 + 7) + (4 - 4) - 8  \\ \pause
+			C &=& 0 + 0 - 8 \\ \pause
+			C &=& -8
+		\end{eqnarray*}
+		
+		\vspace*{-0.75cm}
+		
+		\begin{eqnarray*}
+			D &=& -2 + 4 - 8 + 5 + 6 \\
+			D &=& (- 2 - 8) + (4 + 6) + 5 \\ \pause
+			D &=& -10 + 10 + 5 \\ \pause
+			D &=& 0 + 5 \\ \pause
+			D &=& 5
+		\end{eqnarray*}
+	\end{exampleblock}
+\end{frame}
+\end{document}
