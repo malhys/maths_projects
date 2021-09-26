@@ -1,0 +1,195 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+%\usetheme{Malmoe}
+%\usecolortheme{beaver}
+\usecolortheme{seahorse}
+
+\input{../../../../utils_maths_beamer}
+
+
+\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+\usepackage{amssymb,amsmath}
+
+
+\newcommand{\myitem}{\item[\textbullet]}
+
+\graphicspath{{../img/}}
+
+\title{Séquence 6 : Symétrie axiale}
+%\subtitle{Correction des exercices semaine du 18/05}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+%
+%\AtBeginSection[]
+%{
+%	\begin{frame}
+%		\frametitle{}
+%		\tableofcontents[currentsection, hideallsubsections]
+%	\end{frame} 
+%
+%}
+%
+%
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\section{Symétrique d'une figure par rapport à une droite}
+	
+
+\section{Médiatrice}
+
+\begin{frame}
+	\begin{mydef}
+		
+		\begin{itemize}
+			\item La \kword{médiatrice} d'un segment est son axe de symétrie. \pause
+			\item C'est la droite \kword{perpendiculaire à ce segment} qui \kword{passe par son milieu}.\pause 
+		\end{itemize}
+		
+	\end{mydef}
+
+
+\begin{myex}
+	
+
+	La droite $(d)$ est la médiatrice du segment $[AB]$.
+
+	\begin{center}
+		\includegraphics[scale=0.15]{med1}
+	\end{center}
+\end{myex}
+
+\end{frame}
+
+\begin{frame}
+	\begin{myprops}
+		\begin{itemize}
+				\item \textbf{Si} un point appartient à la médiatrice d'un segment, \textbf{alors} ce point est à la même distance des extrémités de ce segment. \pause
+				\item \textbf{Si} un point est à la même distance des extrémités d'un segment, \textbf{alors} il appartient à la médiatrice de ce segment. \pause			
+		\end{itemize}
+	\end{myprops}
+
+
+\begin{myexs}
+		\begin{enumerate}
+			\item  Le point $D$ appartient à la médiatrice $(d)$ du segment $[AB]$, donc $AD=BD$.
+			\vspace*{0.5cm}
+			\begin{center}
+				\includegraphics[scale=0.1]{med2}
+			\end{center}
+
+			
+		\end{enumerate}
+	
+	
+\end{myexs}
+
+\end{frame}
+
+\begin{frame}
+	\begin{myprops}
+		\begin{itemize}
+			\item \textbf{Si} un point appartient à la médiatrice d'un segment, \textbf{alors} ce point est à la même distance des extrémités de ce segment. 
+			\item \textbf{Si} un point est à la même distance des extrémités d'un segment, \textbf{alors} il appartient à la médiatrice de ce segment. 			
+		\end{itemize}
+	\end{myprops}
+	
+	
+	\begin{myexs}
+		\begin{enumerate}
+						
+			\item On a $EG=GF$, $EH=HF$ et $EI=IF$, donc les points $G$, $H$ et $I$ appartiennent tous à la médiatrice du segment $[EF]$.
+			
+			\begin{center}
+				\includegraphics[scale=0.1]{med3}
+			\end{center}
+			
+		\end{enumerate}
+		
+		
+	\end{myexs}
+	
+\end{frame}
+
+\section{Propriétés de la symétrie}
+
+
+\begin{frame}
+	\begin{myprops}
+		\begin{itemize}
+				\item Si des points sont alignés, alors leurs symétriques par rapport à une droite sont \kword{aussi alignés}.\pause
+				\item Si deux segments sont symétriques par rapport à une droite, alors ils ont la \kword{même longueur}.\pause
+				%\item Si deux angles sont symétriques par rapport à une droite, alors ils ont la \kw{même mesure}.
+				\item Si deux cercles sont symétriques par rapport à une droite, alors ils ont le \kword{même rayon} et leurs \kword{centres sont symétriques}.\pause
+		\end{itemize}
+		
+	\end{myprops}
+
+	\begin{myexs}
+		Le symétrique de la droite $(d_1)$ par rapport à $(d)$ est la droite $(d_2)$.
+	
+
+		\begin{center}
+			\includegraphics[scale=0.4]{prop1}
+		\end{center}
+	\end{myexs}
+\end{frame}
+
+\begin{frame}
+	\begin{myprops}
+		\begin{itemize}
+			\item Si des points sont alignés, alors leurs symétriques par rapport à une droite sont \kword{aussi alignés}.
+			\item Si deux segments sont symétriques par rapport à une droite, alors ils ont la \kword{même longueur}.
+			%\item Si deux angles sont symétriques par rapport à une droite, alors ils ont la \kw{même mesure}.
+			\item Si deux cercles sont symétriques par rapport à une droite, alors ils ont le \kword{même rayon} et leurs \kword{centres sont symétriques}.
+		\end{itemize}
+		
+	\end{myprops}
+	
+	\begin{myexs}
+		$[IJ]$ et $[I'J']$ sont symétriques par rapport à la droite $(d)$, donc $IJ = I'J'$.
+	
+		\begin{center}
+			\includegraphics[scale=0.3]{prop2}
+		\end{center}
+	\end{myexs}
+\end{frame}
+
+
+\begin{frame}
+	\begin{myprops}
+		\begin{itemize}
+			\item Si des points sont alignés, alors leurs symétriques par rapport à une droite sont \kword{aussi alignés}.
+			\item Si deux segments sont symétriques par rapport à une droite, alors ils ont la \kword{même longueur}.
+			%\item Si deux angles sont symétriques par rapport à une droite, alors ils ont la \kw{même mesure}.
+			\item Si deux cercles sont symétriques par rapport à une droite, alors ils ont le \kword{même rayon} et leurs \kword{centres sont symétriques}.
+		\end{itemize}
+		
+	\end{myprops}
+	
+	\begin{myexs}
+		Le symétrique du cercle de centre $O$ et de rayon $r$ est le cercle de centre $O'$ et de rayon $r$.
+		
+		\begin{center}
+			\includegraphics[scale=0.25]{prop3}
+		\end{center}
+	\end{myexs}
+\end{frame}
+\end{document}
